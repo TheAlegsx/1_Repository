@@ -1,2 +1,17 @@
 # Projects
-Research and project work across finance, data and AI systems, organised by subject.
+
+A growing collection of research and project work across finance, data and AI systems.
+
+## Areas
+
+| Area | Description |
+|---|---|
+| [Finance](Finance/README.md) | Investment research and financial modelling |
+
+## Organisation
+
+Projects are grouped by subject and have their own entry pages. The structure can evolve as new projects emerge; overview pages provide navigation to their current locations.
+
+Project pages identify their scope and status. Published versions will distinguish research outputs from work still in development.
+
+[Back to profile](https://github.com/TheAlegsx)
