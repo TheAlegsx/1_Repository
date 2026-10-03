@@ -17,5 +17,6 @@ Project pages identify their scope and status. Published versions will distingui
 ## Updating this repository
 
 Changes can be reviewed, committed and pushed using GitHub Desktop.
+After saving your changes, enter a commit summary, select **Commit to main**, then select **Push origin** to publish them on GitHub.
 
 [Back to profile](https://github.com/TheAlegsx)
