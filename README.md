@@ -14,4 +14,8 @@ Projects are grouped by subject and have their own entry pages. The structure ca
 
 Project pages identify their scope and status. Published versions will distinguish research outputs from work still in development.
 
+## Updating this repository
+
+Changes can be reviewed, committed and pushed using GitHub Desktop.
+
 [Back to profile](https://github.com/TheAlegsx)
