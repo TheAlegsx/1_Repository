@@ -5,7 +5,7 @@ USD results · 3 October 2014–28 August 2026
 
 ## Abstract
 
-This study evaluates a developed-market equity portfolio with Core, Momentum, Quality and Value weights of 60/15/10/15. Absolute ±5-percentage-point sleeve bands are combined with separate leverage management at a target of 1.25x. Over the common historical sample, CAGR is **{{claim:unlevered_cagr}} without borrowing** and **{{claim:levered_cagr}} at the borrowed target**, after modelled investment trading and financing costs. The borrowed portfolio has a {{claim:levered_gap_core}} CAGR advantage over the MSCI World/Core comparator at the same target exposure, with slightly lower observed volatility and drawdown. These favourable full-period comparisons coexist with changing period rankings and alpha intervals that include zero. Historical specification testing and unverified real lending conditions limit prospective conclusions.
+This study evaluates a developed-market equity portfolio with Core, Momentum, Quality and Value weights of 60/15/10/15. Absolute ±5-percentage-point sleeve bands are combined with separate leverage management at a target of 1.25x. Over the common historical sample, CAGR is **{{claim:unlevered_cagr}} without borrowing** and **{{claim:levered_cagr}} at the borrowed target**, after modelled investment trading and financing costs. The borrowed portfolio has a {{claim:levered_gap_core}} CAGR advantage over the MSCI World/Core comparator at the same target exposure, with slightly lower observed volatility and drawdown. These favourable full-period comparisons coexist with changing period rankings and alpha intervals that include zero. Historical specification testing and unverified real lending conditions limit prospective conclusions. [Calculation](https://github.com/TheAlegsx/1_Repository/blob/cd861934faf1aaeca43ae57bde0d01ec68ee6a25/Finance/MSCI%20World%20Factor%20Strategy/src/factor_portfolio/historical.py#L121).
 
 ## 1. Research Question
 
@@ -17,7 +17,7 @@ The main strategy uses 1.25x target leverage. Unlevered results provide a contro
 
 ### 2.1 Allocation and trading rules
 
-**Table 1. Target allocation**
+**Table 1. Target allocation** · [Specification](https://github.com/TheAlegsx/1_Repository/blob/cd861934faf1aaeca43ae57bde0d01ec68ee6a25/Finance/MSCI%20World%20Factor%20Strategy/config/backtest_absolute_decoupled_2026-10-05.json)
 
 {{table:allocation}}
 
@@ -25,7 +25,7 @@ The Core provides broad developed-market equity exposure; the factor sleeves app
 
 Weights are measured against gross invested assets. Each sleeve may drift by five percentage points above or below its target: Core 55–65%, Momentum 10–20%, Quality 5–15% and Value 10–20%. Equality at a boundary does not trigger trading. A strict breach signals a full sleeve reset at the next common NAV observation. A sleeve-only reset preserves debt; a leverage-only adjustment scales the existing mixture proportionally. A simultaneous signal resets both.
 
-Leverage is managed separately at 1.25x with a ±0.10 band. This is an adjustment rule, not a hard cap on realised leverage. An account begins with USD {{claim:capital}} million of committed equity, corresponding to USD {{claim:gross}} million of gross exposure and USD {{claim:debt}} million of debt before opening charges.
+Leverage is managed separately at 1.25x with a ±0.10 band. This is an adjustment rule, not a hard cap on realised leverage. An account begins with USD {{claim:capital}} million of committed equity, corresponding to USD {{claim:gross}} million of gross exposure and USD {{claim:debt}} million of debt before opening charges. [Specification](https://github.com/TheAlegsx/1_Repository/blob/cd861934faf1aaeca43ae57bde0d01ec68ee6a25/Finance/MSCI%20World%20Factor%20Strategy/config/backtest_absolute_decoupled_2026-10-05.json).
 
 Five-percentage-point bands were the author's initial band-width proposal. Tighter alternatives were explored before returning to that width for simplicity and greater permitted factor drift. This chronology does not make the final specification independent of the historical evidence. The separated leverage mechanism must also be distinguished from coupled resets in some exploratory controls. A capped-relative rule, using the smaller of five percentage points and twenty percent of each sleeve target, is retained as a sensitivity in Appendix A.
 
@@ -41,7 +41,7 @@ Dimensional is a secondary systematic-investment alternative. Amundi is a short-
 
 ### 3.1 Inputs and common calendar
 
-**Table 2. Main analytical inputs**
+**Table 2. Main analytical inputs** · [Specification](https://github.com/TheAlegsx/1_Repository/blob/cd861934faf1aaeca43ae57bde0d01ec68ee6a25/Finance/MSCI%20World%20Factor%20Strategy/config/backtest_sources.json)
 
 | Source | Period | Use |
 | --- | --- | --- |
@@ -50,9 +50,9 @@ Dimensional is a secondary systematic-investment alternative. Amundi is a short-
 | New York Fed indicative reference series and official SOFR | Relevant financing dates | Reference rate for borrowed exposure |
 | Saved Amundi NAV workbook | Separate overlap: 30 September 2025–31 August 2026 | Real daily 2x product comparison |
 
-The main common calendar contains **{{claim:levels}} levels and {{claim:intervals}} adjacent return intervals**. Investment levels are intersected before calculating returns; missing investment NAVs are not filled. The short Amundi experiment uses its own overlap and extends to August month-end. Reference rates are carried across nonpublication calendar days. The early indicative series is distinct from later official SOFR; both are financing proxies rather than the actual account's borrowing rate.
+The main common calendar contains **{{claim:levels}} levels and {{claim:intervals}} adjacent return intervals**. Investment levels are intersected before calculating returns; missing investment NAVs are not filled. The short Amundi experiment uses its own overlap and extends to August month-end. Reference rates are carried across nonpublication calendar days. The early indicative series is distinct from later official SOFR; both are financing proxies rather than the actual account's borrowing rate. [Calculation](https://github.com/TheAlegsx/1_Repository/blob/cd861934faf1aaeca43ae57bde0d01ec68ee6a25/Finance/MSCI%20World%20Factor%20Strategy/src/factor_portfolio/backtest_workflow.py#L119).
 
-Accumulating NAVs include embedded fund expenses and reinvestment treatment. Deducting TER again would double-count that layer. NAV is not an executable bid or ask. Investor trading costs are therefore specified separately. Published rounded issuer returns provide a secondary check for {{claim:issuer_count}} calendar-year observations; the largest central-value difference is {{claim:issuer_max_gap}} and remains compatible with the retained rounding assumptions. This is not a second complete daily-price feed.
+Accumulating NAVs include embedded fund expenses and reinvestment treatment. Deducting TER again would double-count that layer. NAV is not an executable bid or ask. Investor trading costs are therefore specified separately. Published rounded issuer returns provide a secondary check for {{claim:issuer_count}} calendar-year observations; the largest central-value difference is {{claim:issuer_max_gap}} and remains compatible with the retained rounding assumptions. This is not a second complete daily-price feed. [Calculation](https://github.com/TheAlegsx/1_Repository/blob/cd861934faf1aaeca43ae57bde0d01ec68ee6a25/Finance/MSCI%20World%20Factor%20Strategy/src/factor_portfolio/backtest_issuer_returns.py#L64).
 
 The Dimensional comparison uses the Global Core Equity Fund, USD Accumulation Shares (ISIN IE00B2PC0153), with NAV observations from the supplied Bloomberg workbook. Its investment mandate differs from MSCI World and allows some emerging-market investments. That permission does not establish the fund's actual emerging-market allocation throughout the sample. Fund identities and sources are listed after the conclusion.
 
@@ -60,17 +60,17 @@ The Dimensional comparison uses the Global Core Equity Fund, USD Accumulation Sh
 
 **AI-assisted methodology and writing:** OpenAI Codex (OpenAI, n.d.) assisted development of the analytical code and all narrative sections, tables and figures. The final AI Assistance and Responsibility section identifies the affected material, tools, author decisions, checks and retained prompt evidence.
 
-Gross invested assets minus debt equals investor equity. At an observation, positions are marked and financing is accrued; prior signals are executed before new signals are evaluated. Trading charges reduce equity. No subscriptions or withdrawals enter the investment backtest.
+Gross invested assets minus debt equals investor equity. At an observation, positions are marked and financing is accrued; prior signals are executed before new signals are evaluated. Trading charges reduce equity. No subscriptions or withdrawals enter the investment backtest. [Calculation](https://github.com/TheAlegsx/1_Repository/blob/cd861934faf1aaeca43ae57bde0d01ec68ee6a25/Finance/MSCI%20World%20Factor%20Strategy/src/factor_portfolio/historical.py#L21).
 
-**Table 3. Investment cost and measurement assumptions**
+**Table 3. Investment cost and measurement assumptions** · [Specification](https://github.com/TheAlegsx/1_Repository/blob/cd861934faf1aaeca43ae57bde0d01ec68ee6a25/Finance/MSCI%20World%20Factor%20Strategy/config/backtest_absolute_decoupled_2026-10-05.json)
 
 {{table:costs}}
 
-Funding accrues from the previous observation inclusive to the current observation exclusive, on ACT/360, and is capitalised at NAV dates. Current-cost scenarios apply the stated tariff and commission conversion throughout history rather than reconstructing historical invoices. Fund administration charges, custody sensitivities, investor taxes and manager business budgets are outside the baseline investment account.
+Funding accrues from the previous observation inclusive to the current observation exclusive, on ACT/360, and is capitalised at NAV dates. Current-cost scenarios apply the stated tariff and commission conversion throughout history rather than reconstructing historical invoices. Fund administration charges, custody sensitivities, investor taxes and manager business budgets are outside the baseline investment account. [Calculation](https://github.com/TheAlegsx/1_Repository/blob/cd861934faf1aaeca43ae57bde0d01ec68ee6a25/Finance/MSCI%20World%20Factor%20Strategy/src/factor_portfolio/historical.py#L21).
 
-The fixed commission conversion is **1 CHF = USD 1.2368**, derived from the recorded ECB reference rates for **31 August 2026**: 1.1596 USD per EUR divided by 0.9376 CHF per EUR. Only the CHF-denominated broker commission is converted; investment returns and debt already use USD. Full precision is retained in the calculation. This endpoint reference rate is a modelling assumption, not a historical series of broker execution rates.
+The fixed commission conversion is **1 CHF = USD 1.2368**, derived from the recorded ECB reference rates for **31 August 2026**: 1.1596 USD per EUR divided by 0.9376 CHF per EUR. Only the CHF-denominated broker commission is converted; investment returns and debt already use USD. Full precision is retained in the calculation. This endpoint reference rate is a modelling assumption, not a historical series of broker execution rates. [Specification](https://github.com/TheAlegsx/1_Repository/blob/cd861934faf1aaeca43ae57bde0d01ec68ee6a25/Finance/MSCI%20World%20Factor%20Strategy/config/backtest_absolute_decoupled_2026-10-05.json).
 
-CAGR uses committed opening capital and elapsed calendar years. Opening trading charges are included once and folded into the first investor-return interval. Drawdown uses a high-water mark no lower than committed opening capital. Volatility uses 252-observation annualisation. Jensen alpha is an annualised excess-return regression intercept against unlevered Core, not the CAGR difference; exploratory intervals use five-lag HAC errors.
+CAGR uses committed opening capital and elapsed calendar years. Opening trading charges are included once and folded into the first investor-return interval. Drawdown uses a high-water mark no lower than committed opening capital. Volatility uses 252-observation annualisation. Jensen alpha is an annualised excess-return regression intercept against unlevered Core, not the CAGR difference; exploratory intervals use five-lag HAC errors. [Calculation](https://github.com/TheAlegsx/1_Repository/blob/cd861934faf1aaeca43ae57bde0d01ec68ee6a25/Finance/MSCI%20World%20Factor%20Strategy/src/factor_portfolio/historical.py#L121).
 
 Separate implementations check account identities and selected daily, event and outcome results under shared inputs and conventions. These checks address implementation errors; they do not establish market-price executability, commercial feasibility or expert peer review.
 
@@ -78,37 +78,37 @@ Separate implementations check account identities and selected daily, event and 
 
 ### 4.1 Central MSCI World comparison
 
-**Table 4. Unlevered control over the main sample**
+**Table 4. Unlevered control over the main sample** · [Calculation](https://github.com/TheAlegsx/1_Repository/blob/cd861934faf1aaeca43ae57bde0d01ec68ee6a25/Finance/MSCI%20World%20Factor%20Strategy/src/factor_portfolio/historical.py#L121)
 
 {{table:unlevered}}
 
-**Table 5. Main portfolio and Core at a 1.25x target**
+**Table 5. Main portfolio and Core at a 1.25x target** · [Calculation](https://github.com/TheAlegsx/1_Repository/blob/cd861934faf1aaeca43ae57bde0d01ec68ee6a25/Finance/MSCI%20World%20Factor%20Strategy/src/factor_portfolio/historical.py#L121)
 
 {{table:main}}
 
-The main strategy meets the stated joint growth/risk criterion against Core over the full sample. Its CAGR advantage is {{claim:unlevered_gap_core}} without borrowing and {{claim:levered_gap_core}} at matched target leverage. These are historical account comparisons, not a causal estimate of the return from each factor.
+The main strategy meets the stated joint growth/risk criterion against Core over the full sample. Its CAGR advantage is {{claim:unlevered_gap_core}} without borrowing and {{claim:levered_gap_core}} at matched target leverage. These are historical account comparisons, not a causal estimate of the return from each factor. [Calculation](https://github.com/TheAlegsx/1_Repository/blob/cd861934faf1aaeca43ae57bde0d01ec68ee6a25/Finance/MSCI%20World%20Factor%20Strategy/src/factor_portfolio/historical.py#L121).
 
-Borrowing increases portfolio CAGR from {{claim:unlevered_cagr}} to {{claim:levered_cagr}}, but also raises volatility from {{claim:unlevered_annualised_volatility}} to {{claim:levered_annualised_volatility}} and deepens maximum drawdown from {{claim:unlevered_maximum_drawdown}} to {{claim:levered_maximum_drawdown}}. The additional growth comes with additional total risk.
+Borrowing increases portfolio CAGR from {{claim:unlevered_cagr}} to {{claim:levered_cagr}}, but also raises volatility from {{claim:unlevered_annualised_volatility}} to {{claim:levered_annualised_volatility}} and deepens maximum drawdown from {{claim:unlevered_maximum_drawdown}} to {{claim:levered_maximum_drawdown}}. The additional growth comes with additional total risk. [Calculation](https://github.com/TheAlegsx/1_Repository/blob/cd861934faf1aaeca43ae57bde0d01ec68ee6a25/Finance/MSCI%20World%20Factor%20Strategy/src/factor_portfolio/historical.py#L121).
 
 {{figure:equity}}
 
-*Figure 1. Investor equity at matched 1.25x target exposure, after modelled trading and financing. The capped-relative sensitivity is shown alongside the main strategy. There are no subscriptions or manager-fee receipts in these paths.*
+*Figure 1. Investor equity at matched 1.25x target exposure, after modelled trading and financing. The capped-relative sensitivity is shown alongside the main strategy. There are no subscriptions or manager-fee receipts in these paths.* [Plot calculation](https://github.com/TheAlegsx/1_Repository/blob/cd861934faf1aaeca43ae57bde0d01ec68ee6a25/Finance/MSCI%20World%20Factor%20Strategy/src/factor_portfolio/backtest_report.py#L278)
 
 {{figure:drawdown}}
 
-*Figure 2. Drawdown from the committed-capital high-water mark on the common observation calendar. The paths include opening charges but do not capture intraday lender exposure.*
+*Figure 2. Drawdown from the committed-capital high-water mark on the common observation calendar. The paths include opening charges but do not capture intraday lender exposure.* [Plot calculation](https://github.com/TheAlegsx/1_Repository/blob/cd861934faf1aaeca43ae57bde0d01ec68ee6a25/Finance/MSCI%20World%20Factor%20Strategy/src/factor_portfolio/backtest_report.py#L278)
 
 ### 4.2 Brief comparison with Dimensional
 
-**Table 6. Main strategy and Dimensional at the 1.25x target**
+**Table 6. Main strategy and Dimensional at the 1.25x target** · [Calculation](https://github.com/TheAlegsx/1_Repository/blob/cd861934faf1aaeca43ae57bde0d01ec68ee6a25/Finance/MSCI%20World%20Factor%20Strategy/src/factor_portfolio/historical.py#L121)
 
 {{table:dimensional}}
 
-The main portfolio's CAGR advantage over Dimensional is {{claim:levered_gap_dimensional}}, with lower observed volatility and a shallower maximum drawdown. Dimensional is an existing systematic fund alternative with different universe and implementation characteristics. Equal target borrowing does not remove those differences. The comparator control excluding external transaction charges also remains below the primary over the full sample; embedded product costs remain in that control. This comparison therefore does not isolate a pure factor premium.
+The main portfolio's CAGR advantage over Dimensional is {{claim:levered_gap_dimensional}}, with lower observed volatility and a shallower maximum drawdown. Dimensional is an existing systematic fund alternative with different universe and implementation characteristics. Equal target borrowing does not remove those differences. The comparator control excluding external transaction charges also remains below the primary over the full sample; embedded product costs remain in that control. This comparison therefore does not isolate a pure factor premium. [Calculation](https://github.com/TheAlegsx/1_Repository/blob/cd861934faf1aaeca43ae57bde0d01ec68ee6a25/Finance/MSCI%20World%20Factor%20Strategy/src/factor_portfolio/historical.py#L121).
 
 ### 4.3 Portfolio at 2x versus the Amundi daily 2x ETF
 
-**Table 7. Factor portfolio at 2x and Amundi daily 2x: 30 September 2025–31 August 2026**
+**Table 7. Factor portfolio at 2x and Amundi daily 2x: 30 September 2025–31 August 2026** · [Calculation](https://github.com/TheAlegsx/1_Repository/blob/cd861934faf1aaeca43ae57bde0d01ec68ee6a25/Finance/MSCI%20World%20Factor%20Strategy/src/factor_portfolio/backtest_products.py#L55)
 
 {{table:amundi}}
 
@@ -142,7 +142,7 @@ The evidence supports further investigation of a fixed specification rather than
 
 ## Appendix A. Band Sensitivity
 
-**Table A1. Absolute/separate and capped-relative policies**
+**Table A1. Absolute/separate and capped-relative policies** · [Calculation](https://github.com/TheAlegsx/1_Repository/blob/cd861934faf1aaeca43ae57bde0d01ec68ee6a25/Finance/MSCI%20World%20Factor%20Strategy/src/factor_portfolio/backtest_workflow.py#L161)
 
 {{table:policy}}
 
@@ -150,25 +150,27 @@ The capped-relative rule has narrower factor bands, particularly for Quality. Br
 
 ## Appendix B. Statistical and Period Checks
 
-**Table B1. Main portfolio alpha against unlevered Core**
+**Table B1. Main portfolio alpha against unlevered Core** · [Calculation](https://github.com/TheAlegsx/1_Repository/blob/cd861934faf1aaeca43ae57bde0d01ec68ee6a25/Finance/MSCI%20World%20Factor%20Strategy/src/factor_portfolio/historical.py#L121)
 
 {{table:alpha}}
 
 Intervals are exploratory nominal-252 annualised regression-intercept intervals with five-lag HAC errors. They are not adjusted for specification selection or multiple testing. The leveraged regression remains against unlevered Core, so its intercept must not be confused with the matched-target CAGR gap.
 
-**Table B2. Independently restarted retrospective periods at 1.25x**
+**Table B2. Independently restarted retrospective periods at 1.25x** · [Calculation](https://github.com/TheAlegsx/1_Repository/blob/cd861934faf1aaeca43ae57bde0d01ec68ee6a25/Finance/MSCI%20World%20Factor%20Strategy/src/factor_portfolio/backtest_workflow.py#L161)
 
 {{table:periods}}
 
 The early period is 3 October 2014–31 December 2021; the later period starts on the first common 2022 observation, 4 January, and ends on 28 August 2026. Each account restarts capital and opening charges. These splits preserve counter-evidence rather than provide an untouched holdout.
 
-**Table B3. Financing-markup sensitivity above the reference rate**
+**Table B3. Financing-markup sensitivity above the reference rate** · [Calculation](https://github.com/TheAlegsx/1_Repository/blob/cd861934faf1aaeca43ae57bde0d01ec68ee6a25/Finance/MSCI%20World%20Factor%20Strategy/src/factor_portfolio/backtest_funding.py#L77)
 
 {{table:funding}}
 
 The later result is a restarted account, not a continuation of the full-history balance. Policy discontinuities prevent interpreting a finite scan as a continuous or globally complete break-even search.
 
 ## Reproducibility Materials
+
+Calculation and specification links in the captions and text open the corresponding source functions or settings on GitHub. Code links identify a fixed source snapshot; [the report-to-calculation map](https://github.com/TheAlegsx/1_Repository/blob/main/Finance/MSCI%20World%20Factor%20Strategy/docs/REPORT_CALCULATION_MAP.md) provides the selected rows, fields and generated evidence paths. Original provider observations remain local.
 
 The prepared code and separately supplied original data reconstruct the investment accounts. Full allocation, policy, rolling-entry, correlation, cost, artificial-regime, gap-cure, holdings and product-control results remain in the accompanying calculation materials. Their inclusion in the research archive does not make raw provider data public. The reader-selection record identifies the evidence behind each displayed table and claim.
 

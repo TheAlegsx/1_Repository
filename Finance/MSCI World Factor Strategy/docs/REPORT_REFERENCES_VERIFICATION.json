@@ -1,0 +1,65 @@
+{
+  "baseline_commit": "cd861934faf1aaeca43ae57bde0d01ec68ee6a25",
+  "unchanged_complete_evidence_reference_verified": true,
+  "references_removed_restore_original_manuscripts_byte_for_byte": {
+    "backtest": true,
+    "inflow": true
+  },
+  "selected_tables_claims_figures_source_entries_and_ai_record_identical": true,
+  "csv_hash_reference_count_unchanged": 598,
+  "investment_business_configuration_and_financial_source_changed": false,
+  "reference_metadata_changes_only": [
+    "reader_review_sha256",
+    "two reader manuscript SHA-256 values"
+  ],
+  "strict_public_bind_readers_passed": true,
+  "verified_reader_run_id": "54f288c4-71cd-46ef-807e-3990b890393c",
+  "reader_payload_hashes": {
+    "report/BACKTEST_RESEARCH_2026-10-07.md": "817dedaf13b5a91cb6fabd107eb9feea3b686fd234c42262e55e7859697fb8e4",
+    "report/CAPITAL_INFLOWS_RESEARCH_2026-10-07.md": "656072dcd3fb098e2049114a574fcc13eab6259675e1fa3780d0b4c98b582e9a",
+    "figures/backtest_equity.png": "429fbc2962cecf187177fafa981ac29a3aaba5a60ccfbc1d4f4b766ea93c28b2",
+    "figures/backtest_drawdown.png": "c33ec9982c35379a0370791cb44f1406dd6c5f683a1ea73b68c9e5a551fa513d",
+    "figures/inflow_historical_nav.png": "5a8b85bd6e39a0562758411b48dd7e9d37150cee92d5895f28ae3f9ef2811844"
+  },
+  "table_caption_references": 23,
+  "static_input_table_references": 1,
+  "figure_caption_references": 3,
+  "prose_paragraph_references": 25,
+  "method_paragraph_references": 9,
+  "reader_source_files_unmodified": true,
+  "date": "2026-10-07",
+  "scope": "Author-requested in-report links to GitHub calculation functions and specified assumptions; original scientific wording, numerical results, selected cells, figures, source citations and final AI disclosures are preserved.",
+  "focused_tests_passed": 19,
+  "all_22_pages_visually_inspected": true,
+  "times_new_roman_and_black_text_preserved": true,
+  "calculation_links_pinned_to_commit": "cd861934faf1aaeca43ae57bde0d01ec68ee6a25",
+  "report_filenames_stable": true,
+  "source_originals_or_private_working_records_published": false,
+  "pdf_checks": [
+    {
+      "report": "MSCI_World_Factor_Strategy_Backtest.pdf",
+      "sha256": "3c23689408f1d86b11547a41f66158cb7d2a57c81fd186fc9fb2c2e353dec15d",
+      "pages": 10,
+      "unique_added_calculation_specification_navigation_targets": 11,
+      "all_expected_links_embedded_and_page_bounded": true,
+      "relative_companion_links_resolve": true,
+      "text_coordinate_checks": 605,
+      "times_new_roman_preserved": true,
+      "ai_declaration_on_final_page": true,
+      "active_content_or_attachments": false
+    },
+    {
+      "report": "Capital_Inflows_Fund_Economics.pdf",
+      "sha256": "a7772a771b9a1cd0195932086076737e3624b26d9e801a76bdacc4301eb2b913",
+      "pages": 12,
+      "unique_added_calculation_specification_navigation_targets": 19,
+      "all_expected_links_embedded_and_page_bounded": true,
+      "relative_companion_links_resolve": true,
+      "text_coordinate_checks": 670,
+      "times_new_roman_preserved": true,
+      "ai_declaration_on_final_page": true,
+      "active_content_or_attachments": false
+    }
+  ],
+  "total_text_coordinate_checks": 1275
+}

@@ -1156,8 +1156,8 @@
   ],
   "schema_version": 1,
   "scope": "All selected table families, dynamic text claims and displayed figures. Manually authored wording, static source/AI aid tables and constant assumptions are retained in templates/configurations, not generated market results.",
-  "source_reader_run_id": "739cb6ae-00d7-4ed1-beef-bfce9b962eca",
-  "status": "Provenance mapped; full actual-GitHub fresh-install reconstruction verified on 7 October 2026",
+  "source_reader_run_id": "54f288c4-71cd-46ef-807e-3990b890393c",
+  "status": "Provenance mapped; financial reconstruction verified; reader references renewed after citation-only manuscript equality checks",
   "tables": [
     {
       "binding_file": "RUN/readers/evidence/backtest_bindings.json",

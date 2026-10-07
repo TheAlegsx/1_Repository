@@ -3,13 +3,13 @@
   "date": "2026-10-07",
   "selection_sha256": "f7b845471553dfc58e3b7dc7b0487c1db588d73e8dc3b61ac6665cc4f4116ff2",
   "templates_sha256": {
-    "backtest": "4abc15fa98ab9906142b12107930410828454f0e4a2853dfead8c71165096944",
-    "inflow": "2ee387fbec3a0c371605d44e01f8a3e8823e012550f5ebc11bf519fddda90393"
+    "backtest": "98fc3e1334d5b999f3a91a68ae21877496ad2595a0c3cb9daafdd9dd7f48c040",
+    "inflow": "1a6d0beaca0780808d84f4adbd78aff4fe56a24b6d35c172bd8ec90371b7b08b"
   },
   "ai_supplement_sha256": "3d5f2fbf54ace883f351fc930480bab78329c364dbdc55632413238aa73958b1",
   "ai_record_sha256": "916e44e4dd2ef1e26a1738f988940d0f050e1afb40245a4436439cadbde0e752",
   "source_run_id": "99472e20-bd5e-46d0-bdb1-ba7fd8635697",
-  "review_scope": "Bounded privacy revision: literal prompts and internal chronology retained locally; public AI attribution preserved. Financial selections and interpretations unchanged. This is an automated editorial check, not human expert approval.",
+  "review_scope": "Bounded author-requested calculation referencing: append GitHub code/specification links only. Original wording, displayed numerical tokens, financial selections, source citations and final AI declaration are preserved. Automated editorial/provenance checks; no independent human expert approval.",
   "decisions": [
     "MSCI World/Core remains benchmark; no new Amundi leverage construction.",
     "Author clarification: display the existing factor2x control versus real Amundi daily2x, not a new Amundi1.25x construction; primary strategy stays1.25x.",
@@ -24,7 +24,8 @@
     "Education Guidance, WSdS5.1.1/5.3 and formal declaration distinguish aid list, methodological/generated-content attribution and independent-work declaration. Only Codex is listed as AI application, author-confirmed; software aids are disclosed; selected exact prompt evidence is retained locally.",
     "No invented historical models, full prompt archive, human expert review, source-rights clearance, institutional approval or signed independence declaration.",
     "Final author-requested polish retains the2x Amundi cells and cost/reset qualifications and every required AI disclosure element while reducing repetition.",
-    "Public versions14/10 remove literal prompt tables only from the final AI section; dates and companion navigation renewed. No financial engine, scenario, table/claim selection or figure change."
+    "Public versions14/10 remove literal prompt tables only from the final AI section; dates and companion navigation renewed. No financial engine, scenario, table/claim selection or figure change.",
+    "Author requested in-report references. All selected table captions, all displayed figures, central numerical prose and accounting methods link to their GitHub producers or specified assumptions; the unchanged calculation map supplies exact evidence origins. No financial assumption, engine, table/claim selection, figure bitmap or AI disclosure changed."
   ],
   "manual_numeric_context": [
     "Report/figure/table identifiers and date; allocation 60/15/10/15 and implied bands; target1.25 and band0.10; named windows and source IDs.",
