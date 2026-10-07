@@ -1,0 +1,258 @@
+{
+  "schema_version": 1,
+  "scope": "public_table_catalog_without_private_execution_history",
+  "tables": [
+    {
+      "id": "backtest_01",
+      "report": "backtest",
+      "section": "2.1 Economic approach and initial allocation",
+      "header": "| Component | Initial weight | Role in the design |"
+    },
+    {
+      "id": "backtest_02",
+      "report": "backtest",
+      "section": "2.2 Benchmark suitability",
+      "header": "| Reference | Reason for inclusion | Qualification |"
+    },
+    {
+      "id": "backtest_03",
+      "report": "backtest",
+      "section": "3.1 Inputs and common period",
+      "header": "| Input | Use | Important limitation |"
+    },
+    {
+      "id": "backtest_04",
+      "report": "backtest",
+      "section": "4.2 Assumptions, their origin and their challenges",
+      "header": "| Assumption | Basis in the model | How it is challenged |"
+    },
+    {
+      "id": "backtest_05",
+      "report": "backtest",
+      "section": "5. Unlevered Results",
+      "header": "| Investment | CAGR | Annualised volatility | Maximum drawdown | Sharpe | Ending equity (USD m) |"
+    },
+    {
+      "id": "backtest_06",
+      "report": "backtest",
+      "section": "6.1 Equal target exposure",
+      "header": "| Investment | CAGR | Annualised volatility | Maximum drawdown | Sharpe | Ending equity (USD m) |"
+    },
+    {
+      "id": "backtest_07",
+      "report": "backtest",
+      "section": "7.1 Time stability and market-adjusted performance",
+      "header": "| Observation endpoint | Target exposure | Proposed CAGR | Core CAGR | Difference (percentage points) |"
+    },
+    {
+      "id": "backtest_08",
+      "report": "backtest",
+      "section": "Appendices",
+      "header": "| Appendix | Supporting material |"
+    },
+    {
+      "id": "backtest_09",
+      "report": "backtest",
+      "section": "A.1 Eight unlevered allocations",
+      "header": "| Allocation | Core/Momentum/Quality/Value | CAGR | Volatility | Drawdown | Sharpe |"
+    },
+    {
+      "id": "backtest_10",
+      "report": "backtest",
+      "section": "A.2 Bounded full-sample return maximisation",
+      "header": "| Exposure | Weights | Sleeve band | Leverage band | Maximum grid CAGR |"
+    },
+    {
+      "id": "backtest_11",
+      "report": "backtest",
+      "section": "B.1 Rule mechanics",
+      "header": "| Sleeve | ISIN | Target | Permitted band |"
+    },
+    {
+      "id": "backtest_12",
+      "report": "backtest",
+      "section": "B.3 All policy results and drift trade-offs",
+      "header": "| Policy | Exposure | CAGR | Drawdown | Events after entry | Total trade costs USD |"
+    },
+    {
+      "id": "backtest_13",
+      "report": "backtest",
+      "section": "C.2 Full comparative measures",
+      "header": "| Strategy / exposure | Beta | Jensen alpha/year | 95% HAC interval | Treynor | Sortino | Calmar |"
+    },
+    {
+      "id": "backtest_14",
+      "report": "backtest",
+      "section": "D.1 Early and later periods",
+      "header": "| Period | Strategy | Exposure | CAGR | Volatility | Drawdown |"
+    },
+    {
+      "id": "backtest_15",
+      "report": "backtest",
+      "section": "D.2 Continuing windows and restarted entries",
+      "header": "| Exposure | Horizon | Windows | Higher CAGR share | Median CAGR difference |"
+    },
+    {
+      "id": "backtest_16",
+      "report": "backtest",
+      "section": "D.2 Continuing windows and restarted entries",
+      "header": "| Requested entry | Factor 1.25x CAGR | Core 1.25x CAGR | Dimensional 1.25x CAGR |"
+    },
+    {
+      "id": "backtest_17",
+      "report": "backtest",
+      "section": "E.1 All principal panels and interpretation",
+      "header": "| Product | core | momentum | quality | value | dimensional |"
+    },
+    {
+      "id": "backtest_18",
+      "report": "backtest",
+      "section": "E.1 All principal panels and interpretation",
+      "header": "| Product | core | momentum | quality | value | dimensional | amundi_2x |"
+    },
+    {
+      "id": "backtest_19",
+      "report": "backtest",
+      "section": "F.1 Embedded expenses and comparator external-cost control",
+      "header": "| Exposure | Our baseline CAGR | Dimensional, zero external charges | CAGR gap |"
+    },
+    {
+      "id": "backtest_20",
+      "report": "backtest",
+      "section": "F.2 Allocation/exposure/funding bridge",
+      "header": "| Sequential counterfactual | CAGR | Ending equity USDm |"
+    },
+    {
+      "id": "backtest_21",
+      "report": "backtest",
+      "section": "F.3 Credit-margin sensitivity",
+      "header": "| Margin above reference | Full CAGR | Confirmation CAGR |"
+    },
+    {
+      "id": "backtest_22",
+      "report": "backtest",
+      "section": "F.4 Separate custody-path recalculation",
+      "header": "| Custody scenario | Factor 1x | Core 1x | Dimensional 1x | Factor 1.25x | Core 1.25x | Dimensional 1.25x |"
+    },
+    {
+      "id": "backtest_23",
+      "report": "backtest",
+      "section": "H.1 Retained scenarios and results",
+      "header": "| Regime | Exposure | Ending equity USDm | CAGR | Drawdown |"
+    },
+    {
+      "id": "backtest_24",
+      "report": "backtest",
+      "section": "I.2 Historical schedules and reconciliation",
+      "header": "| Product | Holdings date | Equity lines | US equity / NAV | Top ten security lines / NAV |"
+    },
+    {
+      "id": "backtest_25",
+      "report": "backtest",
+      "section": "J.1 Short-period comparison and exposure differences",
+      "header": "| Reference | Cumulative return | Volatility | Drawdown |"
+    },
+    {
+      "id": "backtest_26",
+      "report": "backtest",
+      "section": "K.1 Instruments and calendar details",
+      "header": "| Investment | Identifier | Relevant source |"
+    },
+    {
+      "id": "backtest_27",
+      "report": "backtest",
+      "section": "K.2 Complete baseline assumption register",
+      "header": "| Assumption | Origin/rationale | Challenge |"
+    },
+    {
+      "id": "backtest_28",
+      "report": "backtest",
+      "section": "K.3 Calculation evidence map",
+      "header": "| Result | Original input | Work performed | Saved evidence |"
+    },
+    {
+      "id": "backtest_29",
+      "report": "backtest",
+      "section": "K.3 Calculation evidence map",
+      "header": "| Additional result | Work performed | Saved evidence |"
+    },
+    {
+      "id": "backtest_30",
+      "report": "backtest",
+      "section": "L.1 Requirement mapping and deliverable boundaries",
+      "header": "| Assignment requirement | Research support here | Separate work / boundary |"
+    },
+    {
+      "id": "inflow_01",
+      "report": "capital_inflows",
+      "section": "3.1 External client acquisition",
+      "header": "| Case | Annual new client equivalents, years 1\u201310 | Scheduled ten-year gross subscriptions (USD m), before stress cuts |"
+    },
+    {
+      "id": "inflow_02",
+      "report": "capital_inflows",
+      "section": "3.3 Business costs and receipt of fees",
+      "header": "| Input | Central discussion assumption | Why included / challenge |"
+    },
+    {
+      "id": "inflow_03",
+      "report": "capital_inflows",
+      "section": "6.1 Client-acquisition scenarios",
+      "header": "| Case | Owner equity, year 10 (USD m) | External equity, year 10 (USD m) | External fees, year 10 (USD) | Manager result, year 10 (USD) | Cumulative manager cash, ten years (USD) |"
+    },
+    {
+      "id": "inflow_04",
+      "report": "capital_inflows",
+      "section": "6.2 Equal gross subscriptions, different timing",
+      "header": "| Timing case | Total fund assets, year 10 (USD m) | Cumulative external redemptions (USD m) | Ten-year external fees (USD) | Ten-year manager cash (USD) |"
+    },
+    {
+      "id": "inflow_05",
+      "report": "capital_inflows",
+      "section": "6.3 Fund unit return and external investor return",
+      "header": "| Timing case | Annualised unit TWR | Annualised aggregate external MWR |"
+    },
+    {
+      "id": "inflow_06",
+      "report": "capital_inflows",
+      "section": "7. Losses, Retention and Sequence",
+      "header": "| Loss-placement control | Minimum ending total assets (USD) | Maximum ending total assets (USD) | Range (USD) |"
+    },
+    {
+      "id": "inflow_07",
+      "report": "capital_inflows",
+      "section": "8. Fee Economics, Funding and Sensitivities",
+      "header": "| Annual fee | Owner equity, year 10 (USD m) | External fee, year 10 (USD) | Manager result, year 10 (USD) | Ten-year manager cash (USD) |"
+    },
+    {
+      "id": "inflow_08",
+      "report": "capital_inflows",
+      "section": "8. Fee Economics, Funding and Sensitivities",
+      "header": "| Annual fee | Closing cash, external fees only (USD) | Peak deficit, external fees only (USD) | Closing cash, including owner fees (USD) | Peak deficit, including owner fees (USD) |"
+    },
+    {
+      "id": "inflow_09",
+      "report": "capital_inflows",
+      "section": "Appendix A. All Twenty Acquisition Scenario Outcomes",
+      "header": "| Flow case | Flat | 6% | Early loss | Later loss |"
+    },
+    {
+      "id": "inflow_10",
+      "report": "capital_inflows",
+      "section": "C.1 Schedule definitions and controlled assumptions",
+      "header": "| Schedule | Definition |"
+    },
+    {
+      "id": "inflow_11",
+      "report": "capital_inflows",
+      "section": "C.2 All timing cases under 6%",
+      "header": "| Timing case | Total fund assets, year 10 (USD m) | Cumulative external redemptions (USD m) | Cumulative external fees (USD) | Ten-year manager cash (USD) |"
+    },
+    {
+      "id": "inflow_12",
+      "report": "capital_inflows",
+      "section": "C.5 All four return-path comparisons",
+      "header": "| Timing case | Flat | 6% | Early loss | Later loss |"
+    }
+  ]
+}

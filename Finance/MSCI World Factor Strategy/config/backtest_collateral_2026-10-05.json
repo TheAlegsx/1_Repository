@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "scope": "Preserved fifty single-state collateral-limit diagnostics. Independent of sleeve-band policy and historical path; no actual lending approval.",
+  "measurement": {
+    "state": "prefee target gross assets/debt from configured initial equity and primary leverage",
+    "price_shock": "uniform instantaneous asset loss; debt unchanged",
+    "sales": "proportional target sleeve mixture; no external cash",
+    "fees": "baseline per-leg trade cost plus optional extra forced spread",
+    "cure": "debt after sale costs <= safety fraction * new lending limit * remaining assets",
+    "timing": "single state; no financing accrual, settlement or historical path",
+    "iterations": 80,
+    "branch_tolerance_usd": 1e-07,
+    "cure_check_tolerance_usd": 1e-06
+  },
+  "market_losses": [
+    0.0,
+    0.2,
+    0.4,
+    0.6,
+    0.8
+  ],
+  "new_lending_limits": [
+    0.0,
+    0.1,
+    0.15,
+    0.2,
+    0.4
+  ],
+  "extra_forced_spreads": [
+    0.0,
+    0.01
+  ],
+  "safety_fraction": 0.9,
+  "source": {
+    "path": "swissquote_collateral_agreement.pdf",
+    "sha256": "af762305b399e925bbe3cbaf517ccb0092328e65320b52902bc5437434edafd2",
+    "source_url": "https://library.swissquote.com/cdn/2958/ql/sqb-collateralised-loan-agreement-en.pdf",
+    "retrieved_date": "2026-10-02",
+    "publisher": "Swissquote Bank Ltd Switzerland",
+    "role": "Preserved public implementation evidence; numerical losses/limits/buffer are researcher-imposed hypotheses, not extracted account offers."
+  },
+  "interpretation": {
+    "state": "Prefee USD7m equity/1.25x target means USD8.75m assets and USD1.75m debt before shock. No entry fee/funding accrual/capital-flow sequence.",
+    "limits": "Effective hypothetical lending fraction changes independently of market losses. Not the voluntary leverage band, historical maintenance LTV or a security-specific approved haircut.",
+    "cure": "No top-up, proportional sales and ordinary costs plus extra forced spread. Ninety-percent utilization buffer is imposed. Zero lending fraction requires full debt repayment.",
+    "failure": "Cannot repay after liquidation retains negative equity/residual debt; no invented solvent cure or guaranteed worst-case bound.",
+    "account": "Preserved source is generic evidence at original retrieval date. Actual eligibility, cure deadlines, execution, settlement and rates require separate account evidence. This calculation grants no credit approval.",
+    "main": "The absolute primary/capped-relative historical comparison and all economic inputs remain unchanged. No modeled historical lender action or live trade."
+  }
+}

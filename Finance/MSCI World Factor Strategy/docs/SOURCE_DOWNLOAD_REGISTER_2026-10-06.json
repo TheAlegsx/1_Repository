@@ -1,0 +1,615 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-06",
+  "scope": "Consolidated saved-source metadata for report preparation; not new retrieval, licence clearance or public data delivery.",
+  "sources": [
+    {
+      "id": "core",
+      "category": "raw_market_or_metadata",
+      "role": "core",
+      "local_input": "ishares/iShares-Core-MSCI-World-UCITS-ETF_fund.xls",
+      "sha256": "b92b5d99e6a246ad565611477b78b8c8abb6b888fc39ca4f2f0bb9a7cde6b2c3",
+      "publisher": "BlackRock / iShares",
+      "source_url": "https://www.ishares.com/ch/individual/en/products/251882/ishares-core-msci-world-ucits-etf",
+      "retrieved_date": "2026-09-27",
+      "date_basis": "saved source manifest",
+      "publication_treatment": "raw and detailed provider-derived material local",
+      "identity": "IE00B4L5Y983",
+      "limitations": [
+        "NAV observations have provider display precision; later product facts do not reconstruct historical costs."
+      ]
+    },
+    {
+      "id": "momentum",
+      "category": "raw_market_or_metadata",
+      "role": "momentum",
+      "local_input": "ishares/iShares-Edge-MSCI-World-Momentum-Factor-UCITS-ETF-USD-Acc_fund.xls",
+      "sha256": "adcade34f6693ab5fe9b82fd5ba3b69308f164056f5f04e8ffb1a1074508056e",
+      "publisher": "BlackRock / iShares",
+      "source_url": "https://www.ishares.com/uk/individual/en/products/270051/ishares-msci-world-momentum-factor-ucits-etf",
+      "retrieved_date": "2026-09-27",
+      "date_basis": "saved source manifest",
+      "publication_treatment": "raw and detailed provider-derived material local",
+      "identity": "IE00BP3QZ825",
+      "limitations": [
+        "NAV observations have provider display precision; later product facts do not reconstruct historical costs."
+      ]
+    },
+    {
+      "id": "quality",
+      "category": "raw_market_or_metadata",
+      "role": "quality",
+      "local_input": "ishares/iShares-Edge-MSCI-World-Quality-Factor-UCITS-ETF-USD-Acc_fund.xls",
+      "sha256": "34918d1d611c9137e5c591be212b03775d815691e12204704459ba443a28682f",
+      "publisher": "BlackRock / iShares",
+      "source_url": "https://www.ishares.com/uk/individual/en/products/270054/ishares-msci-world-quality-factor-ucits-etf",
+      "retrieved_date": "2026-09-27",
+      "date_basis": "saved source manifest",
+      "publication_treatment": "raw and detailed provider-derived material local",
+      "identity": "IE00BP3QZ601",
+      "limitations": [
+        "NAV observations have provider display precision; later product facts do not reconstruct historical costs."
+      ]
+    },
+    {
+      "id": "value",
+      "category": "raw_market_or_metadata",
+      "role": "value",
+      "local_input": "ishares/iShares-Edge-MSCI-World-Value-Factor-UCITS-ETF-USD-Acc_fund.xls",
+      "sha256": "3ee0de7b73a5d9655cfda1852ad0f07d9f14058fbb359bb6788766e98ca1fa6f",
+      "publisher": "BlackRock / iShares",
+      "source_url": "https://www.ishares.com/uk/individual/en/products/270048/ishares-msci-world-value-factor-ucits-etf",
+      "retrieved_date": "2026-09-27",
+      "date_basis": "saved source manifest",
+      "publication_treatment": "raw and detailed provider-derived material local",
+      "identity": "IE00BP3QZB59",
+      "limitations": [
+        "NAV observations have provider display precision; later product facts do not reconstruct historical costs."
+      ]
+    },
+    {
+      "id": "ishares_manifest",
+      "category": "raw_market_or_metadata",
+      "role": "ishares_manifest",
+      "local_input": "ishares/source_manifest.json",
+      "sha256": "eb54866ca41b134c94e5409b1b18b6f894dc10eb2e00082f503fe4483f7331b7",
+      "publisher": "Project provenance for iShares exports",
+      "source_url": null,
+      "retrieved_date": "2026-09-27",
+      "date_basis": "manifest retrieval_date",
+      "publication_treatment": "raw and detailed provider-derived material local",
+      "identity": null,
+      "limitations": []
+    },
+    {
+      "id": "funding_manifest",
+      "category": "raw_market_or_metadata",
+      "role": "funding_manifest",
+      "local_input": "rates/new_york_fed/source_manifest.json",
+      "sha256": "3bf3dac9f40ad9faad2ba4cb4d73f761cc41cd878695c183c899eec01e53d954",
+      "publisher": "Project provenance for New York Fed series",
+      "source_url": null,
+      "retrieved_date": "2026-09-28",
+      "date_basis": "manifest retrieval_date",
+      "publication_treatment": "raw and detailed provider-derived material local",
+      "identity": null,
+      "limitations": []
+    },
+    {
+      "id": "indicative_sofr",
+      "category": "raw_market_or_metadata",
+      "role": "indicative_sofr",
+      "local_input": "rates/new_york_fed/Data Release.xlsx",
+      "sha256": "1c889930bca90edb58c6fe6c4d219f1366261ab9b3e5e0ad54d9a7e62e102180",
+      "publisher": "Federal Reserve Bank of New York",
+      "source_url": "https://www.newyorkfed.org/medialibrary/media/markets/Data%20Release.xlsx",
+      "retrieved_date": "2026-09-28",
+      "date_basis": "saved source manifest",
+      "publication_treatment": "raw and detailed provider-derived material local",
+      "identity": null,
+      "limitations": [
+        "Reference proxy; not actual portfolio lender rates. Saved terms/notice remain applicable; no new rights determination."
+      ],
+      "units": "basis points",
+      "series_status": "indicative"
+    },
+    {
+      "id": "official_sofr",
+      "category": "raw_market_or_metadata",
+      "role": "official_sofr",
+      "local_input": "rates/new_york_fed/sofr_official_2018-04-02_2026-08-31.json",
+      "sha256": "16031a7ffb8865e9fd7eb066ab119198edca696eba4278f455c30c892d952ecf",
+      "publisher": "Federal Reserve Bank of New York",
+      "source_url": "https://markets.newyorkfed.org/api/rates/secured/sofr/search.json?startDate=2018-04-02&endDate=2026-08-31&type=rate",
+      "retrieved_date": "2026-09-28",
+      "date_basis": "saved source manifest",
+      "publication_treatment": "raw and detailed provider-derived material local",
+      "identity": null,
+      "limitations": [
+        "Reference proxy; not actual portfolio lender rates. Saved terms/notice remain applicable; no new rights determination."
+      ],
+      "units": "percent per annum",
+      "series_status": "official"
+    },
+    {
+      "id": "dimensional",
+      "category": "raw_market_or_metadata",
+      "role": "dimensional",
+      "local_input": "bloomberg/DIMGCEA ID Equity grid_vwffhilo.xlsx",
+      "sha256": "6e0011e52f8bf51de4d0d694c2ef5cd1ed88e2fdb2f5ef8dbce3a535dc42f667",
+      "publisher": "Bloomberg, author-supplied hardcopy",
+      "source_url": null,
+      "retrieved_date": null,
+      "date_basis": "unknown for this primary hardcopy",
+      "publication_treatment": "raw and detailed provider-derived material local",
+      "identity": null,
+      "limitations": [
+        "No independent terminal retrieval log or complete alternative price feed. User-confirmed Dimensional share-class mapping is separate from the workbook identity."
+      ]
+    },
+    {
+      "id": "iwda",
+      "category": "raw_market_or_metadata",
+      "role": "iwda",
+      "local_input": "bloomberg/IWDA LN Equity grid_alspwryu.xlsx",
+      "sha256": "1cc4316444c734d768c50bbba4828ef6f74ce45af4eb9ff94c487fd9be9ae172",
+      "publisher": "Bloomberg, author-supplied hardcopy",
+      "source_url": null,
+      "retrieved_date": "2026-09-29",
+      "date_basis": "Reconstructed from author statement, screenshot file list and stored modification metadata; not an independent terminal log or download time.",
+      "publication_treatment": "raw and detailed provider-derived material local",
+      "identity": "IWDA LN Equity",
+      "limitations": [
+        "Listing quotes/index evidence do not replace official fund NAV or establish executions."
+      ]
+    },
+    {
+      "id": "iwmo",
+      "category": "raw_market_or_metadata",
+      "role": "iwmo",
+      "local_input": "bloomberg/IWMO LN Equity grid_udz0kbd5.xlsx",
+      "sha256": "490a393de9f311a16b584789274b489711e669d3b26d5c14feef519a9cc245d2",
+      "publisher": "Bloomberg, author-supplied hardcopy",
+      "source_url": null,
+      "retrieved_date": "2026-09-29",
+      "date_basis": "Reconstructed from author statement, screenshot file list and stored modification metadata; not an independent terminal log or download time.",
+      "publication_treatment": "raw and detailed provider-derived material local",
+      "identity": "IWMO LN Equity",
+      "limitations": [
+        "Listing quotes/index evidence do not replace official fund NAV or establish executions."
+      ]
+    },
+    {
+      "id": "iwqu",
+      "category": "raw_market_or_metadata",
+      "role": "iwqu",
+      "local_input": "bloomberg/IWQU LN Equity grid_xvx03ott.xlsx",
+      "sha256": "98699d4544b5d8eca460cd74e87f7f11ff14507a49d2265c5984ecd8f6c84c7c",
+      "publisher": "Bloomberg, author-supplied hardcopy",
+      "source_url": null,
+      "retrieved_date": "2026-09-29",
+      "date_basis": "Reconstructed from author statement, screenshot file list and stored modification metadata; not an independent terminal log or download time.",
+      "publication_treatment": "raw and detailed provider-derived material local",
+      "identity": "IWQU LN Equity",
+      "limitations": [
+        "Listing quotes/index evidence do not replace official fund NAV or establish executions."
+      ]
+    },
+    {
+      "id": "iwvl",
+      "category": "raw_market_or_metadata",
+      "role": "iwvl",
+      "local_input": "bloomberg/IWVL LN Equity grid_ls5ij4wd.xlsx",
+      "sha256": "7d0cda5150e5a87d2cf2117d2d11184e80461db1eeec8a58b3e2d4251e58c8b3",
+      "publisher": "Bloomberg, author-supplied hardcopy",
+      "source_url": null,
+      "retrieved_date": "2026-09-29",
+      "date_basis": "Reconstructed from author statement, screenshot file list and stored modification metadata; not an independent terminal log or download time.",
+      "publication_treatment": "raw and detailed provider-derived material local",
+      "identity": "IWVL LN Equity",
+      "limitations": [
+        "Listing quotes/index evidence do not replace official fund NAV or establish executions."
+      ]
+    },
+    {
+      "id": "mxwoldnu",
+      "category": "raw_market_or_metadata",
+      "role": "mxwoldnu",
+      "local_input": "bloomberg/MXWOLDNU Index grid_rmi5kiny.xlsx",
+      "sha256": "80c617e83bcb93863a1336ca5ac75f99705557ec9ee81dc241e7e946a5165cd7",
+      "publisher": "Bloomberg, author-supplied hardcopy",
+      "source_url": null,
+      "retrieved_date": "2026-09-29",
+      "date_basis": "Reconstructed from author statement, screenshot file list and stored modification metadata; not an independent terminal log or download time.",
+      "publication_treatment": "raw and detailed provider-derived material local",
+      "identity": "MXWOLDNU Index",
+      "limitations": [
+        "Listing quotes/index evidence do not replace official fund NAV or establish executions."
+      ]
+    },
+    {
+      "id": "amundi_2x",
+      "category": "raw_market_or_metadata",
+      "role": "amundi_2x",
+      "local_input": "amundi/NAV History_Amundi MSCI World (2x) Leveraged UCITS ETF Acc_FR0014010HV4_30_09_2025.xlsx",
+      "sha256": "22f0780124d0ca4609c9f677a4920d03890b3fe5ccfe94a611c11b26bb39ae95",
+      "publisher": "Amundi",
+      "source_url": null,
+      "retrieved_date": null,
+      "date_basis": "unknown; workbook filename/metadata do not establish retrieval",
+      "publication_treatment": "raw and detailed provider-derived material local",
+      "identity": "FR0014010HV4",
+      "limitations": [
+        "Original download URL and date unknown. Product identity checked from saved workbook. No fabricated provider download URL."
+      ]
+    },
+    {
+      "id": "ishares_iii_annual_2023",
+      "category": "annual_report",
+      "local_input": "ishares_iii_annual_2023.pdf",
+      "sha256": "ebff406670c41b6327ae34e0bf143374f5296388c995d0f45eb8eff609ff86f5",
+      "publisher": "iShares III plc",
+      "retrieved_date": "2026-10-02",
+      "date_basis": "saved retrieval metadata",
+      "snapshot_date": "2023-06-30",
+      "source_url": "https://www.ishares.com/gls-download/literature/annual-report/ishares-iii-plc-annual-report-en-30-jun-23.pdf",
+      "publisher_library": null,
+      "document_id": null,
+      "original_url_sha256": null,
+      "snapshots": 1,
+      "publication_treatment": "PDF and detailed extracted holdings local",
+      "limitations": [
+        "Non-synchronized dates; sparse security lines, not daily attribution."
+      ]
+    },
+    {
+      "id": "ishares_iii_annual_2024",
+      "category": "annual_report",
+      "local_input": "ishares_iii_annual_2024.pdf",
+      "sha256": "31fc20d26ce09dcb3cd631d3bae450b8a8dd00c687310dc00e9cf2684d9c9ea8",
+      "publisher": "iShares III plc",
+      "retrieved_date": "2026-10-02",
+      "date_basis": "saved retrieval metadata",
+      "snapshot_date": "2024-06-30",
+      "source_url": "https://www.ishares.com/gls-download/literature/annual-report/ishares-iii-plc-annual-report-en-30-jun-24.pdf",
+      "publisher_library": null,
+      "document_id": null,
+      "original_url_sha256": null,
+      "snapshots": 1,
+      "publication_treatment": "PDF and detailed extracted holdings local",
+      "limitations": [
+        "Non-synchronized dates; sparse security lines, not daily attribution."
+      ]
+    },
+    {
+      "id": "ishares_iii_annual_2025",
+      "category": "annual_report",
+      "local_input": "ishares_iii_annual_2025.pdf",
+      "sha256": "5860b6d64aae118f1b42a3f2cb865ecc0b391ec9fdfb068ae8270365f491e71c",
+      "publisher": "iShares III plc",
+      "retrieved_date": "2026-10-02",
+      "date_basis": "saved retrieval metadata",
+      "snapshot_date": "2025-06-30",
+      "source_url": "https://www.ishares.com/gls-download/literature/annual-report/ishares-iii-plc-annual-report-en-30-jun-25.pdf",
+      "publisher_library": null,
+      "document_id": null,
+      "original_url_sha256": null,
+      "snapshots": 1,
+      "publication_treatment": "PDF and detailed extracted holdings local",
+      "limitations": [
+        "Non-synchronized dates; sparse security lines, not daily attribution."
+      ]
+    },
+    {
+      "id": "ishares_iv_annual_2024",
+      "category": "annual_report",
+      "local_input": "ishares_iv_annual_2024.pdf",
+      "sha256": "7ec2643e6bfb64ebc9ce1a0097a5f5d9a681e7572adf217839d12d7d15c0bff8",
+      "publisher": "iShares IV plc",
+      "retrieved_date": "2026-10-02",
+      "date_basis": "saved retrieval metadata",
+      "snapshot_date": "2024-05-31",
+      "source_url": "https://www.ishares.com/gls-download/literature/annual-report/ishares-iv-plc-annual-report-en-31-may-24.pdf",
+      "publisher_library": null,
+      "document_id": null,
+      "original_url_sha256": null,
+      "snapshots": 3,
+      "publication_treatment": "PDF and detailed extracted holdings local",
+      "limitations": [
+        "Non-synchronized dates; sparse security lines, not daily attribution."
+      ]
+    },
+    {
+      "id": "ishares_iv_annual_2025",
+      "category": "annual_report",
+      "local_input": "ishares_iv_annual_2025.pdf",
+      "sha256": "6f5aa737d553d42a27787f93d674f88c0f85ccb9631297e07e10b7056d45028d",
+      "publisher": "iShares IV plc",
+      "retrieved_date": "2026-10-02",
+      "date_basis": "saved retrieval metadata",
+      "snapshot_date": "2025-05-31",
+      "source_url": "https://www.ishares.com/gls-download/literature/annual-report/ishares-iv-plc-annual-report-en-31-may-25.pdf",
+      "publisher_library": null,
+      "document_id": null,
+      "original_url_sha256": null,
+      "snapshots": 3,
+      "publication_treatment": "PDF and detailed extracted holdings local",
+      "limitations": [
+        "Non-synchronized dates; sparse security lines, not daily attribution."
+      ]
+    },
+    {
+      "id": "ishares_iv_annual_2026",
+      "category": "annual_report",
+      "local_input": "ishares_iv_annual_2026.pdf",
+      "sha256": "2160e614e6b1a252fccaa373e7b17bb004e5b347103910b4757f12ffe1f36f09",
+      "publisher": "iShares IV plc",
+      "retrieved_date": "2026-10-02",
+      "date_basis": "saved retrieval metadata",
+      "snapshot_date": "2026-05-31",
+      "source_url": "https://www.ishares.com/gls-download/literature/annual-report/ishares-iv-plc-annual-report-en-31-may-26.pdf",
+      "publisher_library": null,
+      "document_id": null,
+      "original_url_sha256": null,
+      "snapshots": 3,
+      "publication_treatment": "PDF and detailed extracted holdings local",
+      "limitations": [
+        "Non-synchronized dates; sparse security lines, not daily attribution."
+      ]
+    },
+    {
+      "id": "dimensional_annual_2024",
+      "category": "annual_report",
+      "local_input": "dimensional_annual_2024.pdf",
+      "sha256": "2e6ce90d2370a4b494b05ecbb45f364403e4e8bc7946c8bd72d8b782b59a974d",
+      "publisher": "Dimensional Funds plc",
+      "retrieved_date": "2026-10-02",
+      "date_basis": "saved retrieval metadata",
+      "snapshot_date": "2024-11-30",
+      "source_url": null,
+      "publisher_library": "https://www.fundslibrary.co.uk/",
+      "document_id": "eaa6cc4c-d03d-424d-8837-51be8a7f4e1f",
+      "original_url_sha256": "b3a8d6b30d31b99edd3bf8b44889775810af96addfd88ba5d7c1f5f2ae23787a",
+      "snapshots": 1,
+      "publication_treatment": "PDF and detailed extracted holdings local",
+      "limitations": [
+        "Non-synchronized dates; sparse security lines, not daily attribution.",
+        "Exact original URL contains tracking/user parameters; retained privately, not exported. Library and document identity retained; no sanitized link claimed to be the original download."
+      ]
+    },
+    {
+      "id": "dimensional_annual_2025",
+      "category": "annual_report",
+      "local_input": "dimensional_annual_2025.pdf",
+      "sha256": "e7ab45092e5ab7a59c22037d4c9727dc41179564e78076dcff068ff98f58e2bc",
+      "publisher": "Dimensional Funds plc",
+      "retrieved_date": "2026-10-02",
+      "date_basis": "saved retrieval metadata",
+      "snapshot_date": "2025-11-30",
+      "source_url": null,
+      "publisher_library": "https://www.fundslibrary.co.uk/",
+      "document_id": "374e6ccf-35ca-474a-bec3-8e0fd0569ff9",
+      "original_url_sha256": "2e876a5655d8650613d4accc69a2f4669b9730b0b3984ee35c613c13101f1b63",
+      "snapshots": 1,
+      "publication_treatment": "PDF and detailed extracted holdings local",
+      "limitations": [
+        "Non-synchronized dates; sparse security lines, not daily attribution.",
+        "Exact original URL contains tracking/user parameters; retained privately, not exported. Library and document identity retained; no sanitized link claimed to be the original download."
+      ]
+    },
+    {
+      "id": "swissquote_collateral_agreement",
+      "category": "dated_banking_document",
+      "publisher": "Swissquote Bank Ltd Switzerland",
+      "source_url": "https://library.swissquote.com/cdn/2958/ql/sqb-collateralised-loan-agreement-en.pdf",
+      "retrieved_date": "2026-10-02",
+      "date_basis": "saved download manifest",
+      "sha256": "af762305b399e925bbe3cbaf517ccb0092328e65320b52902bc5437434edafd2",
+      "publication_treatment": "cached document local; cited public publisher page",
+      "limitations": [
+        "Public current-cost/account evidence, not an individual credit offer, executable tariff or historical account record."
+      ]
+    },
+    {
+      "id": "swissquote_account_fees",
+      "category": "dated_banking_document",
+      "publisher": "Swissquote Bank Ltd Switzerland",
+      "source_url": "https://www.swissquote.com/en-ch/private/trade/pricing/account-fees",
+      "retrieved_date": "2026-10-02",
+      "date_basis": "saved download manifest",
+      "sha256": "5dbeb75599461d711f57f81081083ee7793d0bf71e26bc19991e09684a98bee7",
+      "publication_treatment": "cached document local; cited public publisher page",
+      "limitations": [
+        "Public current-cost/account evidence, not an individual credit offer, executable tariff or historical account record."
+      ]
+    },
+    {
+      "id": "swissquote_lombard",
+      "category": "dated_banking_document",
+      "publisher": "Swissquote Bank Ltd Switzerland",
+      "source_url": "https://www.swissquote.com/en-ch/private/trade/products/securities/lombard-loan",
+      "retrieved_date": "2026-10-02",
+      "date_basis": "saved download manifest",
+      "sha256": "84c0d5af10f0e6f5d7fbc391d4abc0290ba22608c1011797b0cabc34b4a3e255",
+      "publication_treatment": "cached document local; cited public publisher page",
+      "limitations": [
+        "Public current-cost/account evidence, not an individual credit offer, executable tariff or historical account record."
+      ]
+    },
+    {
+      "id": "swissquote_fund_fees",
+      "category": "dated_banking_document",
+      "publisher": "Swissquote Bank Ltd Switzerland",
+      "source_url": "https://www.swissquote.com/en-ch/private/trade/pricing/securities/funds",
+      "retrieved_date": "2026-10-02",
+      "date_basis": "saved download manifest",
+      "sha256": "5f0a46b6c32e9d0490a2c93fa99ae85b33c5936d6de9d17115d64e288a29361f",
+      "publication_treatment": "cached document local; cited public publisher page",
+      "limitations": [
+        "Public current-cost/account evidence, not an individual credit offer, executable tariff or historical account record."
+      ]
+    },
+    {
+      "id": "commission_tariff",
+      "category": "existing_reference_citation",
+      "publisher": "Swissquote",
+      "source_url": "https://www.swissquote.com/de-ch/private/trade/pricing/securities/stocks",
+      "retrieved_date": null,
+      "date_basis": "original access date not independently recorded by this consolidation",
+      "original_evidence_sha256": "0ade219a19cd37063371b54b19bcd5c54f44a522a0f0d200007d8a7f3499e7e8",
+      "publication_treatment": "citation; no copied source document",
+      "limitations": [
+        "Attribution to preserved source only; not fetched or reverified online in this block. Conceptual or assumption evidence is distinct from numerical result generation."
+      ]
+    },
+    {
+      "id": "stamp_duty",
+      "category": "existing_reference_citation",
+      "publisher": "Swiss Federal Tax Administration",
+      "source_url": "https://www.estv.admin.ch/de/umsatzabgabe-kurz-erklaert",
+      "retrieved_date": null,
+      "date_basis": "original access date not independently recorded by this consolidation",
+      "original_evidence_sha256": "0ade219a19cd37063371b54b19bcd5c54f44a522a0f0d200007d8a7f3499e7e8",
+      "publication_treatment": "citation; no copied source document",
+      "limitations": [
+        "Attribution to preserved source only; not fetched or reverified online in this block. Conceptual or assumption evidence is distinct from numerical result generation."
+      ]
+    },
+    {
+      "id": "commission_fx",
+      "category": "existing_reference_citation",
+      "publisher": "ECB / Official Journal",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:C_202604112",
+      "retrieved_date": null,
+      "date_basis": "original access date not independently recorded by this consolidation",
+      "original_evidence_sha256": "0ade219a19cd37063371b54b19bcd5c54f44a522a0f0d200007d8a7f3499e7e8",
+      "publication_treatment": "citation; no copied source document",
+      "limitations": [
+        "Attribution to preserved source only; not fetched or reverified online in this block. Conceptual or assumption evidence is distinct from numerical result generation."
+      ]
+    },
+    {
+      "id": "dimensional_kid",
+      "category": "existing_reference_citation",
+      "publisher": "Dimensional Funds plc / FundAssist",
+      "source_url": "https://expressapi.fundassist.com/v1/api//Files/f66fe82a-b9a3-ed11-a85b-005056a103bb/1",
+      "retrieved_date": null,
+      "date_basis": "original access date not independently recorded by this consolidation",
+      "original_evidence_sha256": "92a7b6b3c9cb36fed31c92599d4d32c78a0adb85e9b49f281507c0eed3b11b97",
+      "publication_treatment": "citation; no copied source document",
+      "limitations": [
+        "Attribution to preserved source only; not fetched or reverified online in this block. Conceptual or assumption evidence is distinct from numerical result generation."
+      ]
+    },
+    {
+      "id": "sofr_explanation",
+      "category": "existing_reference_citation",
+      "publisher": "Federal Reserve Bank of New York",
+      "source_url": "https://libertystreeteconomics.newyorkfed.org/2017/06/introducing-the-revised-broad-treasuries-financing-rate/",
+      "retrieved_date": null,
+      "date_basis": "original access date not independently recorded by this consolidation",
+      "original_evidence_sha256": "92a7b6b3c9cb36fed31c92599d4d32c78a0adb85e9b49f281507c0eed3b11b97",
+      "publication_treatment": "citation; no copied source document",
+      "limitations": [
+        "Attribution to preserved source only; not fetched or reverified online in this block. Conceptual or assumption evidence is distinct from numerical result generation."
+      ]
+    },
+    {
+      "id": "risk_measures",
+      "category": "existing_reference_citation",
+      "publisher": "CFA Institute",
+      "source_url": "https://rpc.cfainstitute.org/topics/performance-attribution/risk-adjusted-performance",
+      "retrieved_date": null,
+      "date_basis": "original access date not independently recorded by this consolidation",
+      "original_evidence_sha256": "4ffd4700fca98aa2d62ba16de35163b86940b5564457c8fd9896d0c170d11edb",
+      "publication_treatment": "citation; no copied source document",
+      "limitations": [
+        "Attribution to preserved source only; not fetched or reverified online in this block. Conceptual or assumption evidence is distinct from numerical result generation."
+      ]
+    },
+    {
+      "id": "inflow_terminology",
+      "category": "existing_reference_citation",
+      "publisher": "Investor.gov / U.S. SEC",
+      "source_url": "https://www.investor.gov/introduction-investing/general-resources/news-alerts/alerts-bulletins/investor-bulletins/mutual-fund-and-etf-fees-and-expenses-investor-bulletin",
+      "retrieved_date": null,
+      "date_basis": "original access date not independently recorded by this consolidation",
+      "original_evidence_sha256": "b73674aa1ee08882a501c1a3bb3cfb3292f519852183148038a808cea3663fcd",
+      "publication_treatment": "citation; no copied source document",
+      "limitations": [
+        "Attribution to preserved source only; not fetched or reverified online in this block. Conceptual or assumption evidence is distinct from numerical result generation."
+      ]
+    },
+    {
+      "id": "core_published_annual_performance",
+      "category": "existing_reference_citation",
+      "publisher": "BlackRock / iShares",
+      "source_url": "https://www.ishares.com/uk/individual/en/products/251882/ishares-msci-world-ucits-etf-acc-fund",
+      "retrieved_date": null,
+      "accessed_date": "2026-10-02",
+      "date_basis": "Saved external-source register records access on 2 October 2026; NAV download date is separate.",
+      "original_evidence_sha256": "92a7b6b3c9cb36fed31c92599d4d32c78a0adb85e9b49f281507c0eed3b11b97",
+      "publication_treatment": "Publisher citation and retained rounded comparison; no newly downloaded page.",
+      "limitations": [
+        "2016\u20132025 published annual performance and dated product/cost facts. Forty observations are a rounding cross-check, not a second daily NAV feed."
+      ]
+    },
+    {
+      "id": "momentum_published_annual_performance",
+      "category": "existing_reference_citation",
+      "publisher": "BlackRock / iShares",
+      "source_url": "https://www.ishares.com/uk/individual/en/products/270051/ishares-msci-world-momentum-factor-ucits-etf",
+      "retrieved_date": null,
+      "accessed_date": "2026-10-02",
+      "date_basis": "Saved external-source register records access on 2 October 2026; NAV download date is separate.",
+      "original_evidence_sha256": "92a7b6b3c9cb36fed31c92599d4d32c78a0adb85e9b49f281507c0eed3b11b97",
+      "publication_treatment": "Publisher citation and retained rounded comparison; no newly downloaded page.",
+      "limitations": [
+        "2016\u20132025 published annual performance and dated product/cost facts. Forty observations are a rounding cross-check, not a second daily NAV feed."
+      ]
+    },
+    {
+      "id": "quality_published_annual_performance",
+      "category": "existing_reference_citation",
+      "publisher": "BlackRock / iShares",
+      "source_url": "https://www.ishares.com/uk/individual/en/products/270054/ishares-msci-world-quality-factor-ucits-etf",
+      "retrieved_date": null,
+      "accessed_date": "2026-10-02",
+      "date_basis": "Saved external-source register records access on 2 October 2026; NAV download date is separate.",
+      "original_evidence_sha256": "92a7b6b3c9cb36fed31c92599d4d32c78a0adb85e9b49f281507c0eed3b11b97",
+      "publication_treatment": "Publisher citation and retained rounded comparison; no newly downloaded page.",
+      "limitations": [
+        "2016\u20132025 published annual performance and dated product/cost facts. Forty observations are a rounding cross-check, not a second daily NAV feed."
+      ]
+    },
+    {
+      "id": "value_published_annual_performance",
+      "category": "existing_reference_citation",
+      "publisher": "BlackRock / iShares",
+      "source_url": "https://www.ishares.com/uk/individual/en/products/270048/ishares-msci-world-value-factor-ucits-etf",
+      "retrieved_date": null,
+      "accessed_date": "2026-10-02",
+      "date_basis": "Saved external-source register records access on 2 October 2026; NAV download date is separate.",
+      "original_evidence_sha256": "92a7b6b3c9cb36fed31c92599d4d32c78a0adb85e9b49f281507c0eed3b11b97",
+      "publication_treatment": "Publisher citation and retained rounded comparison; no newly downloaded page.",
+      "limitations": [
+        "2016\u20132025 published annual performance and dated product/cost facts. Forty observations are a rounding cross-check, not a second daily NAV feed."
+      ]
+    }
+  ],
+  "raw_input_count": 23,
+  "annual_snapshot_count": 14,
+  "open_provenance": [
+    "Amundi original download date and exact URL unknown.",
+    "Bloomberg export dates are reconstructed where declared, not independent terminal records; primary Dimensional retrieval time unconfirmed.",
+    "Generic bank pricing and collateral terms do not resolve actual account category, execution or financing agreement."
+  ],
+  "ai_source": "docs/AI_USE.md",
+  "ai_scope": "Extensive assistance in Alex\u2019s research contribution; original providers remain the sources of external observations.",
+  "model_assumptions": [
+    "60/15/10/15 allocation and absolute separate-leverage choice: author design, not fitted provider facts.",
+    "Capital-inflow plans, retention, 5bp administration fee and manager budgets: adjustable discussion assumptions, not observed fundraising.",
+    "Original 0/6-percent and loss paths: explicitly hypothetical; historical branch reads actual portfolio path and models cash-flow feedback."
+  ],
+  "online_reverification_performed": false
+}

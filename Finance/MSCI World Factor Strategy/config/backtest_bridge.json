@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "period": "full",
+  "factor_policy": "hybrid20",
+  "cases": [
+    {"id": "core_unlevered_net", "strategy": "core", "leverage": 1.0, "reference_interest": true, "margin_source": "baseline", "transaction_costs": true},
+    {"id": "factor_unlevered_net", "strategy": "factor", "leverage": 1.0, "reference_interest": true, "margin_source": "baseline", "transaction_costs": true},
+    {"id": "factor_levered_zero_interest", "strategy": "factor", "leverage": 1.25, "reference_interest": false, "margin_source": "zero", "transaction_costs": true},
+    {"id": "factor_levered_reference_only", "strategy": "factor", "leverage": 1.25, "reference_interest": true, "margin_source": "zero", "transaction_costs": true},
+    {"id": "factor_levered_baseline", "strategy": "factor", "leverage": 1.25, "reference_interest": true, "margin_source": "baseline", "transaction_costs": true},
+    {"id": "factor_unlevered_zero_trading", "strategy": "factor", "leverage": 1.0, "reference_interest": true, "margin_source": "baseline", "transaction_costs": false},
+    {"id": "factor_levered_zero_trading", "strategy": "factor", "leverage": 1.25, "reference_interest": true, "margin_source": "baseline", "transaction_costs": false}
+  ],
+  "sequence": ["core_unlevered_net", "factor_unlevered_net", "factor_levered_zero_interest", "factor_levered_reference_only", "factor_levered_baseline"],
+  "controls": [
+    {"id": "unlevered_trading_cost_control", "from": "factor_unlevered_net", "to": "factor_unlevered_zero_trading"},
+    {"id": "levered_trading_cost_control", "from": "factor_levered_baseline", "to": "factor_levered_zero_trading"}
+  ],
+  "scope": "Seven full-period counterfactual cases and order-dependent differences. Removing interest changes financing only; risk metrics still use observed reference rates and the unlevered net-cost Core benchmark. Zero trading costs retain the trading policy. Not an additive causal attribution."
+}

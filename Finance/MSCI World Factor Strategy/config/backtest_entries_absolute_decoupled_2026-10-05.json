@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "requested_starts": ["2014-10-03", "2015-01-01", "2016-01-01", "2017-01-01", "2018-01-01", "2019-01-01", "2020-01-01", "2021-01-01", "2022-01-01", "2023-01-01", "2024-01-01"],
+  "factor_policies": ["absolute_decoupled", "hybrid20"],
+  "leverage_levels": [1.0, 1.25],
+  "comparison_policy": "hybrid20",
+  "comparison_cagr_tolerance": 1e-9,
+  "research_reference_starts": ["2014-10-03", "2015-01-01", "2016-01-01", "2017-01-01", "2018-01-01", "2019-01-01", "2020-01-01", "2021-01-01", "2022-01-01", "2023-01-01"],
+  "legacy_reference_starts": ["2014-10-03", "2017-01-01", "2020-01-01", "2022-01-01", "2024-01-01"],
+  "scope": "Fresh capital/debt/entry-cost restarts on the first common NAV on or after each requested date, fixed original cutoff. Both factor policies and two investment benchmarks at both exposures. Retrospectively selected dates and unequal, overlapping horizons; no independent samples, probability estimate or prospective validation claim. Preserve the original ten-date research comparison and five-date legacy reference separately."
+}

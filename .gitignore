@@ -1,0 +1,7 @@
+# macOS directory metadata
+.DS_Store
+
+# Local environment credentials
+.env
+.env.*
+!.env.example

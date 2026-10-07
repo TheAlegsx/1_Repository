@@ -1,0 +1,210 @@
+{
+  "schema_version": 1,
+  "scope": "Nine May year-end factor equity schedules and contemporaneous historical reported-name/currency overlap. Core and Dimensional dates remain separate.",
+  "measurement": {
+    "scope": "Equities only",
+    "currency": "USD",
+    "value_units": "USD thousands",
+    "shares_units": "units",
+    "weights": "fair value divided by disclosed fund NAV",
+    "equity_total": "exact published equity value",
+    "country_totals": "exact published country values",
+    "rounding_tolerance": "(security lines + 1) * 0.5 + 1 USD thousands",
+    "country_percent_tolerance_base": 0.006,
+    "country_percent_precision": "0.01 percentage points",
+    "top_positions": 10,
+    "sector_attribution": false,
+    "synchronize_snapshots": false,
+    "funds": [
+      "momentum",
+      "quality",
+      "value"
+    ],
+    "snapshot_month_day": "05-31",
+    "overlap_key": "exact reported name with whitespace normalized + trading currency",
+    "overlap_denominator": "summed equity fair value in each dated fund",
+    "overlap": "sum of smaller matched equity-normalized weights"
+  },
+  "sources": [
+    {
+      "path": "ishares_iv_annual_2024.pdf",
+      "sha256": "7ec2643e6bfb64ebc9ce1a0097a5f5d9a681e7572adf217839d12d7d15c0bff8",
+      "snapshot_date": "2024-05-31",
+      "source_url": "https://www.ishares.com/gls-download/literature/annual-report/ishares-iv-plc-annual-report-en-31-may-24.pdf",
+      "retrieved_date": "2026-10-02",
+      "author": "iShares IV plc",
+      "reported_currency": "USD"
+    },
+    {
+      "path": "ishares_iv_annual_2025.pdf",
+      "sha256": "6f5aa737d553d42a27787f93d674f88c0f85ccb9631297e07e10b7056d45028d",
+      "snapshot_date": "2025-05-31",
+      "source_url": "https://www.ishares.com/gls-download/literature/annual-report/ishares-iv-plc-annual-report-en-31-may-25.pdf",
+      "retrieved_date": "2026-10-02",
+      "author": "iShares IV plc",
+      "reported_currency": "USD"
+    },
+    {
+      "path": "ishares_iv_annual_2026.pdf",
+      "sha256": "2160e614e6b1a252fccaa373e7b17bb004e5b347103910b4757f12ffe1f36f09",
+      "snapshot_date": "2026-05-31",
+      "source_url": "https://www.ishares.com/gls-download/literature/annual-report/ishares-iv-plc-annual-report-en-31-may-26.pdf",
+      "retrieved_date": "2026-10-02",
+      "author": "iShares IV plc",
+      "reported_currency": "USD"
+    }
+  ],
+  "schedules": [
+    {
+      "path": "ishares_iv_annual_2024.pdf",
+      "fund": "momentum",
+      "fund_identity": "iShares Edge MSCI World Momentum Factor UCITS ETF",
+      "snapshot_date": "2024-05-31",
+      "pages_1based": [
+        428,
+        429,
+        430,
+        431,
+        432,
+        433,
+        434
+      ],
+      "expected_holdings": 349,
+      "expected_country_groups": 24
+    },
+    {
+      "path": "ishares_iv_annual_2024.pdf",
+      "fund": "quality",
+      "fund_identity": "iShares Edge MSCI World Quality Factor UCITS ETF",
+      "snapshot_date": "2024-05-31",
+      "pages_1based": [
+        445,
+        446,
+        447,
+        448,
+        449,
+        450
+      ],
+      "expected_holdings": 298,
+      "expected_country_groups": 26
+    },
+    {
+      "path": "ishares_iv_annual_2024.pdf",
+      "fund": "value",
+      "fund_identity": "iShares Edge MSCI World Value Factor UCITS ETF",
+      "snapshot_date": "2024-05-31",
+      "pages_1based": [
+        465,
+        466,
+        467,
+        468,
+        469,
+        470,
+        471,
+        472
+      ],
+      "expected_holdings": 401,
+      "expected_country_groups": 25
+    },
+    {
+      "path": "ishares_iv_annual_2025.pdf",
+      "fund": "momentum",
+      "fund_identity": "iShares Edge MSCI World Momentum Factor UCITS ETF",
+      "snapshot_date": "2025-05-31",
+      "pages_1based": [
+        430,
+        431,
+        432,
+        433,
+        434
+      ],
+      "expected_holdings": 349,
+      "expected_country_groups": 25
+    },
+    {
+      "path": "ishares_iv_annual_2025.pdf",
+      "fund": "quality",
+      "fund_identity": "iShares Edge MSCI World Quality Factor UCITS ETF",
+      "snapshot_date": "2025-05-31",
+      "pages_1based": [
+        435,
+        436,
+        437,
+        438,
+        439
+      ],
+      "expected_holdings": 298,
+      "expected_country_groups": 26
+    },
+    {
+      "path": "ishares_iv_annual_2025.pdf",
+      "fund": "value",
+      "fund_identity": "iShares Edge MSCI World Value Factor UCITS ETF",
+      "snapshot_date": "2025-05-31",
+      "pages_1based": [
+        440,
+        441,
+        442,
+        443,
+        444,
+        445
+      ],
+      "expected_holdings": 399,
+      "expected_country_groups": 26
+    },
+    {
+      "path": "ishares_iv_annual_2026.pdf",
+      "fund": "momentum",
+      "fund_identity": "iShares Edge MSCI World Momentum Factor UCITS ETF",
+      "snapshot_date": "2026-05-31",
+      "pages_1based": [
+        456,
+        457,
+        458,
+        459,
+        460
+      ],
+      "expected_holdings": 350,
+      "expected_country_groups": 27
+    },
+    {
+      "path": "ishares_iv_annual_2026.pdf",
+      "fund": "quality",
+      "fund_identity": "iShares Edge MSCI World Quality Factor UCITS ETF",
+      "snapshot_date": "2026-05-31",
+      "pages_1based": [
+        461,
+        462,
+        463,
+        464,
+        465
+      ],
+      "expected_holdings": 299,
+      "expected_country_groups": 27
+    },
+    {
+      "path": "ishares_iv_annual_2026.pdf",
+      "fund": "value",
+      "fund_identity": "iShares Edge MSCI World Value Factor UCITS ETF",
+      "snapshot_date": "2026-05-31",
+      "pages_1based": [
+        466,
+        467,
+        468,
+        469,
+        470,
+        471
+      ],
+      "expected_holdings": 399,
+      "expected_country_groups": 26
+    }
+  ],
+  "interpretation": {
+    "dates": "Momentum/Quality/Value share May 2024/2025/2026 dates only. Do not synchronize with Core June or Dimensional November snapshots.",
+    "denominators": "Concentration/country weights use disclosed fund NAV. Historical pairwise overlap separately normalizes each fund's summed equity fair values.",
+    "matching": "Exact reported security name and trading currency after whitespace normalization. Duplicate lines add; listings/classes/name variants remain separate. No ISIN or consolidated issuer master.",
+    "scope": "Equities only, not holdings interpolation, sector attribution or causal return explanation. Country incorporation taxonomy retained; not economic emerging-market exposure.",
+    "later_comparison": "Later September snapshot uses ticker/name/currency and unrenormalized fund weights. Its overlap measure must not be substituted for the historical definition.",
+    "download": "Preserved manufacturer source URLs and 2 October 2026 retrieval records. Local copies are not new downloads."
+  }
+}

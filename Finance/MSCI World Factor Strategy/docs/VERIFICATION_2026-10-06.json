@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-06",
+  "scope": "Prepared publication checkout verified locally; actual-GitHub reconstruction pending",
+  "platform": "macOS ARM64; Python3.12.14",
+  "tests_passed": 439,
+  "subtests_passed": 9,
+  "evidence_jobs_completed": 14,
+  "exact_reference_csv_files": 598,
+  "reader_versions": {
+    "backtest": 13,
+    "capital_inflows": 9
+  },
+  "selected_analytical_tables": 23,
+  "dynamic_claims": 56,
+  "figures": 3,
+  "pdf_pages": {
+    "backtest": 10,
+    "capital_inflows": 12
+  },
+  "visible_pdf_items_checked": 770,
+  "pixel_identical_reference_pages": 22,
+  "common_command_source_mutations_during_execution": false,
+  "post_document_review_binding_checked": true,
+  "raw_provider_data_published": false,
+  "publication_performed": false,
+  "actual_github_checkout_tested": false
+}

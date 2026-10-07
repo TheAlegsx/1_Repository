@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "period": "full",
+  "target_leverage": 1.25,
+  "variants": [
+    {"id": "absolute_primary", "policy": "absolute_decoupled", "passive_debt": false},
+    {"id": "capped_relative", "policy": "hybrid20", "passive_debt": false},
+    {"id": "no_sleeve_managed", "policy": "no_sleeve", "passive_debt": false},
+    {"id": "passive_debt_control", "policy": "no_sleeve", "passive_debt": true}
+  ],
+  "maintenance_ltv": [0.25, 0.4, 0.6],
+  "extra_liquidation_spreads": [0.0, 0.01],
+  "gap_losses": [0.2, 0.4, 0.6, 0.8, 0.85],
+  "scope": "Hypothetical maintenance debt/assets limits and extra liquidation costs, not verified bank terms. Breach detected after marking/financing; forced pro-rata cure to target leverage on next NAV has priority, no cash top-ups. Static gaps start at the maintenance boundary, classify insolvency before liquidation, omit intraday prices and do not simulate a lender's liquidation contract."
+}

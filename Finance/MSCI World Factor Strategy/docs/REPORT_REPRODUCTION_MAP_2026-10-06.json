@@ -1,0 +1,1620 @@
+{
+  "claims": [
+    {
+      "calculation_jobs": [],
+      "category": "claim",
+      "claim": "capital",
+      "datasets": [],
+      "expression": "capital times exposure or exposure minus one",
+      "origins": [
+        {
+          "config": "baseline",
+          "field": "initial_equity_usd"
+        },
+        {
+          "config": "baseline",
+          "field": "primary_leverage"
+        }
+      ],
+      "report": "backtest",
+      "sources": []
+    },
+    {
+      "calculation_jobs": [],
+      "category": "claim",
+      "claim": "debt",
+      "datasets": [],
+      "expression": "capital times exposure or exposure minus one",
+      "origins": [
+        {
+          "config": "baseline",
+          "field": "initial_equity_usd"
+        },
+        {
+          "config": "baseline",
+          "field": "primary_leverage"
+        }
+      ],
+      "report": "backtest",
+      "sources": []
+    },
+    {
+      "calculation_jobs": [],
+      "category": "claim",
+      "claim": "gross",
+      "datasets": [],
+      "expression": "capital times exposure or exposure minus one",
+      "origins": [
+        {
+          "config": "baseline",
+          "field": "initial_equity_usd"
+        },
+        {
+          "config": "baseline",
+          "field": "primary_leverage"
+        }
+      ],
+      "report": "backtest",
+      "sources": []
+    },
+    {
+      "calculation_jobs": [
+        "core"
+      ],
+      "category": "claim",
+      "claim": "intervals",
+      "datasets": [
+        "main"
+      ],
+      "expression": "levels minus one",
+      "origins": [
+        {
+          "dataset": "main",
+          "field": "observations",
+          "row": 10
+        }
+      ],
+      "report": "backtest",
+      "sources": []
+    },
+    {
+      "calculation_jobs": [
+        "issuer"
+      ],
+      "category": "claim",
+      "claim": "issuer_count",
+      "datasets": [
+        "issuer"
+      ],
+      "expression": "row count",
+      "origins": [
+        {
+          "dataset": "issuer"
+        }
+      ],
+      "report": "backtest",
+      "sources": []
+    },
+    {
+      "calculation_jobs": [
+        "issuer"
+      ],
+      "category": "claim",
+      "claim": "issuer_max_gap",
+      "datasets": [
+        "issuer"
+      ],
+      "expression": "max absolute published/reconstructed central difference",
+      "origins": [
+        {
+          "dataset": "issuer",
+          "field": "difference_percentage_points"
+        }
+      ],
+      "report": "backtest",
+      "sources": []
+    },
+    {
+      "calculation_jobs": [
+        "core"
+      ],
+      "category": "claim",
+      "claim": "levels",
+      "datasets": [
+        "main"
+      ],
+      "expression": null,
+      "origins": [
+        {
+          "dataset": "main",
+          "field": "observations",
+          "row": 10
+        }
+      ],
+      "report": "backtest",
+      "sources": []
+    },
+    {
+      "calculation_jobs": [
+        "core"
+      ],
+      "category": "claim",
+      "claim": "levered_annualised_volatility",
+      "datasets": [
+        "main"
+      ],
+      "expression": null,
+      "origins": [
+        {
+          "dataset": "main",
+          "field": "annualised_volatility",
+          "row": 10
+        }
+      ],
+      "report": "backtest",
+      "sources": []
+    },
+    {
+      "calculation_jobs": [
+        "core"
+      ],
+      "category": "claim",
+      "claim": "levered_cagr",
+      "datasets": [
+        "main"
+      ],
+      "expression": null,
+      "origins": [
+        {
+          "dataset": "main",
+          "field": "cagr",
+          "row": 10
+        }
+      ],
+      "report": "backtest",
+      "sources": []
+    },
+    {
+      "calculation_jobs": [
+        "core"
+      ],
+      "category": "claim",
+      "claim": "levered_gap_core",
+      "datasets": [
+        "main"
+      ],
+      "expression": "factor cagr minus comparator cagr",
+      "origins": [
+        {
+          "dataset": "main",
+          "field": "cagr",
+          "row": 10
+        },
+        {
+          "dataset": "main",
+          "field": "cagr",
+          "row": 16
+        }
+      ],
+      "report": "backtest",
+      "sources": []
+    },
+    {
+      "calculation_jobs": [
+        "core"
+      ],
+      "category": "claim",
+      "claim": "levered_gap_dimensional",
+      "datasets": [
+        "main"
+      ],
+      "expression": "factor cagr minus comparator cagr",
+      "origins": [
+        {
+          "dataset": "main",
+          "field": "cagr",
+          "row": 10
+        },
+        {
+          "dataset": "main",
+          "field": "cagr",
+          "row": 17
+        }
+      ],
+      "report": "backtest",
+      "sources": []
+    },
+    {
+      "calculation_jobs": [
+        "core"
+      ],
+      "category": "claim",
+      "claim": "levered_maximum_drawdown",
+      "datasets": [
+        "main"
+      ],
+      "expression": null,
+      "origins": [
+        {
+          "dataset": "main",
+          "field": "maximum_drawdown",
+          "row": 10
+        }
+      ],
+      "report": "backtest",
+      "sources": []
+    },
+    {
+      "calculation_jobs": [
+        "core"
+      ],
+      "category": "claim",
+      "claim": "unlevered_annualised_volatility",
+      "datasets": [
+        "main"
+      ],
+      "expression": null,
+      "origins": [
+        {
+          "dataset": "main",
+          "field": "annualised_volatility",
+          "row": 1
+        }
+      ],
+      "report": "backtest",
+      "sources": []
+    },
+    {
+      "calculation_jobs": [
+        "core"
+      ],
+      "category": "claim",
+      "claim": "unlevered_cagr",
+      "datasets": [
+        "main"
+      ],
+      "expression": null,
+      "origins": [
+        {
+          "dataset": "main",
+          "field": "cagr",
+          "row": 1
+        }
+      ],
+      "report": "backtest",
+      "sources": []
+    },
+    {
+      "calculation_jobs": [
+        "core"
+      ],
+      "category": "claim",
+      "claim": "unlevered_gap_core",
+      "datasets": [
+        "main"
+      ],
+      "expression": "factor cagr minus comparator cagr",
+      "origins": [
+        {
+          "dataset": "main",
+          "field": "cagr",
+          "row": 1
+        },
+        {
+          "dataset": "main",
+          "field": "cagr",
+          "row": 7
+        }
+      ],
+      "report": "backtest",
+      "sources": []
+    },
+    {
+      "calculation_jobs": [
+        "core"
+      ],
+      "category": "claim",
+      "claim": "unlevered_maximum_drawdown",
+      "datasets": [
+        "main"
+      ],
+      "expression": null,
+      "origins": [
+        {
+          "dataset": "main",
+          "field": "maximum_drawdown",
+          "row": 1
+        }
+      ],
+      "report": "backtest",
+      "sources": []
+    },
+    {
+      "calculation_jobs": [
+        "inflow_v4"
+      ],
+      "category": "claim",
+      "claim": "baseline_fee",
+      "datasets": [],
+      "expression": null,
+      "origins": [],
+      "report": "inflow",
+      "sources": [
+        {
+          "artifact": "../config/inflow_acquisition.json",
+          "field": "annual_fee",
+          "selector": {}
+        }
+      ]
+    },
+    {
+      "calculation_jobs": [
+        "inflow_v4"
+      ],
+      "category": "claim",
+      "claim": "early_loss_range",
+      "datasets": [],
+      "expression": "maximum minus minimum",
+      "origins": [],
+      "report": "inflow",
+      "sources": [
+        {
+          "artifact": "../controls/loss_controls.json",
+          "field": "cases.total_aum",
+          "selector": {
+            "flow": "early_steps",
+            "layer": "timing",
+            "mode": "same_net_annual_return",
+            "return_scenario": "late_loss"
+          }
+        }
+      ]
+    },
+    {
+      "calculation_jobs": [
+        "inflow_v4"
+      ],
+      "category": "claim",
+      "claim": "fee_bps",
+      "datasets": [],
+      "expression": null,
+      "origins": [],
+      "report": "inflow",
+      "sources": [
+        {
+          "artifact": "../config/inflow_acquisition.json",
+          "field": "annual_fee",
+          "selector": {}
+        }
+      ]
+    },
+    {
+      "calculation_jobs": [
+        "inflow_v4"
+      ],
+      "category": "claim",
+      "claim": "growth_pct",
+      "datasets": [],
+      "expression": null,
+      "origins": [],
+      "report": "inflow",
+      "sources": [
+        {
+          "artifact": "../config/inflow_acquisition.json",
+          "field": "annual_returns",
+          "selector": {}
+        }
+      ]
+    },
+    {
+      "calculation_jobs": [
+        "inflow_v4"
+      ],
+      "category": "claim",
+      "claim": "half_receipt",
+      "datasets": [],
+      "expression": null,
+      "origins": [],
+      "report": "inflow",
+      "sources": [
+        {
+          "artifact": "../config/inflow_acquisition.json",
+          "field": "manager_fee_receipt_fractions",
+          "selector": {}
+        }
+      ]
+    },
+    {
+      "calculation_jobs": [
+        "inflow_v4"
+      ],
+      "category": "claim",
+      "claim": "illustrative_bps",
+      "datasets": [],
+      "expression": null,
+      "origins": [],
+      "report": "inflow",
+      "sources": [
+        {
+          "artifact": "../config/inflow_controls.json",
+          "field": "illustrative_fee",
+          "selector": {}
+        }
+      ]
+    },
+    {
+      "calculation_jobs": [
+        "inflow_v4"
+      ],
+      "category": "claim",
+      "claim": "illustrative_closing_deficit",
+      "datasets": [],
+      "expression": null,
+      "origins": [],
+      "report": "inflow",
+      "sources": [
+        {
+          "artifact": "../controls/loss_controls.json",
+          "field": "summary.illustrative_fee_result.manager_cash",
+          "selector": {}
+        }
+      ]
+    },
+    {
+      "calculation_jobs": [
+        "inflow_v4"
+      ],
+      "category": "claim",
+      "claim": "illustrative_peak",
+      "datasets": [],
+      "expression": null,
+      "origins": [],
+      "report": "inflow",
+      "sources": [
+        {
+          "artifact": "../controls/loss_controls.json",
+          "field": "summary.illustrative_fee_result.peak_funding",
+          "selector": {}
+        }
+      ]
+    },
+    {
+      "calculation_jobs": [
+        "inflow_v4"
+      ],
+      "category": "claim",
+      "claim": "illustrative_peak_month",
+      "datasets": [],
+      "expression": null,
+      "origins": [],
+      "report": "inflow",
+      "sources": [
+        {
+          "artifact": "../controls/loss_controls.json",
+          "field": "summary.illustrative_fee_result.peak_month",
+          "selector": {}
+        }
+      ]
+    },
+    {
+      "calculation_jobs": [
+        "inflow_v4"
+      ],
+      "category": "claim",
+      "claim": "later_return_path",
+      "datasets": [],
+      "expression": null,
+      "origins": [],
+      "report": "inflow",
+      "sources": [
+        {
+          "artifact": "../config/inflow_acquisition.json",
+          "field": "annual_returns",
+          "selector": {}
+        }
+      ]
+    },
+    {
+      "calculation_jobs": [
+        "inflow_v4"
+      ],
+      "category": "claim",
+      "claim": "launch_first_month",
+      "datasets": [],
+      "expression": "minimum subscription month",
+      "origins": [],
+      "report": "inflow",
+      "sources": [
+        {
+          "artifact": "../config/inflow_acquisition.json",
+          "field": "first_year_subscription_months",
+          "selector": {}
+        }
+      ]
+    },
+    {
+      "calculation_jobs": [
+        "inflow_v4"
+      ],
+      "category": "claim",
+      "claim": "launch_months",
+      "datasets": [],
+      "expression": null,
+      "origins": [],
+      "report": "inflow",
+      "sources": [
+        {
+          "artifact": "../config/inflow_acquisition.json",
+          "field": "first_year_subscription_months",
+          "selector": {}
+        }
+      ]
+    },
+    {
+      "calculation_jobs": [
+        "inflow_v4"
+      ],
+      "category": "claim",
+      "claim": "net_margin_bps",
+      "datasets": [],
+      "expression": "full investor fee minus annual servicing rate",
+      "origins": [],
+      "report": "inflow",
+      "sources": [
+        {
+          "artifact": "../config/inflow_acquisition.json",
+          "field": "annual_fee",
+          "selector": {}
+        },
+        {
+          "artifact": "../config/inflow_acquisition.json",
+          "field": "annual_servicing_cost_fraction_of_opening_external_assets",
+          "selector": {}
+        }
+      ]
+    },
+    {
+      "calculation_jobs": [
+        "inflow_v4"
+      ],
+      "category": "claim",
+      "claim": "no_flow_equities",
+      "datasets": [],
+      "expression": null,
+      "origins": [],
+      "report": "inflow",
+      "sources": [
+        {
+          "artifact": "../tables/acquisition_headline.csv",
+          "field": "owner_equity_usd",
+          "selector": {
+            "flow_scenario": "no_flows"
+          }
+        }
+      ]
+    },
+    {
+      "calculation_jobs": [
+        "inflow_v4"
+      ],
+      "category": "claim",
+      "claim": "ordinary_attrition",
+      "datasets": [],
+      "expression": null,
+      "origins": [],
+      "report": "inflow",
+      "sources": [
+        {
+          "artifact": "../config/inflow_acquisition.json",
+          "field": "normal_annual_redemption",
+          "selector": {}
+        }
+      ]
+    },
+    {
+      "calculation_jobs": [
+        "inflow_v4"
+      ],
+      "category": "claim",
+      "claim": "owner_capital_m",
+      "datasets": [],
+      "expression": null,
+      "origins": [],
+      "report": "inflow",
+      "sources": [
+        {
+          "artifact": "../config/inflow_acquisition.json",
+          "field": "initial_owner_capital_usd",
+          "selector": {}
+        }
+      ]
+    },
+    {
+      "calculation_jobs": [
+        "inflow_v4"
+      ],
+      "category": "claim",
+      "claim": "owner_growth_equity",
+      "datasets": [],
+      "expression": null,
+      "origins": [],
+      "report": "inflow",
+      "sources": [
+        {
+          "artifact": "../tables/acquisition_headline.csv",
+          "field": "owner_equity_usd",
+          "selector": {
+            "flow_scenario": "steady",
+            "return_scenario": "growth"
+          }
+        }
+      ]
+    },
+    {
+      "calculation_jobs": [
+        "inflow_v4"
+      ],
+      "category": "claim",
+      "claim": "partial_margin_bps",
+      "datasets": [],
+      "expression": "partial investor fee receipt minus servicing rate",
+      "origins": [],
+      "report": "inflow",
+      "sources": [
+        {
+          "artifact": "../config/inflow_acquisition.json",
+          "field": "annual_fee",
+          "selector": {}
+        },
+        {
+          "artifact": "../config/inflow_acquisition.json",
+          "field": "annual_servicing_cost_fraction_of_opening_external_assets",
+          "selector": {}
+        },
+        {
+          "artifact": "../config/inflow_acquisition.json",
+          "field": "manager_fee_receipt_fractions",
+          "selector": {}
+        }
+      ]
+    },
+    {
+      "calculation_jobs": [
+        "inflow_v4"
+      ],
+      "category": "claim",
+      "claim": "return_paths",
+      "datasets": [],
+      "expression": null,
+      "origins": [],
+      "report": "inflow",
+      "sources": [
+        {
+          "artifact": "../config/inflow_acquisition.json",
+          "field": "annual_returns",
+          "selector": {}
+        }
+      ]
+    },
+    {
+      "calculation_jobs": [
+        "inflow_v4"
+      ],
+      "category": "claim",
+      "claim": "runoff_attrition",
+      "datasets": [],
+      "expression": null,
+      "origins": [],
+      "report": "inflow",
+      "sources": [
+        {
+          "artifact": "../config/inflow_acquisition.json",
+          "field": "sales_stop_annual_redemption",
+          "selector": {}
+        }
+      ]
+    },
+    {
+      "calculation_jobs": [
+        "inflow_v4"
+      ],
+      "category": "claim",
+      "claim": "steady_fees",
+      "datasets": [],
+      "expression": null,
+      "origins": [],
+      "report": "inflow",
+      "sources": [
+        {
+          "artifact": "../tables/acquisition_headline.csv",
+          "field": "external_fees_10y_usd",
+          "selector": {
+            "flow_scenario": "steady",
+            "return_scenario": "growth"
+          }
+        }
+      ]
+    },
+    {
+      "calculation_jobs": [
+        "inflow_v4"
+      ],
+      "category": "claim",
+      "claim": "steady_gross",
+      "datasets": [],
+      "expression": null,
+      "origins": [],
+      "report": "inflow",
+      "sources": [
+        {
+          "artifact": "../tables/acquisition_headline.csv",
+          "field": "gross_subscriptions_10y_usd",
+          "selector": {
+            "flow_scenario": "steady",
+            "return_scenario": "growth"
+          }
+        }
+      ]
+    },
+    {
+      "calculation_jobs": [
+        "inflow_v4"
+      ],
+      "category": "claim",
+      "claim": "steady_peak",
+      "datasets": [],
+      "expression": null,
+      "origins": [],
+      "report": "inflow",
+      "sources": [
+        {
+          "artifact": "../tables/acquisition_headline.csv",
+          "field": "peak_business_funding_gap_usd",
+          "selector": {
+            "flow_scenario": "steady",
+            "return_scenario": "growth"
+          }
+        }
+      ]
+    },
+    {
+      "calculation_jobs": [
+        "inflow_v4"
+      ],
+      "category": "claim",
+      "claim": "stress_attrition",
+      "datasets": [],
+      "expression": null,
+      "origins": [],
+      "report": "inflow",
+      "sources": [
+        {
+          "artifact": "../config/inflow_acquisition.json",
+          "field": "bad_year_annual_redemption",
+          "selector": {}
+        }
+      ]
+    },
+    {
+      "calculation_jobs": [
+        "inflow_v4"
+      ],
+      "category": "claim",
+      "claim": "stress_subscription_fraction",
+      "datasets": [],
+      "expression": null,
+      "origins": [],
+      "report": "inflow",
+      "sources": [
+        {
+          "artifact": "../config/inflow_acquisition.json",
+          "field": "bad_year_subscription_multiplier",
+          "selector": {}
+        }
+      ]
+    },
+    {
+      "calculation_jobs": [
+        "inflow_v4"
+      ],
+      "category": "claim",
+      "claim": "strong_final_clients",
+      "datasets": [],
+      "expression": null,
+      "origins": [],
+      "report": "inflow",
+      "sources": [
+        {
+          "artifact": "../config/inflow_acquisition.json",
+          "field": "annual_new_client_equivalents.strong[9]",
+          "selector": {}
+        }
+      ]
+    },
+    {
+      "calculation_jobs": [
+        "inflow_v4"
+      ],
+      "category": "claim",
+      "claim": "strong_peak",
+      "datasets": [],
+      "expression": null,
+      "origins": [],
+      "report": "inflow",
+      "sources": [
+        {
+          "artifact": "../tables/acquisition_headline.csv",
+          "field": "peak_business_funding_gap_usd",
+          "selector": {
+            "flow_scenario": "strong",
+            "return_scenario": "growth"
+          }
+        }
+      ]
+    },
+    {
+      "calculation_jobs": [
+        "inflow_v4"
+      ],
+      "category": "claim",
+      "claim": "ticket_usd",
+      "datasets": [],
+      "expression": null,
+      "origins": [],
+      "report": "inflow",
+      "sources": [
+        {
+          "artifact": "../config/inflow_acquisition.json",
+          "field": "ticket_usd",
+          "selector": {}
+        }
+      ]
+    },
+    {
+      "calculation_jobs": [
+        "inflow_v4"
+      ],
+      "category": "claim",
+      "claim": "timing_attrition_annual",
+      "datasets": [],
+      "expression": null,
+      "origins": [],
+      "report": "inflow",
+      "sources": [
+        {
+          "artifact": "../config/inflow_timing.json",
+          "field": "annual_external_unit_redemption",
+          "selector": {}
+        }
+      ]
+    },
+    {
+      "calculation_jobs": [
+        "inflow_v4"
+      ],
+      "category": "claim",
+      "claim": "timing_gross",
+      "datasets": [],
+      "expression": null,
+      "origins": [],
+      "report": "inflow",
+      "sources": [
+        {
+          "artifact": "../config/inflow_timing.json",
+          "field": "total_gross_subscriptions_per_timing_case_usd",
+          "selector": {}
+        }
+      ]
+    },
+    {
+      "calculation_jobs": [
+        "interpretation"
+      ],
+      "category": "historical",
+      "claim": "absolute_coupled_twr",
+      "datasets": [
+        "historical_interpretation"
+      ],
+      "expression": null,
+      "origins": [
+        {
+          "dataset": "historical_interpretation",
+          "field": "coupled_unit_twr_annual",
+          "row": 3
+        }
+      ],
+      "report": "inflow",
+      "sources": []
+    },
+    {
+      "calculation_jobs": [
+        "historical"
+      ],
+      "category": "historical",
+      "claim": "absolute_external_receipts",
+      "datasets": [
+        "manager"
+      ],
+      "expression": null,
+      "origins": [
+        {
+          "dataset": "manager",
+          "field": "external_fee_receipts_usd",
+          "row": 6
+        }
+      ],
+      "report": "inflow",
+      "sources": []
+    },
+    {
+      "calculation_jobs": [
+        "interpretation"
+      ],
+      "category": "historical",
+      "claim": "absolute_flow_cost",
+      "datasets": [
+        "historical_interpretation"
+      ],
+      "expression": null,
+      "origins": [
+        {
+          "dataset": "historical_interpretation",
+          "field": "coupled_flow_transaction_cost_usd",
+          "row": 3
+        }
+      ],
+      "report": "inflow",
+      "sources": []
+    },
+    {
+      "calculation_jobs": [
+        "interpretation"
+      ],
+      "category": "historical",
+      "claim": "absolute_gap",
+      "datasets": [
+        "historical_interpretation"
+      ],
+      "expression": null,
+      "origins": [
+        {
+          "dataset": "historical_interpretation",
+          "field": "unit_twr_difference_pp",
+          "row": 3
+        }
+      ],
+      "report": "inflow",
+      "sources": []
+    },
+    {
+      "calculation_jobs": [
+        "historical"
+      ],
+      "category": "historical",
+      "claim": "absolute_manager_costs",
+      "datasets": [
+        "manager"
+      ],
+      "expression": null,
+      "origins": [
+        {
+          "dataset": "manager",
+          "field": "total_manager_cost_usd",
+          "row": 6
+        }
+      ],
+      "report": "inflow",
+      "sources": []
+    },
+    {
+      "calculation_jobs": [
+        "interpretation"
+      ],
+      "category": "historical",
+      "claim": "absolute_overlay_twr",
+      "datasets": [
+        "historical_interpretation"
+      ],
+      "expression": null,
+      "origins": [
+        {
+          "dataset": "historical_interpretation",
+          "field": "overlay_unit_twr_annual",
+          "row": 3
+        }
+      ],
+      "report": "inflow",
+      "sources": []
+    },
+    {
+      "calculation_jobs": [
+        "historical"
+      ],
+      "category": "historical",
+      "claim": "absolute_peak_gap",
+      "datasets": [
+        "manager"
+      ],
+      "expression": null,
+      "origins": [
+        {
+          "dataset": "manager",
+          "field": "external_business_peak_funding_gap_usd",
+          "row": 6
+        }
+      ],
+      "report": "inflow",
+      "sources": []
+    },
+    {
+      "calculation_jobs": [
+        "historical"
+      ],
+      "category": "historical",
+      "claim": "manager_cases",
+      "datasets": [
+        "manager"
+      ],
+      "expression": "row count",
+      "origins": [
+        {
+          "dataset": "manager"
+        }
+      ],
+      "report": "inflow",
+      "sources": []
+    },
+    {
+      "calculation_jobs": [
+        "interpretation"
+      ],
+      "category": "historical",
+      "claim": "months",
+      "datasets": [
+        "historical_interpretation"
+      ],
+      "expression": null,
+      "origins": [
+        {
+          "dataset": "historical_interpretation",
+          "field": "months",
+          "row": 0
+        }
+      ],
+      "report": "inflow",
+      "sources": []
+    },
+    {
+      "calculation_jobs": [
+        "historical"
+      ],
+      "category": "historical",
+      "claim": "negative_manager_cases",
+      "datasets": [
+        "manager"
+      ],
+      "expression": "negative terminal external-business cash count",
+      "origins": [
+        {
+          "dataset": "manager",
+          "field": "cumulative_external_business_cash_usd"
+        }
+      ],
+      "report": "inflow",
+      "sources": []
+    }
+  ],
+  "complete_evidence_jobs": [
+    "core",
+    "expanded",
+    "endpoints",
+    "allocations",
+    "comparator_costs",
+    "custody",
+    "hindsight",
+    "issuer",
+    "independent",
+    "joint_cost",
+    "funding_gap",
+    "inflow_v4",
+    "historical",
+    "interpretation"
+  ],
+  "complete_families_preserved": {
+    "backtest": 34,
+    "inflow": 18
+  },
+  "date": "2026-10-06",
+  "figures": [
+    {
+      "calculation_jobs": [
+        "core"
+      ],
+      "figure": "equity",
+      "generator": "factor_portfolio.backtest_report",
+      "reference_sha256": "429fbc2962cecf187177fafa981ac29a3aaba5a60ccfbc1d4f4b766ea93c28b2",
+      "report": "backtest"
+    },
+    {
+      "calculation_jobs": [
+        "core"
+      ],
+      "figure": "drawdown",
+      "generator": "factor_portfolio.backtest_report",
+      "reference_sha256": "c33ec9982c35379a0370791cb44f1406dd6c5f683a1ea73b68c9e5a551fa513d",
+      "report": "backtest"
+    },
+    {
+      "calculation_jobs": [
+        "historical"
+      ],
+      "figure": "historical_nav",
+      "generator": "factor_portfolio.coordinated_inflow_report",
+      "reference_sha256": "5a8b85bd6e39a0562758411b48dd7e9d37150cee92d5895f28ae3f9ef2811844",
+      "report": "inflow"
+    }
+  ],
+  "reader_versions": {
+    "backtest": 13,
+    "inflow": 9
+  },
+  "schema_version": 1,
+  "scope": "All selected table families, dynamic text claims and displayed figures. Manually authored wording, static source/AI aid tables and constant assumptions are retained in templates/configurations, not generated market results.",
+  "source_reader_run_id": "1637dc07-e9b1-43b4-97d7-2058e451348a",
+  "status": "Provenance mapped; full fresh-install reconstruction remains pending",
+  "tables": [
+    {
+      "binding_file": "outputs/research_readers_v8_2026-10-06/evidence/backtest_bindings.json",
+      "calculation_jobs": [],
+      "columns": null,
+      "configuration_origins": [
+        "baseline"
+      ],
+      "datasets": [],
+      "origin_kind": "bound dataset/configuration cells",
+      "report": "backtest",
+      "rows": null,
+      "source_family": "backtest_01",
+      "table": "allocation"
+    },
+    {
+      "binding_file": "outputs/research_readers_v8_2026-10-06/evidence/backtest_bindings.json",
+      "calculation_jobs": [],
+      "columns": [
+        0,
+        1
+      ],
+      "configuration_origins": [],
+      "datasets": [],
+      "origin_kind": "bound dataset/configuration cells",
+      "report": "backtest",
+      "rows": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "source_family": "backtest_27",
+      "table": "costs"
+    },
+    {
+      "binding_file": "outputs/research_readers_v8_2026-10-06/evidence/backtest_bindings.json",
+      "calculation_jobs": [
+        "core"
+      ],
+      "columns": null,
+      "configuration_origins": [],
+      "datasets": [
+        "main"
+      ],
+      "origin_kind": "bound dataset/configuration cells",
+      "report": "backtest",
+      "rows": [
+        0,
+        2
+      ],
+      "source_family": "backtest_05",
+      "table": "unlevered"
+    },
+    {
+      "binding_file": "outputs/research_readers_v8_2026-10-06/evidence/backtest_bindings.json",
+      "calculation_jobs": [
+        "core"
+      ],
+      "columns": null,
+      "configuration_origins": [],
+      "datasets": [
+        "main"
+      ],
+      "origin_kind": "bound dataset/configuration cells",
+      "report": "backtest",
+      "rows": [
+        0,
+        2
+      ],
+      "source_family": "backtest_06",
+      "table": "main"
+    },
+    {
+      "binding_file": "outputs/research_readers_v8_2026-10-06/evidence/backtest_bindings.json",
+      "calculation_jobs": [
+        "core"
+      ],
+      "columns": null,
+      "configuration_origins": [],
+      "datasets": [
+        "main"
+      ],
+      "origin_kind": "bound dataset/configuration cells",
+      "report": "backtest",
+      "rows": [
+        0,
+        3
+      ],
+      "source_family": "backtest_06",
+      "table": "dimensional"
+    },
+    {
+      "binding_file": "outputs/research_readers_v8_2026-10-06/evidence/backtest_bindings.json",
+      "calculation_jobs": [
+        "expanded"
+      ],
+      "columns": null,
+      "configuration_origins": [],
+      "datasets": [
+        "products"
+      ],
+      "origin_kind": "bound dataset/configuration cells",
+      "report": "backtest",
+      "rows": [
+        1,
+        4
+      ],
+      "source_family": "backtest_25",
+      "table": "amundi"
+    },
+    {
+      "binding_file": "outputs/research_readers_v8_2026-10-06/evidence/backtest_bindings.json",
+      "calculation_jobs": [
+        "core"
+      ],
+      "columns": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "configuration_origins": [],
+      "datasets": [
+        "main"
+      ],
+      "origin_kind": "bound dataset/configuration cells",
+      "report": "backtest",
+      "rows": [
+        1,
+        3,
+        8,
+        10
+      ],
+      "source_family": "backtest_12",
+      "table": "policy"
+    },
+    {
+      "binding_file": "outputs/research_readers_v8_2026-10-06/evidence/backtest_bindings.json",
+      "calculation_jobs": [
+        "core"
+      ],
+      "columns": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "configuration_origins": [],
+      "datasets": [
+        "main"
+      ],
+      "origin_kind": "bound dataset/configuration cells",
+      "report": "backtest",
+      "rows": [
+        0,
+        4
+      ],
+      "source_family": "backtest_13",
+      "table": "alpha"
+    },
+    {
+      "binding_file": "outputs/research_readers_v8_2026-10-06/evidence/backtest_bindings.json",
+      "calculation_jobs": [
+        "core"
+      ],
+      "columns": [
+        0,
+        1,
+        3,
+        4,
+        5,
+        6
+      ],
+      "configuration_origins": [],
+      "datasets": [
+        "main"
+      ],
+      "origin_kind": "bound dataset/configuration cells",
+      "report": "backtest",
+      "rows": [
+        4,
+        6,
+        12,
+        14
+      ],
+      "source_family": "backtest_14",
+      "table": "periods"
+    },
+    {
+      "binding_file": "outputs/research_readers_v8_2026-10-06/evidence/backtest_bindings.json",
+      "calculation_jobs": [
+        "expanded"
+      ],
+      "columns": null,
+      "configuration_origins": [],
+      "datasets": [
+        "funding"
+      ],
+      "origin_kind": "bound dataset/configuration cells",
+      "report": "backtest",
+      "rows": [
+        0,
+        5,
+        7,
+        9
+      ],
+      "source_family": "backtest_21",
+      "table": "funding"
+    },
+    {
+      "binding_file": "outputs/research_readers_v8_2026-10-06/evidence/inflow_bindings.json",
+      "calculation_jobs": [
+        "inflow_v4"
+      ],
+      "columns": null,
+      "configuration_origins": [],
+      "datasets": [],
+      "origin_kind": "hypothetical table generated from inflow configurations and scenario outputs",
+      "report": "inflow",
+      "rows": null,
+      "source_family": "01_acquisition_assumptions",
+      "table": "acquisition"
+    },
+    {
+      "binding_file": "outputs/research_readers_v8_2026-10-06/evidence/inflow_bindings.json",
+      "calculation_jobs": [
+        "inflow_v4"
+      ],
+      "columns": [
+        0,
+        1
+      ],
+      "configuration_origins": [],
+      "datasets": [],
+      "origin_kind": "hypothetical table generated from inflow configurations and scenario outputs",
+      "report": "inflow",
+      "rows": null,
+      "source_family": "02_business_assumptions",
+      "table": "business"
+    },
+    {
+      "binding_file": "outputs/research_readers_v8_2026-10-06/evidence/inflow_bindings.json",
+      "calculation_jobs": [
+        "interpretation"
+      ],
+      "columns": [
+        0,
+        1,
+        2,
+        4
+      ],
+      "configuration_origins": [],
+      "datasets": [
+        "historical_interpretation"
+      ],
+      "origin_kind": "bound dataset/configuration cells",
+      "report": "inflow",
+      "rows": null,
+      "source_family": "historical_selected",
+      "table": "historical_returns"
+    },
+    {
+      "binding_file": "outputs/research_readers_v8_2026-10-06/evidence/inflow_bindings.json",
+      "calculation_jobs": [
+        "historical"
+      ],
+      "columns": [
+        1,
+        3,
+        4,
+        5,
+        6
+      ],
+      "configuration_origins": [],
+      "datasets": [
+        "historical_headline"
+      ],
+      "origin_kind": "bound dataset/configuration cells",
+      "report": "inflow",
+      "rows": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "source_family": "historical_ownership",
+      "table": "ownership"
+    },
+    {
+      "binding_file": "outputs/research_readers_v8_2026-10-06/evidence/inflow_bindings.json",
+      "calculation_jobs": [
+        "historical"
+      ],
+      "columns": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "configuration_origins": [],
+      "datasets": [
+        "manager"
+      ],
+      "origin_kind": "bound dataset/configuration cells",
+      "report": "inflow",
+      "rows": [
+        0,
+        1
+      ],
+      "source_family": "historical_manager",
+      "table": "manager"
+    },
+    {
+      "binding_file": "outputs/research_readers_v8_2026-10-06/evidence/inflow_bindings.json",
+      "calculation_jobs": [
+        "inflow_v4"
+      ],
+      "columns": [
+        0,
+        1,
+        2,
+        5
+      ],
+      "configuration_origins": [],
+      "datasets": [],
+      "origin_kind": "hypothetical table generated from inflow configurations and scenario outputs",
+      "report": "inflow",
+      "rows": null,
+      "source_family": "03_acquisition_outcomes",
+      "table": "hypothetical_outcomes"
+    },
+    {
+      "binding_file": "outputs/research_readers_v8_2026-10-06/evidence/inflow_bindings.json",
+      "calculation_jobs": [
+        "inflow_v4"
+      ],
+      "columns": [
+        0,
+        1,
+        3,
+        4
+      ],
+      "configuration_origins": [],
+      "datasets": [],
+      "origin_kind": "hypothetical table generated from inflow configurations and scenario outputs",
+      "report": "inflow",
+      "rows": null,
+      "source_family": "07_fee_economics",
+      "table": "fees"
+    },
+    {
+      "binding_file": "outputs/research_readers_v8_2026-10-06/evidence/inflow_bindings.json",
+      "calculation_jobs": [
+        "inflow_v4"
+      ],
+      "columns": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "configuration_origins": [],
+      "datasets": [],
+      "origin_kind": "hypothetical table generated from inflow configurations and scenario outputs",
+      "report": "inflow",
+      "rows": null,
+      "source_family": "04_selected_timing_outcomes",
+      "table": "timing"
+    },
+    {
+      "binding_file": "outputs/research_readers_v8_2026-10-06/evidence/inflow_bindings.json",
+      "calculation_jobs": [
+        "inflow_v4"
+      ],
+      "columns": null,
+      "configuration_origins": [],
+      "datasets": [],
+      "origin_kind": "hypothetical table generated from inflow configurations and scenario outputs",
+      "report": "inflow",
+      "rows": null,
+      "source_family": "09_acquisition_return_matrix",
+      "table": "scenario_matrix"
+    },
+    {
+      "binding_file": "outputs/research_readers_v8_2026-10-06/evidence/inflow_bindings.json",
+      "calculation_jobs": [
+        "inflow_v4"
+      ],
+      "columns": null,
+      "configuration_origins": [],
+      "datasets": [],
+      "origin_kind": "hypothetical table generated from inflow configurations and scenario outputs",
+      "report": "inflow",
+      "rows": null,
+      "source_family": "08_treasury_definitions",
+      "table": "treasury"
+    },
+    {
+      "binding_file": "outputs/research_readers_v8_2026-10-06/evidence/inflow_bindings.json",
+      "calculation_jobs": [
+        "inflow_v4"
+      ],
+      "columns": null,
+      "configuration_origins": [],
+      "datasets": [],
+      "origin_kind": "hypothetical table generated from inflow configurations and scenario outputs",
+      "report": "inflow",
+      "rows": null,
+      "source_family": "05_investor_returns",
+      "table": "investor_returns"
+    },
+    {
+      "binding_file": "outputs/research_readers_v8_2026-10-06/evidence/inflow_bindings.json",
+      "calculation_jobs": [
+        "inflow_v4"
+      ],
+      "columns": null,
+      "configuration_origins": [],
+      "datasets": [],
+      "origin_kind": "hypothetical table generated from inflow configurations and scenario outputs",
+      "report": "inflow",
+      "rows": null,
+      "source_family": "06_loss_placement_ranges",
+      "table": "loss_ranges"
+    },
+    {
+      "binding_file": "outputs/research_readers_v8_2026-10-06/evidence/inflow_bindings.json",
+      "calculation_jobs": [
+        "historical"
+      ],
+      "columns": [
+        0,
+        2,
+        3,
+        4,
+        5
+      ],
+      "configuration_origins": [],
+      "datasets": [
+        "historical_headline"
+      ],
+      "origin_kind": "bound dataset/configuration cells",
+      "report": "inflow",
+      "rows": null,
+      "source_family": "historical_controls",
+      "table": "historical_controls"
+    }
+  ]
+}

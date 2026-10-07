@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "factor_policies": ["absolute_decoupled", "hybrid20"],
+  "leverage_levels": [1.0, 1.25],
+  "requested_endpoints": ["2024-12-31", "2025-12-31", "2026-08-28"],
+  "minimum_levels": 3,
+  "risk_conventions": ["main_investor_observations", "legacy_folded_opening"],
+  "primary_risk_convention": "main_investor_observations",
+  "legacy_policy": "hybrid20",
+  "scope": "Same-start continuing paths from freshly regenerated original-input core. Map cutoffs to last common NAV on or before each date. Retain old endpoint risk convention separately; main convention counts opening costs as their own observation. Strict relative-wealth crossings and descriptive monthly endpoint counts, not independent observations or future probabilities. No joint-cost grid or final report."
+}

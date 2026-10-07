@@ -1,0 +1,69 @@
+{
+  "date": "2026-10-06",
+  "status": "security_corrections_verified_locally",
+  "runtime": {
+    "python": "3.12.15",
+    "stdlib_openssl": "OpenSSL 3.5.9 29 Sep 2026",
+    "expat": "expat_2.9.0",
+    "cryptography_openssl": "OpenSSL 4.0.3 29 Sep 2026"
+  },
+  "locked_distributions": 31,
+  "live_osv_package_matches": 0,
+  "tests_passed": 463,
+  "subtests_passed": 9,
+  "meaningful_security_regressions": 24,
+  "evidence_jobs": [
+    "core",
+    "expanded",
+    "endpoints",
+    "allocations",
+    "comparator_costs",
+    "custody",
+    "hindsight",
+    "issuer",
+    "independent",
+    "joint_cost",
+    "funding_gap",
+    "inflow_v4",
+    "historical",
+    "interpretation"
+  ],
+  "exact_reference_csv_files": 598,
+  "financial_reference_sha256": "05fa2d25a7776a59c750fd1d5b38f19d94404e110b1fad8199c6004517303ea2",
+  "reader_run_id": "f8a595ca-7199-47d3-a567-ea19213fca82",
+  "reader_payloads_repeated_exactly": 15,
+  "report_manuscripts_unchanged": {
+    "backtest": "35de75784d57975caa6d0757fd5e5dc023278b6526085c05f281f95565e32b44",
+    "inflow": "06649fb6b21d94919ccf5451b9a079739fb12741dce8e12b90f674b82a3d5c98"
+  },
+  "pdf_checks": {
+    "pages": 22,
+    "pixel_identical_pages": 22,
+    "visible_items": 770,
+    "fonts": "Times New Roman",
+    "text_colour": "black",
+    "coordinate_overflow": 0,
+    "visual_contact_sheets_reviewed": 4
+  },
+  "financial_engines_and_configurations_unchanged": true,
+  "source_changed_during_final_calculation": false,
+  "installer_bootstrap": {
+    "corrected_pip": "26.2.1",
+    "verified_wheel_loaded_directly": true,
+    "path_with_spaces_tested": true,
+    "base_interpreter_unchanged": true
+  },
+  "audit_item_disposition": {
+    "S1": "corrected reader6.19.0",
+    "S2": "corrected installer26.2.1 and explicit venv bootstrap",
+    "S3": "complete31-distribution wheel hash lock",
+    "S4": "descriptor-anchored randomized exclusive atomic JSON writes",
+    "S5": "link-rejecting exclusive canonical/market/funding snapshot writes",
+    "S6": "original-input preflight, file/XML/ZIP/depth/sparse-column limits",
+    "S7": "Python3.12.15 / Expat2.9.0 and runtime guard",
+    "S8": "stdlib OpenSSL3.5.9 and cryptography50.0.2 / bundled OpenSSL4.0.3"
+  },
+  "publication_performed": false,
+  "actual_github_checkout_reconstruction": false,
+  "scope": "Closes the identified project audit items under the demonstrated platform and workflow; not an account/OS security certificate, forensic or legal clearance. Future advisories and human research review remain separate."
+}

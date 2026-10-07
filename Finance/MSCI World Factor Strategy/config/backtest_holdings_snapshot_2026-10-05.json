@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "scope": "Reconstruct only the later 25 September 2026 issuer snapshot at configured target weights. Historical annual-report schedules and Dimensional holdings remain separate.",
+  "snapshot_date": "2026-09-25",
+  "measurement": {
+    "equity_scope": "Asset Class exactly Equity",
+    "identifier": "strip ticker + name + market currency; exact case; no ISIN reconciliation",
+    "overlap": "sum of smaller matched fund weights; no equity renormalization",
+    "portfolio_weights": "source fund weights times configured target sleeve weights",
+    "core_exposures": "aggregate equity holdings only",
+    "factor_exposures": "supplied rounded Exposure Breakdowns including cash/derivatives",
+    "top_positions": 10,
+    "equity_coverage_bounds": [
+      0.9,
+      1.02
+    ]
+  },
+  "expected_rows": {
+    "equity_holdings.csv": 2281,
+    "combined_equity_holdings.csv": 1251,
+    "country_by_sleeve.csv": 60,
+    "country_combined.csv": 25,
+    "sector_by_sleeve.csv": 47,
+    "sector_combined.csv": 12,
+    "pairwise_overlap.csv": 6
+  },
+  "interpretation": {
+    "calendar": "After the main 28 August 2026 cutoff, not historical attribution.",
+    "matching": "Security-line proxy, not a consolidated issuer or reconciled ISIN master. Ticker/name/currency variations can understate overlap; listings/classes remain separate.",
+    "denominator": "Weights are shares of fund NAV times target sleeve allocations, not equity-renormalized or levered shares of initial investor capital.",
+    "classifications": "Core equity-only country/sector sums differ in scope from rounded factor Exposure Breakdowns including cash and derivatives. Missing equity classifications are not filled.",
+    "history": "Four synchronized later ETF snapshots only; older annual-report schedules and Dimensional remain separately dated evidence. Does not explain past performance or establish future diversification."
+  }
+}

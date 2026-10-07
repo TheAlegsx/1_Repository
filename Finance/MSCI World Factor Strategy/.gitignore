@@ -1,0 +1,26 @@
+# Local provider data and generated research outputs
+/data/raw/
+/data/processed/
+/data/local/
+/outputs/
+/output/
+/tmp/
+/local/
+.env
+.env.*
+!.env.example
+*.local.json
+*.local.toml
+# Runtime and operating system files
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+.DS_Store
+
+# Packaging artifacts
+*.egg-info/
+build/
+dist/

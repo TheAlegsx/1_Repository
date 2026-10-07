@@ -1,0 +1,129 @@
+{
+  "schema_version": 1,
+  "scope": "Reconstruct the preserved descriptive product-return study from this run's fresh imports. Independent of primary rebalancing policy; no portfolio/accounting change.",
+  "measurement": {
+    "alignment": "intersect_positive_levels_before_returns",
+    "returns": "simple_excluding_first_level",
+    "methods": [
+      "pearson",
+      "spearman"
+    ],
+    "rank_ties": "average",
+    "monthly": "last_common_observed_level",
+    "negative_condition": "core_return_strictly_negative",
+    "rolling_observations": 252,
+    "fill_missing": false,
+    "investor_costs": false
+  },
+  "excluded_month": "2026-08",
+  "expected_panels": {
+    "long_full": {
+      "first_return_end": "2014-10-06",
+      "last_return_end": "2026-08-28",
+      "return_observations": 2928,
+      "products": [
+        "core",
+        "momentum",
+        "quality",
+        "value",
+        "dimensional"
+      ],
+      "level_start": "2014-10-03",
+      "level_observations": 2929
+    },
+    "long_calibration": {
+      "first_return_end": "2014-10-06",
+      "last_return_end": "2021-12-31",
+      "return_observations": 1786,
+      "products": [
+        "core",
+        "momentum",
+        "quality",
+        "value",
+        "dimensional"
+      ],
+      "level_start": "2014-10-03",
+      "level_observations": 1787
+    },
+    "long_confirmation": {
+      "first_return_end": "2022-01-05",
+      "last_return_end": "2026-08-28",
+      "return_observations": 1141,
+      "products": [
+        "core",
+        "momentum",
+        "quality",
+        "value",
+        "dimensional"
+      ],
+      "level_start": "2022-01-04",
+      "level_observations": 1142
+    },
+    "long_monthly": {
+      "first_return_end": "2014-11-28",
+      "last_return_end": "2026-07-31",
+      "return_observations": 141,
+      "products": [
+        "core",
+        "momentum",
+        "quality",
+        "value",
+        "dimensional"
+      ],
+      "level_start": "2014-10-31",
+      "level_observations": 142
+    },
+    "market_negative_intervals": {
+      "first_return_end": "2014-10-07",
+      "last_return_end": "2026-08-28",
+      "return_observations": 1320,
+      "products": [
+        "core",
+        "momentum",
+        "quality",
+        "value",
+        "dimensional"
+      ],
+      "level_start": null,
+      "level_observations": null
+    },
+    "short_with_amundi": {
+      "first_return_end": "2025-10-01",
+      "last_return_end": "2026-08-28",
+      "return_observations": 225,
+      "products": [
+        "core",
+        "momentum",
+        "quality",
+        "value",
+        "dimensional",
+        "amundi_2x"
+      ],
+      "level_start": "2025-09-30",
+      "level_observations": 226
+    },
+    "short_without_amundi": {
+      "first_return_end": "2025-10-01",
+      "last_return_end": "2026-08-28",
+      "return_observations": 225,
+      "products": [
+        "core",
+        "momentum",
+        "quality",
+        "value",
+        "dimensional"
+      ],
+      "level_start": "2025-09-30",
+      "level_observations": 226
+    }
+  },
+  "interpretation": {
+    "long": "Five unlevered product NAVs; no simulated investor costs or borrowing.",
+    "short": "Six-product common overlap plus identical five-product window. Amundi daily-reset 2x exposure differs from unlevered NAVs and main 1.25x band-managed debt.",
+    "monthly": "Last common observed valuation per month; final partial August 2026 omitted. October 2014 month-end is the initial level.",
+    "negative": "Core return strictly negative; selected irregular intervals, not a continuous wealth path or future protection guarantee.",
+    "rolling": "252 common valuation intervals. Overlapping descriptive windows, no probability/causality interpretation.",
+    "calibration_confirmation": "Recalculate returns within each level panel; first confirmation return ends 5 January 2022, excluding the interval into its opening level.",
+    "limitations": "Published unchanged NAVs/ties retained. Co-movement does not establish holdings overlap, independent factor premiums or future diversification protection. Not forecasts or investment advice."
+  }
+}

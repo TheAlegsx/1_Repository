@@ -1,0 +1,8 @@
+{
+  "loss_year_by_return_scenario": {"early_loss": 1, "late_loss": 4},
+  "break_even_fee_lower": 0.0,
+  "break_even_fee_upper": 0.02,
+  "bisection_iterations": 65,
+  "comparison_tolerance_usd": 0.000001,
+  "illustrative_fee": 0.005
+}

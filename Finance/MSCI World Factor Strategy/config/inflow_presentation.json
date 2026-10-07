@@ -1,0 +1,12 @@
+{
+  "main_return_scenario": "growth",
+  "investor_return_scenario": "late_loss",
+  "loss_return_scenario": "late_loss",
+  "selected_timing_cases": ["constant_monthly", "early_steps", "late_steps"],
+  "loss_range_cases": [
+    {"layer": "acquisition", "flow": "steady"},
+    {"layer": "timing", "flow": "constant_monthly"},
+    {"layer": "timing", "flow": "early_steps"}
+  ],
+  "fee_manager_receipt_fraction": 1.0
+}

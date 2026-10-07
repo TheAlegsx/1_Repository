@@ -1,0 +1,1370 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-06",
+  "scope": "Pre-assembly evidence contract, not final reports, raw-data release or full claim/cell verification.",
+  "primary_policy": "absolute_decoupled",
+  "comparison_policy": "hybrid20",
+  "source_register": "docs/SOURCE_DOWNLOAD_REGISTER_2026-10-06.json",
+  "coverage": "config/report_table_catalog_2026-10-07.json",
+  "ai_document": "docs/AI_USE.md",
+  "baseline": "config/backtest_absolute_decoupled_2026-10-05.json",
+  "inflow_assumptions": "config/inflow_acquisition.json",
+  "execution": "config/historical_inflows_execution_v2_2026-10-05.json",
+  "runs": {
+    "core": "outputs/absolute_decoupled_core_2026-10-05",
+    "expanded": "outputs/absolute_decoupled_annual_dimensional_verified_2026-10-05",
+    "endpoints": "outputs/absolute_decoupled_endpoints_v2_verified_2026-10-05",
+    "allocations": "outputs/absolute_decoupled_allocations_2026-10-05",
+    "comparator_costs": "outputs/absolute_decoupled_comparator_costs_2026-10-05",
+    "custody": "outputs/absolute_decoupled_custody_2026-10-05",
+    "hindsight": "outputs/legacy_bounded_hindsight_2026-10-05",
+    "issuer": "outputs/issuer_annual_returns_2026-10-05",
+    "independent": "outputs/independent_complete_v2_2026-10-06",
+    "joint_cost": "outputs/joint_cost_2026-10-06",
+    "funding_gap": "outputs/funding_scan_gap_v2_2026-10-06",
+    "inflow_v4": "outputs/inflow_complete_verified_2026-10-04",
+    "historical": "outputs/historical_inflow_diagnostics_2026-10-05",
+    "interpretation": "outputs/historical_inflow_interpretation_2026-10-05"
+  },
+  "datasets": {
+    "main": {
+      "run": "core",
+      "path": "results/policy_metrics.csv"
+    },
+    "main_primary": {
+      "run": "core",
+      "path": "results/primary_metrics.csv"
+    },
+    "main_selection": {
+      "run": "core",
+      "path": "results/selection.json"
+    },
+    "absolute_history": {
+      "run": "core",
+      "path": "results/full_factor_absolute_decoupled_1.25_history.csv"
+    },
+    "hybrid_history": {
+      "run": "core",
+      "path": "results/full_factor_hybrid20_1.25_history.csv"
+    },
+    "endpoints": {
+      "run": "endpoints",
+      "path": "endpoint_metrics.csv"
+    },
+    "allocations": {
+      "run": "allocations",
+      "path": "allocation_metrics.csv"
+    },
+    "hindsight": {
+      "run": "hindsight",
+      "path": "bounded_maxima.csv"
+    },
+    "rolling": {
+      "run": "expanded",
+      "path": "results/rolling_monthly_summary.csv"
+    },
+    "entries": {
+      "run": "expanded",
+      "path": "results/fresh_entry_metrics.csv"
+    },
+    "long_correlations": {
+      "run": "expanded",
+      "path": "correlations/long_full_pearson.csv"
+    },
+    "short_correlations": {
+      "run": "expanded",
+      "path": "correlations/short_with_amundi_pearson.csv"
+    },
+    "comparator_costs": {
+      "run": "comparator_costs",
+      "path": "comparator_cost_comparison.csv"
+    },
+    "bridge": {
+      "run": "expanded",
+      "path": "results/counterfactual_bridge.csv"
+    },
+    "funding": {
+      "run": "expanded",
+      "path": "results/funding_metrics.csv"
+    },
+    "custody": {
+      "run": "custody",
+      "path": "custody/custody_metrics.csv"
+    },
+    "synthetic": {
+      "run": "expanded",
+      "path": "synthetic/synthetic_metrics.csv"
+    },
+    "products": {
+      "run": "expanded",
+      "path": "products/product_overlap_metrics.csv"
+    },
+    "issuer": {
+      "run": "issuer",
+      "path": "published_issuer_return_comparison.csv"
+    },
+    "independent": {
+      "run": "independent",
+      "path": "coverage.json"
+    },
+    "joint_cost": {
+      "run": "joint_cost",
+      "path": "cost_policy_comparisons.csv"
+    },
+    "funding_scan": {
+      "run": "funding_gap",
+      "path": "funding_scan.csv"
+    },
+    "funding_crossings": {
+      "run": "funding_gap",
+      "path": "funding_crossings.csv"
+    },
+    "gap_cures": {
+      "run": "funding_gap",
+      "path": "gap_cure_metrics.csv"
+    },
+    "historical_calendar": {
+      "run": "historical",
+      "path": "pilot/basis/historical_calendar.csv"
+    },
+    "historical_basis": {
+      "run": "historical",
+      "path": "pilot/basis/historical_return_basis.csv"
+    },
+    "historical_headline": {
+      "run": "historical",
+      "path": "pilot/coupled_headline.csv"
+    },
+    "historical_returns": {
+      "run": "historical",
+      "path": "dated_investor_returns.csv"
+    },
+    "manager": {
+      "run": "historical",
+      "path": "manager_headline.csv"
+    },
+    "historical_interpretation": {
+      "run": "interpretation",
+      "path": "coupled_overlay_comparison.csv"
+    },
+    "historical_definitions": {
+      "run": "historical",
+      "path": "diagnostic_definitions.json"
+    },
+    "actual_execution": {
+      "run": "historical",
+      "path": "pilot/config/historical_inflows_execution_v2_2026-10-05.json"
+    },
+    "inflow_claims": {
+      "run": "inflow_v4",
+      "path": "report/claims.json"
+    },
+    "annual_core": {
+      "run": "expanded",
+      "path": "annual_core/historical_snapshot_summary.csv"
+    },
+    "annual_factors": {
+      "run": "expanded",
+      "path": "annual_factors/historical_snapshot_summary.csv"
+    },
+    "annual_dimensional": {
+      "run": "expanded",
+      "path": "annual_dimensional/historical_snapshot_summary.csv"
+    },
+    "inflow_table_1": {
+      "run": "inflow_v4",
+      "path": "report_tables/01_acquisition_assumptions.md"
+    },
+    "inflow_table_2": {
+      "run": "inflow_v4",
+      "path": "report_tables/02_business_assumptions.md"
+    },
+    "inflow_table_3": {
+      "run": "inflow_v4",
+      "path": "report_tables/03_acquisition_outcomes.md"
+    },
+    "inflow_table_4": {
+      "run": "inflow_v4",
+      "path": "report_tables/04_selected_timing_outcomes.md"
+    },
+    "inflow_table_5": {
+      "run": "inflow_v4",
+      "path": "report_tables/05_investor_returns.md"
+    },
+    "inflow_table_6": {
+      "run": "inflow_v4",
+      "path": "report_tables/06_loss_placement_ranges.md"
+    },
+    "inflow_table_7": {
+      "run": "inflow_v4",
+      "path": "report_tables/07_fee_economics.md"
+    },
+    "inflow_table_8": {
+      "run": "inflow_v4",
+      "path": "report_tables/08_treasury_definitions.md"
+    },
+    "inflow_table_9": {
+      "run": "inflow_v4",
+      "path": "report_tables/09_acquisition_return_matrix.md"
+    },
+    "inflow_table_10": {
+      "run": "inflow_v4",
+      "path": "report_tables/10_timing_schedules.md"
+    },
+    "inflow_table_11": {
+      "run": "inflow_v4",
+      "path": "report_tables/11_all_timing_outcomes.md"
+    },
+    "inflow_table_12": {
+      "run": "inflow_v4",
+      "path": "report_tables/12_timing_return_matrix.md"
+    }
+  },
+  "tables": [
+    {
+      "id": "backtest_01",
+      "report": "backtest",
+      "original_section": "2.1 Economic approach and initial allocation",
+      "original_header": "| Component | Initial weight | Role in the design |",
+      "original_rows": 4,
+      "dataset_refs": [],
+      "binding_scope": "manual_configuration_source_or_navigation",
+      "assembly_status": "pending"
+    },
+    {
+      "id": "backtest_02",
+      "report": "backtest",
+      "original_section": "2.2 Benchmark suitability",
+      "original_header": "| Reference | Reason for inclusion | Qualification |",
+      "original_rows": 3,
+      "dataset_refs": [],
+      "binding_scope": "manual_configuration_source_or_navigation",
+      "assembly_status": "pending"
+    },
+    {
+      "id": "backtest_03",
+      "report": "backtest",
+      "original_section": "3.1 Inputs and common period",
+      "original_header": "| Input | Use | Important limitation |",
+      "original_rows": 5,
+      "dataset_refs": [],
+      "binding_scope": "manual_configuration_source_or_navigation",
+      "assembly_status": "pending"
+    },
+    {
+      "id": "backtest_04",
+      "report": "backtest",
+      "original_section": "4.2 Assumptions, their origin and their challenges",
+      "original_header": "| Assumption | Basis in the model | How it is challenged |",
+      "original_rows": 7,
+      "dataset_refs": [],
+      "binding_scope": "manual_configuration_source_or_navigation",
+      "assembly_status": "pending"
+    },
+    {
+      "id": "backtest_05",
+      "report": "backtest",
+      "original_section": "5. Unlevered Results",
+      "original_header": "| Investment | CAGR | Annualised volatility | Maximum drawdown | Sharpe | Ending equity (USD m) |",
+      "original_rows": 3,
+      "dataset_refs": [
+        "main"
+      ],
+      "binding_scope": "numerical_family_binding_rendering_pending",
+      "assembly_status": "pending"
+    },
+    {
+      "id": "backtest_06",
+      "report": "backtest",
+      "original_section": "6.1 Equal target exposure",
+      "original_header": "| Investment | CAGR | Annualised volatility | Maximum drawdown | Sharpe | Ending equity (USD m) |",
+      "original_rows": 3,
+      "dataset_refs": [
+        "main"
+      ],
+      "binding_scope": "numerical_family_binding_rendering_pending",
+      "assembly_status": "pending"
+    },
+    {
+      "id": "backtest_07",
+      "report": "backtest",
+      "original_section": "7.1 Time stability and market-adjusted performance",
+      "original_header": "| Observation endpoint | Target exposure | Proposed CAGR | Core CAGR | Difference (percentage points) |",
+      "original_rows": 6,
+      "dataset_refs": [
+        "endpoints"
+      ],
+      "binding_scope": "numerical_family_binding_rendering_pending",
+      "assembly_status": "pending"
+    },
+    {
+      "id": "backtest_08",
+      "report": "backtest",
+      "original_section": "Appendices",
+      "original_header": "| Appendix | Supporting material |",
+      "original_rows": 12,
+      "dataset_refs": [],
+      "binding_scope": "manual_configuration_source_or_navigation",
+      "assembly_status": "pending"
+    },
+    {
+      "id": "backtest_09",
+      "report": "backtest",
+      "original_section": "A.1 Eight unlevered allocations",
+      "original_header": "| Allocation | Core/Momentum/Quality/Value | CAGR | Volatility | Drawdown | Sharpe |",
+      "original_rows": 8,
+      "dataset_refs": [
+        "allocations"
+      ],
+      "binding_scope": "numerical_family_binding_rendering_pending",
+      "assembly_status": "pending"
+    },
+    {
+      "id": "backtest_10",
+      "report": "backtest",
+      "original_section": "A.2 Bounded full-sample return maximisation",
+      "original_header": "| Exposure | Weights | Sleeve band | Leverage band | Maximum grid CAGR |",
+      "original_rows": 2,
+      "dataset_refs": [
+        "hindsight"
+      ],
+      "binding_scope": "numerical_family_binding_rendering_pending",
+      "assembly_status": "pending"
+    },
+    {
+      "id": "backtest_11",
+      "report": "backtest",
+      "original_section": "B.1 Rule mechanics",
+      "original_header": "| Sleeve | ISIN | Target | Permitted band |",
+      "original_rows": 4,
+      "dataset_refs": [],
+      "binding_scope": "manual_configuration_source_or_navigation",
+      "assembly_status": "pending"
+    },
+    {
+      "id": "backtest_12",
+      "report": "backtest",
+      "original_section": "B.3 All policy results and drift trade-offs",
+      "original_header": "| Policy | Exposure | CAGR | Drawdown | Events after entry | Total trade costs USD |",
+      "original_rows": 15,
+      "dataset_refs": [
+        "main"
+      ],
+      "binding_scope": "numerical_family_binding_rendering_pending",
+      "assembly_status": "pending"
+    },
+    {
+      "id": "backtest_13",
+      "report": "backtest",
+      "original_section": "C.2 Full comparative measures",
+      "original_header": "| Strategy / exposure | Beta | Jensen alpha/year | 95% HAC interval | Treynor | Sortino | Calmar |",
+      "original_rows": 6,
+      "dataset_refs": [
+        "main"
+      ],
+      "binding_scope": "numerical_family_binding_rendering_pending",
+      "assembly_status": "pending"
+    },
+    {
+      "id": "backtest_14",
+      "report": "backtest",
+      "original_section": "D.1 Early and later periods",
+      "original_header": "| Period | Strategy | Exposure | CAGR | Volatility | Drawdown |",
+      "original_rows": 12,
+      "dataset_refs": [
+        "main"
+      ],
+      "binding_scope": "numerical_family_binding_rendering_pending",
+      "assembly_status": "pending"
+    },
+    {
+      "id": "backtest_15",
+      "report": "backtest",
+      "original_section": "D.2 Continuing windows and restarted entries",
+      "original_header": "| Exposure | Horizon | Windows | Higher CAGR share | Median CAGR difference |",
+      "original_rows": 6,
+      "dataset_refs": [
+        "rolling"
+      ],
+      "binding_scope": "numerical_family_binding_rendering_pending",
+      "assembly_status": "pending"
+    },
+    {
+      "id": "backtest_16",
+      "report": "backtest",
+      "original_section": "D.2 Continuing windows and restarted entries",
+      "original_header": "| Requested entry | Factor 1.25x CAGR | Core 1.25x CAGR | Dimensional 1.25x CAGR |",
+      "original_rows": 5,
+      "dataset_refs": [
+        "entries"
+      ],
+      "binding_scope": "numerical_family_binding_rendering_pending",
+      "assembly_status": "pending"
+    },
+    {
+      "id": "backtest_17",
+      "report": "backtest",
+      "original_section": "E.1 All principal panels and interpretation",
+      "original_header": "| Product | core | momentum | quality | value | dimensional |",
+      "original_rows": 5,
+      "dataset_refs": [
+        "long_correlations"
+      ],
+      "binding_scope": "numerical_family_binding_rendering_pending",
+      "assembly_status": "pending"
+    },
+    {
+      "id": "backtest_18",
+      "report": "backtest",
+      "original_section": "E.1 All principal panels and interpretation",
+      "original_header": "| Product | core | momentum | quality | value | dimensional | amundi_2x |",
+      "original_rows": 6,
+      "dataset_refs": [
+        "short_correlations"
+      ],
+      "binding_scope": "numerical_family_binding_rendering_pending",
+      "assembly_status": "pending"
+    },
+    {
+      "id": "backtest_19",
+      "report": "backtest",
+      "original_section": "F.1 Embedded expenses and comparator external-cost control",
+      "original_header": "| Exposure | Our baseline CAGR | Dimensional, zero external charges | CAGR gap |",
+      "original_rows": 2,
+      "dataset_refs": [
+        "comparator_costs"
+      ],
+      "binding_scope": "numerical_family_binding_rendering_pending",
+      "assembly_status": "pending"
+    },
+    {
+      "id": "backtest_20",
+      "report": "backtest",
+      "original_section": "F.2 Allocation/exposure/funding bridge",
+      "original_header": "| Sequential counterfactual | CAGR | Ending equity USDm |",
+      "original_rows": 5,
+      "dataset_refs": [
+        "bridge",
+        "funding"
+      ],
+      "binding_scope": "numerical_family_binding_rendering_pending",
+      "assembly_status": "pending"
+    },
+    {
+      "id": "backtest_21",
+      "report": "backtest",
+      "original_section": "F.3 Credit-margin sensitivity",
+      "original_header": "| Margin above reference | Full CAGR | Confirmation CAGR |",
+      "original_rows": 10,
+      "dataset_refs": [
+        "bridge",
+        "funding"
+      ],
+      "binding_scope": "numerical_family_binding_rendering_pending",
+      "assembly_status": "pending"
+    },
+    {
+      "id": "backtest_22",
+      "report": "backtest",
+      "original_section": "F.4 Separate custody-path recalculation",
+      "original_header": "| Custody scenario | Factor 1x | Core 1x | Dimensional 1x | Factor 1.25x | Core 1.25x | Dimensional 1.25x |",
+      "original_rows": 4,
+      "dataset_refs": [
+        "custody"
+      ],
+      "binding_scope": "numerical_family_binding_rendering_pending",
+      "assembly_status": "pending"
+    },
+    {
+      "id": "backtest_23",
+      "report": "backtest",
+      "original_section": "H.1 Retained scenarios and results",
+      "original_header": "| Regime | Exposure | Ending equity USDm | CAGR | Drawdown |",
+      "original_rows": 16,
+      "dataset_refs": [
+        "synthetic"
+      ],
+      "binding_scope": "numerical_family_binding_rendering_pending",
+      "assembly_status": "pending"
+    },
+    {
+      "id": "backtest_24",
+      "report": "backtest",
+      "original_section": "I.2 Historical schedules and reconciliation",
+      "original_header": "| Product | Holdings date | Equity lines | US equity / NAV | Top ten security lines / NAV |",
+      "original_rows": 14,
+      "dataset_refs": [
+        "annual_core",
+        "annual_factors",
+        "annual_dimensional"
+      ],
+      "binding_scope": "numerical_family_binding_rendering_pending",
+      "assembly_status": "pending"
+    },
+    {
+      "id": "backtest_25",
+      "report": "backtest",
+      "original_section": "J.1 Short-period comparison and exposure differences",
+      "original_header": "| Reference | Cumulative return | Volatility | Drawdown |",
+      "original_rows": 5,
+      "dataset_refs": [
+        "products"
+      ],
+      "binding_scope": "numerical_family_binding_rendering_pending",
+      "assembly_status": "pending"
+    },
+    {
+      "id": "backtest_26",
+      "report": "backtest",
+      "original_section": "K.1 Instruments and calendar details",
+      "original_header": "| Investment | Identifier | Relevant source |",
+      "original_rows": 6,
+      "dataset_refs": [],
+      "binding_scope": "manual_configuration_source_or_navigation",
+      "assembly_status": "pending"
+    },
+    {
+      "id": "backtest_27",
+      "report": "backtest",
+      "original_section": "K.2 Complete baseline assumption register",
+      "original_header": "| Assumption | Origin/rationale | Challenge |",
+      "original_rows": 12,
+      "dataset_refs": [],
+      "binding_scope": "manual_configuration_source_or_navigation",
+      "assembly_status": "pending"
+    },
+    {
+      "id": "backtest_28",
+      "report": "backtest",
+      "original_section": "K.3 Calculation evidence map",
+      "original_header": "| Result | Original input | Work performed | Saved evidence |",
+      "original_rows": 11,
+      "dataset_refs": [],
+      "binding_scope": "manual_configuration_source_or_navigation",
+      "assembly_status": "pending"
+    },
+    {
+      "id": "backtest_29",
+      "report": "backtest",
+      "original_section": "K.3 Calculation evidence map",
+      "original_header": "| Additional result | Work performed | Saved evidence |",
+      "original_rows": 5,
+      "dataset_refs": [],
+      "binding_scope": "manual_configuration_source_or_navigation",
+      "assembly_status": "pending"
+    },
+    {
+      "id": "backtest_30",
+      "report": "backtest",
+      "original_section": "L.1 Requirement mapping and deliverable boundaries",
+      "original_header": "| Assignment requirement | Research support here | Separate work / boundary |",
+      "original_rows": 11,
+      "dataset_refs": [],
+      "binding_scope": "manual_configuration_source_or_navigation",
+      "assembly_status": "pending"
+    },
+    {
+      "id": "inflow_01",
+      "report": "capital_inflows",
+      "original_section": "3.1 External client acquisition",
+      "original_header": "| Case | Annual new client equivalents, years 1\u201310 | Scheduled ten-year gross subscriptions (USD m), before stress cuts |",
+      "original_rows": 5,
+      "dataset_refs": [
+        "inflow_table_1"
+      ],
+      "binding_scope": "preserved_hypothetical_v4_table",
+      "assembly_status": "pending"
+    },
+    {
+      "id": "inflow_02",
+      "report": "capital_inflows",
+      "original_section": "3.3 Business costs and receipt of fees",
+      "original_header": "| Input | Central discussion assumption | Why included / challenge |",
+      "original_rows": 6,
+      "dataset_refs": [
+        "inflow_table_2"
+      ],
+      "binding_scope": "preserved_hypothetical_v4_table",
+      "assembly_status": "pending"
+    },
+    {
+      "id": "inflow_03",
+      "report": "capital_inflows",
+      "original_section": "6.1 Client-acquisition scenarios",
+      "original_header": "| Case | Owner equity, year 10 (USD m) | External equity, year 10 (USD m) | External fees, year 10 (USD) | Manager result, year 10 (USD) | Cumulative manager cash, ten years (USD) |",
+      "original_rows": 5,
+      "dataset_refs": [
+        "inflow_table_3"
+      ],
+      "binding_scope": "preserved_hypothetical_v4_table",
+      "assembly_status": "pending"
+    },
+    {
+      "id": "inflow_04",
+      "report": "capital_inflows",
+      "original_section": "6.2 Equal gross subscriptions, different timing",
+      "original_header": "| Timing case | Total fund assets, year 10 (USD m) | Cumulative external redemptions (USD m) | Ten-year external fees (USD) | Ten-year manager cash (USD) |",
+      "original_rows": 3,
+      "dataset_refs": [
+        "inflow_table_4"
+      ],
+      "binding_scope": "preserved_hypothetical_v4_table",
+      "assembly_status": "pending"
+    },
+    {
+      "id": "inflow_05",
+      "report": "capital_inflows",
+      "original_section": "6.3 Fund unit return and external investor return",
+      "original_header": "| Timing case | Annualised unit TWR | Annualised aggregate external MWR |",
+      "original_rows": 3,
+      "dataset_refs": [
+        "inflow_table_5"
+      ],
+      "binding_scope": "preserved_hypothetical_v4_table",
+      "assembly_status": "pending"
+    },
+    {
+      "id": "inflow_06",
+      "report": "capital_inflows",
+      "original_section": "7. Losses, Retention and Sequence",
+      "original_header": "| Loss-placement control | Minimum ending total assets (USD) | Maximum ending total assets (USD) | Range (USD) |",
+      "original_rows": 3,
+      "dataset_refs": [
+        "inflow_table_6"
+      ],
+      "binding_scope": "preserved_hypothetical_v4_table",
+      "assembly_status": "pending"
+    },
+    {
+      "id": "inflow_07",
+      "report": "capital_inflows",
+      "original_section": "8. Fee Economics, Funding and Sensitivities",
+      "original_header": "| Annual fee | Owner equity, year 10 (USD m) | External fee, year 10 (USD) | Manager result, year 10 (USD) | Ten-year manager cash (USD) |",
+      "original_rows": 4,
+      "dataset_refs": [
+        "inflow_table_7"
+      ],
+      "binding_scope": "preserved_hypothetical_v4_table",
+      "assembly_status": "pending"
+    },
+    {
+      "id": "inflow_08",
+      "report": "capital_inflows",
+      "original_section": "8. Fee Economics, Funding and Sensitivities",
+      "original_header": "| Annual fee | Closing cash, external fees only (USD) | Peak deficit, external fees only (USD) | Closing cash, including owner fees (USD) | Peak deficit, including owner fees (USD) |",
+      "original_rows": 4,
+      "dataset_refs": [
+        "inflow_table_8"
+      ],
+      "binding_scope": "preserved_hypothetical_v4_table",
+      "assembly_status": "pending"
+    },
+    {
+      "id": "inflow_09",
+      "report": "capital_inflows",
+      "original_section": "Appendix A. All Twenty Acquisition Scenario Outcomes",
+      "original_header": "| Flow case | Flat | 6% | Early loss | Later loss |",
+      "original_rows": 5,
+      "dataset_refs": [
+        "inflow_table_9"
+      ],
+      "binding_scope": "preserved_hypothetical_v4_table",
+      "assembly_status": "pending"
+    },
+    {
+      "id": "inflow_10",
+      "report": "capital_inflows",
+      "original_section": "C.1 Schedule definitions and controlled assumptions",
+      "original_header": "| Schedule | Definition |",
+      "original_rows": 6,
+      "dataset_refs": [
+        "inflow_table_10"
+      ],
+      "binding_scope": "preserved_hypothetical_v4_table",
+      "assembly_status": "pending"
+    },
+    {
+      "id": "inflow_11",
+      "report": "capital_inflows",
+      "original_section": "C.2 All timing cases under 6%",
+      "original_header": "| Timing case | Total fund assets, year 10 (USD m) | Cumulative external redemptions (USD m) | Cumulative external fees (USD) | Ten-year manager cash (USD) |",
+      "original_rows": 6,
+      "dataset_refs": [
+        "inflow_table_11"
+      ],
+      "binding_scope": "preserved_hypothetical_v4_table",
+      "assembly_status": "pending"
+    },
+    {
+      "id": "inflow_12",
+      "report": "capital_inflows",
+      "original_section": "C.5 All four return-path comparisons",
+      "original_header": "| Timing case | Flat | 6% | Early loss | Later loss |",
+      "original_rows": 6,
+      "dataset_refs": [
+        "inflow_table_12"
+      ],
+      "binding_scope": "preserved_hypothetical_v4_table",
+      "assembly_status": "pending"
+    }
+  ],
+  "claims": [
+    {
+      "id": "main_factor_absolute_decoupled_1.0_cagr",
+      "dataset": "main",
+      "selection": {
+        "period": "full",
+        "strategy": "factor",
+        "policy": "absolute_decoupled",
+        "leverage": 1.0
+      },
+      "field": "cagr",
+      "kind": "historical_backtest",
+      "display": "percent_4dp"
+    },
+    {
+      "id": "main_factor_absolute_decoupled_1.0_annualised_volatility",
+      "dataset": "main",
+      "selection": {
+        "period": "full",
+        "strategy": "factor",
+        "policy": "absolute_decoupled",
+        "leverage": 1.0
+      },
+      "field": "annualised_volatility",
+      "kind": "historical_backtest",
+      "display": "percent_4dp"
+    },
+    {
+      "id": "main_factor_absolute_decoupled_1.0_maximum_drawdown",
+      "dataset": "main",
+      "selection": {
+        "period": "full",
+        "strategy": "factor",
+        "policy": "absolute_decoupled",
+        "leverage": 1.0
+      },
+      "field": "maximum_drawdown",
+      "kind": "historical_backtest",
+      "display": "percent_4dp"
+    },
+    {
+      "id": "main_factor_absolute_decoupled_1.0_sharpe_ratio",
+      "dataset": "main",
+      "selection": {
+        "period": "full",
+        "strategy": "factor",
+        "policy": "absolute_decoupled",
+        "leverage": 1.0
+      },
+      "field": "sharpe_ratio",
+      "kind": "historical_backtest",
+      "display": "decimal_3dp"
+    },
+    {
+      "id": "main_factor_absolute_decoupled_1.0_ending_equity_usd",
+      "dataset": "main",
+      "selection": {
+        "period": "full",
+        "strategy": "factor",
+        "policy": "absolute_decoupled",
+        "leverage": 1.0
+      },
+      "field": "ending_equity_usd",
+      "kind": "historical_backtest",
+      "display": "usd_million_3dp"
+    },
+    {
+      "id": "main_factor_absolute_decoupled_1.25_cagr",
+      "dataset": "main",
+      "selection": {
+        "period": "full",
+        "strategy": "factor",
+        "policy": "absolute_decoupled",
+        "leverage": 1.25
+      },
+      "field": "cagr",
+      "kind": "historical_backtest",
+      "display": "percent_4dp"
+    },
+    {
+      "id": "main_factor_absolute_decoupled_1.25_annualised_volatility",
+      "dataset": "main",
+      "selection": {
+        "period": "full",
+        "strategy": "factor",
+        "policy": "absolute_decoupled",
+        "leverage": 1.25
+      },
+      "field": "annualised_volatility",
+      "kind": "historical_backtest",
+      "display": "percent_4dp"
+    },
+    {
+      "id": "main_factor_absolute_decoupled_1.25_maximum_drawdown",
+      "dataset": "main",
+      "selection": {
+        "period": "full",
+        "strategy": "factor",
+        "policy": "absolute_decoupled",
+        "leverage": 1.25
+      },
+      "field": "maximum_drawdown",
+      "kind": "historical_backtest",
+      "display": "percent_4dp"
+    },
+    {
+      "id": "main_factor_absolute_decoupled_1.25_sharpe_ratio",
+      "dataset": "main",
+      "selection": {
+        "period": "full",
+        "strategy": "factor",
+        "policy": "absolute_decoupled",
+        "leverage": 1.25
+      },
+      "field": "sharpe_ratio",
+      "kind": "historical_backtest",
+      "display": "decimal_3dp"
+    },
+    {
+      "id": "main_factor_absolute_decoupled_1.25_ending_equity_usd",
+      "dataset": "main",
+      "selection": {
+        "period": "full",
+        "strategy": "factor",
+        "policy": "absolute_decoupled",
+        "leverage": 1.25
+      },
+      "field": "ending_equity_usd",
+      "kind": "historical_backtest",
+      "display": "usd_million_3dp"
+    },
+    {
+      "id": "main_factor_hybrid20_1.0_cagr",
+      "dataset": "main",
+      "selection": {
+        "period": "full",
+        "strategy": "factor",
+        "policy": "hybrid20",
+        "leverage": 1.0
+      },
+      "field": "cagr",
+      "kind": "historical_backtest",
+      "display": "percent_4dp"
+    },
+    {
+      "id": "main_factor_hybrid20_1.0_annualised_volatility",
+      "dataset": "main",
+      "selection": {
+        "period": "full",
+        "strategy": "factor",
+        "policy": "hybrid20",
+        "leverage": 1.0
+      },
+      "field": "annualised_volatility",
+      "kind": "historical_backtest",
+      "display": "percent_4dp"
+    },
+    {
+      "id": "main_factor_hybrid20_1.0_maximum_drawdown",
+      "dataset": "main",
+      "selection": {
+        "period": "full",
+        "strategy": "factor",
+        "policy": "hybrid20",
+        "leverage": 1.0
+      },
+      "field": "maximum_drawdown",
+      "kind": "historical_backtest",
+      "display": "percent_4dp"
+    },
+    {
+      "id": "main_factor_hybrid20_1.0_sharpe_ratio",
+      "dataset": "main",
+      "selection": {
+        "period": "full",
+        "strategy": "factor",
+        "policy": "hybrid20",
+        "leverage": 1.0
+      },
+      "field": "sharpe_ratio",
+      "kind": "historical_backtest",
+      "display": "decimal_3dp"
+    },
+    {
+      "id": "main_factor_hybrid20_1.0_ending_equity_usd",
+      "dataset": "main",
+      "selection": {
+        "period": "full",
+        "strategy": "factor",
+        "policy": "hybrid20",
+        "leverage": 1.0
+      },
+      "field": "ending_equity_usd",
+      "kind": "historical_backtest",
+      "display": "usd_million_3dp"
+    },
+    {
+      "id": "main_factor_hybrid20_1.25_cagr",
+      "dataset": "main",
+      "selection": {
+        "period": "full",
+        "strategy": "factor",
+        "policy": "hybrid20",
+        "leverage": 1.25
+      },
+      "field": "cagr",
+      "kind": "historical_backtest",
+      "display": "percent_4dp"
+    },
+    {
+      "id": "main_factor_hybrid20_1.25_annualised_volatility",
+      "dataset": "main",
+      "selection": {
+        "period": "full",
+        "strategy": "factor",
+        "policy": "hybrid20",
+        "leverage": 1.25
+      },
+      "field": "annualised_volatility",
+      "kind": "historical_backtest",
+      "display": "percent_4dp"
+    },
+    {
+      "id": "main_factor_hybrid20_1.25_maximum_drawdown",
+      "dataset": "main",
+      "selection": {
+        "period": "full",
+        "strategy": "factor",
+        "policy": "hybrid20",
+        "leverage": 1.25
+      },
+      "field": "maximum_drawdown",
+      "kind": "historical_backtest",
+      "display": "percent_4dp"
+    },
+    {
+      "id": "main_factor_hybrid20_1.25_sharpe_ratio",
+      "dataset": "main",
+      "selection": {
+        "period": "full",
+        "strategy": "factor",
+        "policy": "hybrid20",
+        "leverage": 1.25
+      },
+      "field": "sharpe_ratio",
+      "kind": "historical_backtest",
+      "display": "decimal_3dp"
+    },
+    {
+      "id": "main_factor_hybrid20_1.25_ending_equity_usd",
+      "dataset": "main",
+      "selection": {
+        "period": "full",
+        "strategy": "factor",
+        "policy": "hybrid20",
+        "leverage": 1.25
+      },
+      "field": "ending_equity_usd",
+      "kind": "historical_backtest",
+      "display": "usd_million_3dp"
+    },
+    {
+      "id": "main_core_leverage_managed_1.0_cagr",
+      "dataset": "main",
+      "selection": {
+        "period": "full",
+        "strategy": "core",
+        "policy": "leverage_managed",
+        "leverage": 1.0
+      },
+      "field": "cagr",
+      "kind": "historical_backtest",
+      "display": "percent_4dp"
+    },
+    {
+      "id": "main_core_leverage_managed_1.0_annualised_volatility",
+      "dataset": "main",
+      "selection": {
+        "period": "full",
+        "strategy": "core",
+        "policy": "leverage_managed",
+        "leverage": 1.0
+      },
+      "field": "annualised_volatility",
+      "kind": "historical_backtest",
+      "display": "percent_4dp"
+    },
+    {
+      "id": "main_core_leverage_managed_1.0_maximum_drawdown",
+      "dataset": "main",
+      "selection": {
+        "period": "full",
+        "strategy": "core",
+        "policy": "leverage_managed",
+        "leverage": 1.0
+      },
+      "field": "maximum_drawdown",
+      "kind": "historical_backtest",
+      "display": "percent_4dp"
+    },
+    {
+      "id": "main_core_leverage_managed_1.0_sharpe_ratio",
+      "dataset": "main",
+      "selection": {
+        "period": "full",
+        "strategy": "core",
+        "policy": "leverage_managed",
+        "leverage": 1.0
+      },
+      "field": "sharpe_ratio",
+      "kind": "historical_backtest",
+      "display": "decimal_3dp"
+    },
+    {
+      "id": "main_core_leverage_managed_1.0_ending_equity_usd",
+      "dataset": "main",
+      "selection": {
+        "period": "full",
+        "strategy": "core",
+        "policy": "leverage_managed",
+        "leverage": 1.0
+      },
+      "field": "ending_equity_usd",
+      "kind": "historical_backtest",
+      "display": "usd_million_3dp"
+    },
+    {
+      "id": "main_core_leverage_managed_1.25_cagr",
+      "dataset": "main",
+      "selection": {
+        "period": "full",
+        "strategy": "core",
+        "policy": "leverage_managed",
+        "leverage": 1.25
+      },
+      "field": "cagr",
+      "kind": "historical_backtest",
+      "display": "percent_4dp"
+    },
+    {
+      "id": "main_core_leverage_managed_1.25_annualised_volatility",
+      "dataset": "main",
+      "selection": {
+        "period": "full",
+        "strategy": "core",
+        "policy": "leverage_managed",
+        "leverage": 1.25
+      },
+      "field": "annualised_volatility",
+      "kind": "historical_backtest",
+      "display": "percent_4dp"
+    },
+    {
+      "id": "main_core_leverage_managed_1.25_maximum_drawdown",
+      "dataset": "main",
+      "selection": {
+        "period": "full",
+        "strategy": "core",
+        "policy": "leverage_managed",
+        "leverage": 1.25
+      },
+      "field": "maximum_drawdown",
+      "kind": "historical_backtest",
+      "display": "percent_4dp"
+    },
+    {
+      "id": "main_core_leverage_managed_1.25_sharpe_ratio",
+      "dataset": "main",
+      "selection": {
+        "period": "full",
+        "strategy": "core",
+        "policy": "leverage_managed",
+        "leverage": 1.25
+      },
+      "field": "sharpe_ratio",
+      "kind": "historical_backtest",
+      "display": "decimal_3dp"
+    },
+    {
+      "id": "main_core_leverage_managed_1.25_ending_equity_usd",
+      "dataset": "main",
+      "selection": {
+        "period": "full",
+        "strategy": "core",
+        "policy": "leverage_managed",
+        "leverage": 1.25
+      },
+      "field": "ending_equity_usd",
+      "kind": "historical_backtest",
+      "display": "usd_million_3dp"
+    },
+    {
+      "id": "main_dimensional_leverage_managed_1.0_cagr",
+      "dataset": "main",
+      "selection": {
+        "period": "full",
+        "strategy": "dimensional",
+        "policy": "leverage_managed",
+        "leverage": 1.0
+      },
+      "field": "cagr",
+      "kind": "historical_backtest",
+      "display": "percent_4dp"
+    },
+    {
+      "id": "main_dimensional_leverage_managed_1.0_annualised_volatility",
+      "dataset": "main",
+      "selection": {
+        "period": "full",
+        "strategy": "dimensional",
+        "policy": "leverage_managed",
+        "leverage": 1.0
+      },
+      "field": "annualised_volatility",
+      "kind": "historical_backtest",
+      "display": "percent_4dp"
+    },
+    {
+      "id": "main_dimensional_leverage_managed_1.0_maximum_drawdown",
+      "dataset": "main",
+      "selection": {
+        "period": "full",
+        "strategy": "dimensional",
+        "policy": "leverage_managed",
+        "leverage": 1.0
+      },
+      "field": "maximum_drawdown",
+      "kind": "historical_backtest",
+      "display": "percent_4dp"
+    },
+    {
+      "id": "main_dimensional_leverage_managed_1.0_sharpe_ratio",
+      "dataset": "main",
+      "selection": {
+        "period": "full",
+        "strategy": "dimensional",
+        "policy": "leverage_managed",
+        "leverage": 1.0
+      },
+      "field": "sharpe_ratio",
+      "kind": "historical_backtest",
+      "display": "decimal_3dp"
+    },
+    {
+      "id": "main_dimensional_leverage_managed_1.0_ending_equity_usd",
+      "dataset": "main",
+      "selection": {
+        "period": "full",
+        "strategy": "dimensional",
+        "policy": "leverage_managed",
+        "leverage": 1.0
+      },
+      "field": "ending_equity_usd",
+      "kind": "historical_backtest",
+      "display": "usd_million_3dp"
+    },
+    {
+      "id": "main_dimensional_leverage_managed_1.25_cagr",
+      "dataset": "main",
+      "selection": {
+        "period": "full",
+        "strategy": "dimensional",
+        "policy": "leverage_managed",
+        "leverage": 1.25
+      },
+      "field": "cagr",
+      "kind": "historical_backtest",
+      "display": "percent_4dp"
+    },
+    {
+      "id": "main_dimensional_leverage_managed_1.25_annualised_volatility",
+      "dataset": "main",
+      "selection": {
+        "period": "full",
+        "strategy": "dimensional",
+        "policy": "leverage_managed",
+        "leverage": 1.25
+      },
+      "field": "annualised_volatility",
+      "kind": "historical_backtest",
+      "display": "percent_4dp"
+    },
+    {
+      "id": "main_dimensional_leverage_managed_1.25_maximum_drawdown",
+      "dataset": "main",
+      "selection": {
+        "period": "full",
+        "strategy": "dimensional",
+        "policy": "leverage_managed",
+        "leverage": 1.25
+      },
+      "field": "maximum_drawdown",
+      "kind": "historical_backtest",
+      "display": "percent_4dp"
+    },
+    {
+      "id": "main_dimensional_leverage_managed_1.25_sharpe_ratio",
+      "dataset": "main",
+      "selection": {
+        "period": "full",
+        "strategy": "dimensional",
+        "policy": "leverage_managed",
+        "leverage": 1.25
+      },
+      "field": "sharpe_ratio",
+      "kind": "historical_backtest",
+      "display": "decimal_3dp"
+    },
+    {
+      "id": "main_dimensional_leverage_managed_1.25_ending_equity_usd",
+      "dataset": "main",
+      "selection": {
+        "period": "full",
+        "strategy": "dimensional",
+        "policy": "leverage_managed",
+        "leverage": 1.25
+      },
+      "field": "ending_equity_usd",
+      "kind": "historical_backtest",
+      "display": "usd_million_3dp"
+    },
+    {
+      "id": "historical_steady_absolute_decoupled_coupled_unit_twr_annual",
+      "dataset": "historical_interpretation",
+      "selection": {
+        "policy": "absolute_decoupled",
+        "layer": "acquisition",
+        "flow_plan": "steady"
+      },
+      "field": "coupled_unit_twr_annual",
+      "kind": "historical_hypothetical_flows",
+      "display": "percent_4dp"
+    },
+    {
+      "id": "historical_steady_absolute_decoupled_overlay_unit_twr_annual",
+      "dataset": "historical_interpretation",
+      "selection": {
+        "policy": "absolute_decoupled",
+        "layer": "acquisition",
+        "flow_plan": "steady"
+      },
+      "field": "overlay_unit_twr_annual",
+      "kind": "historical_hypothetical_flows",
+      "display": "percent_4dp"
+    },
+    {
+      "id": "historical_steady_absolute_decoupled_unit_twr_difference_pp",
+      "dataset": "historical_interpretation",
+      "selection": {
+        "policy": "absolute_decoupled",
+        "layer": "acquisition",
+        "flow_plan": "steady"
+      },
+      "field": "unit_twr_difference_pp",
+      "kind": "historical_hypothetical_flows",
+      "display": "pp_4dp"
+    },
+    {
+      "id": "historical_steady_absolute_decoupled_coupled_flow_transaction_cost_usd",
+      "dataset": "historical_interpretation",
+      "selection": {
+        "policy": "absolute_decoupled",
+        "layer": "acquisition",
+        "flow_plan": "steady"
+      },
+      "field": "coupled_flow_transaction_cost_usd",
+      "kind": "historical_hypothetical_flows",
+      "display": "usd_2dp"
+    },
+    {
+      "id": "historical_steady_hybrid20_coupled_unit_twr_annual",
+      "dataset": "historical_interpretation",
+      "selection": {
+        "policy": "hybrid20",
+        "layer": "acquisition",
+        "flow_plan": "steady"
+      },
+      "field": "coupled_unit_twr_annual",
+      "kind": "historical_hypothetical_flows",
+      "display": "percent_4dp"
+    },
+    {
+      "id": "historical_steady_hybrid20_overlay_unit_twr_annual",
+      "dataset": "historical_interpretation",
+      "selection": {
+        "policy": "hybrid20",
+        "layer": "acquisition",
+        "flow_plan": "steady"
+      },
+      "field": "overlay_unit_twr_annual",
+      "kind": "historical_hypothetical_flows",
+      "display": "percent_4dp"
+    },
+    {
+      "id": "historical_steady_hybrid20_unit_twr_difference_pp",
+      "dataset": "historical_interpretation",
+      "selection": {
+        "policy": "hybrid20",
+        "layer": "acquisition",
+        "flow_plan": "steady"
+      },
+      "field": "unit_twr_difference_pp",
+      "kind": "historical_hypothetical_flows",
+      "display": "pp_4dp"
+    },
+    {
+      "id": "historical_steady_hybrid20_coupled_flow_transaction_cost_usd",
+      "dataset": "historical_interpretation",
+      "selection": {
+        "policy": "hybrid20",
+        "layer": "acquisition",
+        "flow_plan": "steady"
+      },
+      "field": "coupled_flow_transaction_cost_usd",
+      "kind": "historical_hypothetical_flows",
+      "display": "usd_2dp"
+    }
+  ],
+  "supplementary_evidence": [
+    "issuer",
+    "independent",
+    "joint_cost",
+    "funding_scan",
+    "funding_crossings",
+    "gap_cures",
+    "historical_headline",
+    "historical_returns",
+    "manager",
+    "historical_interpretation",
+    "actual_execution",
+    "inflow_claims"
+  ],
+  "report_separation": {
+    "main_period": [
+      "2014-10-03",
+      "2026-08-28"
+    ],
+    "historical_inflow_period": [
+      "2014-10-03",
+      "2024-10-03"
+    ],
+    "project_months": 120,
+    "primary_backtest_cagr_is_not_constant_inflow_return": true,
+    "hypothetical_v4_scenarios_preserved": true,
+    "manager_cash_excludes_owner_and_external_portfolio_wealth": true,
+    "execution_contract": "executed_v2_not_archived_original_proposal"
+  },
+  "disclosure_placements": [
+    "backtest_front_matter",
+    "capital_inflows_front_matter",
+    "package_start_page",
+    "source_register"
+  ],
+  "remaining_scope": [
+    "No final prose/caption or every narrative/cell approval is implied.",
+    "Forty-two legacy table-family bindings do not require retaining the same final appendix layout.",
+    "Full dependency installation and reconstruction from eventual public release remain untested.",
+    "Raw/provider-derived material stays local; no publication performed."
+  ]
+}

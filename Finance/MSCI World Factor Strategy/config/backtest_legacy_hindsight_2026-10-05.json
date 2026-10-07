@@ -1,0 +1,174 @@
+{
+  "schema_version": 1,
+  "policy": "legacy_absolute",
+  "period": "full",
+  "leverage_levels": [
+    1.0,
+    1.25
+  ],
+  "sleeve_bands": [
+    0.03,
+    0.05
+  ],
+  "leverage_bands": [
+    0.05,
+    0.1,
+    0.15
+  ],
+  "definition_target_leverage": 1.25,
+  "definition_baseline_scenario_id": "W13-SB05-LB10",
+  "definition_source_sha256": "b83f54d511645ceeb2326ecdf95581da11a0f965f5c9280c6e9d8088eaa47ed4",
+  "weight_vectors": [
+    {
+      "core": 0.5,
+      "momentum": 0.15,
+      "quality": 0.15,
+      "value": 0.2
+    },
+    {
+      "core": 0.5,
+      "momentum": 0.2,
+      "quality": 0.15,
+      "value": 0.15
+    },
+    {
+      "core": 0.5,
+      "momentum": 0.2,
+      "quality": 0.1,
+      "value": 0.2
+    },
+    {
+      "core": 0.55,
+      "momentum": 0.1,
+      "quality": 0.15,
+      "value": 0.2
+    },
+    {
+      "core": 0.55,
+      "momentum": 0.15,
+      "quality": 0.15,
+      "value": 0.15
+    },
+    {
+      "core": 0.55,
+      "momentum": 0.15,
+      "quality": 0.1,
+      "value": 0.2
+    },
+    {
+      "core": 0.55,
+      "momentum": 0.2,
+      "quality": 0.15,
+      "value": 0.1
+    },
+    {
+      "core": 0.55,
+      "momentum": 0.2,
+      "quality": 0.1,
+      "value": 0.15
+    },
+    {
+      "core": 0.55,
+      "momentum": 0.2,
+      "quality": 0.05,
+      "value": 0.2
+    },
+    {
+      "core": 0.6,
+      "momentum": 0.1,
+      "quality": 0.15,
+      "value": 0.15
+    },
+    {
+      "core": 0.6,
+      "momentum": 0.1,
+      "quality": 0.1,
+      "value": 0.2
+    },
+    {
+      "core": 0.6,
+      "momentum": 0.15,
+      "quality": 0.15,
+      "value": 0.1
+    },
+    {
+      "core": 0.6,
+      "momentum": 0.15,
+      "quality": 0.1,
+      "value": 0.15
+    },
+    {
+      "core": 0.6,
+      "momentum": 0.15,
+      "quality": 0.05,
+      "value": 0.2
+    },
+    {
+      "core": 0.6,
+      "momentum": 0.2,
+      "quality": 0.1,
+      "value": 0.1
+    },
+    {
+      "core": 0.6,
+      "momentum": 0.2,
+      "quality": 0.05,
+      "value": 0.15
+    },
+    {
+      "core": 0.65,
+      "momentum": 0.1,
+      "quality": 0.15,
+      "value": 0.1
+    },
+    {
+      "core": 0.65,
+      "momentum": 0.1,
+      "quality": 0.1,
+      "value": 0.15
+    },
+    {
+      "core": 0.65,
+      "momentum": 0.1,
+      "quality": 0.05,
+      "value": 0.2
+    },
+    {
+      "core": 0.65,
+      "momentum": 0.15,
+      "quality": 0.1,
+      "value": 0.1
+    },
+    {
+      "core": 0.65,
+      "momentum": 0.15,
+      "quality": 0.05,
+      "value": 0.15
+    },
+    {
+      "core": 0.65,
+      "momentum": 0.2,
+      "quality": 0.05,
+      "value": 0.1
+    },
+    {
+      "core": 0.7,
+      "momentum": 0.1,
+      "quality": 0.1,
+      "value": 0.1
+    },
+    {
+      "core": 0.7,
+      "momentum": 0.1,
+      "quality": 0.05,
+      "value": 0.15
+    },
+    {
+      "core": 0.7,
+      "momentum": 0.15,
+      "quality": 0.05,
+      "value": 0.1
+    }
+  ],
+  "scope": "Original 25-weight x 2-sleeve-band x 3-leverage-band definition, replayed at both exposures with coupled legacy absolute resets. Definition target leverage is preserved metadata; actual simulated exposures are explicit. Ex-post bounded CAGR maxima and exact ties only, no future optimum or automatic change to selected absolute-decoupled weights/bands. Original costs, financing and full common period retained."
+}

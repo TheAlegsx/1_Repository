@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "status": "coupled_accounting_pilot",
+  "calendar_contract_sha256": "0890439b188bd75f8257377373838cfd61cbf6804612a9d5305beca1431e33d0",
+  "scope": "Isolated borrowed portfolio/cohort accounting pilot v2; main engines unchanged.",
+  "period": "120 project months, actual October 2014-October 2024 dates; full underlying main backtest unchanged.",
+  "portfolio_flow": "Net same-event cash flow, current mixture and effective leverage before trade costs. Execute proportional trades; finance actual trade expenses with debt. Resulting leverage drift feeds original next-signal rule.",
+  "pricing": "Units quoted after fund fee and before flow trade expenses; remaining units bear trade expenses. No dilution levy/swing pricing.",
+  "fee": "Monthly proposed fund fee on previous event opening-equity base. Debt-funded at borrowed exposure; cost-inclusive proportional sale at unlevered exposure.",
+  "signals": "Original mark/funding/prior-signal trades retained; fees and flows before next signal. No-flow/zero-added-fee history/events exact.",
+  "reporting": "24 coupled cases include two zero-added-fee controls and duplicate no-flow layers. 22 overlay cases are labeled diagnostics, not unique portfolio scenarios.",
+  "validation_tolerances": {
+    "usd_atol": 1e-06,
+    "rtol": 2e-12
+  },
+  "execution_version": 2,
+  "proposal_deviation": "Exact post-cost leverage preservation is not well-defined at discontinuous commission tiers; v2 uses explicit cost posting. The unchanged original proposal and failed pilot outputs are preserved.",
+  "numerical_evidence": "Original fixed point oscillated between USD293.246172 and USD355.233584 for a USD35,603.321803 net flow at leverage1.199236170. No fee/rate/return parameter adjusted.",
+  "validation_scope": "Primary leverage1.25; positive-debt flow execution. Unlevered paid flow trades are outside this pilot."
+}

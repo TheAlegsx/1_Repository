@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "periods": ["full", "confirmation"],
+  "margin_bps": [0, 100, 150, 200, 250, 300, 425, 500, 700, 1000],
+  "target_leverage": 1.25,
+  "factor_policy": "hybrid20",
+  "threshold": {
+    "period": "full",
+    "bracket_bps": [0, 1000],
+    "iterations": 22
+  },
+  "reconciliation_tolerances": {
+    "threshold_margin_bps_atol": 0.001,
+    "threshold_cagr_difference_atol": 1e-9
+  },
+  "scope": "Historical funding-cost experiments; margin is added to observed annual reference rates. Nonbaseline terms are hypothetical. A bracketed local CAGR crossing is sample-dependent, with no uniqueness, continuity or global monotonicity guarantee."
+}

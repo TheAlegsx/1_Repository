@@ -1,0 +1,169 @@
+{
+  "initial_owner_capital_usd": 7000000,
+  "ticket_usd": 250000,
+  "ticket_sensitivity_usd": [
+    100000,
+    250000,
+    500000
+  ],
+  "annual_fee": 0.0005,
+  "fee_sensitivity": [
+    0.0005,
+    0.001,
+    0.0025,
+    0.005
+  ],
+  "annual_returns": {
+    "flat": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "growth": [
+      0.06,
+      0.06,
+      0.06,
+      0.06,
+      0.06,
+      0.06,
+      0.06,
+      0.06,
+      0.06,
+      0.06
+    ],
+    "early_loss": [
+      -0.3,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "late_loss": [
+      0.06,
+      0.06,
+      0.06,
+      -0.3,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "annual_new_client_equivalents": {
+    "no_flows": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "limited": [
+      0,
+      1,
+      1,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    "steady": [
+      2,
+      4,
+      6,
+      8,
+      10,
+      12,
+      14,
+      16,
+      18,
+      20
+    ],
+    "strong": [
+      4,
+      8,
+      12,
+      16,
+      20,
+      24,
+      28,
+      32,
+      36,
+      40
+    ],
+    "sales_stop": [
+      4,
+      4,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "first_year_subscription_months": [
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ],
+  "normal_annual_redemption": 0.1,
+  "sales_stop_annual_redemption": 0.2,
+  "bad_year_subscription_multiplier": 0.5,
+  "bad_year_annual_redemption": 0.3,
+  "bad_year_rule": "Concurrent imposed negative annual scenario year; not a predictive signal",
+  "annual_fixed_manager_cost_usd": 25000,
+  "fixed_cost_inflation": 0.02,
+  "setup_cost_usd": 25000,
+  "acquisition_cost_fraction_of_gross_subscriptions": 0.005,
+  "annual_servicing_cost_fraction_of_opening_external_assets": 0.0002,
+  "manager_fee_receipt_fractions": [
+    1,
+    0.5
+  ],
+  "status": "Uncalibrated discussion assumptions, not empirical estimates or a commercial forecast",
+  "business_cost_sensitivity": {
+    "first_year_fixed_cost_usd": [
+      25000,
+      50000,
+      150000
+    ],
+    "acquisition_fraction": [
+      0,
+      0.001,
+      0.005
+    ],
+    "servicing_fraction": [
+      0,
+      0.0002
+    ]
+  },
+  "sensitivity_return_scenario": "growth",
+  "sensitivity_flow_scenario": "steady"
+}

@@ -1,0 +1,770 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-07",
+  "source_run_id": "99472e20-bd5e-46d0-bdb1-ba7fd8635697",
+  "reports": {
+    "backtest": {
+      "version": 14,
+      "template": "src/factor_portfolio/templates/research_backtest_reader_2026-10-06.md",
+      "output": "BACKTEST_RESEARCH_2026-10-07.md",
+      "tables": {
+        "allocation": {
+          "source": "backtest_01",
+          "rows": null,
+          "columns": null,
+          "placement": "main"
+        },
+        "costs": {
+          "source": "backtest_27",
+          "rows": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "columns": [
+            0,
+            1
+          ],
+          "placement": "main"
+        },
+        "unlevered": {
+          "source": "backtest_05",
+          "rows": [
+            0,
+            2
+          ],
+          "columns": null,
+          "placement": "main"
+        },
+        "main": {
+          "source": "backtest_06",
+          "rows": [
+            0,
+            2
+          ],
+          "columns": null,
+          "placement": "main"
+        },
+        "dimensional": {
+          "source": "backtest_06",
+          "rows": [
+            0,
+            3
+          ],
+          "columns": null,
+          "placement": "main"
+        },
+        "amundi": {
+          "source": "backtest_25",
+          "rows": [
+            1,
+            4
+          ],
+          "columns": null,
+          "placement": "main"
+        },
+        "policy": {
+          "source": "backtest_12",
+          "rows": [
+            1,
+            3,
+            8,
+            10
+          ],
+          "columns": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "placement": "appendix"
+        },
+        "alpha": {
+          "source": "backtest_13",
+          "rows": [
+            0,
+            4
+          ],
+          "columns": [
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "placement": "appendix"
+        },
+        "periods": {
+          "source": "backtest_14",
+          "rows": [
+            4,
+            6,
+            12,
+            14
+          ],
+          "columns": [
+            0,
+            1,
+            3,
+            4,
+            5,
+            6
+          ],
+          "placement": "appendix"
+        },
+        "funding": {
+          "source": "backtest_21",
+          "rows": [
+            0,
+            5,
+            7,
+            9
+          ],
+          "columns": null,
+          "placement": "appendix"
+        }
+      },
+      "table_family_disposition": {
+        "backtest_01": {
+          "disposition": "selected",
+          "reader_tables": [
+            "allocation"
+          ],
+          "reason": "Selected rows/columns retain sealed source cells; full family remains in calculation materials."
+        },
+        "backtest_02": {
+          "disposition": "retained_outside_pdf",
+          "reader_tables": [],
+          "reason": "Detailed controls, repetitions or research administration; preserved in the sealed source package."
+        },
+        "backtest_03": {
+          "disposition": "retained_outside_pdf",
+          "reader_tables": [],
+          "reason": "Detailed controls, repetitions or research administration; preserved in the sealed source package."
+        },
+        "backtest_04": {
+          "disposition": "retained_outside_pdf",
+          "reader_tables": [],
+          "reason": "Specific numerical costs selected from backtest_27; this qualitative overview remains calculation material."
+        },
+        "backtest_05": {
+          "disposition": "selected",
+          "reader_tables": [
+            "unlevered"
+          ],
+          "reason": "Selected rows/columns retain sealed source cells; full family remains in calculation materials."
+        },
+        "backtest_06": {
+          "disposition": "selected",
+          "reader_tables": [
+            "main",
+            "dimensional"
+          ],
+          "reason": "Selected rows/columns retain sealed source cells; full family remains in calculation materials."
+        },
+        "backtest_07": {
+          "disposition": "retained_outside_pdf",
+          "reader_tables": [],
+          "reason": "Detailed controls, repetitions or research administration; preserved in the sealed source package."
+        },
+        "backtest_08": {
+          "disposition": "retained_outside_pdf",
+          "reader_tables": [],
+          "reason": "Detailed controls, repetitions or research administration; preserved in the sealed source package."
+        },
+        "backtest_09": {
+          "disposition": "retained_outside_pdf",
+          "reader_tables": [],
+          "reason": "Detailed controls, repetitions or research administration; preserved in the sealed source package."
+        },
+        "backtest_10": {
+          "disposition": "retained_outside_pdf",
+          "reader_tables": [],
+          "reason": "Detailed controls, repetitions or research administration; preserved in the sealed source package."
+        },
+        "backtest_11": {
+          "disposition": "retained_outside_pdf",
+          "reader_tables": [],
+          "reason": "Detailed controls, repetitions or research administration; preserved in the sealed source package."
+        },
+        "backtest_12": {
+          "disposition": "selected",
+          "reader_tables": [
+            "policy"
+          ],
+          "reason": "Selected rows/columns retain sealed source cells; full family remains in calculation materials."
+        },
+        "backtest_13": {
+          "disposition": "selected",
+          "reader_tables": [
+            "alpha"
+          ],
+          "reason": "Selected rows/columns retain sealed source cells; full family remains in calculation materials."
+        },
+        "backtest_14": {
+          "disposition": "selected",
+          "reader_tables": [
+            "periods"
+          ],
+          "reason": "Selected rows/columns retain sealed source cells; full family remains in calculation materials."
+        },
+        "backtest_15": {
+          "disposition": "retained_outside_pdf",
+          "reader_tables": [],
+          "reason": "Detailed controls, repetitions or research administration; preserved in the sealed source package."
+        },
+        "backtest_16": {
+          "disposition": "retained_outside_pdf",
+          "reader_tables": [],
+          "reason": "Detailed controls, repetitions or research administration; preserved in the sealed source package."
+        },
+        "backtest_17": {
+          "disposition": "retained_outside_pdf",
+          "reader_tables": [],
+          "reason": "Detailed controls, repetitions or research administration; preserved in the sealed source package."
+        },
+        "backtest_18": {
+          "disposition": "retained_outside_pdf",
+          "reader_tables": [],
+          "reason": "Detailed controls, repetitions or research administration; preserved in the sealed source package."
+        },
+        "backtest_19": {
+          "disposition": "retained_outside_pdf",
+          "reader_tables": [],
+          "reason": "Detailed controls, repetitions or research administration; preserved in the sealed source package."
+        },
+        "backtest_20": {
+          "disposition": "retained_outside_pdf",
+          "reader_tables": [],
+          "reason": "Detailed controls, repetitions or research administration; preserved in the sealed source package."
+        },
+        "backtest_21": {
+          "disposition": "selected",
+          "reader_tables": [
+            "funding"
+          ],
+          "reason": "Selected rows/columns retain sealed source cells; full family remains in calculation materials."
+        },
+        "backtest_22": {
+          "disposition": "retained_outside_pdf",
+          "reader_tables": [],
+          "reason": "Detailed controls, repetitions or research administration; preserved in the sealed source package."
+        },
+        "backtest_23": {
+          "disposition": "retained_outside_pdf",
+          "reader_tables": [],
+          "reason": "Detailed controls, repetitions or research administration; preserved in the sealed source package."
+        },
+        "backtest_24": {
+          "disposition": "retained_outside_pdf",
+          "reader_tables": [],
+          "reason": "Detailed controls, repetitions or research administration; preserved in the sealed source package."
+        },
+        "backtest_25": {
+          "disposition": "selected",
+          "reader_tables": [
+            "amundi"
+          ],
+          "reason": "Selected rows/columns retain sealed source cells; full family remains in calculation materials."
+        },
+        "backtest_26": {
+          "disposition": "retained_outside_pdf",
+          "reader_tables": [],
+          "reason": "Detailed controls, repetitions or research administration; preserved in the sealed source package."
+        },
+        "backtest_27": {
+          "disposition": "selected",
+          "reader_tables": [
+            "costs"
+          ],
+          "reason": "Selected numerical cost assumptions retain sealed source cells; full family remains calculation material."
+        },
+        "backtest_28": {
+          "disposition": "retained_outside_pdf",
+          "reader_tables": [],
+          "reason": "Detailed controls, repetitions or research administration; preserved in the sealed source package."
+        },
+        "backtest_29": {
+          "disposition": "retained_outside_pdf",
+          "reader_tables": [],
+          "reason": "Detailed controls, repetitions or research administration; preserved in the sealed source package."
+        },
+        "backtest_30": {
+          "disposition": "retained_outside_pdf",
+          "reader_tables": [],
+          "reason": "Detailed controls, repetitions or research administration; preserved in the sealed source package."
+        },
+        "financing_crossings": {
+          "disposition": "retained_outside_pdf",
+          "reader_tables": [],
+          "reason": "Detailed controls, repetitions or research administration; preserved in the sealed source package."
+        },
+        "gap_cures": {
+          "disposition": "retained_outside_pdf",
+          "reader_tables": [],
+          "reason": "Detailed controls, repetitions or research administration; preserved in the sealed source package."
+        },
+        "joint_cost": {
+          "disposition": "retained_outside_pdf",
+          "reader_tables": [],
+          "reason": "Detailed controls, repetitions or research administration; preserved in the sealed source package."
+        },
+        "historical_link": {
+          "disposition": "retained_outside_pdf",
+          "reader_tables": [],
+          "reason": "Detailed controls, repetitions or research administration; preserved in the sealed source package."
+        }
+      },
+      "claim_disposition": {
+        "claim": {
+          "unlevered_cagr": "displayed",
+          "unlevered_annualised_volatility": "displayed",
+          "unlevered_maximum_drawdown": "displayed",
+          "unlevered_gap_core": "displayed",
+          "unlevered_gap_dimensional": "retained_outside_pdf",
+          "levered_cagr": "displayed",
+          "levered_annualised_volatility": "displayed",
+          "levered_maximum_drawdown": "displayed",
+          "levered_gap_core": "displayed",
+          "levered_gap_dimensional": "displayed",
+          "capital": "displayed",
+          "gross": "displayed",
+          "debt": "displayed",
+          "issuer_count": "displayed",
+          "issuer_max_gap": "displayed",
+          "annual_snapshots": "retained_outside_pdf",
+          "holding_lines": "retained_outside_pdf",
+          "levels": "displayed",
+          "intervals": "displayed",
+          "cures": "retained_outside_pdf",
+          "insolvent": "retained_outside_pdf",
+          "independent_retained": "retained_outside_pdf",
+          "independent_additional": "retained_outside_pdf",
+          "independent_comparisons": "retained_outside_pdf"
+        }
+      },
+      "figures": {
+        "equity": "backtest/figures/equity.png",
+        "drawdown": "backtest/figures/drawdown.png"
+      },
+      "figure_disposition": {
+        "equity": "displayed",
+        "drawdown": "displayed"
+      },
+      "source_ids": [
+        "core",
+        "momentum",
+        "quality",
+        "value",
+        "indicative_sofr",
+        "official_sofr",
+        "dimensional",
+        "amundi_2x",
+        "commission_tariff",
+        "stamp_duty",
+        "commission_fx",
+        "dimensional_kid",
+        "sofr_explanation",
+        "risk_measures",
+        "swissquote_collateral_agreement",
+        "swissquote_lombard",
+        "core_published_annual_performance",
+        "momentum_published_annual_performance",
+        "quality_published_annual_performance",
+        "value_published_annual_performance"
+      ]
+    },
+    "inflow": {
+      "version": 10,
+      "template": "src/factor_portfolio/templates/research_inflow_reader_2026-10-06.md",
+      "output": "CAPITAL_INFLOWS_RESEARCH_2026-10-07.md",
+      "tables": {
+        "acquisition": {
+          "source": "01_acquisition_assumptions",
+          "rows": null,
+          "columns": null,
+          "placement": "main"
+        },
+        "business": {
+          "source": "02_business_assumptions",
+          "rows": null,
+          "columns": [
+            0,
+            1
+          ],
+          "placement": "main"
+        },
+        "historical_returns": {
+          "source": "historical_selected",
+          "rows": null,
+          "columns": [
+            0,
+            1,
+            2,
+            4
+          ],
+          "placement": "main"
+        },
+        "ownership": {
+          "source": "historical_ownership",
+          "rows": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "columns": [
+            1,
+            3,
+            4,
+            5,
+            6
+          ],
+          "placement": "main"
+        },
+        "manager": {
+          "source": "historical_manager",
+          "rows": [
+            0,
+            1
+          ],
+          "columns": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "placement": "main"
+        },
+        "hypothetical_outcomes": {
+          "source": "03_acquisition_outcomes",
+          "rows": null,
+          "columns": [
+            0,
+            1,
+            2,
+            5
+          ],
+          "placement": "main"
+        },
+        "fees": {
+          "source": "07_fee_economics",
+          "rows": null,
+          "columns": [
+            0,
+            1,
+            3,
+            4
+          ],
+          "placement": "main"
+        },
+        "timing": {
+          "source": "04_selected_timing_outcomes",
+          "rows": null,
+          "columns": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "placement": "main"
+        },
+        "scenario_matrix": {
+          "source": "09_acquisition_return_matrix",
+          "rows": null,
+          "columns": null,
+          "placement": "appendix"
+        },
+        "treasury": {
+          "source": "08_treasury_definitions",
+          "rows": null,
+          "columns": null,
+          "placement": "appendix"
+        },
+        "investor_returns": {
+          "source": "05_investor_returns",
+          "rows": null,
+          "columns": null,
+          "placement": "appendix"
+        },
+        "loss_ranges": {
+          "source": "06_loss_placement_ranges",
+          "rows": null,
+          "columns": null,
+          "placement": "appendix"
+        },
+        "historical_controls": {
+          "source": "historical_controls",
+          "rows": null,
+          "columns": [
+            0,
+            2,
+            3,
+            4,
+            5
+          ],
+          "placement": "appendix"
+        }
+      },
+      "table_family_disposition": {
+        "01_acquisition_assumptions": {
+          "disposition": "selected",
+          "reader_tables": [
+            "acquisition"
+          ],
+          "reason": "Selected rows/columns retain sealed source cells; full family remains in calculation materials."
+        },
+        "02_business_assumptions": {
+          "disposition": "selected",
+          "reader_tables": [
+            "business"
+          ],
+          "reason": "Selected rows/columns retain sealed source cells; full family remains in calculation materials."
+        },
+        "03_acquisition_outcomes": {
+          "disposition": "selected",
+          "reader_tables": [
+            "hypothetical_outcomes"
+          ],
+          "reason": "Selected rows/columns retain sealed source cells; full family remains in calculation materials."
+        },
+        "04_selected_timing_outcomes": {
+          "disposition": "selected",
+          "reader_tables": [
+            "timing"
+          ],
+          "reason": "Selected rows/columns retain sealed source cells; full family remains in calculation materials."
+        },
+        "05_investor_returns": {
+          "disposition": "selected",
+          "reader_tables": [
+            "investor_returns"
+          ],
+          "reason": "Selected rows/columns retain sealed source cells; full family remains in calculation materials."
+        },
+        "06_loss_placement_ranges": {
+          "disposition": "selected",
+          "reader_tables": [
+            "loss_ranges"
+          ],
+          "reason": "Selected rows/columns retain sealed source cells; full family remains in calculation materials."
+        },
+        "07_fee_economics": {
+          "disposition": "selected",
+          "reader_tables": [
+            "fees"
+          ],
+          "reason": "Selected rows/columns retain sealed source cells; full family remains in calculation materials."
+        },
+        "08_treasury_definitions": {
+          "disposition": "selected",
+          "reader_tables": [
+            "treasury"
+          ],
+          "reason": "Selected rows/columns retain sealed source cells; full family remains in calculation materials."
+        },
+        "09_acquisition_return_matrix": {
+          "disposition": "selected",
+          "reader_tables": [
+            "scenario_matrix"
+          ],
+          "reason": "Selected rows/columns retain sealed source cells; full family remains in calculation materials."
+        },
+        "10_timing_schedules": {
+          "disposition": "retained_outside_pdf",
+          "reader_tables": [],
+          "reason": "Detailed controls, repetitions or research administration; preserved in the sealed source package."
+        },
+        "11_all_timing_outcomes": {
+          "disposition": "retained_outside_pdf",
+          "reader_tables": [],
+          "reason": "Detailed controls, repetitions or research administration; preserved in the sealed source package."
+        },
+        "12_timing_return_matrix": {
+          "disposition": "retained_outside_pdf",
+          "reader_tables": [],
+          "reason": "Detailed controls, repetitions or research administration; preserved in the sealed source package."
+        },
+        "historical_scope": {
+          "disposition": "retained_outside_pdf",
+          "reader_tables": [],
+          "reason": "Detailed controls, repetitions or research administration; preserved in the sealed source package."
+        },
+        "historical_selected": {
+          "disposition": "selected",
+          "reader_tables": [
+            "historical_returns"
+          ],
+          "reason": "Selected rows/columns retain sealed source cells; full family remains in calculation materials."
+        },
+        "historical_ownership": {
+          "disposition": "selected",
+          "reader_tables": [
+            "ownership"
+          ],
+          "reason": "Selected rows/columns retain sealed source cells; full family remains in calculation materials."
+        },
+        "historical_manager": {
+          "disposition": "selected",
+          "reader_tables": [
+            "manager"
+          ],
+          "reason": "Selected rows/columns retain sealed source cells; full family remains in calculation materials."
+        },
+        "historical_returns_full": {
+          "disposition": "retained_outside_pdf",
+          "reader_tables": [],
+          "reason": "Detailed controls, repetitions or research administration; preserved in the sealed source package."
+        },
+        "historical_controls": {
+          "disposition": "selected",
+          "reader_tables": [
+            "historical_controls"
+          ],
+          "reason": "Selected rows/columns retain sealed source cells; full family remains in calculation materials."
+        }
+      },
+      "claim_disposition": {
+        "claim": {
+          "acquisition_bps": "retained_outside_pdf",
+          "acquisition_cases": "retained_outside_pdf",
+          "acquisition_cost_bps": "retained_outside_pdf",
+          "acquisition_cost_pct": "retained_outside_pdf",
+          "acquisition_grid": "retained_outside_pdf",
+          "acquisition_payback": "retained_outside_pdf",
+          "acquisition_rows": "retained_outside_pdf",
+          "alternative_tickets": "retained_outside_pdf",
+          "annual_fee_pct": "retained_outside_pdf",
+          "baseline_bps": "retained_outside_pdf",
+          "baseline_cases": "retained_outside_pdf",
+          "baseline_fee": "displayed",
+          "baseline_fee_bps": "retained_outside_pdf",
+          "capital_usd_m": "retained_outside_pdf",
+          "cost_case_count": "retained_outside_pdf",
+          "early_loss_range": "displayed",
+          "fee_bps": "displayed",
+          "fee_case_count": "retained_outside_pdf",
+          "fixed_cost": "retained_outside_pdf",
+          "fixed_cost_grid": "retained_outside_pdf",
+          "full_fee_bps": "retained_outside_pdf",
+          "growth_pct": "displayed",
+          "growth_unit_return": "retained_outside_pdf",
+          "half_receipt": "displayed",
+          "illustrative_bps": "displayed",
+          "illustrative_closing_deficit": "displayed",
+          "illustrative_fee_bps": "retained_outside_pdf",
+          "illustrative_owner_fees": "retained_outside_pdf",
+          "illustrative_owner_peak": "retained_outside_pdf",
+          "illustrative_peak": "displayed",
+          "illustrative_peak_month": "displayed",
+          "illustrative_total_cash": "retained_outside_pdf",
+          "investor_fee_short": "retained_outside_pdf",
+          "investor_return_count": "retained_outside_pdf",
+          "later_return_path": "displayed",
+          "launch_delay": "retained_outside_pdf",
+          "launch_first_month": "displayed",
+          "launch_months": "displayed",
+          "loss_annual_pct": "retained_outside_pdf",
+          "loss_control_count": "retained_outside_pdf",
+          "main_illustration": "retained_outside_pdf",
+          "main_return_path": "retained_outside_pdf",
+          "months": "retained_outside_pdf",
+          "months_per_year_words": "retained_outside_pdf",
+          "net_margin_bps": "displayed",
+          "no_flow_equities": "displayed",
+          "ordinary_attrition": "displayed",
+          "ordinary_attrition_pct": "retained_outside_pdf",
+          "owner_capital_m": "displayed",
+          "owner_control_residual": "retained_outside_pdf",
+          "owner_growth_equity": "displayed",
+          "owner_receipt": "retained_outside_pdf",
+          "owners_capital": "retained_outside_pdf",
+          "partial_margin_bps": "displayed",
+          "prelaunch_months": "retained_outside_pdf",
+          "return_paths": "displayed",
+          "return_paths_emphasised": "retained_outside_pdf",
+          "runoff_attrition": "displayed",
+          "servicing_bps": "retained_outside_pdf",
+          "servicing_cost_pct": "retained_outside_pdf",
+          "servicing_grid": "retained_outside_pdf",
+          "servicing_variable_bps": "retained_outside_pdf",
+          "setup_cost": "retained_outside_pdf",
+          "short_fee": "retained_outside_pdf",
+          "smooth_loss_monthly": "retained_outside_pdf",
+          "static_aum_no_variable": "retained_outside_pdf",
+          "static_aum_with_variable": "retained_outside_pdf",
+          "static_cost": "retained_outside_pdf",
+          "steady_fees": "displayed",
+          "steady_gross": "displayed",
+          "steady_peak": "displayed",
+          "stress_attrition": "displayed",
+          "stress_subscription_fraction": "displayed",
+          "strong_final_clients": "displayed",
+          "strong_peak": "displayed",
+          "ticket_usd": "displayed",
+          "timing_acquisition_cost": "retained_outside_pdf",
+          "timing_attrition": "retained_outside_pdf",
+          "timing_attrition_annual": "displayed",
+          "timing_attrition_year": "retained_outside_pdf",
+          "timing_cases": "retained_outside_pdf",
+          "timing_gross": "displayed",
+          "timing_rows": "retained_outside_pdf",
+          "timing_tranche": "retained_outside_pdf"
+        },
+        "historical": {
+          "absolute_coupled_twr": "displayed",
+          "absolute_overlay_twr": "displayed",
+          "absolute_gap": "displayed",
+          "absolute_flow_cost": "displayed",
+          "hybrid_coupled_twr": "retained_outside_pdf",
+          "hybrid_overlay_twr": "retained_outside_pdf",
+          "hybrid_gap": "retained_outside_pdf",
+          "hybrid_flow_cost": "retained_outside_pdf",
+          "absolute_external_receipts": "displayed",
+          "absolute_manager_costs": "displayed",
+          "absolute_peak_gap": "displayed",
+          "months": "displayed",
+          "dated_return_rows": "retained_outside_pdf",
+          "undefined_mwr": "retained_outside_pdf",
+          "manager_cases": "displayed",
+          "negative_manager_cases": "displayed",
+          "manager_cash_min": "retained_outside_pdf",
+          "manager_cash_max": "retained_outside_pdf"
+        }
+      },
+      "figures": {
+        "historical_nav": "inflow/figures/historical/historical_nav.png"
+      },
+      "figure_disposition": {
+        "figure_1": "retained_outside_pdf",
+        "figure_2": "retained_outside_pdf",
+        "figure_3": "retained_outside_pdf",
+        "figure_4": "retained_outside_pdf",
+        "figure_5": "retained_outside_pdf",
+        "figure_6": "retained_outside_pdf",
+        "figure_7": "retained_outside_pdf",
+        "figure_8": "retained_outside_pdf",
+        "historical_nav": "displayed",
+        "historical_manager": "retained_outside_pdf"
+      },
+      "source_ids": [
+        "core",
+        "momentum",
+        "quality",
+        "value",
+        "indicative_sofr",
+        "official_sofr",
+        "commission_tariff",
+        "stamp_duty",
+        "commission_fx",
+        "inflow_terminology"
+      ]
+    }
+  }
+}

@@ -1,0 +1,321 @@
+{
+  "date": "2026-10-06",
+  "inputs": [
+    {
+      "input_root": "annual_raw_root",
+      "relative_path": "ishares_iii_annual_2023.pdf",
+      "sha256": "ebff406670c41b6327ae34e0bf143374f5296388c995d0f45eb8eff609ff86f5",
+      "used_by": [
+        "expanded",
+        "custody"
+      ]
+    },
+    {
+      "input_root": "annual_raw_root",
+      "relative_path": "ishares_iii_annual_2024.pdf",
+      "sha256": "31fc20d26ce09dcb3cd631d3bae450b8a8dd00c687310dc00e9cf2684d9c9ea8",
+      "used_by": [
+        "expanded",
+        "custody"
+      ]
+    },
+    {
+      "input_root": "annual_raw_root",
+      "relative_path": "ishares_iii_annual_2025.pdf",
+      "sha256": "5860b6d64aae118f1b42a3f2cb865ecc0b391ec9fdfb068ae8270365f491e71c",
+      "used_by": [
+        "expanded",
+        "custody"
+      ]
+    },
+    {
+      "input_root": "collateral_raw_root",
+      "relative_path": "swissquote_collateral_agreement.pdf",
+      "sha256": "af762305b399e925bbe3cbaf517ccb0092328e65320b52902bc5437434edafd2",
+      "used_by": [
+        "custody"
+      ]
+    },
+    {
+      "input_root": "custody_raw_root",
+      "relative_path": "swissquote_account_fees.html",
+      "sha256": "5dbeb75599461d711f57f81081083ee7793d0bf71e26bc19991e09684a98bee7",
+      "used_by": [
+        "custody"
+      ]
+    },
+    {
+      "input_root": "dimensional_annual_raw_root",
+      "relative_path": "dimensional_annual_2024.pdf",
+      "sha256": "2e6ce90d2370a4b494b05ecbb45f364403e4e8bc7946c8bd72d8b782b59a974d",
+      "used_by": [
+        "expanded",
+        "custody"
+      ]
+    },
+    {
+      "input_root": "dimensional_annual_raw_root",
+      "relative_path": "dimensional_annual_2025.pdf",
+      "sha256": "e7ab45092e5ab7a59c22037d4c9727dc41179564e78076dcff068ff98f58e2bc",
+      "used_by": [
+        "expanded",
+        "custody"
+      ]
+    },
+    {
+      "input_root": "factor_annual_raw_root",
+      "relative_path": "ishares_iv_annual_2024.pdf",
+      "sha256": "7ec2643e6bfb64ebc9ce1a0097a5f5d9a681e7572adf217839d12d7d15c0bff8",
+      "used_by": [
+        "expanded",
+        "custody"
+      ]
+    },
+    {
+      "input_root": "factor_annual_raw_root",
+      "relative_path": "ishares_iv_annual_2025.pdf",
+      "sha256": "6f5aa737d553d42a27787f93d674f88c0f85ccb9631297e07e10b7056d45028d",
+      "used_by": [
+        "expanded",
+        "custody"
+      ]
+    },
+    {
+      "input_root": "factor_annual_raw_root",
+      "relative_path": "ishares_iv_annual_2026.pdf",
+      "sha256": "2160e614e6b1a252fccaa373e7b17bb004e5b347103910b4757f12ffe1f36f09",
+      "used_by": [
+        "expanded",
+        "custody"
+      ]
+    },
+    {
+      "input_root": "raw_root",
+      "relative_path": "amundi/NAV History_Amundi MSCI World (2x) Leveraged UCITS ETF Acc_FR0014010HV4_30_09_2025.xlsx",
+      "sha256": "22f0780124d0ca4609c9f677a4920d03890b3fe5ccfe94a611c11b26bb39ae95",
+      "used_by": [
+        "expanded",
+        "custody"
+      ]
+    },
+    {
+      "input_root": "raw_root",
+      "relative_path": "bloomberg/DIMGCEA ID Equity grid_vwffhilo.xlsx",
+      "sha256": "6e0011e52f8bf51de4d0d694c2ef5cd1ed88e2fdb2f5ef8dbce3a535dc42f667",
+      "used_by": [
+        "core",
+        "expanded",
+        "endpoints",
+        "allocations",
+        "comparator_costs",
+        "custody",
+        "hindsight",
+        "issuer",
+        "independent",
+        "joint_cost",
+        "funding_gap",
+        "historical"
+      ]
+    },
+    {
+      "input_root": "raw_root",
+      "relative_path": "bloomberg/IWDA LN Equity grid_alspwryu.xlsx",
+      "sha256": "1cc4316444c734d768c50bbba4828ef6f74ce45af4eb9ff94c487fd9be9ae172",
+      "used_by": [
+        "expanded",
+        "custody"
+      ]
+    },
+    {
+      "input_root": "raw_root",
+      "relative_path": "bloomberg/IWMO LN Equity grid_udz0kbd5.xlsx",
+      "sha256": "490a393de9f311a16b584789274b489711e669d3b26d5c14feef519a9cc245d2",
+      "used_by": [
+        "expanded",
+        "custody"
+      ]
+    },
+    {
+      "input_root": "raw_root",
+      "relative_path": "bloomberg/IWQU LN Equity grid_xvx03ott.xlsx",
+      "sha256": "98699d4544b5d8eca460cd74e87f7f11ff14507a49d2265c5984ecd8f6c84c7c",
+      "used_by": [
+        "expanded",
+        "custody"
+      ]
+    },
+    {
+      "input_root": "raw_root",
+      "relative_path": "bloomberg/IWVL LN Equity grid_ls5ij4wd.xlsx",
+      "sha256": "7d0cda5150e5a87d2cf2117d2d11184e80461db1eeec8a58b3e2d4251e58c8b3",
+      "used_by": [
+        "expanded",
+        "custody"
+      ]
+    },
+    {
+      "input_root": "raw_root",
+      "relative_path": "bloomberg/MXWOLDNU Index grid_rmi5kiny.xlsx",
+      "sha256": "80c617e83bcb93863a1336ca5ac75f99705557ec9ee81dc241e7e946a5165cd7",
+      "used_by": [
+        "expanded",
+        "custody"
+      ]
+    },
+    {
+      "input_root": "raw_root",
+      "relative_path": "ishares/iShares-Core-MSCI-World-UCITS-ETF_fund.xls",
+      "sha256": "b92b5d99e6a246ad565611477b78b8c8abb6b888fc39ca4f2f0bb9a7cde6b2c3",
+      "used_by": [
+        "core",
+        "expanded",
+        "endpoints",
+        "allocations",
+        "comparator_costs",
+        "custody",
+        "hindsight",
+        "issuer",
+        "independent",
+        "joint_cost",
+        "funding_gap",
+        "historical"
+      ]
+    },
+    {
+      "input_root": "raw_root",
+      "relative_path": "ishares/iShares-Edge-MSCI-World-Momentum-Factor-UCITS-ETF-USD-Acc_fund.xls",
+      "sha256": "adcade34f6693ab5fe9b82fd5ba3b69308f164056f5f04e8ffb1a1074508056e",
+      "used_by": [
+        "core",
+        "expanded",
+        "endpoints",
+        "allocations",
+        "comparator_costs",
+        "custody",
+        "hindsight",
+        "issuer",
+        "independent",
+        "joint_cost",
+        "funding_gap",
+        "historical"
+      ]
+    },
+    {
+      "input_root": "raw_root",
+      "relative_path": "ishares/iShares-Edge-MSCI-World-Quality-Factor-UCITS-ETF-USD-Acc_fund.xls",
+      "sha256": "34918d1d611c9137e5c591be212b03775d815691e12204704459ba443a28682f",
+      "used_by": [
+        "core",
+        "expanded",
+        "endpoints",
+        "allocations",
+        "comparator_costs",
+        "custody",
+        "hindsight",
+        "issuer",
+        "independent",
+        "joint_cost",
+        "funding_gap",
+        "historical"
+      ]
+    },
+    {
+      "input_root": "raw_root",
+      "relative_path": "ishares/iShares-Edge-MSCI-World-Value-Factor-UCITS-ETF-USD-Acc_fund.xls",
+      "sha256": "3ee0de7b73a5d9655cfda1852ad0f07d9f14058fbb359bb6788766e98ca1fa6f",
+      "used_by": [
+        "core",
+        "expanded",
+        "endpoints",
+        "allocations",
+        "comparator_costs",
+        "custody",
+        "hindsight",
+        "issuer",
+        "independent",
+        "joint_cost",
+        "funding_gap",
+        "historical"
+      ]
+    },
+    {
+      "input_root": "raw_root",
+      "relative_path": "ishares/source_manifest.json",
+      "sha256": "eb54866ca41b134c94e5409b1b18b6f894dc10eb2e00082f503fe4483f7331b7",
+      "used_by": [
+        "core",
+        "expanded",
+        "endpoints",
+        "allocations",
+        "comparator_costs",
+        "custody",
+        "hindsight",
+        "issuer",
+        "independent",
+        "joint_cost",
+        "funding_gap",
+        "historical"
+      ]
+    },
+    {
+      "input_root": "raw_root",
+      "relative_path": "rates/new_york_fed/Data Release.xlsx",
+      "sha256": "1c889930bca90edb58c6fe6c4d219f1366261ab9b3e5e0ad54d9a7e62e102180",
+      "used_by": [
+        "core",
+        "expanded",
+        "endpoints",
+        "allocations",
+        "comparator_costs",
+        "custody",
+        "hindsight",
+        "issuer",
+        "independent",
+        "joint_cost",
+        "funding_gap",
+        "historical"
+      ]
+    },
+    {
+      "input_root": "raw_root",
+      "relative_path": "rates/new_york_fed/sofr_official_2018-04-02_2026-08-31.json",
+      "sha256": "16031a7ffb8865e9fd7eb066ab119198edca696eba4278f455c30c892d952ecf",
+      "used_by": [
+        "core",
+        "expanded",
+        "endpoints",
+        "allocations",
+        "comparator_costs",
+        "custody",
+        "hindsight",
+        "issuer",
+        "independent",
+        "joint_cost",
+        "funding_gap",
+        "historical"
+      ]
+    },
+    {
+      "input_root": "raw_root",
+      "relative_path": "rates/new_york_fed/source_manifest.json",
+      "sha256": "3bf3dac9f40ad9faad2ba4cb4d73f761cc41cd878695c183c899eec01e53d954",
+      "used_by": [
+        "core",
+        "expanded",
+        "endpoints",
+        "allocations",
+        "comparator_costs",
+        "custody",
+        "hindsight",
+        "issuer",
+        "independent",
+        "joint_cost",
+        "funding_gap",
+        "historical"
+      ]
+    }
+  ],
+  "observations_included": false,
+  "schema_version": 1,
+  "scope": "Original filenames and hashes from accepted run manifests. Supply separately, locally."
+}

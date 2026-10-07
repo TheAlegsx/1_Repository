@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "status": "implementation_proposal",
+  "audit_scope": "calendar_and_no_flow_basis_only",
+  "start": "2014-10-03",
+  "project_months": 120,
+  "calendar_rule": "anniversary_month_first_common_nav_on_or_after",
+  "policies": [
+    "absolute_decoupled",
+    "hybrid20"
+  ],
+  "leverage": 1.25,
+  "initial_unit_nav": 100.0,
+  "proposed_required_run": "coupled portfolio/cohort replay with separately labeled return-path overlay diagnostic",
+  "calendar_scope": "Ten project years to match existing 120-month business schedules. Full 2014-2026 source backtest is regenerated unchanged; no extrapolation, filling or hidden schedule extension.",
+  "proposed_accounting": {
+    "owner_units": "Initial committed USD7m at unit NAV100; investment entry costs lower NAV once. Owner units fixed, no owner redemptions.",
+    "event_order": "Mark prices/accrue financing, execute prior investment signal, charge separately proposed fund fee, redeem/subscribe, execute net-flow portfolio adjustment, form next investment signal.",
+    "fund_fee": "Existing annual 5bp /12 on previous event closing/opening period assets, separately attributed to owner/external units. Zero-added-fee baseline control also required.",
+    "new_flow_trades": "Net simultaneous subscriptions/redemptions; proportional current sleeve mixture. Preserve pre-flow effective leverage after solving baseline trade costs; do not reset to target weights or 1.25x merely because money arrives.",
+    "cost_allocation": "Units redeemed/issued at post-fund-fee, pre-flow-trade-cost NAV. Flow transaction costs borne by remaining fund units; no exit levy, swing pricing, market impact or per-client brokerage invented.",
+    "signals": "Existing investment trades execute on next common NAV. Flow fees/trades feed subsequent signals. No-flow/zero-added-fee history must match original every observation.",
+    "business_costs": "Manager costs paid outside fund. External fee receipts remain distinct from internal owner-group transfers; setup paid once in model month1.",
+    "stress": "Fixed schedules only; no future negative-year knowledge used to cut sales or increase redemptions.",
+    "annualisation": "Actual dated periods, 365.2425 calendar-year convention. Investor money-weighted returns require dated cash flows, not equal-month IRR relabeled as XIRR."
+  },
+  "execution_status": "Neither proposed coupled replay nor cash-flow overlay is implemented by the calendar audit. Proposed assumptions remain visible and versioned before accounting extension."
+}

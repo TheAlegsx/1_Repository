@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "factor_policies": ["absolute_decoupled", "hybrid20"],
+  "legacy_policy": "hybrid20",
+  "leverage": 1.0,
+  "periods": ["full", "calibration", "confirmation"],
+  "selected_allocation": "original",
+  "allocations": {
+    "original": {"core": 0.60, "momentum": 0.15, "quality": 0.10, "value": 0.15},
+    "previous": {"core": 0.60, "momentum": 0.15, "quality": 0.15, "value": 0.10},
+    "equal_factors": {"core": 0.55, "momentum": 0.15, "quality": 0.15, "value": 0.15},
+    "stronger_anchor": {"core": 0.70, "momentum": 0.10, "quality": 0.10, "value": 0.10},
+    "stronger_factors": {"core": 0.40, "momentum": 0.20, "quality": 0.20, "value": 0.20},
+    "momentum_focus": {"core": 0.60, "momentum": 0.20, "quality": 0.10, "value": 0.10},
+    "quality_focus": {"core": 0.60, "momentum": 0.10, "quality": 0.20, "value": 0.10},
+    "value_focus": {"core": 0.60, "momentum": 0.10, "quality": 0.10, "value": 0.20}
+  },
+  "scope": "Eight preserved user-discussed unlevered allocations. Retain capped-relative legacy comparisons; add uniform absolute/separate comparisons under the same independently restarted full/calibration/confirmation periods, capital, costs and investor metrics. Original selected weights remain unchanged. No automatic weight selection, borrowed allocation runs, hindsight optimisation, capital flows, administration fee or final reports."
+}

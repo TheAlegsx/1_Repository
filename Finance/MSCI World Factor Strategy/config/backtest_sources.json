@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "cutoff": "2026-08-31",
+  "start": "2014-10-03",
+  "dimensional_cutoff": "2026-08-28",
+  "dimensional_security": "DIMGCEA ID Equity",
+  "dimensional_isin": "IE00B2PC0153",
+  "sources": [
+    {
+      "role": "core",
+      "path": "ishares/iShares-Core-MSCI-World-UCITS-ETF_fund.xls",
+      "sha256": "b92b5d99e6a246ad565611477b78b8c8abb6b888fc39ca4f2f0bb9a7cde6b2c3",
+      "format": "SpreadsheetML USD accumulating NAV",
+      "identity": "IE00B4L5Y983"
+    },
+    {
+      "role": "momentum",
+      "path": "ishares/iShares-Edge-MSCI-World-Momentum-Factor-UCITS-ETF-USD-Acc_fund.xls",
+      "sha256": "adcade34f6693ab5fe9b82fd5ba3b69308f164056f5f04e8ffb1a1074508056e",
+      "format": "SpreadsheetML USD accumulating NAV",
+      "identity": "IE00BP3QZ825"
+    },
+    {
+      "role": "quality",
+      "path": "ishares/iShares-Edge-MSCI-World-Quality-Factor-UCITS-ETF-USD-Acc_fund.xls",
+      "sha256": "34918d1d611c9137e5c591be212b03775d815691e12204704459ba443a28682f",
+      "format": "SpreadsheetML USD accumulating NAV",
+      "identity": "IE00BP3QZ601"
+    },
+    {
+      "role": "value",
+      "path": "ishares/iShares-Edge-MSCI-World-Value-Factor-UCITS-ETF-USD-Acc_fund.xls",
+      "sha256": "3ee0de7b73a5d9655cfda1852ad0f07d9f14058fbb359bb6788766e98ca1fa6f",
+      "format": "SpreadsheetML USD accumulating NAV",
+      "identity": "IE00BP3QZB59"
+    },
+    {
+      "role": "ishares_manifest",
+      "path": "ishares/source_manifest.json",
+      "sha256": "eb54866ca41b134c94e5409b1b18b6f894dc10eb2e00082f503fe4483f7331b7"
+    },
+    {
+      "role": "funding_manifest",
+      "path": "rates/new_york_fed/source_manifest.json",
+      "sha256": "3bf3dac9f40ad9faad2ba4cb4d73f761cc41cd878695c183c899eec01e53d954"
+    },
+    {
+      "role": "indicative_sofr",
+      "path": "rates/new_york_fed/Data Release.xlsx",
+      "sha256": "1c889930bca90edb58c6fe6c4d219f1366261ab9b3e5e0ad54d9a7e62e102180"
+    },
+    {
+      "role": "official_sofr",
+      "path": "rates/new_york_fed/sofr_official_2018-04-02_2026-08-31.json",
+      "sha256": "16031a7ffb8865e9fd7eb066ab119198edca696eba4278f455c30c892d952ecf"
+    },
+    {
+      "role": "dimensional",
+      "path": "bloomberg/DIMGCEA ID Equity grid_vwffhilo.xlsx",
+      "sha256": "6e0011e52f8bf51de4d0d694c2ef5cd1ed88e2fdb2f5ef8dbce3a535dc42f667"
+    }
+  ],
+  "expected_common": {
+    "start": "2014-10-03",
+    "end": "2026-08-28",
+    "levels": 2929
+  },
+  "scope": "Main historical policy comparison only; excludes Amundi/listing evidence, holdings, synthetic controls and additional implementation diagnostics. Raw observations supplied separately; no redistribution permission is implied."
+}

@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "status": "coupled_accounting_pilot",
+  "calendar_contract_sha256": "0890439b188bd75f8257377373838cfd61cbf6804612a9d5305beca1431e33d0",
+  "scope": "Execute agreed proposal as isolated portfolio/cohort extension. Main historical/hypothetical engines immutable. Manager and dated investor diagnostics next.",
+  "period": "120 project months, actual October 2014-October 2024 dates; full underlying main backtest unchanged.",
+  "portfolio_flow": "Net same-event cash flow, current mixture/current post-fund-fee leverage, post-cost fixed point under baseline fees.",
+  "pricing": "Units quoted after fund fee and before flow trade expenses; remaining units bear trade expenses. No dilution levy/swing pricing.",
+  "fee": "Monthly proposed fund fee on previous event opening-equity base. Debt-funded at borrowed exposure; cost-inclusive proportional sale at unlevered exposure.",
+  "signals": "Original mark/funding/prior-signal trades retained; fees and flows before next signal. No-flow/zero-added-fee history/events exact.",
+  "reporting": "24 coupled cases include two zero-added-fee controls and duplicate no-flow layers. 22 overlay cases are labeled diagnostics, not unique portfolio scenarios.",
+  "validation_tolerances": {
+    "usd_atol": 1e-06,
+    "rtol": 2e-12
+  }
+}

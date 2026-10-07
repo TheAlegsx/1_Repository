@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "year_days": 365.2425,
+  "log_annual_discount_min": -1.2,
+  "log_annual_discount_max": 1.2,
+  "scan_points": 801,
+  "bisection_iterations": 65,
+  "npv_residual_tolerance_usd": 1e-05,
+  "scope": "Dated annual-log discount grid consistent with main calendar-year convention. No-flow MWR undefined; multiple/no scanned roots reported rather than arbitrarily selected.",
+  "manager": "External business receipts exclude internal owner-group fees. Conditional treasury uses same receipt fraction for owner fees. Budgets remain outside fund, same original month1/setup/annual inflation conventions."
+}

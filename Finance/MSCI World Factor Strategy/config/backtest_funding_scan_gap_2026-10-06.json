@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "comparison_fields": [
+    "ending_equity_usd",
+    "cagr",
+    "maximum_drawdown",
+    "annualised_volatility",
+    "transaction_cost_usd",
+    "financing_cost_usd",
+    "trades_after_entry",
+    "margin_calls"
+  ],
+  "currency_fields": [
+    "ending_equity_usd",
+    "transaction_cost_usd",
+    "financing_cost_usd"
+  ],
+  "integer_fields": [
+    "trades_after_entry",
+    "margin_calls"
+  ],
+  "original_scalar_source_sha256": "c632dea45b781fd7e8b682139d13fba50a550548794860ff7c603c08b855a5b5",
+  "period": "full",
+  "target_leverage": 1.25,
+  "factor_policies": [
+    "hybrid20",
+    "absolute_decoupled"
+  ],
+  "scan_low_bps": 0,
+  "scan_high_bps": 1000,
+  "scan_step_bps": 10,
+  "refinement_iterations": 25,
+  "approximate_zero_residual": 1e-06,
+  "base_cagr_decimal_places": 12,
+  "maintenance_ltv": [
+    0.25,
+    0.4,
+    0.6
+  ],
+  "gap_losses": [
+    0.2,
+    0.4,
+    0.6,
+    0.8,
+    0.85
+  ],
+  "liquidation_extra_spread": 0.01,
+  "fee_iterations": 100,
+  "fee_convergence_usd": 1e-08,
+  "scope": "Preserved finite scan with rounded fresh core CAGR base, both policies. Shared fifteen hypothetical margin-boundary cures, ordinary fees plus 100bp extra liquidation friction, no cash injection. Independent scalar accounts and analytic fee-interval cure solver; no global continuity or actual bank execution claim.",
+  "legacy_provenance": {
+    "legacy_source": {
+      "path": "results/final_allocation_checks_2026-10-02/verify_revision.py",
+      "sha256": "d2c3ffb26b591a121adb68b4f3ee8bb9f8091cf94c3d1d1ddf816e2c14b40bfb"
+    },
+    "legacy_scan": {
+      "path": "results/report_evidence_2026-10-03/implementation/borrowing_margin_crossover_scan.csv",
+      "sha256": "9538274ee4c579878d44c1334bea5381d5033cac0afd139351a4f75e0d68279a"
+    },
+    "legacy_crossings": {
+      "path": "results/report_evidence_2026-10-03/implementation/borrowing_margin_crossover_classification.csv",
+      "sha256": "d674be1b2e58bd216f51a80bc94f78c7630ec4d45147914976b6ca2b270092ba"
+    },
+    "legacy_gaps": {
+      "path": "results/report_evidence_2026-10-03/implementation/margin_gap_liquidation_results.csv",
+      "sha256": "50d7a65dabce8e3631d22c3d332f77dbabd5f77f39fd89b80072029bdf2db218"
+    }
+  }
+}

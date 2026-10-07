@@ -1,0 +1,11 @@
+# Preserve checksummed text bytes across checkout environments.
+* text=auto eol=lf
+
+# PDF streams and byte offsets must never undergo text conversion.
+*.pdf binary
+
+# Markdown uses intentional two-space hard line breaks.
+*.md whitespace=-blank-at-eol
+
+# Retain the inherited engine file without an unrelated cosmetic rewrite.
+src/factor_portfolio/historical.py whitespace=-blank-at-eof

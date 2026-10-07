@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-06",
+  "template_sha256": "4e09dedde9dbd220757093c6efd1600a1710c98220ff3f1e9991c0c76167b28b",
+  "hypothetical_template_sha256": "b53a24effcdc565996f50e2b54f00374474e1fbdd06c26daeb9a39a849ac2ce8",
+  "reviewed_configuration_sha256": {
+    "inflow_acquisition.json": "21c2622c3d111adcbe53396c6cd79dd46f34f0b191f5991d60909eece38f6764",
+    "inflow_timing.json": "1d20ac14ba27ac7dde62f1fde91d7faa8915c7126c79fe69cefb9d2dfccdbaa3",
+    "inflow_returns.json": "8c98c00c9e2221267a8f7389c2538006495418ecaa6cfcbf43f1d16bf373cab5",
+    "inflow_controls.json": "f9a9d9599c90b8a1a798b1a97f4f441ae2a3df4434ba7544b8d13389904036f0",
+    "inflow_presentation.json": "4d7c7b85b3eab620e30961a306f318fb4755006cde987dd6313acfd98ed7f705"
+  },
+  "scope": "Codex-authored extension under Alex\u2019s bounded continuation request; preserved v4 hypothetical numbers/assumptions plus verified dated historical evidence. Not expert/human peer review, new commercial or lender approval, publication or fresh installation.",
+  "manual_context": [
+    "Report and section/figure numbers; source draft version/date.",
+    "Prior good-sales USD 55 million and surge USD 1.092 billion; prior ordinary redemptions 5%; prior version-1 grid 15 cases. These are historical context, not inputs.",
+    "Monthly convention: twelve months per year, month-end subscriptions, opening NAV and formula exponents.",
+    "First-year and year-10 references, named early/year-1 and later/year-4 loss scenarios, zero return following each loss, 100% conditional internal fee receipt. Reviewed against the locked baseline configuration.",
+    "Reviewed baseline scenario counts and descriptive words (four return paths, five matched-volume schedules, ten years); subscription stress fraction and monthly conventions.",
+    "New report version5/date, section and figure numbering, cross-references and actual historical window qualifications.",
+    "Absolute \u00b15pp / separate leverage, target1.25x and executed v2 posting are captured model conventions; no financial parameter changes.",
+    "Actual/365.2425 dated annualisation is distinct from equal-month hypothetical returns and Excel actual/365.",
+    "Owner/internal receipts are conditional; historical receipt-fraction convention and original hypothetical treasury convention remain separate.",
+    "Historical fixed plans/attrition do not apply the hypothetical annual-loss demand feedback; fund fee uses previous-event net fund equity."
+  ],
+  "backtest_link": "../../backtest/report/BACKTEST_REPORT_2026-10-06.md",
+  "interpretation_guards": [
+    "Historical date/policy/ownership/missing-return status",
+    "Negative manager cash/invariant overlay statements",
+    "Preserved twelve hypothetical tables and all original claim identities"
+  ]
+}

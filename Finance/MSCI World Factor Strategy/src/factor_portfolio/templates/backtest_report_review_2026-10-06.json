@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-06",
+  "template_sha256": "2b2b3a923033f18c56a5645b450ac5b845aa6393a736c47e18eeb2ac011abab1",
+  "baseline_semantic_sha256": "ec08c06ed0109e1b58a833070745a6cb13d3b8728a2d80a12694dbd471ae8f02",
+  "scope": "Codex-authored interpretation aligned to inspected accepted evidence under Alex\u2019s bounded continuation request. This is not human/expert peer review, prospective validation or publication approval.",
+  "manual_context": [
+    "Report version/date, headings, section/table identifiers and appendix labels.",
+    "Ex-post design selection, fixed model mechanics and measurement definitions from captured baseline / unchanged accounting.",
+    "Factor rationale and benchmark/product/implementation qualifications from original version8 and dated source evidence.",
+    "Explicit fixed-band examples and baseline assumption register; output includes their controlling baseline snapshot.",
+    "No changed banking/law/product information or new provider download is asserted.",
+    "Companion inflow assembly, video and publication are explicitly pending.",
+    "Numerical result-cell provenance is distinguished from manual configuration/design/source/navigation context; metadata pivots retain source indices.",
+    "Finite scan:10bp/25 refinements/residual1e-6; cure extra friction100bp and post-cost target1.25x. Captured source settings checked before assembly."
+  ],
+  "selection": "Current absolute primary, retained capped-relative comparison; legacy coupled grid kept distinct; no tuning."
+}

@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "years": [
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+  ],
+  "published_rounding_half_width_percentage_points": 0.05,
+  "maximum_year_end_deferral_days": 7,
+  "products": {
+    "core": {
+      "isin": "IE00B4L5Y983",
+      "url": "https://www.ishares.com/uk/individual/en/products/251882/ishares-msci-world-ucits-etf-acc-fund",
+      "nav_rounding_half_width_usd": 5e-07,
+      "published_returns_pct": [
+        7.7,
+        22.4,
+        -8.6,
+        27.8,
+        15.9,
+        21.9,
+        -18.0,
+        23.9,
+        18.7,
+        21.2
+      ]
+    },
+    "momentum": {
+      "isin": "IE00BP3QZ825",
+      "url": "https://www.ishares.com/uk/individual/en/products/270051/ishares-msci-world-momentum-factor-ucits-etf",
+      "nav_rounding_half_width_usd": 0.005,
+      "published_returns_pct": [
+        4.0,
+        31.9,
+        -3.0,
+        27.4,
+        27.9,
+        14.3,
+        -17.9,
+        11.6,
+        29.8,
+        21.2
+      ]
+    },
+    "quality": {
+      "isin": "IE00BP3QZ601",
+      "url": "https://www.ishares.com/uk/individual/en/products/270054/ishares-msci-world-quality-factor-ucits-etf",
+      "nav_rounding_half_width_usd": 0.005,
+      "published_returns_pct": [
+        5.0,
+        23.1,
+        -7.3,
+        30.5,
+        14.9,
+        23.2,
+        -19.2,
+        25.7,
+        16.6,
+        15.4
+      ]
+    },
+    "value": {
+      "isin": "IE00BP3QZB59",
+      "url": "https://www.ishares.com/uk/individual/en/products/270048/ishares-msci-world-value-factor-ucits-etf",
+      "nav_rounding_half_width_usd": 0.005,
+      "published_returns_pct": [
+        8.1,
+        22.2,
+        -13.9,
+        19.1,
+        -3.9,
+        20.0,
+        -10.0,
+        19.4,
+        5.3,
+        39.6
+      ]
+    }
+  },
+  "original_comparison_sha256": "297786d1a0613ebb5e2e879cfa0bcfb3fb73d576e99c892882fca187fa9939e2",
+  "original_reference_access_claim": "2026-10-02 as recorded in preserved source register; original HTML snapshot is not retained here.",
+  "primary_page_values_rechecked_on": "2026-10-05",
+  "scope": "40 USD accumulating fund calendar-year NAV total returns from official fund performance rows, retaining original observations. Reconstruct from fresh common NAV levels, preserve original nearest-rounding bounds and published one-decimal intervals. No portfolio fees/leverage, replacement raw prices, second daily NAV feed or future validation."
+}

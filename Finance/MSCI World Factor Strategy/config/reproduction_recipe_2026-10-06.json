@@ -1,0 +1,503 @@
+{
+  "jobs": [
+    {
+      "arguments": [
+        "--config",
+        "config/backtest_absolute_decoupled_2026-10-05.json",
+        "--sources",
+        "config/backtest_sources.json",
+        "--raw-root",
+        "{raw_root}",
+        "--output",
+        "outputs/absolute_decoupled_core_2026-10-05"
+      ],
+      "configuration_files": [
+        "config/backtest_absolute_decoupled_2026-10-05.json",
+        "config/backtest_sources.json"
+      ],
+      "depends_on": [],
+      "id": "core",
+      "module": "factor_portfolio.backtest_workflow",
+      "output": "outputs/absolute_decoupled_core_2026-10-05",
+      "reference_manifest_sha256": "424c8cd4db1ebd3b62ed5e87f4fb521d2edf524b1ecffec129be3622016f675c",
+      "verification_status": "CLI inspected; complete fresh execution pending"
+    },
+    {
+      "arguments": [
+        "--config",
+        "config/backtest_absolute_decoupled_2026-10-05.json",
+        "--sources",
+        "config/backtest_sources.json",
+        "--raw-root",
+        "{raw_root}",
+        "--funding-config",
+        "config/backtest_funding_absolute_decoupled_2026-10-05.json",
+        "--bridge-config",
+        "config/backtest_bridge_absolute_decoupled_2026-10-05.json",
+        "--entry-config",
+        "config/backtest_entries_absolute_decoupled_2026-10-05.json",
+        "--rolling-config",
+        "config/backtest_rolling_absolute_decoupled_2026-10-05.json",
+        "--margin-config",
+        "config/backtest_margin_absolute_decoupled_2026-10-05.json",
+        "--synthetic-config",
+        "config/backtest_synthetic_absolute_decoupled_2026-10-05.json",
+        "--product-config",
+        "config/backtest_products_absolute_decoupled_2026-10-05.json",
+        "--correlation-config",
+        "config/backtest_correlations_2026-10-05.json",
+        "--holdings-config",
+        "config/backtest_holdings_snapshot_2026-10-05.json",
+        "--annual-holdings-config",
+        "config/backtest_annual_core_2026-10-05.json",
+        "--factor-holdings-config",
+        "config/backtest_annual_factors_2026-10-05.json",
+        "--dimensional-holdings-config",
+        "config/backtest_annual_dimensional_2026-10-05.json",
+        "--annual-raw-root",
+        "{annual_raw_root}",
+        "--factor-annual-raw-root",
+        "{factor_annual_raw_root}",
+        "--dimensional-annual-raw-root",
+        "{dimensional_annual_raw_root}",
+        "--output",
+        "outputs/absolute_decoupled_annual_dimensional_verified_2026-10-05"
+      ],
+      "configuration_files": [
+        "config/backtest_absolute_decoupled_2026-10-05.json",
+        "config/backtest_sources.json",
+        "config/backtest_funding_absolute_decoupled_2026-10-05.json",
+        "config/backtest_bridge_absolute_decoupled_2026-10-05.json",
+        "config/backtest_entries_absolute_decoupled_2026-10-05.json",
+        "config/backtest_rolling_absolute_decoupled_2026-10-05.json",
+        "config/backtest_margin_absolute_decoupled_2026-10-05.json",
+        "config/backtest_synthetic_absolute_decoupled_2026-10-05.json",
+        "config/backtest_products_absolute_decoupled_2026-10-05.json",
+        "config/backtest_correlations_2026-10-05.json",
+        "config/backtest_holdings_snapshot_2026-10-05.json",
+        "config/backtest_annual_core_2026-10-05.json",
+        "config/backtest_annual_factors_2026-10-05.json",
+        "config/backtest_annual_dimensional_2026-10-05.json"
+      ],
+      "depends_on": [],
+      "id": "expanded",
+      "module": "factor_portfolio.backtest_workflow",
+      "output": "outputs/absolute_decoupled_annual_dimensional_verified_2026-10-05",
+      "reference_manifest_sha256": "7e94b3a8c0c89d9d591d4fd33f9dddb8497bf58b8f71133928176b379b9dafb9",
+      "verification_status": "CLI inspected; complete fresh execution pending"
+    },
+    {
+      "arguments": [
+        "--raw-root",
+        "{raw_root}",
+        "--baseline",
+        "config/backtest_absolute_decoupled_2026-10-05.json",
+        "--sources",
+        "config/backtest_sources.json",
+        "--settings",
+        "config/backtest_endpoints_absolute_decoupled_v2_2026-10-05.json",
+        "--output",
+        "outputs/absolute_decoupled_endpoints_v2_verified_2026-10-05"
+      ],
+      "configuration_files": [
+        "config/backtest_absolute_decoupled_2026-10-05.json",
+        "config/backtest_sources.json",
+        "config/backtest_endpoints_absolute_decoupled_v2_2026-10-05.json"
+      ],
+      "depends_on": [],
+      "id": "endpoints",
+      "module": "factor_portfolio.backtest_endpoints",
+      "output": "outputs/absolute_decoupled_endpoints_v2_verified_2026-10-05",
+      "reference_manifest_sha256": "ca45577a3ea79085f089eac66cbb04d03ab9308d037a8ff72bbdde8656442866",
+      "verification_status": "CLI inspected; complete fresh execution pending"
+    },
+    {
+      "arguments": [
+        "--raw-root",
+        "{raw_root}",
+        "--baseline",
+        "config/backtest_absolute_decoupled_2026-10-05.json",
+        "--sources",
+        "config/backtest_sources.json",
+        "--settings",
+        "config/backtest_allocations_absolute_decoupled_2026-10-05.json",
+        "--output",
+        "outputs/absolute_decoupled_allocations_2026-10-05"
+      ],
+      "configuration_files": [
+        "config/backtest_absolute_decoupled_2026-10-05.json",
+        "config/backtest_sources.json",
+        "config/backtest_allocations_absolute_decoupled_2026-10-05.json"
+      ],
+      "depends_on": [],
+      "id": "allocations",
+      "module": "factor_portfolio.backtest_allocations",
+      "output": "outputs/absolute_decoupled_allocations_2026-10-05",
+      "reference_manifest_sha256": "e171d7df1666b8dd6a1489fec8a8ddee2e5d27ee4eee070960039a9732e719fa",
+      "verification_status": "CLI inspected; complete fresh execution pending"
+    },
+    {
+      "arguments": [
+        "--raw-root",
+        "{raw_root}",
+        "--baseline",
+        "config/backtest_absolute_decoupled_2026-10-05.json",
+        "--sources",
+        "config/backtest_sources.json",
+        "--settings",
+        "config/backtest_comparator_costs_absolute_decoupled_2026-10-05.json",
+        "--output",
+        "outputs/absolute_decoupled_comparator_costs_2026-10-05"
+      ],
+      "configuration_files": [
+        "config/backtest_absolute_decoupled_2026-10-05.json",
+        "config/backtest_sources.json",
+        "config/backtest_comparator_costs_absolute_decoupled_2026-10-05.json"
+      ],
+      "depends_on": [],
+      "id": "comparator_costs",
+      "module": "factor_portfolio.backtest_comparator_costs",
+      "output": "outputs/absolute_decoupled_comparator_costs_2026-10-05",
+      "reference_manifest_sha256": "77a6e6ad81e4eeec070a8c991863c4ac7df7131315ca748afb7c5b111dac815d",
+      "verification_status": "CLI inspected; complete fresh execution pending"
+    },
+    {
+      "arguments": [
+        "--config",
+        "config/backtest_absolute_decoupled_2026-10-05.json",
+        "--sources",
+        "config/backtest_sources.json",
+        "--raw-root",
+        "{raw_root}",
+        "--funding-config",
+        "config/backtest_funding_absolute_decoupled_2026-10-05.json",
+        "--bridge-config",
+        "config/backtest_bridge_absolute_decoupled_2026-10-05.json",
+        "--entry-config",
+        "config/backtest_entries_absolute_decoupled_2026-10-05.json",
+        "--rolling-config",
+        "config/backtest_rolling_absolute_decoupled_2026-10-05.json",
+        "--margin-config",
+        "config/backtest_margin_absolute_decoupled_2026-10-05.json",
+        "--synthetic-config",
+        "config/backtest_synthetic_absolute_decoupled_2026-10-05.json",
+        "--product-config",
+        "config/backtest_products_absolute_decoupled_2026-10-05.json",
+        "--correlation-config",
+        "config/backtest_correlations_2026-10-05.json",
+        "--holdings-config",
+        "config/backtest_holdings_snapshot_2026-10-05.json",
+        "--annual-holdings-config",
+        "config/backtest_annual_core_2026-10-05.json",
+        "--factor-holdings-config",
+        "config/backtest_annual_factors_2026-10-05.json",
+        "--dimensional-holdings-config",
+        "config/backtest_annual_dimensional_2026-10-05.json",
+        "--annual-raw-root",
+        "{annual_raw_root}",
+        "--factor-annual-raw-root",
+        "{factor_annual_raw_root}",
+        "--dimensional-annual-raw-root",
+        "{dimensional_annual_raw_root}",
+        "--collateral-config",
+        "config/backtest_collateral_2026-10-05.json",
+        "--collateral-raw-root",
+        "{collateral_raw_root}",
+        "--custody-config",
+        "config/backtest_custody_absolute_decoupled_2026-10-05.json",
+        "--custody-raw-root",
+        "{custody_raw_root}",
+        "--output",
+        "outputs/absolute_decoupled_custody_2026-10-05"
+      ],
+      "configuration_files": [
+        "config/backtest_absolute_decoupled_2026-10-05.json",
+        "config/backtest_sources.json",
+        "config/backtest_funding_absolute_decoupled_2026-10-05.json",
+        "config/backtest_bridge_absolute_decoupled_2026-10-05.json",
+        "config/backtest_entries_absolute_decoupled_2026-10-05.json",
+        "config/backtest_rolling_absolute_decoupled_2026-10-05.json",
+        "config/backtest_margin_absolute_decoupled_2026-10-05.json",
+        "config/backtest_synthetic_absolute_decoupled_2026-10-05.json",
+        "config/backtest_products_absolute_decoupled_2026-10-05.json",
+        "config/backtest_correlations_2026-10-05.json",
+        "config/backtest_holdings_snapshot_2026-10-05.json",
+        "config/backtest_annual_core_2026-10-05.json",
+        "config/backtest_annual_factors_2026-10-05.json",
+        "config/backtest_annual_dimensional_2026-10-05.json",
+        "config/backtest_collateral_2026-10-05.json",
+        "config/backtest_custody_absolute_decoupled_2026-10-05.json"
+      ],
+      "depends_on": [],
+      "id": "custody",
+      "module": "factor_portfolio.backtest_workflow",
+      "output": "outputs/absolute_decoupled_custody_2026-10-05",
+      "reference_manifest_sha256": "dd1ef5453ae16d897b7cce6523cd16e8c6f4209cf084953a2863bde9defda9ab",
+      "verification_status": "CLI inspected; complete fresh execution pending"
+    },
+    {
+      "arguments": [
+        "--raw-root",
+        "{raw_root}",
+        "--baseline",
+        "config/backtest_absolute_decoupled_2026-10-05.json",
+        "--sources",
+        "config/backtest_sources.json",
+        "--settings",
+        "config/backtest_legacy_hindsight_2026-10-05.json",
+        "--output",
+        "outputs/legacy_bounded_hindsight_2026-10-05"
+      ],
+      "configuration_files": [
+        "config/backtest_absolute_decoupled_2026-10-05.json",
+        "config/backtest_sources.json",
+        "config/backtest_legacy_hindsight_2026-10-05.json"
+      ],
+      "depends_on": [],
+      "id": "hindsight",
+      "module": "factor_portfolio.backtest_hindsight",
+      "output": "outputs/legacy_bounded_hindsight_2026-10-05",
+      "reference_manifest_sha256": "8a0dbe73ec4b62502aaa2b6acfb433f14897b0b44f7b9a3f934db7b7f20d7572",
+      "verification_status": "CLI inspected; complete fresh execution pending"
+    },
+    {
+      "arguments": [
+        "--raw-root",
+        "{raw_root}",
+        "--baseline",
+        "config/backtest_absolute_decoupled_2026-10-05.json",
+        "--sources",
+        "config/backtest_sources.json",
+        "--settings",
+        "config/issuer_annual_returns_2026-10-05.json",
+        "--output",
+        "outputs/issuer_annual_returns_2026-10-05"
+      ],
+      "configuration_files": [
+        "config/backtest_absolute_decoupled_2026-10-05.json",
+        "config/backtest_sources.json",
+        "config/issuer_annual_returns_2026-10-05.json"
+      ],
+      "depends_on": [],
+      "id": "issuer",
+      "module": "factor_portfolio.backtest_issuer_returns",
+      "output": "outputs/issuer_annual_returns_2026-10-05",
+      "reference_manifest_sha256": "6381001c2da82b70048e2cbc48c130fc18dbef21d87579c2eec376f6d3bfb189",
+      "verification_status": "CLI inspected; complete fresh execution pending"
+    },
+    {
+      "arguments": [
+        "--raw-root",
+        "{raw_root}",
+        "--config-dir",
+        "config",
+        "--output",
+        "outputs/independent_complete_v2_2026-10-06"
+      ],
+      "configuration_files": [
+        "config/backtest_absolute_decoupled_2026-10-05.json",
+        "config/backtest_baseline.json",
+        "config/backtest_sources.json",
+        "config/backtest_funding_absolute_decoupled_2026-10-05.json",
+        "config/backtest_funding.json",
+        "config/independent_funding_2026-10-05.json",
+        "config/independent_core_2026-10-05.json",
+        "config/backtest_entries_absolute_decoupled_2026-10-05.json",
+        "config/backtest_margin_absolute_decoupled_2026-10-05.json",
+        "config/backtest_synthetic_absolute_decoupled_2026-10-05.json",
+        "config/backtest_rolling_absolute_decoupled_2026-10-05.json",
+        "config/backtest_legacy_hindsight_2026-10-05.json",
+        "config/independent_complete_2026-10-06.json"
+      ],
+      "depends_on": [],
+      "id": "independent",
+      "module": "factor_portfolio.backtest_independent_complete",
+      "output": "outputs/independent_complete_v2_2026-10-06",
+      "reference_manifest_sha256": "c25b5aed7d52caf191b6ecc836fa1f6ed5e20a4d16ef35c5a2090f4cada78e4b",
+      "verification_status": "CLI inspected; complete fresh execution pending"
+    },
+    {
+      "arguments": [
+        "--raw-root",
+        "{raw_root}",
+        "--baseline",
+        "config/backtest_absolute_decoupled_2026-10-05.json",
+        "--sources",
+        "config/backtest_sources.json",
+        "--settings",
+        "config/backtest_joint_cost_2026-10-06.json",
+        "--output",
+        "outputs/joint_cost_2026-10-06"
+      ],
+      "configuration_files": [
+        "config/backtest_absolute_decoupled_2026-10-05.json",
+        "config/backtest_sources.json",
+        "config/backtest_joint_cost_2026-10-06.json"
+      ],
+      "depends_on": [],
+      "id": "joint_cost",
+      "module": "factor_portfolio.backtest_joint_cost",
+      "output": "outputs/joint_cost_2026-10-06",
+      "reference_manifest_sha256": "d6929f32e2db48fc672cbb0e09d86618387812434a4aae17bc7d9a11eab2f4cf",
+      "verification_status": "CLI inspected; complete fresh execution pending"
+    },
+    {
+      "arguments": [
+        "--raw-root",
+        "{raw_root}",
+        "--baseline",
+        "config/backtest_absolute_decoupled_2026-10-05.json",
+        "--sources",
+        "config/backtest_sources.json",
+        "--settings",
+        "config/backtest_funding_scan_gap_2026-10-06.json",
+        "--output",
+        "outputs/funding_scan_gap_v2_2026-10-06"
+      ],
+      "configuration_files": [
+        "config/backtest_absolute_decoupled_2026-10-05.json",
+        "config/backtest_sources.json",
+        "config/backtest_funding_scan_gap_2026-10-06.json"
+      ],
+      "depends_on": [],
+      "id": "funding_gap",
+      "module": "factor_portfolio.backtest_funding_scan_gap",
+      "output": "outputs/funding_scan_gap_v2_2026-10-06",
+      "reference_manifest_sha256": "e420d7f993f837561fbad5c4ee11a72507721a2f2fda4aa4cde9390288fe70af",
+      "verification_status": "CLI inspected; complete fresh execution pending"
+    },
+    {
+      "arguments": [
+        "--config-dir",
+        "config",
+        "--output",
+        "outputs/inflow_complete_verified_2026-10-04"
+      ],
+      "configuration_files": [
+        "config/inflow_acquisition.json",
+        "config/inflow_timing.json",
+        "config/inflow_returns.json",
+        "config/inflow_controls.json",
+        "config/inflow_presentation.json"
+      ],
+      "depends_on": [],
+      "id": "inflow_v4",
+      "module": "factor_portfolio.inflow_workflow",
+      "output": "outputs/inflow_complete_verified_2026-10-04",
+      "reference_manifest_sha256": "9a777da86fafd41d4fb2758d3014ac7408263e18f30751cb398ada50ea6e5a75",
+      "verification_status": "CLI inspected; complete fresh execution pending"
+    },
+    {
+      "arguments": [
+        "--raw-root",
+        "{raw_root}",
+        "--config-dir",
+        "config",
+        "--output",
+        "outputs/historical_inflow_diagnostics_2026-10-05"
+      ],
+      "configuration_files": [
+        "config/backtest_absolute_decoupled_2026-10-05.json",
+        "config/backtest_sources.json",
+        "config/inflow_acquisition.json",
+        "config/inflow_timing.json",
+        "config/historical_inflows_contract_2026-10-05.json",
+        "config/historical_inflows_execution_v2_2026-10-05.json",
+        "config/historical_inflows_diagnostics_2026-10-05.json"
+      ],
+      "depends_on": [],
+      "id": "historical",
+      "module": "factor_portfolio.historical_inflow_diagnostics",
+      "output": "outputs/historical_inflow_diagnostics_2026-10-05",
+      "reference_manifest_sha256": "7e7a004fcefc883b02e7b61b1cd9809fbfdca23ddb292a6e9006347e0f386d7e",
+      "verification_status": "CLI inspected; complete fresh execution pending"
+    },
+    {
+      "arguments": [
+        "--diagnostics",
+        "outputs/historical_inflow_diagnostics_2026-10-05",
+        "--output",
+        "outputs/historical_inflow_interpretation_2026-10-05"
+      ],
+      "configuration_files": [],
+      "depends_on": [
+        "historical"
+      ],
+      "id": "interpretation",
+      "module": "factor_portfolio.historical_inflow_interpretation",
+      "output": "outputs/historical_inflow_interpretation_2026-10-05",
+      "reference_manifest_sha256": "72ee2ebfa48495538704c09b994592c5f978f172b3d01b13c64bd91c09a96c3b",
+      "verification_status": "CLI inspected; complete fresh execution pending"
+    }
+  ],
+  "output_paths_note": "Named output paths are targets to create in an empty candidate, not copied research inputs.",
+  "purpose": "Fresh reconstruction recipe; not yet an executed full-run claim",
+  "report_steps": [
+    {
+      "arguments": [
+        "--settings",
+        "config/coordinated_reports_2026-10-06.json",
+        "--output",
+        "outputs/fresh_report_contract"
+      ],
+      "depends_on": [
+        "core",
+        "expanded",
+        "endpoints",
+        "allocations",
+        "comparator_costs",
+        "custody",
+        "hindsight",
+        "issuer",
+        "independent",
+        "joint_cost",
+        "funding_gap",
+        "inflow_v4",
+        "historical",
+        "interpretation"
+      ],
+      "module": "factor_portfolio.report_contract"
+    },
+    {
+      "arguments": [
+        "--contract",
+        "outputs/fresh_report_contract",
+        "--output",
+        "outputs/fresh_backtest_report"
+      ],
+      "module": "factor_portfolio.backtest_report"
+    },
+    {
+      "arguments": [
+        "--contract",
+        "outputs/fresh_report_contract",
+        "--backtest",
+        "outputs/fresh_backtest_report",
+        "--output",
+        "outputs/fresh_coordinated_reports"
+      ],
+      "module": "factor_portfolio.coordinated_inflow_report"
+    },
+    {
+      "arguments": [
+        "--source",
+        "outputs/fresh_coordinated_reports",
+        "--output",
+        "outputs/fresh_readers"
+      ],
+      "module": "factor_portfolio.research_reader_reports",
+      "prerequisite": "Compare recalculated results, then renew reviewed source-run identity; never disable the guard"
+    },
+    {
+      "arguments": [
+        "--source",
+        "outputs/fresh_readers",
+        "--output",
+        "output/pdf/fresh_readers"
+      ],
+      "module": "factor_portfolio.research_reader_pdf",
+      "prerequisite": "Install PDF dependencies and supply licensed Times New Roman fonts"
+    }
+  ],
+  "schema_version": 1
+}

@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "source_report": {
+    "title": "Capital Inflows, Investor Outcomes and Fund Economics",
+    "version": 4,
+    "date": "2026-10-03",
+    "sha256": "b73674aa1ee08882a501c1a3bb3cfb3292f519852183148038a808cea3663fcd"
+  },
+  "reviewed_configuration_sha256": {
+    "inflow_acquisition.json": "21c2622c3d111adcbe53396c6cd79dd46f34f0b191f5991d60909eece38f6764",
+    "inflow_timing.json": "1d20ac14ba27ac7dde62f1fde91d7faa8915c7126c79fe69cefb9d2dfccdbaa3",
+    "inflow_returns.json": "8c98c00c9e2221267a8f7389c2538006495418ecaa6cfcbf43f1d16bf373cab5",
+    "inflow_controls.json": "f9a9d9599c90b8a1a798b1a97f4f441ae2a3df4434ba7544b8d13389904036f0",
+    "inflow_presentation.json": "4d7c7b85b3eab620e30961a306f318fb4755006cde987dd6313acfd98ed7f705"
+  },
+  "scope": "Local reconstruction of the version-4 baseline. Manually authored interpretations and captions require review after assumptions change. No publication or original report replacement.",
+  "static_fixed_cost_example_usd": 50000,
+  "figures": {
+    "figure_1": {
+      "alt": "Revised acquisition paths",
+      "path": "../figures/acquisition/01_aum.png"
+    },
+    "figure_2": {
+      "alt": "Equal gross subscriptions, different timing",
+      "path": "../figures/timing/01_subscription_timing.png"
+    },
+    "figure_3": {
+      "alt": "Later-loss stress",
+      "path": "../figures/acquisition/02_aum.png"
+    },
+    "figure_4": {
+      "alt": "Business cash requirements",
+      "path": "../figures/acquisition/03_manager_cash.png"
+    },
+    "figure_5": {
+      "alt": "Fee sensitivity",
+      "path": "../figures/acquisition/04_fee_sensitivity.png"
+    },
+    "figure_6": {
+      "alt": "Fund assets under 6%",
+      "path": "../figures/timing/02_assets_growth.png"
+    },
+    "figure_7": {
+      "alt": "Timing and the year 4 loss",
+      "path": "../figures/timing/03_assets_loss.png"
+    },
+    "figure_8": {
+      "alt": "Manager cash by timing",
+      "path": "../figures/timing/04_manager_cash.png"
+    }
+  },
+  "manual_numeric_context": [
+    "Report and section/figure numbers; source draft version/date.",
+    "Prior good-sales USD 55 million and surge USD 1.092 billion; prior ordinary redemptions 5%; prior version-1 grid 15 cases. These are historical context, not inputs.",
+    "Monthly convention: twelve months per year, month-end subscriptions, opening NAV and formula exponents.",
+    "First-year and year-10 references, named early/year-1 and later/year-4 loss scenarios, zero return following each loss, 100% conditional internal fee receipt. Reviewed against the locked baseline configuration.",
+    "Reviewed baseline scenario counts and descriptive words (four return paths, five matched-volume schedules, ten years); subscription stress fraction and monthly conventions."
+  ],
+  "manual_prose_changes": [
+    "Working-copy status, source provenance and interpretation-review boundary added.",
+    "Historical report links described as archives outside the generated bundle.",
+    "Old result/script/verification links replaced with newly generated evidence and source hashes.",
+    "Original decimal validation description replaced with the current independent cash-asset/cohort validation.",
+    "Appendix B/C.6 calculation trail adapted to the new workflow."
+  ],
+  "release_status": "Local preparation only; owner capital and public inclusion decisions unresolved.",
+  "reviewed_template_sha256": "b53a24effcdc565996f50e2b54f00374474e1fbdd06c26daeb9a39a849ac2ce8"
+}

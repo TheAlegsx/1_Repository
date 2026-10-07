@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "factor_policies": ["absolute_decoupled", "hybrid20"],
+  "comparison_policy": "hybrid20",
+  "study_leverage": 1.25,
+  "horizon_years": 3,
+  "fresh_start_grid": {"start": "2014-10-01", "end": "2023-07-01", "step_months": 6},
+  "ongoing_start_grid": {"start": "2015-01-01", "end": "2023-01-01", "step_months": 12},
+  "minimum_fresh_levels": 650,
+  "comparison_cagr_tolerance": 1e-9,
+  "monthly_horizons_years": [1, 3, 5],
+  "monthly_leverage_levels": [1.0, 1.25],
+  "scope": "Reconstruct original three-year fresh/ongoing research grids and monthly-end one/three/five-year ongoing factor-versus-Core windows. Fresh paths restart capital/debt/entry costs; ongoing paths inherit actual wealth and do not recharge entry. Overlapping retrospective windows and descriptive shares, not independent samples or probabilities. Keep observed common-calendar month ends, including the final partial month."
+}

@@ -1,0 +1,9 @@
+{
+  "initial_unit_nav": 100.0,
+  "months_per_year": 12,
+  "log_monthly_discount_min": -0.1,
+  "log_monthly_discount_max": 0.1,
+  "scan_points": 801,
+  "bisection_iterations": 65,
+  "npv_residual_tolerance_usd": 0.00001
+}

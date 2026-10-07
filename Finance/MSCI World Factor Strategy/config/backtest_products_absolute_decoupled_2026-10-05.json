@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "cutoff": "2026-08-31",
+  "factor_policies": [
+    "absolute_decoupled",
+    "hybrid20"
+  ],
+  "factor_exposures": [
+    1.25,
+    2.0
+  ],
+  "expected_common": {
+    "start": "2025-09-30",
+    "end": "2026-08-31",
+    "levels": 232
+  },
+  "expected_market_levels": 234,
+  "sources": [
+    {
+      "role": "iwda",
+      "path": "bloomberg/IWDA LN Equity grid_alspwryu.xlsx",
+      "sha256": "1cc4316444c734d768c50bbba4828ef6f74ce45af4eb9ff94c487fd9be9ae172",
+      "identity": "IWDA LN Equity"
+    },
+    {
+      "role": "iwmo",
+      "path": "bloomberg/IWMO LN Equity grid_udz0kbd5.xlsx",
+      "sha256": "490a393de9f311a16b584789274b489711e669d3b26d5c14feef519a9cc245d2",
+      "identity": "IWMO LN Equity"
+    },
+    {
+      "role": "iwqu",
+      "path": "bloomberg/IWQU LN Equity grid_xvx03ott.xlsx",
+      "sha256": "98699d4544b5d8eca460cd74e87f7f11ff14507a49d2265c5984ecd8f6c84c7c",
+      "identity": "IWQU LN Equity"
+    },
+    {
+      "role": "iwvl",
+      "path": "bloomberg/IWVL LN Equity grid_ls5ij4wd.xlsx",
+      "sha256": "7d0cda5150e5a87d2cf2117d2d11184e80461db1eeec8a58b3e2d4251e58c8b3",
+      "identity": "IWVL LN Equity"
+    },
+    {
+      "role": "mxwoldnu",
+      "path": "bloomberg/MXWOLDNU Index grid_rmi5kiny.xlsx",
+      "sha256": "80c617e83bcb93863a1336ca5ac75f99705557ec9ee81dc241e7e946a5165cd7",
+      "identity": "MXWOLDNU Index"
+    },
+    {
+      "role": "amundi_2x",
+      "path": "amundi/NAV History_Amundi MSCI World (2x) Leveraged UCITS ETF Acc_FR0014010HV4_30_09_2025.xlsx",
+      "sha256": "22f0780124d0ca4609c9f677a4920d03890b3fe5ccfe94a611c11b26bb39ae95",
+      "identity": "FR0014010HV4"
+    }
+  ],
+  "provenance": {
+    "source_contract_basis": "Preserved checksum-validated market-data source entries; identities also checked in workbook headers.",
+    "original_market_manifest_sha256": "6c47a804b018a72e6b4ef180fee61b7a596a05a9e2f9a1c678205cdb01778ee6",
+    "bloomberg_export_date": "2026-09-29",
+    "bloomberg_date_basis": "Reconstructed from author statement, screenshot file list and stored modification metadata; not an independent terminal log or download time.",
+    "amundi_original_download_date": null,
+    "amundi_original_download_url": null,
+    "amundi_date_warning": "Workbook metadata dates and filename suffix do not establish the original download date."
+  },
+  "scope": "Separate 232-level short overlap through 31 August 2026; never replace the main three-way cutoff 28 August. Normalize after entry; investor purchase/exit costs are not imputed to product NAV/index. Daily-reset product/index and band-managed debt portfolios are not like-for-like tracking replicas. 2x is a comparison control, not a new primary target. Raw/derived provider data remain local."
+}

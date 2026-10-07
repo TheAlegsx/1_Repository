@@ -1,0 +1,8 @@
+include README.md SETUP.md REPRODUCE.md LICENSE
+include requirements-lock.txt requirements-plots-lock.txt requirements-reader-pdf-lock.txt
+include requirements-bootstrap-lock.txt requirements-security-lock.txt
+recursive-include tools *.py
+recursive-include config *.json *.md
+recursive-include examples *.py *.csv *.json *.md
+recursive-include docs *.md *.json
+recursive-include src/factor_portfolio/templates *.md *.json

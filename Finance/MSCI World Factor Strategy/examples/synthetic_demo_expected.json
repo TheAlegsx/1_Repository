@@ -1,0 +1,17 @@
+{
+  "end": "2032-04-20",
+  "ending_equity_usd": 8466.510626,
+  "events_including_initialization": 5,
+  "financing_cost_usd": 165.023015,
+  "fixture_sha256": "af16c081d29591ee1d5f839c850be9dd8126e173789e76536c7b101445a6e3c8",
+  "initial_equity_usd": 10000.0,
+  "input_status": "synthetic; no market observations",
+  "post_initialization_event_reasons": [
+    "leverage band breach",
+    "sleeve band breach"
+  ],
+  "start": "2030-01-02",
+  "summary_rounding": "six decimal USD; exact fixture and discrete fields",
+  "transaction_cost_usd": 28.484395,
+  "valuation_rows": 600
+}

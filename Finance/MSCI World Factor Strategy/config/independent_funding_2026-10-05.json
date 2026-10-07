@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "comparison_fields": [
+    "ending_equity_usd",
+    "cagr",
+    "maximum_drawdown",
+    "annualised_volatility",
+    "transaction_cost_usd",
+    "financing_cost_usd",
+    "trades_after_entry",
+    "margin_calls"
+  ],
+  "currency_fields": [
+    "ending_equity_usd",
+    "transaction_cost_usd",
+    "financing_cost_usd"
+  ],
+  "integer_fields": [
+    "trades_after_entry",
+    "margin_calls"
+  ],
+  "original_scalar_source_sha256": "c632dea45b781fd7e8b682139d13fba50a550548794860ff7c603c08b855a5b5",
+  "scope": "Independent funding slice: sixty original capped-relative cases plus sixty absolute/separate labels under identical financing settings. Eight outcomes per case; independently computed same-bracket fixed-iteration crossing. Benchmarks duplicate between branches. Only sixty legacy cases count toward the original 625-run audit; prior independent core adds 57. Same baseline tolerances, no new financing assumptions, input feed or risk-inference audit.",
+  "branches": [
+    "legacy",
+    "primary"
+  ]
+}

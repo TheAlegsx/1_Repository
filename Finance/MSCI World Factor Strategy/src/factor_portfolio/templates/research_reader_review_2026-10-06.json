@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-07",
+  "selection_sha256": "f7b845471553dfc58e3b7dc7b0487c1db588d73e8dc3b61ac6665cc4f4116ff2",
+  "templates_sha256": {
+    "backtest": "4abc15fa98ab9906142b12107930410828454f0e4a2853dfead8c71165096944",
+    "inflow": "2ee387fbec3a0c371605d44e01f8a3e8823e012550f5ebc11bf519fddda90393"
+  },
+  "ai_supplement_sha256": "3d5f2fbf54ace883f351fc930480bab78329c364dbdc55632413238aa73958b1",
+  "ai_record_sha256": "916e44e4dd2ef1e26a1738f988940d0f050e1afb40245a4436439cadbde0e752",
+  "source_run_id": "99472e20-bd5e-46d0-bdb1-ba7fd8635697",
+  "review_scope": "Bounded privacy revision: literal prompts and internal chronology retained locally; public AI attribution preserved. Financial selections and interpretations unchanged. This is an automated editorial check, not human expert approval.",
+  "decisions": [
+    "MSCI World/Core remains benchmark; no new Amundi leverage construction.",
+    "Author clarification: display the existing factor2x control versus real Amundi daily2x, not a new Amundi1.25x construction; primary strategy stays1.25x.",
+    "Factor2x has higher short-window cumulative return and higher volatility/deeper drawdown. Daily reset and band-managed debt differ. Amundi NAV is used unchanged; no duplicated portfolio-loan financing cost; investor purchase/exit costs not imputed.",
+    "Reader sources separate calculation inputs from cost/product/method references. Original retrieval dates and qualifications remain intact in the sealed technical register; no dates inferred from chats.",
+    "Dimensional share-class identity and permitted universe checked against its official KID; no assertion of actual emerging-market weights. Commission FX explained from the recorded 31August2026 cross-rate and used only for CHF commissions.",
+    "Author band-width chronology retained without asserting a pristine holdout or identical legacy leverage semantics.",
+    "Historical coupled \u00b15pp branch retains actual-date returns and fee/flow/debt feedback; hypothetical paths and demand rules remain separate.",
+    "Owner/internal fee receipts are conditional transfers; no-investor MWR unavailable.",
+    "All table families, claims and figures classified; unchanged sealed package is the numerical source.",
+    "Full AI declaration/aid list occurs only in the last section; brief prominent Method attribution identifies the substantial generated prose/code throughout both readers.",
+    "Education Guidance, WSdS5.1.1/5.3 and formal declaration distinguish aid list, methodological/generated-content attribution and independent-work declaration. Only Codex is listed as AI application, author-confirmed; software aids are disclosed; selected exact prompt evidence is retained locally.",
+    "No invented historical models, full prompt archive, human expert review, source-rights clearance, institutional approval or signed independence declaration.",
+    "Final author-requested polish retains the2x Amundi cells and cost/reset qualifications and every required AI disclosure element while reducing repetition.",
+    "Public versions14/10 remove literal prompt tables only from the final AI section; dates and companion navigation renewed. No financial engine, scenario, table/claim selection or figure change."
+  ],
+  "manual_numeric_context": [
+    "Report/figure/table identifiers and date; allocation 60/15/10/15 and implied bands; target1.25 and band0.10; named windows and source IDs.",
+    "ACT/360, 252 observation scaling, HAC five lags, historical dated annualization365.2425; hypothetical twelve-month formulas and ten-year timing.",
+    "Scenario-return labels and preserved hypothetical demand/treasury conventions.",
+    "Fixed commission cross-rate: saved1.1596USD/EUR divided by0.9376CHF/EUR gives1.2367747440USD/CHF, displayed in prose rounded to1.2368; no economic parameter change. Product document dates28April2026 and17July2025 are publication/version dates, not original NAV retrieval dates."
+  ],
+  "remaining": [
+    "Human substantive reading",
+    "Reader/PDF assembly and visual verification from this fresh source",
+    "Explicit publication decision and actual-GitHub reconstruction",
+    "Assessment-specific disclosure/archive and formal submission review; recheck applicable binding-date requirements"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "factor_policies": [
+    "absolute_decoupled",
+    "hybrid20"
+  ],
+  "leverage_levels": [
+    1.0,
+    1.25
+  ],
+  "requested_endpoints": [
+    "2024-12-31",
+    "2025-12-31",
+    "2026-08-28"
+  ],
+  "minimum_levels": 3,
+  "risk_conventions": [
+    "committed_capital_first_interval"
+  ],
+  "primary_risk_convention": "committed_capital_first_interval",
+  "legacy_policy": "hybrid20",
+  "scope": "Same-start continuing original-input paths. Retain existing main/legacy investor return convention: entry costs folded into first subsequent interval, no extra opening-return observation. Backward cutoff mapping, strict wealth crossings, overlapping descriptive endpoints. No joint-cost grid or final report.",
+  "execution_version": 2,
+  "prior_diagnostic_configuration_sha256": "0e2c26035cbf16562b84f53f6d7bd3cea3e405392a4cf7167a7d423a58d345b2"
+}

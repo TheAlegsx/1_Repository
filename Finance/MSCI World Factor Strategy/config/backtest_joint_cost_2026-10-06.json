@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "comparison_fields": [
+    "ending_equity_usd",
+    "cagr",
+    "maximum_drawdown",
+    "annualised_volatility",
+    "transaction_cost_usd",
+    "financing_cost_usd",
+    "trades_after_entry",
+    "margin_calls"
+  ],
+  "currency_fields": [
+    "ending_equity_usd",
+    "transaction_cost_usd",
+    "financing_cost_usd"
+  ],
+  "integer_fields": [
+    "trades_after_entry",
+    "margin_calls"
+  ],
+  "original_scalar_source_sha256": "c632dea45b781fd7e8b682139d13fba50a550548794860ff7c603c08b855a5b5",
+  "scope": "Preserved six-margin/seven-spread Cartesian grid, historical full common period and target1.25x. 42 hybrid/Core and 42 absolute/Core comparisons share 42 Core accounts. Baseline fee/rate parameters remain unchanged outside explicit scenario copies; no tuning, bank terms or bootstrap inference.",
+  "period": "full",
+  "target_leverage": 1.25,
+  "factor_policies": [
+    "hybrid20",
+    "absolute_decoupled"
+  ],
+  "margin_bps": [
+    200,
+    300,
+    425,
+    500,
+    700,
+    1000
+  ],
+  "one_way_spread_bps": [
+    0,
+    5,
+    10,
+    20,
+    30,
+    50,
+    100
+  ],
+  "legacy_source_sha256": "5d4258a5a81118fe7d4aec57b39ccdc547f4e64fbed079f92c22f1ad144a4974",
+  "legacy_result_sha256": "7a8f479aaabe97e3f0ffc55c1194592905023dff1150a6771fbd5951b7904c29",
+  "legacy_validation_source_sha256": "58a8e932f6baa527b418505e0b5db676d600dcabb3c167bab1bc220d1ed6eec6"
+}

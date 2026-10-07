@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "comparison_fields": [
+    "ending_equity_usd",
+    "cagr",
+    "maximum_drawdown",
+    "annualised_volatility",
+    "transaction_cost_usd",
+    "financing_cost_usd",
+    "trades_after_entry",
+    "margin_calls"
+  ],
+  "currency_fields": [
+    "ending_equity_usd",
+    "transaction_cost_usd",
+    "financing_cost_usd"
+  ],
+  "integer_fields": [
+    "trades_after_entry",
+    "margin_calls"
+  ],
+  "original_scalar_source_sha256": "c632dea45b781fd7e8b682139d13fba50a550548794860ff7c603c08b855a5b5",
+  "scope": "First independent-accounting slice: 57 main policy/period variants, eight outcomes each and 19 full-period wealth curves. Separate scalar implementation adapted from preserved audit source, same admitted levels/funding and explicit capital/fees. Use unchanged baseline metric/account tolerances. Not full 625-run audit, independent raw-source import, alpha/HAC validation, joint-cost grid or final reports."
+}

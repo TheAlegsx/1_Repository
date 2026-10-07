@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "initial_equity_usd": 7000000,
+  "target_weights": {
+    "core": 0.6,
+    "momentum": 0.15,
+    "quality": 0.1,
+    "value": 0.15
+  },
+  "leverage_levels": [
+    1.0,
+    1.25
+  ],
+  "policies": [
+    "legacy_absolute",
+    "absolute_decoupled",
+    "relative20",
+    "hybrid20",
+    "quarterly",
+    "annual",
+    "no_sleeve"
+  ],
+  "borrowing_margin_annual": 0.03,
+  "sleeve_band": 0.05,
+  "leverage_band": 0.1,
+  "passive_debt_control": true,
+  "fee_schedule": {
+    "usd_per_chf": 1.2367747440273038,
+    "platform_fee_usd": 0.85,
+    "stamp_duty_rate": 0.0015,
+    "spread_rate": 0.0005
+  },
+  "periods": {
+    "full": {
+      "start": "2014-10-03",
+      "end": "2026-08-28"
+    },
+    "calibration": {
+      "start": "2014-10-03",
+      "end": "2021-12-31"
+    },
+    "confirmation": {
+      "start": "2022-01-04",
+      "end": "2026-08-28"
+    }
+  },
+  "measurement": {
+    "reference_day_count": 360,
+    "annualisation_intervals": 252,
+    "cagr_calendar_year_days": 365.2425,
+    "alpha_hac_lags": 5,
+    "normal_interval_multiplier": 1.96,
+    "include_opening_cost_in_investor_returns": true
+  },
+  "reconciliation_tolerances": {
+    "account_usd_atol": 1e-06,
+    "account_rtol": 2e-12,
+    "metric_atol": 1e-09
+  },
+  "scope": "5 October 2026 ex-post design selection: uniform absolute five-percentage-point sleeve bands with separate leverage management; chosen for simplicity and consciously accepted factor drift. Historical capped-relative policy remains a comparison; no accounting, weights, cost, funding or calendar change.",
+  "primary_policy": "absolute_decoupled",
+  "primary_leverage": 1.25,
+  "comparison_policies": [
+    "hybrid20",
+    "annual",
+    "no_sleeve"
+  ],
+  "history_policies": [
+    "absolute_decoupled",
+    "hybrid20"
+  ]
+}

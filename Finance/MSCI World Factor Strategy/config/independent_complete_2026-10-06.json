@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "comparison_fields": [
+    "ending_equity_usd",
+    "cagr",
+    "maximum_drawdown",
+    "annualised_volatility",
+    "transaction_cost_usd",
+    "financing_cost_usd",
+    "trades_after_entry",
+    "margin_calls"
+  ],
+  "currency_fields": [
+    "ending_equity_usd",
+    "transaction_cost_usd",
+    "financing_cost_usd"
+  ],
+  "integer_fields": [
+    "trades_after_entry",
+    "margin_calls"
+  ],
+  "original_scalar_source_sha256": "c632dea45b781fd7e8b682139d13fba50a550548794860ff7c603c08b855a5b5",
+  "scope": "Full original 625 eight-outcome independent accounting labels plus 188 additional current labels, independent raw-source readers, 19 thirteen-field risk paths and 1284 continuing monthly windows. Shared original data/model terms; not independent daily feed, all broader audit evidence or final reports.",
+  "retained_case_families": {
+    "main_policy_period": 57,
+    "funding": 60,
+    "fresh_entry": 30,
+    "maintenance_margin": 18,
+    "bounded_hindsight": 300,
+    "synthetic": 160
+  },
+  "expected_extended_cases": {
+    "entry": 88,
+    "margin": 24,
+    "grid": 300,
+    "synthetic": 224
+  }
+}

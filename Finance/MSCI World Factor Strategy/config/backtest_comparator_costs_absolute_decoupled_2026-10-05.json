@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "period": "full",
+  "factor_policies": ["absolute_decoupled", "hybrid20"],
+  "leverage_levels": [1.0, 1.25],
+  "comparator": "dimensional",
+  "comparator_policy": "no_sleeve",
+  "zero_external_transaction_costs": true,
+  "factor_baseline_transaction_costs": true,
+  "retain_reference_and_margin": true,
+  "legacy_policy": "hybrid20",
+  "scope": "Favourable comparator control: remove Dimensional external commissions/platform/spread/stamp charges only. Preserve NAV-embedded fund expenses, original reference funding plus margin, leverage rule and next-observation accounting. Factor portfolios keep their full baseline costs. No fee estimate, cost attribution, future forecast, custody scenario or final report."
+}

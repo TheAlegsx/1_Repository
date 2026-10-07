@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "start": "2030-01-02",
+  "levels": 1306,
+  "reference_rate": 0.03,
+  "borrow_rate_columns": {"borrow_5pct": 0.05, "borrow_6pct": 0.06, "borrow_7_25pct": 0.0725},
+  "regimes": ["flat", "volatile_sideways", "sustained_decline", "prolonged_weakness", "fast_recovery", "slow_recovery", "factor_lag", "factor_rotation"],
+  "sideways": {"amplitude": 0.15, "pi_multiplier": 10},
+  "decline_endpoint": 0.65,
+  "piecewise_paths": {
+    "prolonged_weakness": {"knots": [0, 0.15, 0.35, 0.75, 1], "levels": [1, 1.08, 0.70, 0.63, 0.65]},
+    "fast_recovery": {"knots": [0, 0.20, 0.21, 0.40, 1], "levels": [1, 1.10, 0.66, 1.10, 1.20]},
+    "slow_recovery": {"knots": [0, 0.20, 0.21, 0.40, 1], "levels": [1, 1.10, 0.66, 0.76, 1.20]}
+  },
+  "factor_lag_annual_returns": [0.06, -0.02, 0.0, -0.04],
+  "rotation": {"core_annual_return": 0.04, "amplitude": 0.30, "pi_multiplier": 6, "phase_numerators": [0, 2, 4], "phase_denominator": 3},
+  "exposure_funding_pairs": [[1.0, 0.06], [1.25, 0.05], [1.25, 0.06], [1.25, 0.0725]],
+  "strategies": [
+    {"id": "factor_absolute", "portfolio": "factor", "policy": "absolute_decoupled", "passive_debt": false, "maintenance_ltv": null},
+    {"id": "factor_hybrid", "portfolio": "factor", "policy": "hybrid20", "passive_debt": false, "maintenance_ltv": null},
+    {"id": "factor_no_sleeve", "portfolio": "factor", "policy": "no_sleeve", "passive_debt": false, "maintenance_ltv": null},
+    {"id": "factor_passive", "portfolio": "factor", "policy": "no_sleeve", "passive_debt": true, "maintenance_ltv": null},
+    {"id": "factor_absolute_margin25", "portfolio": "factor", "policy": "absolute_decoupled", "passive_debt": false, "maintenance_ltv": 0.25},
+    {"id": "factor_margin25", "portfolio": "factor", "policy": "hybrid20", "passive_debt": false, "maintenance_ltv": 0.25},
+    {"id": "core", "portfolio": "core", "policy": "no_sleeve", "passive_debt": false, "maintenance_ltv": null}
+  ],
+  "legacy_strategies": ["factor_hybrid", "factor_no_sleeve", "factor_passive", "factor_margin25", "core"],
+  "source_protocol_sha256": "1781aa4e7f655ce81c0bae254aedc4067f09ffb2b101a216ab45a1a563681295",
+  "scope": "Analytical artificial levels and fictional weekdays, no stochastic seeds, fitted distributions, market observations or Dimensional forecast. Preserve original eight paths and four funding/exposure pairs; add absolute primary and its hypothetical maintenance control. No flows/admin fee; preserve insolvency, abort other errors, never tune paths to improve outcomes."
+}

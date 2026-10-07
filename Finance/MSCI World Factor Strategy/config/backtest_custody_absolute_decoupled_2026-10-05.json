@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "measurement": {
+    "period": "full",
+    "valuation": "marked gross invested assets before pending trades",
+    "charge_date": "last observed common NAV in each calendar quarter",
+    "proration": "inclusive calendar days; opening/closing stubs use declared data endpoints",
+    "payment": "borrowed exposure: add to debt; unlevered: proportional asset sale including original costs",
+    "ordering": "mark and accrue funding, charge custody, execute prior signal, form next signal",
+    "private_base": "CHF50 quarterly capped-bracket simplification at this capital scale",
+    "fee_type": "current-tariff hypothetical sensitivity; no administration-fee revenue",
+    "transaction_sale_iterations": 100,
+    "transaction_sale_tolerance_usd": 1e-08
+  },
+  "factor_policies": [
+    "hybrid20",
+    "absolute_decoupled"
+  ],
+  "leverage_levels": [
+    1.0,
+    1.25
+  ],
+  "modes": [
+    "none",
+    "private_full",
+    "private_excess",
+    "legal_entity"
+  ],
+  "rates": {
+    "private_base_chf": 50.0,
+    "private_quarterly_rate": 7.5e-05,
+    "private_threshold_chf": 1000000.0,
+    "entity_quarterly_rate": 0.00025,
+    "entity_minimum_chf": 20.0,
+    "vat_multiplier": 1.081
+  },
+  "source": {
+    "path": "swissquote_account_fees.html",
+    "sha256": "5dbeb75599461d711f57f81081083ee7793d0bf71e26bc19991e09684a98bee7",
+    "source_url": "https://www.swissquote.com/en-ch/private/trade/pricing/account-fees",
+    "retrieved_date": "2026-10-02",
+    "publisher": "Swissquote Bank Ltd Switzerland",
+    "role": "Preserved generic current-tariff evidence, not historical invoices or negotiated account terms."
+  },
+  "interpretation": {
+    "scope": "32 independent full-period paths: old 24 comparisons plus eight absolute-factor cases. Main no-custody baseline unchanged.",
+    "pricing": "Private full-value versus excess-only threshold interpretations both retained. Legal entity is a separate scenario, not a selected legal form or confirmed quote.",
+    "fx": "Original frozen baseline CHF conversion; no historical tariff/FX/VAT reconstruction.",
+    "ordering": "Quarterly expense changes equity/debt before prior-signal execution and next-signal formation; expense can change band crossings and subsequent trades.",
+    "nonmonotonic": "Fees can alter intervention timing; endpoint returns need not be monotonic in costs. A higher ending value does not make fees beneficial.",
+    "business": "Administration revenue, capital inflows, owner consumption and manager business costs remain separate.",
+    "gap": "Actual account classification, exact tariffs, fund eligibility and invoice-level implementation remain open."
+  }
+}
