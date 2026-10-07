@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "date": "2026-10-07",
-  "status": "local_matching_originals_common_reconstruction_verified",
+  "status": "published_github_matching_originals_reconstruction_verified",
   "platform": "macOS ARM64",
   "original_input_files": 25,
   "calculation_jobs": 14,
@@ -20,6 +20,10 @@
   "pdf_document_glyph_colour": "black",
   "financial_parameters_and_numerical_reference_blocks_changed": false,
   "literal_prompt_tables_and_internal_execution_inventory_public": false,
-  "actual_published_github_reconstruction_performed": false,
-  "scope": "Recorded research with matching local original snapshots; automated reconstruction, not a forecast or independent human expert approval. The reviewed base interpreter/dependencies were reused. Actual GitHub publication and a fresh checkout/environment test remain subsequent steps."
+  "actual_published_github_reconstruction_performed": true,
+  "scope": "Recorded research reconstructed from the actual published code in a fresh isolated installation with matching25local originals. All14jobs/598CSV references and both manuscripts/22PDF pages match. The patched base interpreter was reused. Automated/separate-implementation checks are not future-performance or independent human expert approval. Only documentation changes after the tested revision.",
+  "tested_published_commit": "f43f980241b827a635a9b22fd4ed55a3829e1bad",
+  "fresh_downloaded_checkout_and_venv": true,
+  "reviewed_base_interpreter_reused": true,
+  "synthetic_accounting_demonstration_passed": true
 }
