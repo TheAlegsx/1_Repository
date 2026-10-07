@@ -20,4 +20,4 @@ The hypothetical branch uses separately adjustable flat,6% growth, early-loss an
 
 Historical choices and alternative rules were examined retrospectively. Reported alpha intervals include zero; overlapping horizons and constructed controls are not independent samples. Matching accounting implementations reduces implementation-error risk under shared inputs; it does not establish future superiority, executable prices, bank-specific credit terms or business viability. Historical holdings are sparse dated snapshots, not continuous attribution panels.
 
-[Backtest](../reports/MSCI_World_Factor_Strategy_Backtest_V13_2026-10-06.pdf) · [Fund economics](../reports/Capital_Inflows_Fund_Economics_V9_2026-10-06.pdf) · [AI attribution](AI_USE.md)
+[Backtest](../reports/MSCI_World_Factor_Strategy_Backtest.pdf) · [Fund economics](../reports/Capital_Inflows_Fund_Economics.pdf) · [AI attribution](AI_USE.md)
