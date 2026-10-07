@@ -3,13 +3,13 @@
   "date": "2026-10-07",
   "selection_sha256": "f7b845471553dfc58e3b7dc7b0487c1db588d73e8dc3b61ac6665cc4f4116ff2",
   "templates_sha256": {
-    "backtest": "98fc3e1334d5b999f3a91a68ae21877496ad2595a0c3cb9daafdd9dd7f48c040",
-    "inflow": "1a6d0beaca0780808d84f4adbd78aff4fe56a24b6d35c172bd8ec90371b7b08b"
+    "backtest": "e84e3bf5d3f049ae513505caa4ad12c96fad573467177c9ee0873e3a9cf9656b",
+    "inflow": "94b08037cb23931de23f3be3be9a4cc68f6b0421923fe9f414b44c671dab0b7e"
   },
   "ai_supplement_sha256": "3d5f2fbf54ace883f351fc930480bab78329c364dbdc55632413238aa73958b1",
   "ai_record_sha256": "916e44e4dd2ef1e26a1738f988940d0f050e1afb40245a4436439cadbde0e752",
   "source_run_id": "99472e20-bd5e-46d0-bdb1-ba7fd8635697",
-  "review_scope": "Bounded author-requested calculation referencing: append GitHub code/specification links only. Original wording, displayed numerical tokens, financial selections, source citations and final AI declaration are preserved. Automated editorial/provenance checks; no independent human expert approval.",
+  "review_scope": "Bounded author-requested link clarity: function/configuration names explain their calculations; GitHub references are visibly highlighted. Original scientific wording, selected data, assumptions, sources and final AI declarations are preserved. Automated editorial checks; no independent human expert approval.",
   "decisions": [
     "MSCI World/Core remains benchmark; no new Amundi leverage construction.",
     "Author clarification: display the existing factor2x control versus real Amundi daily2x, not a new Amundi1.25x construction; primary strategy stays1.25x.",
@@ -25,7 +25,9 @@
     "No invented historical models, full prompt archive, human expert review, source-rights clearance, institutional approval or signed independence declaration.",
     "Final author-requested polish retains the2x Amundi cells and cost/reset qualifications and every required AI disclosure element while reducing repetition.",
     "Public versions14/10 remove literal prompt tables only from the final AI section; dates and companion navigation renewed. No financial engine, scenario, table/claim selection or figure change.",
-    "Author requested in-report references. All selected table captions, all displayed figures, central numerical prose and accounting methods link to their GitHub producers or specified assumptions; the unchanged calculation map supplies exact evidence origins. No financial assumption, engine, table/claim selection, figure bitmap or AI disclosure changed."
+    "Author requested in-report references. All selected table captions, all displayed figures, central numerical prose and accounting methods link to their GitHub producers or specified assumptions; the unchanged calculation map supplies exact evidence origins. No financial assumption, engine, table/claim selection, figure bitmap or AI disclosure changed.",
+    "Author requested visible, descriptive references. Link labels name the relevant function/configuration and its calculation; the renderer highlights GitHub reference links in pale blue with dark blue underlined text. All targets remain pinned to the already-verified calculation source. Body text remains black in Times New Roman.",
+    "Visual check found a separated figure caption; keep each figure with its caption and use the existing caption style. Figure bitmaps and caption wording are unchanged."
   ],
   "manual_numeric_context": [
     "Report/figure/table identifiers and date; allocation 60/15/10/15 and implied bands; target1.25 and band0.10; named windows and source IDs.",

@@ -1,5 +1,5 @@
 {
-  "baseline_commit": "cd861934faf1aaeca43ae57bde0d01ec68ee6a25",
+  "baseline_commit": "03b358d69be9ee265b38124a3e7deba427e2d6ee",
   "unchanged_complete_evidence_reference_verified": true,
   "references_removed_restore_original_manuscripts_byte_for_byte": {
     "backtest": true,
@@ -13,10 +13,10 @@
     "two reader manuscript SHA-256 values"
   ],
   "strict_public_bind_readers_passed": true,
-  "verified_reader_run_id": "54f288c4-71cd-46ef-807e-3990b890393c",
+  "verified_reader_run_id": "90f6be94-9c41-4454-8cc4-162b03afbe8b",
   "reader_payload_hashes": {
-    "report/BACKTEST_RESEARCH_2026-10-07.md": "817dedaf13b5a91cb6fabd107eb9feea3b686fd234c42262e55e7859697fb8e4",
-    "report/CAPITAL_INFLOWS_RESEARCH_2026-10-07.md": "656072dcd3fb098e2049114a574fcc13eab6259675e1fa3780d0b4c98b582e9a",
+    "report/BACKTEST_RESEARCH_2026-10-07.md": "aa5a2c567496ff3a6b5c015edca2f917b95b002128d574219b4528e97885394c",
+    "report/CAPITAL_INFLOWS_RESEARCH_2026-10-07.md": "c0769d7015730b5f05f5c961236e523ef453c54f4b0a2f825959508e37986ae9",
     "figures/backtest_equity.png": "429fbc2962cecf187177fafa981ac29a3aaba5a60ccfbc1d4f4b766ea93c28b2",
     "figures/backtest_drawdown.png": "c33ec9982c35379a0370791cb44f1406dd6c5f683a1ea73b68c9e5a551fa513d",
     "figures/inflow_historical_nav.png": "5a8b85bd6e39a0562758411b48dd7e9d37150cee92d5895f28ae3f9ef2811844"
@@ -28,38 +28,60 @@
   "method_paragraph_references": 9,
   "reader_source_files_unmodified": true,
   "date": "2026-10-07",
-  "scope": "Author-requested in-report links to GitHub calculation functions and specified assumptions; original scientific wording, numerical results, selected cells, figures, source citations and final AI disclosures are preserved.",
+  "scope": "Author-requested descriptive, visible links to calculation functions/configurations. Original scientific wording, selected results, figure bitmaps, source citations and final AI declarations are unchanged.",
   "focused_tests_passed": 19,
-  "all_22_pages_visually_inspected": true,
-  "times_new_roman_and_black_text_preserved": true,
+  "all_pages_visually_inspected": true,
+  "body_text": "Times New Roman, black",
+  "github_reference_style": {
+    "text": "dark blue #1e4d78",
+    "background": "pale blue #edf4fa",
+    "underlined": true,
+    "size_pt": 9
+  },
+  "function_names_and_calculation_roles_visible": true,
+  "calculation_link_targets_unchanged": true,
   "calculation_links_pinned_to_commit": "cd861934faf1aaeca43ae57bde0d01ec68ee6a25",
   "report_filenames_stable": true,
+  "renderer_changes": "GitHub reference styling and style descriptions; figures kept with captions using existing caption style. No numerical model changes.",
   "source_originals_or_private_working_records_published": false,
   "pdf_checks": [
     {
       "report": "MSCI_World_Factor_Strategy_Backtest.pdf",
-      "sha256": "3c23689408f1d86b11547a41f66158cb7d2a57c81fd186fc9fb2c2e353dec15d",
-      "pages": 10,
+      "sha256": "0143cd246bd9acf4a407444e032840b6de3877aa81786fafe3c2bac09dcf3346",
+      "pages": 11,
       "unique_added_calculation_specification_navigation_targets": 11,
       "all_expected_links_embedded_and_page_bounded": true,
       "relative_companion_links_resolve": true,
-      "text_coordinate_checks": 605,
+      "text_coordinate_checks": 650,
       "times_new_roman_preserved": true,
       "ai_declaration_on_final_page": true,
-      "active_content_or_attachments": false
+      "active_content_or_attachments": false,
+      "figure_captions_with_images": true,
+      "blue_link_text_and_pale_background_verified": true,
+      "palette_operations": {
+        "link_text": 25,
+        "link_background": 34
+      }
     },
     {
       "report": "Capital_Inflows_Fund_Economics.pdf",
-      "sha256": "a7772a771b9a1cd0195932086076737e3624b26d9e801a76bdacc4301eb2b913",
+      "sha256": "1b97ff08e685f8c2a3ae799e84b545f3665fce8d3f4c7cc134545b30e215fb76",
       "pages": 12,
       "unique_added_calculation_specification_navigation_targets": 19,
       "all_expected_links_embedded_and_page_bounded": true,
       "relative_companion_links_resolve": true,
-      "text_coordinate_checks": 670,
+      "text_coordinate_checks": 755,
       "times_new_roman_preserved": true,
       "ai_declaration_on_final_page": true,
-      "active_content_or_attachments": false
+      "active_content_or_attachments": false,
+      "figure_captions_with_images": true,
+      "blue_link_text_and_pale_background_verified": true,
+      "palette_operations": {
+        "link_text": 44,
+        "link_background": 59
+      }
     }
   ],
-  "total_text_coordinate_checks": 1275
+  "total_pages": 23,
+  "total_text_coordinate_checks": 1405
 }

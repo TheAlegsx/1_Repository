@@ -1,4 +1,4 @@
-"""Render the reviewed research readers in Times New Roman with black text."""
+"""Render Times New Roman readers with black text and visible GitHub references."""
 from pathlib import Path
 from collections import Counter
 import hashlib
@@ -51,6 +51,9 @@ def inline(s):
         label, target = m[1], m[2]
         label = html.escape(label)
         if target.startswith(('https://', 'http://')):
+            if target.startswith('https://github.com/TheAlegsx/1_Repository/blob/'):
+                return hold(f'<link href="{html.escape(target, quote=True)}" color="#1e4d78">'
+                            f'<font size="9" backColor="#edf4fa"><u>{label}</u></font></link>')
             return hold(f'<link href="{html.escape(target, quote=True)}" color="#000000">{label}</link>')
         if Path(target).name == 'source_register.md':
             return hold(f'<link href="#source-register" color="#000000">{label}</link>')
@@ -201,7 +204,10 @@ def convert(text, parent, story, audit, initial_orientation='portrait'):
             with PILImage.open(path) as im:w,h=im.size
             framewidth=(landscape(A4)[0] if orientation=='landscape' else A4[0])-2*MARGIN
             scale=min(framewidth/w,(380 if orientation=='landscape' else 470)/h)
-            story.extend([Image(str(path),width=w*scale,height=h*scale),Spacer(1,7)])
+            figure=Image(str(path),width=w*scale,height=h*scale)
+            figure.keepWithNext=True
+            gap=Spacer(1,7);gap.keepWithNext=True
+            story.extend([figure,gap])
             audit['images'].append(str(path.relative_to(SOURCE)))
             i+=1;continue
         parts=[line];i+=1
@@ -221,7 +227,7 @@ def convert(text, parent, story, audit, initial_orientation='portrait'):
             following = next((item.strip() for item in lines[i:] if item.strip()), '')
             is_table_label = (re.match(r'^\*\*Table\s', paragraph)
                 or (re.fullmatch(r'\*\*[^*]+\*\*', paragraph) and following.startswith('|')))
-            style = TABLE_CAPTION if is_table_label else STYLE
+            style = TABLE_CAPTION if is_table_label else CAPTION if paragraph.startswith('*Figure ') else STYLE
             story.append(Paragraph(inline(paragraph),style))
 
 def sha(path):return hashlib.sha256(path.read_bytes()).hexdigest()
@@ -263,7 +269,7 @@ def render_readers(source, destination, font_directory):
             landscape_pages=[i+1 for i,p in enumerate(pdf.pages) if float(p.mediabox.width)>float(p.mediabox.height)]))
     if inventory(SOURCE)!=before:raise RuntimeError('Reader source changed during PDF rendering')
     write_json(destination/'pdf_manifest.json',dict(source_run_id=json.loads((SOURCE/'run_manifest.json').read_text())['run_id'],
-        reports=records,font='Times New Roman',document_text='black',font_files_sha256={p.name:sha(p) for p in Path(font_directory).glob('Times New Roman*.ttf')},
+        reports=records,font='Times New Roman',document_text='black body; blue, underlined GitHub reference links with pale blue background',font_files_sha256={p.name:sha(p) for p in Path(font_directory).glob('Times New Roman*.ttf')},
         source_files_unchanged=len(before),renderer_sha256=sha(Path(__file__)),visual_review='pending',
         accompanying_ai_record=dict(file=LINK_MAP['ai_use_record.md'],sha256=sha(ai_record)),
         scope='Curated research readers; original chart bitmaps preserved. Detailed evidence is retained separately, not bundled into PDFs.'))

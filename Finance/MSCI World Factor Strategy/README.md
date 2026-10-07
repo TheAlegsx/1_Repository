@@ -1,6 +1,6 @@
 # MSCI World Factor Strategy
 
-GitHub reconstruction verified: code downloaded from the published revision and installed in a new isolated environment reproduced all14 calculation branches and598 reference CSV hashes.469 tests and nine subtests passed in that fresh environment. The current PDFs add direct GitHub calculation/specification links; original results, wording and figures are preserved, and reader reconstruction matches the renewed manuscript checks. [Verification](docs/VERIFICATION.md) · [Security controls](docs/SECURITY.md). Original provider data and private working records remain local.
+GitHub reconstruction verified: code downloaded from the published revision and installed in a new isolated environment reproduced all14 calculation branches and598 reference CSV hashes.469 tests and nine subtests passed in that fresh environment. The current PDFs add blue highlighted GitHub links naming calculation functions/settings and their roles; original results, wording and figures are preserved, and reader reconstruction matches the renewed manuscript checks. [Verification](docs/VERIFICATION.md) · [Security controls](docs/SECURITY.md). Original provider data and private working records remain local.
 
 Research on a leveraged global equity factor portfolio and the economics of a potential fund. The project brings together two connected studies: historical investment performance and hypothetical capital inflows, ownership, fees and operating costs.
 

@@ -781,10 +781,10 @@
     "inflow/figures/historical/figure_data.csv": "1b21b2ed4d4065d679092d2572af817f31dc3a2f7d427c86ac9369fb928f069c"
   },
   "reader_selection_sha256": "f7b845471553dfc58e3b7dc7b0487c1db588d73e8dc3b61ac6665cc4f4116ff2",
-  "reader_review_sha256": "6e5e7266b2d9ad1dd77a4a5a6be17e09c67b499ecf0a0dfd716f11d91d202c94",
+  "reader_review_sha256": "f1fd6602672707073dc9d21819fe3458c5ae79f279bf7011770cfdd27fb55b8d",
   "reader_payloads": {
-    "report/BACKTEST_RESEARCH_2026-10-07.md": "817dedaf13b5a91cb6fabd107eb9feea3b686fd234c42262e55e7859697fb8e4",
-    "report/CAPITAL_INFLOWS_RESEARCH_2026-10-07.md": "656072dcd3fb098e2049114a574fcc13eab6259675e1fa3780d0b4c98b582e9a",
+    "report/BACKTEST_RESEARCH_2026-10-07.md": "aa5a2c567496ff3a6b5c015edca2f917b95b002128d574219b4528e97885394c",
+    "report/CAPITAL_INFLOWS_RESEARCH_2026-10-07.md": "c0769d7015730b5f05f5c961236e523ef453c54f4b0a2f825959508e37986ae9",
     "figures/backtest_equity.png": "429fbc2962cecf187177fafa981ac29a3aaba5a60ccfbc1d4f4b766ea93c28b2",
     "figures/backtest_drawdown.png": "c33ec9982c35379a0370791cb44f1406dd6c5f683a1ea73b68c9e5a551fa513d",
     "figures/inflow_historical_nav.png": "5a8b85bd6e39a0562758411b48dd7e9d37150cee92d5895f28ae3f9ef2811844"
