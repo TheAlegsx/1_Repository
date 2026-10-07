@@ -5,11 +5,15 @@ USD results · 3 October 2014–28 August 2026
 
 ## Abstract
 
+The concept provides a shared implementation of factor exposure and moderate leverage. Historical benchmark outperformance is an additional benefit to evaluate.
+
 This study evaluates a developed-market equity portfolio with Core, Momentum, Quality and Value weights of 60/15/10/15. Absolute ±5-percentage-point sleeve bands are combined with separate leverage management at a target of 1.25x. Over the common historical sample, CAGR is **{{claim:unlevered_cagr}} without borrowing** and **{{claim:levered_cagr}} at the borrowed target**, after modelled investment trading and financing costs. The borrowed portfolio has a {{claim:levered_gap_core}} CAGR advantage over the MSCI World/Core comparator at the same target exposure, with slightly lower observed volatility and drawdown. These favourable full-period comparisons coexist with changing period rankings and alpha intervals that include zero. Historical specification testing and unverified real lending conditions limit prospective conclusions. [Return and risk metrics: historical.metrics](https://github.com/TheAlegsx/1_Repository/blob/cd861934faf1aaeca43ae57bde0d01ec68ee6a25/Finance/MSCI%20World%20Factor%20Strategy/src/factor_portfolio/historical.py#L121).
 
 ## 1. Research Question
 
-Can a portfolio anchored in the MSCI World, with momentum, quality and value sleeves, improve historical growth and risk outcomes relative to a broad-market investment? Does borrowing add return after investment costs, and what additional risks accompany it?
+How does a shared portfolio anchored in the MSCI World, with momentum, quality and value sleeves, compare with a broad-market investment in growth, risk and cost? Does borrowing add return after investment costs, and what additional risks accompany it?
+
+The intended value is a rules-based factor/leverage alternative for investors for whom direct borrowing is unavailable or relatively expensive. Its usefulness need not depend on persistent benchmark outperformance. Actual borrowing access and terms must still be established.
 
 The main strategy uses 1.25x target leverage. Unlevered results provide a control for the contribution and risk of borrowing. A favourable joint historical comparison requires higher CAGR, no higher volatility and no deeper maximum drawdown. This criterion is distinct from statistical alpha or a reliable forecast of future outperformance.
 
@@ -26,6 +30,8 @@ The Core provides broad developed-market equity exposure; the factor sleeves app
 Weights are measured against gross invested assets. Each sleeve may drift by five percentage points above or below its target: Core 55–65%, Momentum 10–20%, Quality 5–15% and Value 10–20%. Equality at a boundary does not trigger trading. A strict breach signals a full sleeve reset at the next common NAV observation. A sleeve-only reset preserves debt; a leverage-only adjustment scales the existing mixture proportionally. A simultaneous signal resets both.
 
 Leverage is managed separately at 1.25x with a ±0.10 band. This is an adjustment rule, not a hard cap on realised leverage. An account begins with USD {{claim:capital}} million of committed equity, corresponding to USD {{claim:gross}} million of gross exposure and USD {{claim:debt}} million of debt before opening charges. [Portfolio and cost settings: backtest configuration](https://github.com/TheAlegsx/1_Repository/blob/cd861934faf1aaeca43ae57bde0d01ec68ee6a25/Finance/MSCI%20World%20Factor%20Strategy/config/backtest_absolute_decoupled_2026-10-05.json).
+
+The proposed opening equity represents seven founders contributing USD one million each. The backtest treats their investment as one aggregate account; it does not model separate founder transactions.
 
 Five-percentage-point bands were the author's initial band-width proposal. Tighter alternatives were explored before returning to that width for simplicity and greater permitted factor drift. This chronology does not make the final specification independent of the historical evidence. The separated leverage mechanism must also be distinguished from coupled resets in some exploratory controls. A capped-relative rule, using the smaller of five percentage points and twenty percent of each sleeve target, is retained as a sensitivity in Appendix A.
 
@@ -126,6 +132,8 @@ The main portfolio's exploratory alpha intervals include zero at both exposure l
 
 Financing and custody costs can change signals, holdings and later trades. Consequently, small changes in charges need not produce monotone ending values. The financing sensitivity in Appendix B is descriptive; it does not identify a universally safe borrowing margin. Higher ending wealth in an isolated fee scenario is not evidence that paying higher fees is beneficial.
 
+A larger pool of capital, including possible external subscriptions, might support negotiation of better financing terms. The funding sensitivity measures alternative assumed borrowing margins; it does not establish a relationship between assets and lender pricing. The baseline margin remains fixed, and the companion inflow model does not automatically reduce it as assets grow.
+
 Hypothetical instantaneous losses at maintenance boundaries include both sale-funded cures and insolvency before a cure is possible. These are imposed account states with liquidation friction, not actual historical lender accounts. Positive equity and successful modelled sales do not establish that a lender permits the cure or executes at that NAV.
 
 Actual collateral eligibility, account category, rate fixing, settlement, liquidation timing and complete charges remain unconfirmed. The public banking material supports scenario definitions rather than an individual credit offer. Sparse holdings snapshots cannot explain the entire historical return difference or supply a full historical sector panel.
@@ -133,6 +141,8 @@ Actual collateral eligibility, account category, rate fixing, settlement, liquid
 ## 6. Conclusion
 
 Under the stated conventions, the 60/15/10/15 portfolio with absolute ±5-percentage-point bands and separate leverage management has a favourable full-sample growth/risk comparison with MSCI World/Core. The simpler common band consciously permits factor drift. Borrowing adds historical growth and materially increases total risk.
+
+Shared access to the factor/leverage implementation is the central investment rationale; the favourable historical comparison is supporting evidence. Any financing advantage from pooling capital remains conditional on applicable lending terms.
 
 The evidence supports further investigation of a fixed specification rather than a forecast of superior returns. Prospective evaluation and verified lending and execution terms are separate requirements from reproducing the historical accounts. The [capital-inflow companion report](CAPITAL_INFLOWS_RESEARCH_2026-10-07.md) applies the portfolio to a shorter historical fund experiment with hypothetical fees, flows and business costs. Its separate flat, fixed-growth and imposed-loss controls are not projections of the full-period backtest CAGR.
 

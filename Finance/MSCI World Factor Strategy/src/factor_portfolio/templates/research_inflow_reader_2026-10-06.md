@@ -5,13 +5,19 @@ USD {{claim:owner_capital_m}} million of initial owner capital · Historical and
 
 ## Abstract
 
+A shared investment for the founders and a business serving external investors are distinct economic propositions.
+
 This study examines how investor subscriptions, redemptions, fees and outside-fund costs affect fund assets, owner invested equity and manager cash. The historical branch executes the MSCI World factor portfolio with absolute ±5-percentage-point sleeve bands and separate 1.25x leverage management over 3 October 2014–3 October 2024. Its steady-acquisition unit time-weighted return is {{historical:absolute_coupled_twr}} annually, versus {{historical:absolute_overlay_twr}} for a diagnostic that omits portfolio flow feedback. Separate flat, fixed-growth and imposed-loss scenarios test adjustable business assumptions. Fundraising increases externally owned assets without automatically improving owner wealth or funding the manager. At the assumed {{claim:baseline_fee}} investor charge, all retained historical manager labels have negative terminal external-business cash under the stated budgets. These experiments are conditional calculations rather than fundraising or return forecasts. [Fund return comparison: historical_inflow_interpretation.compare_accounts](https://github.com/TheAlegsx/1_Repository/blob/cd861934faf1aaeca43ae57bde0d01ec68ee6a25/Finance/MSCI%20World%20Factor%20Strategy/src/factor_portfolio/historical_inflow_interpretation.py#L20) · [Client, fee and cost settings: inflow_acquisition.json](https://github.com/TheAlegsx/1_Repository/blob/cd861934faf1aaeca43ae57bde0d01ec68ee6a25/Finance/MSCI%20World%20Factor%20Strategy/config/inflow_acquisition.json).
 
 ## 1. Research Question and Economic Framework
 
 How much externally owned capital can specified client-acquisition schedules generate, and would external fee receipts cover the assumed business costs? How do returns, redemptions and subscription timing change that answer?
 
+The concept begins with seven founders contributing USD one million each. Initial owner capital is modelled as an aggregate cohort, not seven individual cash-flow ledgers. The portfolio could serve their shared investment purpose without outside subscriptions; operating a fund business for external clients is a separate question.
+
 Four quantities must remain separate. **Owner invested equity** is the owner's fund holding. **External invested equity** belongs to subscribing clients. **Total net fund assets** combine the two invested cohorts. **Manager cash** is held outside the fund and reflects fee receipts less the stated business costs. Assets raised from clients do not become owner wealth, and investment performance does not establish manager profitability.
+
+Additional capital might improve access to financing or negotiated borrowing terms. This is an economic hypothesis: the backtest funding sensitivities vary assumed margins, but do not demonstrate an assets-to-pricing relationship. The historical inflow replay retains the same financing specification as the backtest; subscriptions do not automatically earn a lower margin.
 
 Subscriptions buy units; redemptions return cash to investors. Closing external equity excludes cash already redeemed. Ending fund assets alone therefore cannot rank investor outcomes. Owner fees transferred to an owner-associated manager are internal transfers within the assumed owner group; they are not new externally earned revenue.
 
@@ -63,7 +69,7 @@ The historical execution additionally marks portfolio prices, accrues financing 
 
 At the {{claim:fee_bps}} and without external subscriptions, hypothetical owner equity after ten years is {{claim:no_flow_equities}}. Under a fixed return path, external subscriptions do not change owner unit performance. This invariance is not imposed on the historical coupled portfolio, where fees and flow trades can alter later investment accounts. [Client, fee and cost settings: inflow_acquisition.json](https://github.com/TheAlegsx/1_Repository/blob/cd861934faf1aaeca43ae57bde0d01ec68ee6a25/Finance/MSCI%20World%20Factor%20Strategy/config/inflow_acquisition.json) · [Acquisition accounts: inflow_scenarios.acquisition](https://github.com/TheAlegsx/1_Repository/blob/cd861934faf1aaeca43ae57bde0d01ec68ee6a25/Finance/MSCI%20World%20Factor%20Strategy/src/factor_portfolio/inflow_scenarios.py#L14).
 
-A commercial operation with zero clients still incurs the assumed business costs. That counterfactual does not describe the cost of a personal portfolio, which may avoid fund-business setup and sales infrastructure. Appendix B includes the historical no-flow/no-added-fund-fee control; ordinary investment trading and financing costs remain in it.
+A commercial operation with zero external clients still incurs the assumed business costs. The founders could instead pursue a shared investment arrangement, but its applicable costs and governance would need a separate assessment. The no-external-investor cases here retain the stated business budgets; they are not a newly calculated lean founders-only arrangement. Appendix B includes the historical no-flow/no-added-fund-fee control; ordinary investment trading and financing costs remain in it.
 
 ## 4. Historical Portfolio and Fund Results
 
@@ -146,6 +152,8 @@ Moving the same net annual loss into different individual months changes the sub
 The study separates investment outcomes from fundraising and business economics. The historical branch executes the actual strategy with assumed investor flows and an added fund fee; the hypothetical branches isolate adjustable return, demand and timing assumptions. Their horizons and accounting should remain distinct.
 
 External subscriptions can enlarge fund assets without becoming owner wealth. At the assumed low fee and the stated costs, the retained historical manager accounts require additional working capital. Strong fundraising alone does not resolve that shortfall. Fee retention, acquisition spending and servicing costs must be discussed together.
+
+These commercial results do not by themselves reject the founders' shared investment purpose. External capital could expand that arrangement and might improve financing terms, but neither benefit is established by larger asset totals alone. Investment usefulness, conditional financing economies and manager profitability should therefore be assessed separately.
 
 The next substantive inputs are evidenced client counts, tickets, redemption behaviour, fee-sharing contracts, provider invoices and the source of manager working capital. These would support a recalculation of an explicit business design. Historical investment performance cannot supply missing commercial evidence or executable credit terms. Personal withdrawals, tax, inflation and retirement sufficiency require a separate owner-wealth analysis.
 

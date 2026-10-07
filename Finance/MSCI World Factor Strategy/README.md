@@ -1,8 +1,10 @@
 # MSCI World Factor Strategy
 
-GitHub reconstruction verified: code downloaded from the published revision and installed in a new isolated environment reproduced all14 calculation branches and598 reference CSV hashes.469 tests and nine subtests passed in that fresh environment. The current PDFs add blue highlighted GitHub links naming calculation functions/settings and their roles; original results, wording and figures are preserved, and reader reconstruction matches the renewed manuscript checks. [Verification](docs/VERIFICATION.md) · [Security controls](docs/SECURITY.md). Original provider data and private working records remain local.
+GitHub reconstruction verified: code downloaded from the published revision and installed in a new isolated environment reproduced all14 calculation branches and598 reference CSV hashes.469 tests and nine subtests passed in that fresh environment. The current PDFs explain shared factor/leverage access, the proposed seven-founder capital and conditional financing economies. Numerical results and figures are preserved; strict reader reconstruction matches the reviewed revised manuscripts. Blue highlighted GitHub links name calculation functions/settings and their roles. [Verification](docs/VERIFICATION.md) · [Security controls](docs/SECURITY.md). Original provider data and private working records remain local.
 
 Research on a leveraged global equity factor portfolio and the economics of a potential fund. The project brings together two connected studies: historical investment performance and hypothetical capital inflows, ownership, fees and operating costs.
+
+The concept offers shared factor/leverage implementation, with proposed opening capital from seven founders at USD one million each. Historical benchmark outperformance is additional evidence. A larger capital pool might improve financing terms, but this remains a hypothesis; the model has no automatic AUM-driven borrowing discount. Founders' investment outcomes and the economics of serving external clients are evaluated separately.
 
 **Status:** published research reports with verified reconstruction. The current reading reports are dated 7 October 2026. Each report has one stable filename; later updates are tracked in Git history.
 
