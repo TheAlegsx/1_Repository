@@ -1,0 +1,136 @@
+{
+  "date": "2026-10-07",
+  "scope": "Stable reading-report filenames and corresponding navigation/export links; no change to financial assumptions, calculations, numerical reference checks or report contents. Earlier publication states remain in Git history.",
+  "baseline_publication_commit": "ce1bb653b2608cbdaae0a1770200b07f5733115f",
+  "financial_reconstruction_commit": "f43f980241b827a635a9b22fd4ed55a3829e1bad",
+  "verified_reader_run_id": "739cb6ae-00d7-4ed1-beef-bfce9b962eca",
+  "reports": [
+    {
+      "report": "MSCI_World_Factor_Strategy_Backtest.pdf",
+      "date": "2026-10-07",
+      "sha256": "7694ad0700da405277215f538f63ea1ef8d8cbd87e8f234413bee420493c0e87",
+      "pages": 10,
+      "visible_text_identical": true,
+      "all_pages_pixel_identical": true,
+      "render_dpi": 110,
+      "relative_report_and_ai_links": [
+        "AI_USE_RECORD_2026-10-06.md",
+        "Capital_Inflows_Fund_Economics.pdf"
+      ],
+      "active_content_or_attachments": false,
+      "page_pixels": [
+        {
+          "page": 1,
+          "pixel_sha256": "55fb7905038bb80770ab47338ebf77d2547a138b42441725f3b19854e3373dfb"
+        },
+        {
+          "page": 2,
+          "pixel_sha256": "8a4687fc0f1f3d0c597fc391bf8bae5e1313874ca176bb9c52a3909ba8107209"
+        },
+        {
+          "page": 3,
+          "pixel_sha256": "7cc8a45f024b3e94349b86e3947f1da3de821456babd1f2cb0ce85d1652ca501"
+        },
+        {
+          "page": 4,
+          "pixel_sha256": "76cb497bdecac0aace2e82032e3a0b0dfebb189a37b6b30b5a9aee6ef5445cc9"
+        },
+        {
+          "page": 5,
+          "pixel_sha256": "a26a1d3a312b7b75657c90e7b067e5f7b9e8b480593a49c0a4eda7476379f5d3"
+        },
+        {
+          "page": 6,
+          "pixel_sha256": "62fe6cc0b058c99a5f93d8d591b9f841ddaa1a719e46dbe0a29f41ebbee08fd7"
+        },
+        {
+          "page": 7,
+          "pixel_sha256": "566265058a3e5cd4770d62dc5a7ccea39748870b31d191d7600610843c6b7d4b"
+        },
+        {
+          "page": 8,
+          "pixel_sha256": "cbbbce06bac4e4c6472d615d847d18cf47fdecfb6808e917ea7626677bb47cc3"
+        },
+        {
+          "page": 9,
+          "pixel_sha256": "48b5f057e2f6ec9e546dc81344b309665636f346f991b30ac06a051c96ca4102"
+        },
+        {
+          "page": 10,
+          "pixel_sha256": "ac02a3d5825239616e732c4f19c01794b76558102054567c9ac12a68aa441d88"
+        }
+      ]
+    },
+    {
+      "report": "Capital_Inflows_Fund_Economics.pdf",
+      "date": "2026-10-07",
+      "sha256": "9a5d067b27f7fffeb55f3f9e2af8828b84c1cc3dd9c2d2b7e674e1a6f6988481",
+      "pages": 12,
+      "visible_text_identical": true,
+      "all_pages_pixel_identical": true,
+      "render_dpi": 110,
+      "relative_report_and_ai_links": [
+        "AI_USE_RECORD_2026-10-06.md",
+        "MSCI_World_Factor_Strategy_Backtest.pdf"
+      ],
+      "active_content_or_attachments": false,
+      "page_pixels": [
+        {
+          "page": 1,
+          "pixel_sha256": "c132b1c1df3b69fb7e967aa8a8c3a85f24df31d3af0c4e5ee4d74956ab8bc2a2"
+        },
+        {
+          "page": 2,
+          "pixel_sha256": "6561dd2d25351bc80c9711b26af92befa640aba6b81c3b13111af359cf6a289d"
+        },
+        {
+          "page": 3,
+          "pixel_sha256": "8d726510423557fa25862fb5d2832b3d7392db5ce13d3da51d8a670c60393230"
+        },
+        {
+          "page": 4,
+          "pixel_sha256": "f52d9ffb647358dbe9e78d302f47245f2034adf0ecef5336bfe62bb493369dc3"
+        },
+        {
+          "page": 5,
+          "pixel_sha256": "55dff4d9f225456072b2bc6f2e87d818587e290fb006c86b80ff82d4da592a12"
+        },
+        {
+          "page": 6,
+          "pixel_sha256": "a039d7db6f3541c9fad55c72e1e9cbdeadc47cf8ed6f076727f8df8fa81833af"
+        },
+        {
+          "page": 7,
+          "pixel_sha256": "9f8c885844e36b52202ac4f566c6223e9728b353027e2de74e64a1656243372a"
+        },
+        {
+          "page": 8,
+          "pixel_sha256": "90488e33baf379c29bd75e44a6eb56b63e7956a6fe98687431bc95bcf9473a11"
+        },
+        {
+          "page": 9,
+          "pixel_sha256": "7b14d14ce76f528ec52b465fbe58ff19f283e2fa76ab937d8251e75899a4d27e"
+        },
+        {
+          "page": 10,
+          "pixel_sha256": "20d498b981e6b94a1b6e5863c5efab3283f2521d01a5afcaff2ebdddadffa359"
+        },
+        {
+          "page": 11,
+          "pixel_sha256": "cfd0598c627b6f25fcc6da607e9ead359ef7dccd45cfc162d1a94be5a8a822a9"
+        },
+        {
+          "page": 12,
+          "pixel_sha256": "e5e849e15feb07f656111051b032c5b7e10d4ba5dac4979c05b1b82e541ae635"
+        }
+      ]
+    }
+  ],
+  "renderer_change": "Only the two filenames in SPECS; LINK_MAP derives the matching PDF cross-links. Renderer logic and reader manuscripts are unchanged.",
+  "financial_source_configuration_reference_unchanged": true,
+  "reader_assembly_and_presentation_tested": true,
+  "all_22_page_pixels_unchanged": true,
+  "contact_sheets_inspected": true,
+  "market_data_or_private_working_records_added": false,
+  "old_report_filenames_removed_from_current_tree": true
+}

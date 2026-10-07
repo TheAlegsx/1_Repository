@@ -6,7 +6,7 @@ Finance research and modelling projects.
 
 | Project | Focus | Status |
 |---|---|---|
-| [MSCI World Factor Strategy](MSCI%20World%20Factor%20Strategy/README.md) | Factor investing, leverage and fund economics | In development |
+| [MSCI World Factor Strategy](MSCI%20World%20Factor%20Strategy/README.md) | Factor investing, leverage and fund economics | Published reports; reconstruction verified |
 
 Each project has its own overview and documentation. Additional projects and useful subdivisions can be added as the research develops.
 

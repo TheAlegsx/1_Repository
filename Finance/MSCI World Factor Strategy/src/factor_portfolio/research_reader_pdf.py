@@ -18,9 +18,9 @@ from pypdf import PdfReader
 SOURCE = Path('.')
 SPECS = [
     ('report/BACKTEST_RESEARCH_2026-10-07.md',
-     'MSCI_World_Factor_Strategy_Backtest_V14_2026-10-07.pdf', 'Portfolio backtest'),
+     'MSCI_World_Factor_Strategy_Backtest.pdf', 'Portfolio backtest'),
     ('report/CAPITAL_INFLOWS_RESEARCH_2026-10-07.md',
-     'Capital_Inflows_Fund_Economics_V10_2026-10-07.pdf', 'Capital inflows and fund economics')]
+     'Capital_Inflows_Fund_Economics.pdf', 'Capital inflows and fund economics')]
 LINK_MAP = {Path(src).name: name for src, name, _ in SPECS}
 LINK_MAP['ai_use_record.md'] = 'AI_USE_RECORD_2026-10-06.md'
 NAVY = colors.black

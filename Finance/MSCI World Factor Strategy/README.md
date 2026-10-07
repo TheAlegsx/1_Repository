@@ -4,12 +4,12 @@ GitHub reconstruction verified: code downloaded from the published revision and 
 
 Research on a leveraged global equity factor portfolio and the economics of a potential fund. The project brings together two connected studies: historical investment performance and hypothetical capital inflows, ownership, fees and operating costs.
 
-**Status:** research in development; a published research contribution with verified reconstruction. Assumptions can be revised through separately reviewed configurations. The latest reading reports are dated 7 October 2026.
+**Status:** published research reports with verified reconstruction. The current reading reports are dated 7 October 2026. Each report has one stable filename; later updates are tracked in Git history.
 
 | Read | Scope |
 | --- | --- |
-| [Portfolio backtest, version 14](reports/MSCI_World_Factor_Strategy_Backtest_V14_2026-10-07.pdf) | Investment returns, costs, leverage, benchmarks and robustness |
-| [Capital inflows and fund economics, version 10](reports/Capital_Inflows_Fund_Economics_V10_2026-10-07.pdf) | Historical fund replay and separate hypothetical fundraising/business scenarios |
+| [Portfolio backtest](reports/MSCI_World_Factor_Strategy_Backtest.pdf) | Investment returns, costs, leverage, benchmarks and robustness |
+| [Capital inflows and fund economics](reports/Capital_Inflows_Fund_Economics.pdf) | Historical fund replay and separate hypothetical fundraising/business scenarios |
 
 ## Main design
 

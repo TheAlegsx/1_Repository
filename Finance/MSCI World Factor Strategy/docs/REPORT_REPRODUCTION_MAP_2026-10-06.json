@@ -1124,7 +1124,7 @@
     "backtest": 34,
     "inflow": 18
   },
-  "date": "2026-10-06",
+  "date": "2026-10-07",
   "figures": [
     {
       "calculation_jobs": [
@@ -1154,17 +1154,13 @@
       "report": "inflow"
     }
   ],
-  "reader_versions": {
-    "backtest": 13,
-    "inflow": 9
-  },
   "schema_version": 1,
   "scope": "All selected table families, dynamic text claims and displayed figures. Manually authored wording, static source/AI aid tables and constant assumptions are retained in templates/configurations, not generated market results.",
-  "source_reader_run_id": "1637dc07-e9b1-43b4-97d7-2058e451348a",
-  "status": "Provenance mapped; full fresh-install reconstruction remains pending",
+  "source_reader_run_id": "739cb6ae-00d7-4ed1-beef-bfce9b962eca",
+  "status": "Provenance mapped; full actual-GitHub fresh-install reconstruction verified on 7 October 2026",
   "tables": [
     {
-      "binding_file": "outputs/research_readers_v8_2026-10-06/evidence/backtest_bindings.json",
+      "binding_file": "RUN/readers/evidence/backtest_bindings.json",
       "calculation_jobs": [],
       "columns": null,
       "configuration_origins": [
@@ -1178,7 +1174,7 @@
       "table": "allocation"
     },
     {
-      "binding_file": "outputs/research_readers_v8_2026-10-06/evidence/backtest_bindings.json",
+      "binding_file": "RUN/readers/evidence/backtest_bindings.json",
       "calculation_jobs": [],
       "columns": [
         0,
@@ -1200,7 +1196,7 @@
       "table": "costs"
     },
     {
-      "binding_file": "outputs/research_readers_v8_2026-10-06/evidence/backtest_bindings.json",
+      "binding_file": "RUN/readers/evidence/backtest_bindings.json",
       "calculation_jobs": [
         "core"
       ],
@@ -1219,7 +1215,7 @@
       "table": "unlevered"
     },
     {
-      "binding_file": "outputs/research_readers_v8_2026-10-06/evidence/backtest_bindings.json",
+      "binding_file": "RUN/readers/evidence/backtest_bindings.json",
       "calculation_jobs": [
         "core"
       ],
@@ -1238,7 +1234,7 @@
       "table": "main"
     },
     {
-      "binding_file": "outputs/research_readers_v8_2026-10-06/evidence/backtest_bindings.json",
+      "binding_file": "RUN/readers/evidence/backtest_bindings.json",
       "calculation_jobs": [
         "core"
       ],
@@ -1257,7 +1253,7 @@
       "table": "dimensional"
     },
     {
-      "binding_file": "outputs/research_readers_v8_2026-10-06/evidence/backtest_bindings.json",
+      "binding_file": "RUN/readers/evidence/backtest_bindings.json",
       "calculation_jobs": [
         "expanded"
       ],
@@ -1276,7 +1272,7 @@
       "table": "amundi"
     },
     {
-      "binding_file": "outputs/research_readers_v8_2026-10-06/evidence/backtest_bindings.json",
+      "binding_file": "RUN/readers/evidence/backtest_bindings.json",
       "calculation_jobs": [
         "core"
       ],
@@ -1303,7 +1299,7 @@
       "table": "policy"
     },
     {
-      "binding_file": "outputs/research_readers_v8_2026-10-06/evidence/backtest_bindings.json",
+      "binding_file": "RUN/readers/evidence/backtest_bindings.json",
       "calculation_jobs": [
         "core"
       ],
@@ -1328,7 +1324,7 @@
       "table": "alpha"
     },
     {
-      "binding_file": "outputs/research_readers_v8_2026-10-06/evidence/backtest_bindings.json",
+      "binding_file": "RUN/readers/evidence/backtest_bindings.json",
       "calculation_jobs": [
         "core"
       ],
@@ -1356,7 +1352,7 @@
       "table": "periods"
     },
     {
-      "binding_file": "outputs/research_readers_v8_2026-10-06/evidence/backtest_bindings.json",
+      "binding_file": "RUN/readers/evidence/backtest_bindings.json",
       "calculation_jobs": [
         "expanded"
       ],
@@ -1377,7 +1373,7 @@
       "table": "funding"
     },
     {
-      "binding_file": "outputs/research_readers_v8_2026-10-06/evidence/inflow_bindings.json",
+      "binding_file": "RUN/readers/evidence/inflow_bindings.json",
       "calculation_jobs": [
         "inflow_v4"
       ],
@@ -1391,7 +1387,7 @@
       "table": "acquisition"
     },
     {
-      "binding_file": "outputs/research_readers_v8_2026-10-06/evidence/inflow_bindings.json",
+      "binding_file": "RUN/readers/evidence/inflow_bindings.json",
       "calculation_jobs": [
         "inflow_v4"
       ],
@@ -1408,7 +1404,7 @@
       "table": "business"
     },
     {
-      "binding_file": "outputs/research_readers_v8_2026-10-06/evidence/inflow_bindings.json",
+      "binding_file": "RUN/readers/evidence/inflow_bindings.json",
       "calculation_jobs": [
         "interpretation"
       ],
@@ -1429,7 +1425,7 @@
       "table": "historical_returns"
     },
     {
-      "binding_file": "outputs/research_readers_v8_2026-10-06/evidence/inflow_bindings.json",
+      "binding_file": "RUN/readers/evidence/inflow_bindings.json",
       "calculation_jobs": [
         "historical"
       ],
@@ -1456,7 +1452,7 @@
       "table": "ownership"
     },
     {
-      "binding_file": "outputs/research_readers_v8_2026-10-06/evidence/inflow_bindings.json",
+      "binding_file": "RUN/readers/evidence/inflow_bindings.json",
       "calculation_jobs": [
         "historical"
       ],
@@ -1482,7 +1478,7 @@
       "table": "manager"
     },
     {
-      "binding_file": "outputs/research_readers_v8_2026-10-06/evidence/inflow_bindings.json",
+      "binding_file": "RUN/readers/evidence/inflow_bindings.json",
       "calculation_jobs": [
         "inflow_v4"
       ],
@@ -1501,7 +1497,7 @@
       "table": "hypothetical_outcomes"
     },
     {
-      "binding_file": "outputs/research_readers_v8_2026-10-06/evidence/inflow_bindings.json",
+      "binding_file": "RUN/readers/evidence/inflow_bindings.json",
       "calculation_jobs": [
         "inflow_v4"
       ],
@@ -1520,7 +1516,7 @@
       "table": "fees"
     },
     {
-      "binding_file": "outputs/research_readers_v8_2026-10-06/evidence/inflow_bindings.json",
+      "binding_file": "RUN/readers/evidence/inflow_bindings.json",
       "calculation_jobs": [
         "inflow_v4"
       ],
@@ -1539,7 +1535,7 @@
       "table": "timing"
     },
     {
-      "binding_file": "outputs/research_readers_v8_2026-10-06/evidence/inflow_bindings.json",
+      "binding_file": "RUN/readers/evidence/inflow_bindings.json",
       "calculation_jobs": [
         "inflow_v4"
       ],
@@ -1553,7 +1549,7 @@
       "table": "scenario_matrix"
     },
     {
-      "binding_file": "outputs/research_readers_v8_2026-10-06/evidence/inflow_bindings.json",
+      "binding_file": "RUN/readers/evidence/inflow_bindings.json",
       "calculation_jobs": [
         "inflow_v4"
       ],
@@ -1567,7 +1563,7 @@
       "table": "treasury"
     },
     {
-      "binding_file": "outputs/research_readers_v8_2026-10-06/evidence/inflow_bindings.json",
+      "binding_file": "RUN/readers/evidence/inflow_bindings.json",
       "calculation_jobs": [
         "inflow_v4"
       ],
@@ -1581,7 +1577,7 @@
       "table": "investor_returns"
     },
     {
-      "binding_file": "outputs/research_readers_v8_2026-10-06/evidence/inflow_bindings.json",
+      "binding_file": "RUN/readers/evidence/inflow_bindings.json",
       "calculation_jobs": [
         "inflow_v4"
       ],
@@ -1595,7 +1591,7 @@
       "table": "loss_ranges"
     },
     {
-      "binding_file": "outputs/research_readers_v8_2026-10-06/evidence/inflow_bindings.json",
+      "binding_file": "RUN/readers/evidence/inflow_bindings.json",
       "calculation_jobs": [
         "historical"
       ],
@@ -1616,5 +1612,10 @@
       "source_family": "historical_controls",
       "table": "historical_controls"
     }
-  ]
+  ],
+  "reports": {
+    "backtest": "reports/MSCI_World_Factor_Strategy_Backtest.pdf",
+    "inflow": "reports/Capital_Inflows_Fund_Economics.pdf"
+  },
+  "binding_path_note": "RUN denotes the new output directory supplied to publication_reproduce; reader sidecars are generated there."
 }

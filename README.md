@@ -12,7 +12,7 @@ A growing collection of research and project work across finance, data and AI sy
 
 Projects are grouped by subject and have their own entry pages. The structure can evolve as new projects emerge; overview pages provide navigation to their current locations.
 
-Project pages identify their scope and status. Published versions will distinguish research outputs from work still in development.
+Project pages identify their scope and publication status. Each published report has one stable filename; earlier states and later changes are tracked in Git history.
 
 ## Updating this repository
 
