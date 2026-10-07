@@ -21,6 +21,7 @@ The historical inflow simulation uses the actual return sequence and fee/flow/de
 
 ## Explore and reproduce
 
+- [Report to calculation map](docs/REPORT_CALCULATION_MAP.md) — tables, figures, prose claims and their code/evidence origins
 - [Methods and limitations](docs/METHODS.md)
 - [Data sources and original-file requirements](data/README.md)
 - [Installation](SETUP.md) and [complete reconstruction](REPRODUCE.md)
