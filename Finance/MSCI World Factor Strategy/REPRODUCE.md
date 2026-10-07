@@ -2,6 +2,10 @@
 
 Run from this project root after[installation](SETUP.md). The command reconstructs every required calculation from separately supplied original files. It requires no saved result folders, original working-project code or network data feed.
 
+## Assessment package shortcut
+
+For an author-prepared private package with `Code/` and sibling `Inputs/`, use [the assessment start guide](docs/ASSESSOR_START.md). After installation, `python tools/run_assessment.py` automatically verifies and locates the originals, invokes this same workflow and writes an outcome summary. The manual local-input route remains available below.
+
 ## Supply the originals locally
 
 Match the filenames and SHA-256 pins in[the original-data inventory](docs/ORIGINAL_DATA_REQUIREMENTS_2026-10-06.json). Create `local/input_roots.json` yourself; it is ignored by Git. Values should be absolute paths to your local folders:
