@@ -74,11 +74,43 @@ def select_table(spec, selection):
     return result
 
 
+def reader_display(text):
+    """Round presentation only; source cells retain original values and displays."""
+    text = str(text)
+    text = re.sub(r'(-?\d+\.\d{3,})(%| pp)',
+                  lambda m: f'{float(m[1]):.2f}{m[2]}', text)
+    text = re.sub(r'(?<![\d.])(-?\d{1,3}(?:,\d{3})+\.\d{2})(?![\d%])',
+                  lambda m: f'{float(m[1].replace(",", "")):,.0f}', text)
+    return text
+
+
+def present_table(spec, name, key):
+    # Bindings keep source display/value/origin and separately identify what readers see.
+    spec = copy.deepcopy(spec)
+    replacements = {'Coupled unit TWR / year': 'Fund unit return / year',
+                    'Overlay unit TWR / year': 'Return-path comparison / year',
+                    'Coupled external MWR / year': 'External investor MWR / year',
+                    'Conditional total-fee cash, USD': 'Cash including owner fees, USD',
+                    'Flat': 'Flat 0%', '6%': 'Fixed 6%'}
+    spec['source_headers'] = list(spec['headers'])
+    spec['headers'] = [replacements.get(x, x) for x in spec['headers']]
+    for row in spec['rows']:
+        for cell in row:
+            cell['reader_display'] = reader_display(cell['display'])
+        if name == 'backtest' and key == 'costs':
+            if row[0]['display'] == 'Credit markup':
+                row[0]['reader_display'] = 'Financing markup above reference'
+                row[1]['reader_display'] = '3 percentage points (300 bp)'
+            if row[0]['display'] == 'USD per CHF':
+                row[1]['reader_display'] = f"{float(row[1]['value']):.4f}"
+    return spec
+
+
 def table_markdown(spec):
     def line(values):
         return '| ' + ' | '.join(str(x).replace('|', '\\|').replace('\n', ' ') for x in values) + ' |'
     return '\n'.join([line(spec['headers']), line(['---'] * len(spec['headers']))]
-                     + [line(c['display'] for c in row) for row in spec['rows']])
+                     + [line(c.get('reader_display', c['display']) for c in row) for row in spec['rows']])
 
 
 def source_excerpt(source, names):
@@ -219,18 +251,27 @@ def assemble(project_root, source, output, selection_path, review_path=None):
             declared = {k for k, v in plan['claim_disposition'][namespace].items() if v == 'displayed'}
             if actual != declared:
                 raise ValueError('claim selection differs from reviewed disposition')
-        selected = {key: select_table(tables[name][value['source']], value)
+        selected = {key: present_table(select_table(tables[name][value['source']], value), name, key)
                     for key, value in plan['tables'].items()}
         for key, spec in selected.items():
             spec['source_table'] = plan['tables'][key]['source']
         figure_records = {}
-        for key, relative in plan['figures'].items():
+        for key, specification in plan['figures'].items():
+            relative = specification['source'] if isinstance(specification, dict) else specification
             src = source / relative
             if not src.is_file() or before.get(relative) != sha256(src):
-                raise ValueError('selected figure missing or changed')
+                raise ValueError('selected figure evidence missing or changed')
             dest = output / 'figures' / f'{name}_{key}.png'
-            copy_bytes(src, dest)
-            figure_records[key] = dict(source=relative, sha256=sha256(src), artifact=str(dest.relative_to(output)))
+            if isinstance(specification, dict):
+                from .reader_figures import render
+                values = render(specification['render'], src, dest)
+                figure_records[key] = dict(source=relative, source_sha256=sha256(src),
+                    sha256=sha256(dest), artifact=str(dest.relative_to(output)),
+                    transform=specification['render'], values=str(values.relative_to(output)),
+                    values_sha256=sha256(values))
+            else:
+                copy_bytes(src, dest)
+                figure_records[key] = dict(source=relative, sha256=sha256(src), artifact=str(dest.relative_to(output)))
         used = {namespace: [] for namespace in ['table', 'claim', 'historical', 'figure', 'sources', 'disclosure']}
 
         def substitute(match):
@@ -239,7 +280,7 @@ def assemble(project_root, source, output, selection_path, review_path=None):
             if namespace == 'table':
                 return table_markdown(selected[key])
             if namespace in ['claim', 'historical']:
-                return claims[name][namespace][key]['display']
+                return reader_display(claims[name][namespace][key]['display'])
             if namespace == 'figure':
                 return f'![{name.capitalize()} {key.replace("_", " ")}](../{figure_records[key]["artifact"]})'
             if namespace == 'sources':
@@ -248,7 +289,7 @@ def assemble(project_root, source, output, selection_path, review_path=None):
                 return source_excerpt(source, plan['source_ids'])
             if key != 'author':
                 raise ValueError('unknown disclosure')
-            return disclosure + '\n\n' + supplement_path.read_text().strip()
+            return supplement_path.read_text().strip()
 
         text = TOKEN.sub(substitute, template)
         if '{{' in text or '}}' in text:
@@ -261,11 +302,11 @@ def assemble(project_root, source, output, selection_path, review_path=None):
             raise ValueError('figure/disclosure selection mismatch')
         sections = re.split(r'^## ', text, flags=re.MULTILINE)
         if (not sections[-1].startswith('AI Assistance and Responsibility\n')
-                or text.count(disclosure) != 1 or disclosure in '\n'.join(sections[:-1])):
+                or supplement_path.read_text().strip() not in sections[-1]):
             raise ValueError('AI disclosure must occur only in the final section')
         report_path = output / 'report' / plan['output']
         report_path.write_text(text)
-        displayed_claims = {ns: {k: claims[name][ns][k] for k in sorted(set(used[ns]))}
+        displayed_claims = {ns: {k: dict(copy.deepcopy(claims[name][ns][k]), reader_display=reader_display(claims[name][ns][k]['display'])) for k in sorted(set(used[ns]))}
                             for ns in claims[name]}
         write_json(output / 'evidence' / f'{name}_bindings.json', dict(
             tables=selected, claims=displayed_claims, claim_occurrences=used,
@@ -273,7 +314,8 @@ def assemble(project_root, source, output, selection_path, review_path=None):
             source_package=str(source.relative_to(project_root)),
             source_run_id=source_manifest['run_id'],
             source_payload_sha256=before,
-            manual_context=review['manual_numeric_context']))
+            manual_context=review['manual_numeric_context'],
+            presentation_scope='Source values/displays/origins unchanged; reader_display supplies rounded wording.'))
         results[name] = dict(file=str(report_path.relative_to(output)), version=plan['version'],
                              tables=len(selected), figures=len(figure_records),
                              unique_claims=sum(len(x) for x in displayed_claims.values()),
@@ -300,7 +342,7 @@ def assemble(project_root, source, output, selection_path, review_path=None):
         f'Editorial versions {results["backtest"]["version"]}/{results["inflow"]["version"]} assembled from verified complete research evidence. '
         'Financial assumptions and calculations are unchanged. Full omitted material '
         'remains in the separately retained source package; raw data stay local. '
-        'Human reading, fresh installation and publication remain subsequent steps.\n')
+        'See the package closure record for the actual completed verification scope.\n')
     artifacts = inventory(output)
     code_path = Path(__file__)
     manifest = dict(schema_version=1, run_id=str(uuid.uuid4()), status='complete',

@@ -9,6 +9,7 @@ import re
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.lib import colors
+from reportlab.lib.enums import TA_LEFT, TA_RIGHT
 from reportlab.lib.pagesizes import A4, landscape
 from reportlab.lib.styles import ParagraphStyle
 from reportlab.platypus import (BaseDocTemplate, PageTemplate, Frame, Paragraph,
@@ -53,7 +54,7 @@ def inline(s):
         if target.startswith(('https://', 'http://')):
             if target.startswith('https://github.com/TheAlegsx/1_Repository/blob/'):
                 return hold(f'<link href="{html.escape(target, quote=True)}" color="#1e4d78">'
-                            f'<font size="9" backColor="#edf4fa"><u>{label}</u></font></link>')
+                            f'<font size="8" backColor="#f3f6f9"><u>{label}</u></font></link>')
             return hold(f'<link href="{html.escape(target, quote=True)}" color="#000000">{label}</link>')
         if Path(target).name == 'source_register.md':
             return hold(f'<link href="#source-register" color="#000000">{label}</link>')
@@ -69,24 +70,25 @@ def inline(s):
     return s
 
 STYLE = ParagraphStyle('Body', fontName='Reading', fontSize=11, leading=15,
-                       textColor=NAVY, spaceAfter=8, splitLongWords=True,
+                       textColor=NAVY, spaceAfter=6, splitLongWords=True,
                        bulletFontName='Reading', allowWidows=0, allowOrphans=0)
 STYLES = {i: ParagraphStyle(f'H{i}', parent=STYLE, fontName='Reading-Bold',
     fontSize={1:23,2:15,3:12,4:11}.get(i,11),
     leading={1:28,2:20,3:16,4:15}.get(i,15),
-    spaceBefore=15 if i>1 else 4, spaceAfter=10, keepWithNext=True) for i in range(1,7)}
+    spaceBefore=12 if i>1 else 4, spaceAfter=8, keepWithNext=True) for i in range(1,7)}
 CAPTION = ParagraphStyle('Caption', parent=STYLE, fontSize=9, leading=12,
                          textColor=GREY, spaceBefore=5, spaceAfter=13)
 TABLE_CAPTION = ParagraphStyle('TableCaption', parent=STYLE, keepWithNext=True,
                               spaceBefore=4, spaceAfter=6)
 
 class ReadingDocument(BaseDocTemplate):
-    def __init__(self, path, title):
+    def __init__(self, path, title, total_pages=None):
+        self.total_pages = total_pages
         self.short_title = title
         self.heading_index = 0
         super().__init__(str(path), pagesize=A4, leftMargin=MARGIN, rightMargin=MARGIN,
             topMargin=51, bottomMargin=49, title=title, author='Alex Weber',
-            subject='Research report, 7 October 2026', pageCompression=1)
+            subject='Research report, 8 October 2026', pageCompression=1)
         templates = []
         for name, size in [('portrait', A4), ('landscape', landscape(A4))]:
             w,h=size
@@ -102,9 +104,9 @@ class ReadingDocument(BaseDocTemplate):
         canvas.setFont('Reading',8)
         canvas.setFillColor(GREY)
         canvas.drawString(MARGIN,h-24,self.short_title)
-        canvas.drawRightString(w-MARGIN,h-24,'Research report | 7 October 2026')
-        canvas.drawString(MARGIN,27,'Research report | Sources and calculation materials recorded')
-        canvas.drawRightString(w-MARGIN,27,str(doc.page))
+        canvas.drawRightString(w-MARGIN,h-24,'Research report | 8 October 2026')
+        canvas.drawString(MARGIN,27,self.short_title)
+        canvas.drawRightString(w-MARGIN,27,f'Page {doc.page} of {self.total_pages}' if self.total_pages else str(doc.page))
         canvas.restoreState()
     def afterFlowable(self, flowable):
         if getattr(flowable,'outline_level',None) is not None:
@@ -144,7 +146,7 @@ def convert(text, parent, story, audit, initial_orientation='portrait'):
             mode=orientation
             width=(landscape(A4)[0] if mode=='landscape' else A4[0])-2*MARGIN
             size=9.3 if mode=='landscape' else 9
-            cell_style=ParagraphStyle('Cell',parent=STYLE,fontSize=size,leading=size+3,
+            cell_style=ParagraphStyle('Cell',parent=STYLE,fontSize=size,leading=size+2,
                 spaceAfter=0,spaceBefore=0)
             # Weight text columns by typical content, rather than the longest outlier.
             weights=[]
@@ -154,8 +156,15 @@ def convert(text, parent, story, audit, initial_orientation='portrait'):
                 weights.append(max(9,min(42,typical**.75+len(rows[0][col])**.55)))
             widths=[width*x/sum(weights) for x in weights]
             if source_table:widths=[180,170,100,width-450]
-            paragraphs=[[Paragraph(('<b>'+inline(c)+'</b>') if r==0 else inline(c),cell_style)
-                         for c in row] for r,row in enumerate(rows)]
+            paragraphs=[]
+            for r, row in enumerate(rows):
+                formatted=[]
+                for c in row:
+                    numeric = bool(re.fullmatch(r'(?:USD )?[-+±]?\d[\d,.]*(?:%| pp| bp|x)?', c))
+                    style = ParagraphStyle('NumericCell' if numeric else 'TextCell', parent=cell_style,
+                                           alignment=TA_RIGHT if numeric and r>0 else TA_LEFT)
+                    formatted.append(Paragraph(('<b>'+inline(c)+'</b>') if r==0 else inline(c),style))
+                paragraphs.append(formatted)
             t=Table(paragraphs,colWidths=widths,repeatRows=1,hAlign='LEFT',splitByRow=1)
             t.setStyle(TableStyle([
                 ('BACKGROUND',(0,0),(-1,0),colors.HexColor('#EEEEEE')),
@@ -164,15 +173,8 @@ def convert(text, parent, story, audit, initial_orientation='portrait'):
                 ('LINEBELOW',(0,1),(-1,-1),.25,colors.HexColor('#DDDDDD')),
                 ('VALIGN',(0,0),(-1,-1),'TOP'),
                 ('LEFTPADDING',(0,0),(-1,-1),6),('RIGHTPADDING',(0,0),(-1,-1),6),
-                ('TOPPADDING',(0,0),(-1,-1),6),('BOTTOMPADDING',(0,0),(-1,-1),6)]))
-            if len(rows)<=8:
-                group=[t]
-                if story and isinstance(story[-1],Paragraph) and story[-1].style.name=='TableCaption':
-                    group.insert(0,story.pop())
-                while story and isinstance(story[-1],Paragraph) and story[-1].style.name.startswith('H'):
-                    group.insert(0,story.pop())
-                story.extend([KeepTogether(group),Spacer(1,10)])
-            else:story.extend([t,Spacer(1,10)])
+                ('TOPPADDING',(0,0),(-1,-1),4),('BOTTOMPADDING',(0,0),(-1,-1),4)]))
+            story.extend([t,Spacer(1,7)])
             audit['tables']+=1; audit['table_cells']+=sum(map(len,rows))
             audit['table_values'].extend(c for row in rows for c in row)
             continue
@@ -253,6 +255,10 @@ def render_readers(source, destination, font_directory):
         convert(path.read_text(),path.parent,story,audit)
         output=destination/name
         ReadingDocument(output,title).build(story)
+        page_count = len(PdfReader(output).pages)
+        story=[]; audit={'tables':0,'table_cells':0,'table_values':[],'images':[]}
+        convert(path.read_text(),path.parent,story,audit)
+        ReadingDocument(output,title,total_pages=page_count).build(story)
         pdf=PdfReader(output)
         extracted=normalise('\n'.join(page.extract_text() or '' for page in pdf.pages))
         numbers=lambda s:Counter(re.findall(r'(?<![A-Za-z])[-+]?\d[\d,]*(?:\.\d+)?%?',s))
@@ -272,7 +278,7 @@ def render_readers(source, destination, font_directory):
         reports=records,font='Times New Roman',document_text='black body; blue, underlined GitHub reference links with pale blue background',font_files_sha256={p.name:sha(p) for p in Path(font_directory).glob('Times New Roman*.ttf')},
         source_files_unchanged=len(before),renderer_sha256=sha(Path(__file__)),visual_review='pending',
         accompanying_ai_record=dict(file=LINK_MAP['ai_use_record.md'],sha256=sha(ai_record)),
-        scope='Curated research readers; original chart bitmaps preserved. Detailed evidence is retained separately, not bundled into PDFs.'))
+        scope='Curated research readers; charts regenerated from sealed evidence with unchanged financial values. Detailed evidence is retained separately, not bundled into PDFs.'))
     print(json.dumps(records,indent=2))
     return records
 
