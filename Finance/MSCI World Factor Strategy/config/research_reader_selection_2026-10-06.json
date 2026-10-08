@@ -4,7 +4,7 @@
   "source_run_id": "99472e20-bd5e-46d0-bdb1-ba7fd8635697",
   "reports": {
     "backtest": {
-      "version": 15,
+      "version": 16,
       "template": "src/factor_portfolio/templates/research_backtest_reader_2026-10-06.md",
       "output": "BACKTEST_RESEARCH_2026-10-07.md",
       "tables": {
@@ -355,6 +355,10 @@
         "drawdown": {
           "source": "backtest/figures/figure_data.csv",
           "render": "backtest_drawdown"
+        },
+        "leverage": {
+          "source": "backtest/evidence/primary_history.csv",
+          "render": "leverage"
         }
       },
       "figure_disposition": {
@@ -382,10 +386,16 @@
         "momentum_published_annual_performance",
         "quality_published_annual_performance",
         "value_published_annual_performance"
+      ],
+      "diagnostics": [
+        "retail",
+        "endpoints",
+        "leverage",
+        "core_mean"
       ]
     },
     "inflow": {
-      "version": 11,
+      "version": 12,
       "template": "src/factor_portfolio/templates/research_inflow_reader_2026-10-06.md",
       "output": "CAPITAL_INFLOWS_RESEARCH_2026-10-07.md",
       "tables": {
@@ -406,7 +416,9 @@
         },
         "historical_returns": {
           "source": "historical_selected",
-          "rows": null,
+          "rows": [
+            0
+          ],
           "columns": [
             0,
             1,
@@ -516,6 +528,19 @@
             5
           ],
           "placement": "appendix"
+        },
+        "historical_relative": {
+          "source": "historical_selected",
+          "rows": [
+            1
+          ],
+          "columns": [
+            0,
+            1,
+            2,
+            4
+          ],
+          "placement": "appendix"
         }
       },
       "table_family_disposition": {
@@ -605,7 +630,8 @@
         "historical_selected": {
           "disposition": "selected",
           "reader_tables": [
-            "historical_returns"
+            "historical_returns",
+            "historical_relative"
           ],
           "reason": "Selected rows/columns retain sealed source cells; full family remains in calculation materials."
         },

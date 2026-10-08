@@ -778,22 +778,26 @@
     "backtest/figures/drawdown.png": "c33ec9982c35379a0370791cb44f1406dd6c5f683a1ea73b68c9e5a551fa513d",
     "backtest/figures/figure_data.csv": "21b190d30be350a509851be3ce20723f14c6a92c443320ca2a6ee06ad84d7a59",
     "inflow/figures/historical/historical_nav.png": "5a8b85bd6e39a0562758411b48dd7e9d37150cee92d5895f28ae3f9ef2811844",
-    "inflow/figures/historical/figure_data.csv": "1b21b2ed4d4065d679092d2572af817f31dc3a2f7d427c86ac9369fb928f069c"
+    "inflow/figures/historical/figure_data.csv": "1b21b2ed4d4065d679092d2572af817f31dc3a2f7d427c86ac9369fb928f069c",
+    "backtest/evidence/primary_history.csv": "2beea3997b85133f3f3134812dfd058c9866f8b79cd66a6aafeaa88c1a9c7933"
   },
-  "reader_selection_sha256": "4b8f711306fe95cdf4160de88f4a58ebdfdf05cb7db77a75965536f364eb1f08",
-  "reader_review_sha256": "aa220eb0be76c707ffda3e6dc1a143b24917ba1e7308e5f60a7d271293ee8381",
+  "reader_selection_sha256": "6df2313bf7f852f1ab40d3461d5612e02423c1cd98c1669686645f8b51c726b3",
+  "reader_review_sha256": "3b5ec9e9b08695bbf8a243d92f56960235c402d319ad2b53da0f5c56f7b7fbad",
   "reader_payloads": {
-    "report/CAPITAL_INFLOWS_RESEARCH_2026-10-07.md": "8f015f411e39358808cd651ebdf2d65fc37ef2c2791fc0ac62187c96bcbee1e6",
-    "report/BACKTEST_RESEARCH_2026-10-07.md": "e1b2f428b2c9f8eaca9ca13d34b9b20022cbeb9554e2f718a306990579c3d2a9",
+    "report/CAPITAL_INFLOWS_RESEARCH_2026-10-07.md": "78a5d9a76ca06b51250b2bb093405a8152d042df44d043efd19dd5330bfa9173",
+    "report/BACKTEST_RESEARCH_2026-10-07.md": "72f76cb40f2ea18f5298265903715737615a841b3f59a85905d85080c58e8c06",
     "figures/inflow_historical_nav.json": "1e3c6a9bda6cff3423d2c5a64a4aa0134ed487a10c168055894230c238b8fe20",
     "figures/inflow_manager_cash.json": "ac78c10ade97c7024b427abe47c34ef0bab22128b6033b813fb5bd5b9c77ad15",
-    "figures/inflow_accounts.png": "fa96d9b0b0f88f6747076149d9f9fc251b151365e3386ae967431339b24ba54b",
+    "figures/inflow_accounts.png": "472ff714a3dadad555d768bd66b9a59e91269123ac397bcdfb6a4e18918785f2",
     "figures/backtest_equity.json": "f498b6306089abce902c5d027e9efe4385ca13b49203b3f21107712ddee88001",
-    "figures/inflow_manager_cash.png": "598c740b1c045e2f4bf3c7a8e975dee64ab4403c7910f233ce931d171090ee9f",
+    "figures/inflow_manager_cash.png": "b6f31b3c54358dd97ab7db04a60e940e8fd89658c7f0980366c87f1bcb11e938",
     "figures/inflow_accounts.json": "875e166d7e113cf03829f8b70666ae66fca476610537c6b289aea582626ae9c6",
-    "figures/backtest_drawdown.png": "c252f6be4f50707158cd498ac9cca8dbec1fcf80d46f3f26733aa6f1119e3352",
+    "figures/backtest_leverage.png": "cbd965a9469931ac1048205fef070eab82b674e21f9c85f862ef801c58bb3625",
+    "figures/backtest_drawdown.png": "215763010ed0c2e02f6aca72c1385c221188734aad136541abc0b17b62597ddc",
     "figures/inflow_historical_nav.png": "81f721fd6c89e9a286e724b666e67bb28363efeaf7512ef01d4f1c64bccb12fc",
+    "figures/backtest_leverage.json": "9bbf59987f90785555f94979ea715c888031bfaa8bff33cf2275b275e38240ed",
     "figures/backtest_drawdown.json": "0f83397bd1106e44750893706edfbe7f2f1f625074e58d29278e53d886b8eaa5",
-    "figures/backtest_equity.png": "9ee631d31415de4e8cce770f98868e2b0cb44a8b522b2b9e8bd4df8016e7d9f3"
+    "figures/backtest_equity.png": "9ee631d31415de4e8cce770f98868e2b0cb44a8b522b2b9e8bd4df8016e7d9f3",
+    "evidence/backtest_diagnostics.json": "544d1afc8b732071927ef691fd2939246c652b8b7a3f23e843b3f5266027d27a"
   }
 }

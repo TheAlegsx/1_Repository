@@ -22,7 +22,7 @@ Subscriptions buy units; redemptions return cash to investors. Closing external 
 
 {{figure:accounts}}
 
-*Figure 1. Two investor groups hold units in the same fund. Subscriptions and redemptions change investor holdings; fund fees leave the fund for the separate manager account. Operating costs are paid from manager cash. Owner-fee receipts are internal transfers when the manager belongs to the same owner group. Arrows describe the model, not a licensed or established legal structure.* [Account schematic: reader_figures.render](https://github.com/TheAlegsx/1_Repository/blob/9e755b3ffd9ed02ff8a99ff4f644707c4dc9fbd1/Finance/MSCI%20World%20Factor%20Strategy/src/factor_portfolio/reader_figures.py#L15)
+*Figure 1. Two investor groups hold units in the same fund. Subscriptions and redemptions change investor holdings; fund fees leave the fund for the separate manager account. Operating costs are paid from manager cash. Owner-fee receipts are internal transfers when the manager belongs to the same owner group. Arrows describe the model, not a licensed or established legal structure.* [Account schematic: reader_figures.render](https://github.com/TheAlegsx/1_Repository/blob/24979b0b422c1f016a4b3a51e84420b3d701b5f7/Finance/MSCI%20World%20Factor%20Strategy/src/factor_portfolio/reader_figures.py#L15)
 
 ## 2. Assumptions and Accounting
 
@@ -90,11 +90,11 @@ The **return-path comparison (overlay)** applies the no-flow portfolio's dated r
 
 {{table:historical_returns}}
 
-For the main strategy, the annualised fund unit return differs from the overlay by {{historical:absolute_gap}}. Direct flow-trading charges are {{historical:absolute_flow_cost}}. Those charges alone do not causally explain the difference; debt posting, funding and changed intervention paths also matter. Capped-relative remains a sensitivity comparison. [Fund return comparison: historical_inflow_interpretation.compare_accounts](https://github.com/TheAlegsx/1_Repository/blob/cd861934faf1aaeca43ae57bde0d01ec68ee6a25/Finance/MSCI%20World%20Factor%20Strategy/src/factor_portfolio/historical_inflow_interpretation.py#L20).
+For the main strategy, the annualised fund unit return differs from the overlay by {{historical:absolute_gap}}. Direct flow-trading charges are {{historical:absolute_flow_cost}}. Those charges alone do not causally explain the difference; debt posting, funding and changed intervention paths also matter. The capped-relative comparison is retained in Appendix B. [Fund return comparison: historical_inflow_interpretation.compare_accounts](https://github.com/TheAlegsx/1_Repository/blob/cd861934faf1aaeca43ae57bde0d01ec68ee6a25/Finance/MSCI%20World%20Factor%20Strategy/src/factor_portfolio/historical_inflow_interpretation.py#L20).
 
 {{figure:historical_nav}}
 
-*Figure 2. Historical fund unit performance under steady acquisition and the return-path comparison. The lower panel shows 100 x (coupled unit NAV / overlay unit NAV - 1), making portfolio flow feedback visible. This relative wealth difference is not the annualised return gap. Both paths include the added fee; investment observations are historical, while client schedules are assumed.* [Reader charts from recorded evidence: reader_figures.render](https://github.com/TheAlegsx/1_Repository/blob/9e755b3ffd9ed02ff8a99ff4f644707c4dc9fbd1/Finance/MSCI%20World%20Factor%20Strategy/src/factor_portfolio/reader_figures.py#L15)
+*Figure 2. Historical fund unit performance under steady acquisition and the return-path comparison. The lower panel shows 100 x (coupled unit NAV / overlay unit NAV - 1), making portfolio flow feedback visible. This relative wealth difference is not the annualised return gap. Both paths include the added fee; investment observations are historical, while client schedules are assumed.* [Reader charts from recorded evidence: reader_figures.render](https://github.com/TheAlegsx/1_Repository/blob/24979b0b422c1f016a4b3a51e84420b3d701b5f7/Finance/MSCI%20World%20Factor%20Strategy/src/factor_portfolio/reader_figures.py#L15)
 
 ### 4.2 Ownership and cash already returned to investors
 
@@ -104,7 +104,7 @@ For the main strategy, the annualised fund unit return differs from the overlay 
 
 The founder investment closes at **USD 19.60 million without external flows**, versus **USD 19.41 million with steady acquisition**. Under the unchanged financing terms, larger fund assets therefore do not automatically improve the founders' invested equity. These values exclude the separate manager account. The large asset totals include client-owned capital. Owner invested equity excludes outside manager cash and personal withdrawals. Redemptions are cash returned to investors and are excluded from closing external equity; they are not automatically destroyed wealth.
 
-Fund-unit TWR measures the compounded unit performance. Aggregate external MWR also accounts for when clients subscribe and redeem. Subscriptions are negative investor cash flows; redemptions and terminal external equity are positive. Historical MWR uses actual dated transactions and elapsed days divided by 365.2425. The external-investor window begins at the first subscription and differs from the full fund window. No-investor MWR is unavailable, never zero. One root found by a finite scan does not prove global uniqueness or detection of every tangency. [Dated investor return: historical_inflow_diagnostics.dated_mwr](https://github.com/TheAlegsx/1_Repository/blob/cd861934faf1aaeca43ae57bde0d01ec68ee6a25/Finance/MSCI%20World%20Factor%20Strategy/src/factor_portfolio/historical_inflow_diagnostics.py#L29).
+Fund-unit TWR measures the compounded unit performance. Aggregate external MWR also accounts for when clients subscribe and redeem. Subscriptions are negative investor cash flows; redemptions and terminal external equity are positive. Historical MWR uses the actual transaction dates; Appendix B records its annualisation and root-search conventions. The external-investor window begins at the first subscription and differs from the full fund window. No-investor MWR is unavailable, never zero. [Dated investor return: historical_inflow_diagnostics.dated_mwr](https://github.com/TheAlegsx/1_Repository/blob/cd861934faf1aaeca43ae57bde0d01ec68ee6a25/Finance/MSCI%20World%20Factor%20Strategy/src/factor_portfolio/historical_inflow_diagnostics.py#L29).
 
 ### 4.3 Manager cash and working capital
 
@@ -116,7 +116,7 @@ At full fee receipt, external receipts are {{historical:absolute_external_receip
 
 {{figure:manager_cash}}
 
-*Figure 3. Historical steady-acquisition scenario at the 5 bp investor fee and full manager receipt: external fee receipts versus modelled outside-fund business costs over ten years. Their difference is an approximately USD 408,000 funding deficit. Owner-fee transfers are excluded from the external revenue bar.* [Fee and cost chart: reader_figures.render](https://github.com/TheAlegsx/1_Repository/blob/9e755b3ffd9ed02ff8a99ff4f644707c4dc9fbd1/Finance/MSCI%20World%20Factor%20Strategy/src/factor_portfolio/reader_figures.py#L15)
+*Figure 3. Historical steady-acquisition scenario at the 5 bp investor fee and full manager receipt: external fee receipts versus modelled outside-fund business costs over ten years. Their difference is an approximately USD 408,000 funding deficit. Owner-fee transfers are excluded from the external revenue bar.* [Fee and cost chart: reader_figures.render](https://github.com/TheAlegsx/1_Repository/blob/24979b0b422c1f016a4b3a51e84420b3d701b5f7/Finance/MSCI%20World%20Factor%20Strategy/src/factor_portfolio/reader_figures.py#L15)
 
 Across the retained historical grid, {{historical:negative_manager_cases}} of {{historical:manager_cases}} manager labels have negative terminal external-business cash. The labels include repeated no-flow economics and controls, so this is not a count of independent observations or a probability of failure. The result challenges the assumed fee-and-cost combination, not every possible fund business. [Manager cash: historical_inflow_diagnostics.manager_accounts](https://github.com/TheAlegsx/1_Repository/blob/cd861934faf1aaeca43ae57bde0d01ec68ee6a25/Finance/MSCI%20World%20Factor%20Strategy/src/factor_portfolio/historical_inflow_diagnostics.py#L94).
 
@@ -176,6 +176,10 @@ The [companion portfolio backtest](BACKTEST_RESEARCH_2026-10-07.md) presents inv
 
 {{sources:inflow}}
 
+## Reproducibility Materials
+
+The blue links open the responsible function or configuration on GitHub. [The calculation map](https://github.com/TheAlegsx/1_Repository/blob/main/Finance/MSCI%20World%20Factor%20Strategy/docs/REPORT_CALCULATION_MAP.md) identifies exact rows, fields and generated evidence paths. Code links use fixed snapshots. The prepared code and separately supplied original investment data reconstruct both historical and hypothetical accounts. Complete monthly ledgers, return-search records, additional sensitivities and source-cell bindings remain in the accompanying calculation materials. Provider originals stay local.
+
 ## Appendix A. Hypothetical Scenario Overview
 
 **Table A1. Closing total fund assets under all twenty acquisition combinations, USD million** · [Acquisition accounts: inflow_scenarios.acquisition](https://github.com/TheAlegsx/1_Repository/blob/cd861934faf1aaeca43ae57bde0d01ec68ee6a25/Finance/MSCI%20World%20Factor%20Strategy/src/factor_portfolio/inflow_scenarios.py#L14)
@@ -210,11 +214,11 @@ The loss is concentrated into each possible month while preserving the same net 
 
 The controls retain ordinary investment entry, trading and financing costs. They reconcile to the investment paths over the shorter business horizon. No external cohort is invested, so external MWR is unavailable.
 
-## Reproducibility Materials
+**Table B4. Steady acquisition: retained capped-relative comparison** · [Existing comparison cells: historical_inflow_interpretation.compare_accounts](https://github.com/TheAlegsx/1_Repository/blob/cd861934faf1aaeca43ae57bde0d01ec68ee6a25/Finance/MSCI%20World%20Factor%20Strategy/src/factor_portfolio/historical_inflow_interpretation.py#L20)
 
-Blue highlighted links name the source function or configuration and the quantity it calculates or specifies. Click a function link to open the corresponding code line on GitHub. Code links identify a fixed source snapshot; [the report-to-calculation map](https://github.com/TheAlegsx/1_Repository/blob/main/Finance/MSCI%20World%20Factor%20Strategy/docs/REPORT_CALCULATION_MAP.md) provides the selected rows, fields and generated evidence paths. Original provider observations remain local.
+{{table:historical_relative}}
 
-The prepared code, explicit business configurations and separately supplied original investment data reconstruct the accounts. Complete dated historical returns, root-search statuses, monthly cohorts, timing schedules, fee/ticket/receipt and cost grids, additional figures and reconciliation records remain accompanying calculation material. They preserve adjustable assumptions and omitted evidence without lengthening the main argument. The reader-selection record identifies every displayed result's source.
+Historical MWR annualises actual dated cash flows using elapsed days divided by 365.2425. One root found by a finite scan does not establish global uniqueness or detection of every tangency. These implementation qualifications differ from the equal-month IRR convention used by hypothetical controls.
 
 ## AI Assistance and Responsibility
 

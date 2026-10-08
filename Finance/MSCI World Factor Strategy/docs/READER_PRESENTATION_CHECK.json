@@ -3,8 +3,8 @@
   "reports": [
     {
       "file": "MSCI_World_Factor_Strategy_Backtest.pdf",
-      "sha256": "a28977e07cfb190cadc002939b353bbecb9c19062c46d75269a23a35d4c7c4b0",
-      "pages": 10,
+      "sha256": "6151f0c70aedac778dfe9c396a88c24c61e27db1245c457f23b06cd3935d77cf",
+      "pages": 11,
       "all_page_text_annotations_and_pixels_match_second_assembly": true,
       "render_dpi": 108,
       "table_numeric_tokens_checked": true,
@@ -14,7 +14,7 @@
     },
     {
       "file": "Capital_Inflows_Fund_Economics.pdf",
-      "sha256": "b54cc4b08b1d0148b4b8561ecb78e7579b3aa6457070939ae2a210a8c9e45b89",
+      "sha256": "77e5ad3fbc65994a1879f7ce93c4e90b0e342d6252ac7b6e6cfc0573a025076e",
       "pages": 12,
       "all_page_text_annotations_and_pixels_match_second_assembly": true,
       "render_dpi": 108,
@@ -24,7 +24,7 @@
       "final_only_ai_section": true
     }
   ],
-  "local_git_pdf_targets_checked": 29,
+  "local_git_pdf_targets_checked": 30,
   "scope": "Two reader/PDF assemblies from identical sealed evidence; all pages compared. Unchanged financial pipeline was not rerun.",
   "date": "2026-10-08",
   "financial_parameters_and_engines_unchanged": true,
@@ -33,11 +33,12 @@
   "existing_tests_passed": 484,
   "existing_subtests_passed": 9,
   "complete_financial_rerun": false,
-  "prior_independent_financial_reconstruction": "598 CSV hashes and 52-family complete evidence previously verified; unchanged numerical producer/input/configuration identities reused",
+  "chart_source_commit": "24979b0b422c1f016a4b3a51e84420b3d701b5f7",
+  "descriptive_inputs": "Previously reviewed core history and complete report metric/equity-curve evidence; new copy matches existing CSV pin",
+  "prior_independent_financial_reconstruction": "Fourteen numerical jobs and598CSV references unchanged",
   "limitations": [
     "macOS ARM64 demonstrated",
-    "locally licensed Times New Roman fonts required for the demonstrated PDF appearance",
-    "checks are not independent human peer review"
-  ],
-  "chart_source_commit": "9e755b3ffd9ed02ff8a99ff4f644707c4dc9fbd1"
+    "licensed Times New Roman fonts required for demonstrated PDFs",
+    "observational summaries and reconstruction checks, not independent human expert review"
+  ]
 }

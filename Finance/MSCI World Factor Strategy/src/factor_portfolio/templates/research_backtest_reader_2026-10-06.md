@@ -95,19 +95,41 @@ These account returns include embedded product expenses, investor trading charge
 
 Borrowing increases portfolio CAGR from {{claim:unlevered_cagr}} to {{claim:levered_cagr}}, but also raises volatility from {{claim:unlevered_annualised_volatility}} to {{claim:levered_annualised_volatility}} and deepens maximum drawdown from {{claim:unlevered_maximum_drawdown}} to {{claim:levered_maximum_drawdown}}. The additional growth comes with additional total risk. [Return and risk metrics: historical.metrics](https://github.com/TheAlegsx/1_Repository/blob/cd861934faf1aaeca43ae57bde0d01ec68ee6a25/Finance/MSCI%20World%20Factor%20Strategy/src/factor_portfolio/historical.py#L121).
 
+**Table 6. Main strategy and the unlevered retail alternative** · [Existing return and risk measures: reader_diagnostics.summaries](https://github.com/TheAlegsx/1_Repository/blob/24979b0b422c1f016a4b3a51e84420b3d701b5f7/Finance/MSCI%20World%20Factor%20Strategy/src/factor_portfolio/reader_diagnostics.py#L8)
+
+{{detail:retail}}
+
+For an investor without convenient borrowing access, unlevered Core is a relevant practical alternative. The main portfolio delivered higher historical CAGR, with higher volatility and a slightly lower Sharpe ratio, before the added fund fee. Its value proposition is access to a chosen factor/leverage exposure; these figures do not establish better risk-adjusted performance than a simple Core holding. The matched-target comparison remains necessary to distinguish this question from the effects of borrowing.
+
+**Table 7. End-date sensitivity of the continuing investment paths** · [Relative wealth: reader_diagnostics.summaries](https://github.com/TheAlegsx/1_Repository/blob/24979b0b422c1f016a4b3a51e84420b3d701b5f7/Finance/MSCI%20World%20Factor%20Strategy/src/factor_portfolio/reader_diagnostics.py#L8)
+
+{{detail:endpoints}}
+
+Relative wealth is 100 x (portfolio equity / Core equity - 1), with both paths at a 1.25x target and unchanged opening capital. These are checkpoints of the continuing accounts, not independently restarted backtests or annual return gaps. The portfolio recovered most of its 2024 shortfall during 2025 and was nearly level with Core at the end of 2025. Its positive terminal wealth advantage emerged in the observed 2026 segment. The headline result is therefore sensitive to the chosen endpoint and does not demonstrate a persistent advantage throughout the sample.
+
 After the opening investment, the main path contains only **two rule-triggered interventions**: a sleeve reset on **3 September 2020** and a leverage adjustment on **9 April 2021**. The count includes leverage adjustments. Most of this historical path therefore consists of held positions with permitted weight and leverage drift. The thresholds still govern when trading is avoided, and few interventions do not remove retrospective selection risk. The event ledger records both actions.
 
 {{figure:equity}}
 
-*Figure 1. Main portfolio and Core at the same 1.25x target, after modelled trading and financing. The lower panel shows their relative ending wealth at each date: 100 x (portfolio equity / Core equity - 1). This is not an annual return or regression alpha. The capped-relative comparison remains in Appendix A.* [Reader charts from recorded evidence: reader_figures.render](https://github.com/TheAlegsx/1_Repository/blob/9e755b3ffd9ed02ff8a99ff4f644707c4dc9fbd1/Finance/MSCI%20World%20Factor%20Strategy/src/factor_portfolio/reader_figures.py#L15)
+*Figure 1. Main portfolio and Core at the same 1.25x target, after modelled trading and financing. The lower panel shows their relative ending wealth at each date: 100 x (portfolio equity / Core equity - 1). This is not an annual return or regression alpha. The capped-relative comparison remains in Appendix A.* [Reader charts from recorded evidence: reader_figures.render](https://github.com/TheAlegsx/1_Repository/blob/24979b0b422c1f016a4b3a51e84420b3d701b5f7/Finance/MSCI%20World%20Factor%20Strategy/src/factor_portfolio/reader_figures.py#L15)
 
 {{figure:drawdown}}
 
-*Figure 2. Main portfolio and Core drawdowns from their committed-capital high-water marks. Opening charges are included; intraday lender exposure is outside this observation calendar.* [Reader charts from recorded evidence: reader_figures.render](https://github.com/TheAlegsx/1_Repository/blob/9e755b3ffd9ed02ff8a99ff4f644707c4dc9fbd1/Finance/MSCI%20World%20Factor%20Strategy/src/factor_portfolio/reader_figures.py#L15)
+*Figure 2. Main portfolio and Core drawdowns from their committed-capital high-water marks. Opening charges are included; intraday lender exposure is outside this observation calendar.* [Reader charts from recorded evidence: reader_figures.render](https://github.com/TheAlegsx/1_Repository/blob/24979b0b422c1f016a4b3a51e84420b3d701b5f7/Finance/MSCI%20World%20Factor%20Strategy/src/factor_portfolio/reader_figures.py#L15)
+
+**Table 8. Realised leverage on the common NAV calendar** · [Leverage summaries: reader_diagnostics.summaries](https://github.com/TheAlegsx/1_Repository/blob/24979b0b422c1f016a4b3a51e84420b3d701b5f7/Finance/MSCI%20World%20Factor%20Strategy/src/factor_portfolio/reader_diagnostics.py#L8)
+
+{{detail:leverage}}
+
+The observation mean is close to the target and to the Core comparator's **{{detail:core_mean}}**. Leverage varies because market moves change equity and financing accrues into debt. The 1.25x label is an actively monitored target rather than a constant daily exposure or only an opening value. Similar average leverage does not imply equal daily exposure, beta or risk. The observed maximum is a common-NAV measure, not an intraday maximum or a verified distance to a lender's margin-call threshold.
+
+{{figure:leverage}}
+
+*Figure 3. Observed portfolio leverage, target and adjustment band. Strict breaches are executed at the next common NAV; the band is not a hard realised-exposure cap. The average uses the same observation-based definition as the reported investment metrics.* [Recorded leverage plot: reader_figures.render](https://github.com/TheAlegsx/1_Repository/blob/24979b0b422c1f016a4b3a51e84420b3d701b5f7/Finance/MSCI%20World%20Factor%20Strategy/src/factor_portfolio/reader_figures.py#L15)
 
 ### 4.2 Brief comparison with Dimensional
 
-**Table 6. Main strategy and Dimensional at the 1.25x target** · [CAGR, volatility and drawdown: historical.metrics](https://github.com/TheAlegsx/1_Repository/blob/cd861934faf1aaeca43ae57bde0d01ec68ee6a25/Finance/MSCI%20World%20Factor%20Strategy/src/factor_portfolio/historical.py#L121)
+**Table 9. Main strategy and Dimensional at the 1.25x target** · [CAGR, volatility and drawdown: historical.metrics](https://github.com/TheAlegsx/1_Repository/blob/cd861934faf1aaeca43ae57bde0d01ec68ee6a25/Finance/MSCI%20World%20Factor%20Strategy/src/factor_portfolio/historical.py#L121)
 
 {{table:dimensional}}
 
@@ -115,7 +137,7 @@ The main portfolio's CAGR advantage over Dimensional is {{claim:levered_gap_dime
 
 ### 4.3 Portfolio at 2x versus the Amundi daily 2x ETF
 
-**Table 7. Factor portfolio at 2x and Amundi daily 2x: 30 September 2025–31 August 2026** · [Product comparison: backtest_products.product_comparison](https://github.com/TheAlegsx/1_Repository/blob/cd861934faf1aaeca43ae57bde0d01ec68ee6a25/Finance/MSCI%20World%20Factor%20Strategy/src/factor_portfolio/backtest_products.py#L55)
+**Table 10. Factor portfolio at 2x and Amundi daily 2x: 30 September 2025–31 August 2026** · [Product comparison: backtest_products.product_comparison](https://github.com/TheAlegsx/1_Repository/blob/cd861934faf1aaeca43ae57bde0d01ec68ee6a25/Finance/MSCI%20World%20Factor%20Strategy/src/factor_portfolio/backtest_products.py#L55)
 
 {{table:amundi}}
 
