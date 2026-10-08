@@ -1,13 +1,12 @@
 # MSCI World Factor Strategy
 
-**Portfolio backtest · Research report · 7 October 2026**  
-USD results · 3 October 2014–28 August 2026
+**Portfolio backtest · Research report · 8 October 2026**  
+USD results · 3 October 2014–28 August 2026  
+AI-assisted analysis and writing; tools, scope and responsibility are disclosed in the final section.
 
 ## Abstract
 
-The concept provides a shared implementation of factor exposure and moderate leverage. Historical benchmark outperformance is an additional benefit to evaluate.
-
-This study evaluates a developed-market equity portfolio with Core, Momentum, Quality and Value weights of 60/15/10/15. Absolute ±5-percentage-point sleeve bands are combined with separate leverage management at a target of 1.25x. Over the common historical sample, CAGR is **{{claim:unlevered_cagr}} without borrowing** and **{{claim:levered_cagr}} at the borrowed target**, after modelled investment trading and financing costs. The borrowed portfolio has a {{claim:levered_gap_core}} CAGR advantage over the MSCI World/Core comparator at the same target exposure, with slightly lower observed volatility and drawdown. These favourable full-period comparisons coexist with changing period rankings and alpha intervals that include zero. Historical specification testing and unverified real lending conditions limit prospective conclusions. [Return and risk metrics: historical.metrics](https://github.com/TheAlegsx/1_Repository/blob/cd861934faf1aaeca43ae57bde0d01ec68ee6a25/Finance/MSCI%20World%20Factor%20Strategy/src/factor_portfolio/historical.py#L121).
+This study evaluates a shared MSCI World portfolio with Core, Momentum, Quality and Value weights of 60/15/10/15 and a 1.25x leverage target. Over 3 October 2014-28 August 2026, its CAGR is **{{claim:levered_cagr}}**, compared with **12.82%** for the MSCI World/Core investment at the same target leverage. Both include modelled trading and financing costs; the portfolio result excludes the added fund fee and outside-fund business costs. Borrowing raises return and risk relative to the unlevered portfolio. The estimated alpha against unlevered Core is -0.08% annually, with an interval including zero. The concept offers shared factor and leverage access; the historical evidence supports neither reliable future outperformance nor a proven commercial advantage.
 
 ## 1. Research Question
 
@@ -25,7 +24,7 @@ The main strategy uses 1.25x target leverage. Unlevered results provide a contro
 
 {{table:allocation}}
 
-The Core provides broad developed-market equity exposure; the factor sleeves apply different selection and weighting characteristics within the MSCI World framework. They remain equity investments and can decline together. The weights express the proposed investment design rather than a fitted estimate of optimal future weights.
+The Core provides broad developed-market equity exposure; the factor sleeves apply different selection and weighting characteristics within the MSCI World framework. They remain equity investments and can decline together. The 60% Core keeps broad-market exposure central, while the remaining 40% diversifies the proposed factor tilts. The 1.25x target adds moderate borrowing rather than adopting a daily 2x product. These are design choices, not estimates of optimal future weights.
 
 Weights are measured against gross invested assets. Each sleeve may drift by five percentage points above or below its target: Core 55–65%, Momentum 10–20%, Quality 5–15% and Value 10–20%. Equality at a boundary does not trigger trading. A strict breach signals a full sleeve reset at the next common NAV observation. A sleeve-only reset preserves debt; a leverage-only adjustment scales the existing mixture proportionally. A simultaneous signal resets both.
 
@@ -64,13 +63,13 @@ The Dimensional comparison uses the Global Core Equity Fund, USD Accumulation Sh
 
 ### 3.2 Accounting and costs
 
-**AI-assisted methodology and writing:** OpenAI Codex (OpenAI, n.d.) assisted development of the analytical code and all narrative sections, tables and figures. The final AI Assistance and Responsibility section identifies the affected material, tools, author decisions, checks and retained prompt evidence.
-
 Gross invested assets minus debt equals investor equity. At an observation, positions are marked and financing is accrued; prior signals are executed before new signals are evaluated. Trading charges reduce equity. No subscriptions or withdrawals enter the investment backtest. [Trading, debt and fees: historical.simulate](https://github.com/TheAlegsx/1_Repository/blob/cd861934faf1aaeca43ae57bde0d01ec68ee6a25/Finance/MSCI%20World%20Factor%20Strategy/src/factor_portfolio/historical.py#L21).
 
 **Table 3. Investment cost and measurement assumptions** · [Trading and borrowing costs: backtest configuration](https://github.com/TheAlegsx/1_Repository/blob/cd861934faf1aaeca43ae57bde0d01ec68ee6a25/Finance/MSCI%20World%20Factor%20Strategy/config/backtest_absolute_decoupled_2026-10-05.json)
 
 {{table:costs}}
+
+The borrowing charge is the reference rate **plus 3 percentage points (300 bp)**. Each traded leg also incurs a stepped broker commission, ranging from CHF 3 to CHF 190 according to the configured trade-notional brackets. The commission is converted into USD at the fixed rate below; the USD 0.85 platform charge is additional. [Broker commission: config.SwissquoteStandardFeeSchedule](https://github.com/TheAlegsx/1_Repository/blob/cd861934faf1aaeca43ae57bde0d01ec68ee6a25/Finance/MSCI%20World%20Factor%20Strategy/src/factor_portfolio/config.py#L66) specifies the exact brackets used in this current-cost scenario.
 
 Funding accrues from the previous observation inclusive to the current observation exclusive, on ACT/360, and is capitalised at NAV dates. Current-cost scenarios apply the stated tariff and commission conversion throughout history rather than reconstructing historical invoices. Fund administration charges, custody sensitivities, investor taxes and manager business budgets are outside the baseline investment account. [Trading, debt and fees: historical.simulate](https://github.com/TheAlegsx/1_Repository/blob/cd861934faf1aaeca43ae57bde0d01ec68ee6a25/Finance/MSCI%20World%20Factor%20Strategy/src/factor_portfolio/historical.py#L21).
 
@@ -92,17 +91,19 @@ Separate implementations check account identities and selected daily, event and 
 
 {{table:main}}
 
-The main strategy meets the stated joint growth/risk criterion against Core over the full sample. Its CAGR advantage is {{claim:unlevered_gap_core}} without borrowing and {{claim:levered_gap_core}} at matched target leverage. These are historical account comparisons, not a causal estimate of the return from each factor. [Return and risk metrics: historical.metrics](https://github.com/TheAlegsx/1_Repository/blob/cd861934faf1aaeca43ae57bde0d01ec68ee6a25/Finance/MSCI%20World%20Factor%20Strategy/src/factor_portfolio/historical.py#L121).
+These account returns include embedded product expenses, investor trading charges and financing. They exclude the additional fund fee and outside-fund operating budget analysed in the companion study. The main strategy meets the stated joint growth/risk criterion against Core over the full sample. Its CAGR advantage is {{claim:unlevered_gap_core}} without borrowing and {{claim:levered_gap_core}} at matched target leverage. These are historical account comparisons, not a causal estimate of the return from each factor. [Return and risk metrics: historical.metrics](https://github.com/TheAlegsx/1_Repository/blob/cd861934faf1aaeca43ae57bde0d01ec68ee6a25/Finance/MSCI%20World%20Factor%20Strategy/src/factor_portfolio/historical.py#L121).
 
 Borrowing increases portfolio CAGR from {{claim:unlevered_cagr}} to {{claim:levered_cagr}}, but also raises volatility from {{claim:unlevered_annualised_volatility}} to {{claim:levered_annualised_volatility}} and deepens maximum drawdown from {{claim:unlevered_maximum_drawdown}} to {{claim:levered_maximum_drawdown}}. The additional growth comes with additional total risk. [Return and risk metrics: historical.metrics](https://github.com/TheAlegsx/1_Repository/blob/cd861934faf1aaeca43ae57bde0d01ec68ee6a25/Finance/MSCI%20World%20Factor%20Strategy/src/factor_portfolio/historical.py#L121).
 
+After the opening investment, the main path contains only **two rule-triggered interventions**: a sleeve reset on **3 September 2020** and a leverage adjustment on **9 April 2021**. The count includes leverage adjustments. Most of this historical path therefore consists of held positions with permitted weight and leverage drift. The thresholds still govern when trading is avoided, and few interventions do not remove retrospective selection risk. The event ledger records both actions.
+
 {{figure:equity}}
 
-*Figure 1. Investor equity at matched 1.25x target exposure, after modelled trading and financing. The capped-relative sensitivity is shown alongside the main strategy. There are no subscriptions or manager-fee receipts in these paths.* [Equity and drawdown plots: backtest_report.plot_history](https://github.com/TheAlegsx/1_Repository/blob/cd861934faf1aaeca43ae57bde0d01ec68ee6a25/Finance/MSCI%20World%20Factor%20Strategy/src/factor_portfolio/backtest_report.py#L278)
+*Figure 1. Main portfolio and Core at the same 1.25x target, after modelled trading and financing. The lower panel shows their relative ending wealth at each date: 100 x (portfolio equity / Core equity - 1). This is not an annual return or regression alpha. The capped-relative comparison remains in Appendix A.* [Reader charts from recorded evidence: reader_figures.render](https://github.com/TheAlegsx/1_Repository/blob/9e755b3ffd9ed02ff8a99ff4f644707c4dc9fbd1/Finance/MSCI%20World%20Factor%20Strategy/src/factor_portfolio/reader_figures.py#L15)
 
 {{figure:drawdown}}
 
-*Figure 2. Drawdown from the committed-capital high-water mark on the common observation calendar. The paths include opening charges but do not capture intraday lender exposure.* [Equity and drawdown plots: backtest_report.plot_history](https://github.com/TheAlegsx/1_Repository/blob/cd861934faf1aaeca43ae57bde0d01ec68ee6a25/Finance/MSCI%20World%20Factor%20Strategy/src/factor_portfolio/backtest_report.py#L278)
+*Figure 2. Main portfolio and Core drawdowns from their committed-capital high-water marks. Opening charges are included; intraday lender exposure is outside this observation calendar.* [Reader charts from recorded evidence: reader_figures.render](https://github.com/TheAlegsx/1_Repository/blob/9e755b3ffd9ed02ff8a99ff4f644707c4dc9fbd1/Finance/MSCI%20World%20Factor%20Strategy/src/factor_portfolio/reader_figures.py#L15)
 
 ### 4.2 Brief comparison with Dimensional
 
@@ -128,9 +129,9 @@ Amundi resets exposure daily, while the factor portfolio manages leverage within
 
 The growth ranking is not stable across all dates. In independently restarted early and later periods, Core exceeds the main portfolio's CAGR in the early segment, while the main portfolio leads in the later segment. Appendix B retains this counter-evidence and the alpha estimates. Overlapping rolling windows and alternative entry dates do not provide independent probabilities of future success.
 
-The main portfolio's exploratory alpha intervals include zero at both exposure levels. The leveraged estimate is not convincingly positive. Historical testing, changes in period rankings and a market-exposed set of equity sleeves prevent a claim of established future superiority. The later restart is retrospective rather than a pristine holdout.
+The main portfolio's exploratory alpha intervals include zero at both exposure levels. The slightly negative leveraged alpha and the positive matched-target CAGR gap answer different questions. Alpha is a beta-adjusted excess-return intercept against **unlevered Core**; the CAGR gap compares compounded account growth with Core at the **same 1.25x target**. No separate significance test of that CAGR gap is reported. Historical testing, changes in period rankings and a market-exposed set of equity sleeves prevent a claim of established future superiority. The later restart is retrospective rather than a pristine holdout.
 
-Financing and custody costs can change signals, holdings and later trades. Consequently, small changes in charges need not produce monotone ending values. The financing sensitivity in Appendix B is descriptive; it does not identify a universally safe borrowing margin. Higher ending wealth in an isolated fee scenario is not evidence that paying higher fees is beneficial.
+Financing and custody costs can change signals, holdings and later trades. Consequently, small changes in charges need not produce monotone ending values. Appendix B reruns the whole strategy at each financing margin, including newly triggered trades. At 0 bp the path has five post-entry interventions, compared with two at 300 bp, including additional leverage adjustments around the 2020 decline. The 13.64% versus 13.24% CAGR comparison therefore includes changed exposure paths as well as direct interest expense. Zero markup still incurs the reference rate. A constant-debt estimate of financing drag cannot reproduce this comparison, and the table does not identify a universally safe borrowing margin. Higher ending wealth in an isolated fee scenario is not evidence that paying higher fees is beneficial.
 
 A larger pool of capital, including possible external subscriptions, might support negotiation of better financing terms. The funding sensitivity measures alternative assumed borrowing margins; it does not establish a relationship between assets and lender pricing. The baseline margin remains fixed, and the companion inflow model does not automatically reduce it as assets grow.
 
@@ -180,9 +181,7 @@ The later result is a restarted account, not a continuation of the full-history 
 
 ## Reproducibility Materials
 
-Blue highlighted links name the source function or configuration and the quantity it calculates or specifies. Click a function link to open the corresponding code line on GitHub. Code links identify a fixed source snapshot; [the report-to-calculation map](https://github.com/TheAlegsx/1_Repository/blob/main/Finance/MSCI%20World%20Factor%20Strategy/docs/REPORT_CALCULATION_MAP.md) provides the selected rows, fields and generated evidence paths. Original provider observations remain local.
-
-The prepared code and separately supplied original data reconstruct the investment accounts. Full allocation, policy, rolling-entry, correlation, cost, artificial-regime, gap-cure, holdings and product-control results remain in the accompanying calculation materials. Their inclusion in the research archive does not make raw provider data public. The reader-selection record identifies the evidence behind each displayed table and claim.
+The blue links open the responsible function or configuration on GitHub. [The calculation map](https://github.com/TheAlegsx/1_Repository/blob/main/Finance/MSCI%20World%20Factor%20Strategy/docs/REPORT_CALCULATION_MAP.md) identifies exact rows, fields and generated evidence paths. Code links use fixed snapshots. The prepared code and separately supplied original data reconstruct the accounts; full analyses and source-cell bindings remain in the accompanying calculation materials. Provider originals stay local.
 
 ## AI Assistance and Responsibility
 

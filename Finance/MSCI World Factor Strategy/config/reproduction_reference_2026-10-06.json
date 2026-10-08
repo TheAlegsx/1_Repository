@@ -780,13 +780,20 @@
     "inflow/figures/historical/historical_nav.png": "5a8b85bd6e39a0562758411b48dd7e9d37150cee92d5895f28ae3f9ef2811844",
     "inflow/figures/historical/figure_data.csv": "1b21b2ed4d4065d679092d2572af817f31dc3a2f7d427c86ac9369fb928f069c"
   },
-  "reader_selection_sha256": "f7b845471553dfc58e3b7dc7b0487c1db588d73e8dc3b61ac6665cc4f4116ff2",
-  "reader_review_sha256": "0c1445fcee2cdda4f42df8096c8c49ee1fcfb621a2b3c022317fcc768d3b8e84",
+  "reader_selection_sha256": "4b8f711306fe95cdf4160de88f4a58ebdfdf05cb7db77a75965536f364eb1f08",
+  "reader_review_sha256": "aa220eb0be76c707ffda3e6dc1a143b24917ba1e7308e5f60a7d271293ee8381",
   "reader_payloads": {
-    "report/BACKTEST_RESEARCH_2026-10-07.md": "e15773108add6d745194fbc27ad05bc058cca68db093c6ce84796ce48db20171",
-    "report/CAPITAL_INFLOWS_RESEARCH_2026-10-07.md": "b2317b54cf147635225d958e1a1bef63683eb2745e24d38b0acc388caea294a3",
-    "figures/backtest_equity.png": "429fbc2962cecf187177fafa981ac29a3aaba5a60ccfbc1d4f4b766ea93c28b2",
-    "figures/backtest_drawdown.png": "c33ec9982c35379a0370791cb44f1406dd6c5f683a1ea73b68c9e5a551fa513d",
-    "figures/inflow_historical_nav.png": "5a8b85bd6e39a0562758411b48dd7e9d37150cee92d5895f28ae3f9ef2811844"
+    "report/CAPITAL_INFLOWS_RESEARCH_2026-10-07.md": "8f015f411e39358808cd651ebdf2d65fc37ef2c2791fc0ac62187c96bcbee1e6",
+    "report/BACKTEST_RESEARCH_2026-10-07.md": "e1b2f428b2c9f8eaca9ca13d34b9b20022cbeb9554e2f718a306990579c3d2a9",
+    "figures/inflow_historical_nav.json": "1e3c6a9bda6cff3423d2c5a64a4aa0134ed487a10c168055894230c238b8fe20",
+    "figures/inflow_manager_cash.json": "ac78c10ade97c7024b427abe47c34ef0bab22128b6033b813fb5bd5b9c77ad15",
+    "figures/inflow_accounts.png": "fa96d9b0b0f88f6747076149d9f9fc251b151365e3386ae967431339b24ba54b",
+    "figures/backtest_equity.json": "f498b6306089abce902c5d027e9efe4385ca13b49203b3f21107712ddee88001",
+    "figures/inflow_manager_cash.png": "598c740b1c045e2f4bf3c7a8e975dee64ab4403c7910f233ce931d171090ee9f",
+    "figures/inflow_accounts.json": "875e166d7e113cf03829f8b70666ae66fca476610537c6b289aea582626ae9c6",
+    "figures/backtest_drawdown.png": "c252f6be4f50707158cd498ac9cca8dbec1fcf80d46f3f26733aa6f1119e3352",
+    "figures/inflow_historical_nav.png": "81f721fd6c89e9a286e724b666e67bb28363efeaf7512ef01d4f1c64bccb12fc",
+    "figures/backtest_drawdown.json": "0f83397bd1106e44750893706edfbe7f2f1f625074e58d29278e53d886b8eaa5",
+    "figures/backtest_equity.png": "9ee631d31415de4e8cce770f98868e2b0cb44a8b522b2b9e8bd4df8016e7d9f3"
   }
 }

@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "date": "2026-10-07",
+  "date": "2026-10-08",
   "source_run_id": "99472e20-bd5e-46d0-bdb1-ba7fd8635697",
   "reports": {
     "backtest": {
-      "version": 14,
+      "version": 15,
       "template": "src/factor_portfolio/templates/research_backtest_reader_2026-10-06.md",
       "output": "BACKTEST_RESEARCH_2026-10-07.md",
       "tables": {
@@ -348,8 +348,14 @@
         }
       },
       "figures": {
-        "equity": "backtest/figures/equity.png",
-        "drawdown": "backtest/figures/drawdown.png"
+        "equity": {
+          "source": "backtest/figures/figure_data.csv",
+          "render": "backtest_equity"
+        },
+        "drawdown": {
+          "source": "backtest/figures/figure_data.csv",
+          "render": "backtest_drawdown"
+        }
       },
       "figure_disposition": {
         "equity": "displayed",
@@ -379,7 +385,7 @@
       ]
     },
     "inflow": {
-      "version": 10,
+      "version": 11,
       "template": "src/factor_portfolio/templates/research_inflow_reader_2026-10-06.md",
       "output": "CAPITAL_INFLOWS_RESEARCH_2026-10-07.md",
       "tables": {
@@ -643,7 +649,7 @@
           "annual_fee_pct": "retained_outside_pdf",
           "baseline_bps": "retained_outside_pdf",
           "baseline_cases": "retained_outside_pdf",
-          "baseline_fee": "displayed",
+          "baseline_fee": "retained_outside_pdf",
           "baseline_fee_bps": "retained_outside_pdf",
           "capital_usd_m": "retained_outside_pdf",
           "cost_case_count": "retained_outside_pdf",
@@ -719,7 +725,7 @@
         },
         "historical": {
           "absolute_coupled_twr": "displayed",
-          "absolute_overlay_twr": "displayed",
+          "absolute_overlay_twr": "retained_outside_pdf",
           "absolute_gap": "displayed",
           "absolute_flow_cost": "displayed",
           "hybrid_coupled_twr": "retained_outside_pdf",
@@ -739,7 +745,18 @@
         }
       },
       "figures": {
-        "historical_nav": "inflow/figures/historical/historical_nav.png"
+        "historical_nav": {
+          "source": "inflow/figures/historical/figure_data.csv",
+          "render": "inflow_nav"
+        },
+        "accounts": {
+          "source": "inflow/report/historical_tables.json",
+          "render": "accounts"
+        },
+        "manager_cash": {
+          "source": "inflow/report/historical_tables.json",
+          "render": "manager_cash"
+        }
       },
       "figure_disposition": {
         "figure_1": "retained_outside_pdf",

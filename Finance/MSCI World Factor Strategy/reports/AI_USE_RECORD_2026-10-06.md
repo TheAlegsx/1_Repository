@@ -1,8 +1,8 @@
 # AI-use disclosure record
 
-Public disclosure prepared 7 October 2026 for the MSCI World Factor Strategy and Capital Inflows and Fund Economics research reports.
+Public disclosure updated 8 October 2026 for the MSCI World Factor Strategy and Capital Inflows and Fund Economics research reports.
 
-OpenAI Codex was the only generative AI application used. Assistance was extensive throughout methodological discussion, programming, original-file readers, data processing, portfolio and fund simulations, statistical analysis, interpretation, prose, tables, figures, references and reproducibility documentation. AI contributed to methods as well as their implementation; this record does not imply that the author independently wrote all code or developed every analytical approach.
+OpenAI Codex was the generative AI application used for the original research and report production. For the 8 October 2026 revision, Alex supplied a Claude (Anthropic) critique of both reports; its methodological, wording and layout suggestions were checked against project evidence and informed the editorial revision. No verified Claude model/version or direct access to its underlying session is asserted. Assistance was extensive throughout methodological discussion, programming, original-file readers, data processing, portfolio and fund simulations, statistical analysis, interpretation, prose, tables, figures, references and reproducibility documentation. AI contributed to methods as well as their implementation; this record does not imply that the author independently wrote all code or developed every analytical approach.
 
 Alex specified and approved the principal portfolio constraints, supplied the project materials, selected the comparisons and reviewed successive drafts. The human author remains responsible for the content, assumptions, factual verification and submission. Original market data and external documents retain their provider attribution. Hypothetical fundraising, fee and business assumptions remain distinct from observed market inputs.
 
@@ -15,3 +15,5 @@ Automated and separate-implementation checks assess calculations and reporting u
 ## Application reference
 
 OpenAI. (n.d.). *Codex* [Generative AI coding assistant]. [Application reference](https://openai.com/codex/).
+
+Anthropic. (n.d.). *Claude* [Generative AI assistant; author-supplied review]. [Application reference](https://claude.ai/).

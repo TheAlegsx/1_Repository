@@ -1,29 +1,27 @@
-### Scope of assistance
+### Tools, scope and author contribution
 
-OpenAI Codex was used for substantive code generation and revision, methodological discussion, analysis and report drafting. AI-generated or substantially revised wording appears throughout the abstract, main text, source commentary and appendices. Tables and figures were produced by AI-assisted code using the stated data and scenario assumptions. Provider data and external documents retain their original attribution.
+OpenAI Codex (OpenAI, n.d.) assisted method development, programming, data processing, portfolio and fund simulations, statistics, interpretation and documentation. AI-generated or substantially revised wording appears throughout both abstracts, main texts, source commentary and appendices. Tables and figures were produced through AI-assisted code. Alex supplied the materials, specified and approved principal design choices, selected comparisons and reviewed drafts; the author retains responsibility for the content.
+
+During the October 2026 revision, Alex also supplied a **Claude (Anthropic, n.d.)** review of the reports. Its methodological, wording and layout suggestions were evaluated against project evidence and informed this revision. Claude was not the original calculation engine. Its model/version has not been established.
 
 **List of aids (Hilfsmittelverzeichnis)**
 
 | Tool | Purpose and affected material |
 | --- | --- |
-| OpenAI Codex (OpenAI, n.d.) | Method development, code generation/revision, data processing, backtests and scenarios, statistics, interpretation, all report prose, tables, figures and documentation |
-| Python, NumPy, pandas and openpyxl | Numerical implementation, data alignment/accounting, scenario processing, original spreadsheet readers and report evidence |
-| Matplotlib | Programmatic charts from calculated investment and fund paths |
-| pytest | Automated calculation and report-contract checks |
-| pypdf, pdfplumber, ReportLab, Pillow and Poppler | Source-PDF extraction/checks, report PDF generation and rendered-page verification |
+| OpenAI Codex | Methodology, code, data processing, calculations, statistics, interpretation, wording throughout both reports, tables, figures and documentation |
+| Claude | Author-supplied critical review informing the revised interpretation, wording and presentation of both reports |
+| Python, NumPy, pandas, openpyxl and Matplotlib | Calculation implementation, spreadsheet inputs, tables and charts |
+| pytest | Automated calculation and report checks |
+| pypdf, pdfplumber, ReportLab, Pillow, PDFium and Poppler | Source-PDF extraction, report generation and text, link and visual checks |
 
-### Author contribution and verification
+### Verification and retained records
 
-Alex specified and approved key design choices, supplied project material, determined which comparisons to present and reviewed successive drafts. Codex helped translate these instructions into data readers, portfolio and fund simulations, analytical controls and reporting routines. It also contributed to the development of methods and interpretation of results.
+Checks covered accounting identities, reference comparisons, separate implementations, numerical bindings, text and layout. They assess implementation under the stated inputs; they do not constitute independent human expert review. Provider sources retain their attribution.
 
-Verification covered accounting identities, comparisons with retained reference outcomes, separate implementations, report evidence bindings and numerical, text and layout checks. These checks assess implementation and reporting under shared inputs and conventions; they do not constitute independent human expert review. The accompanying evidence record identifies the checks performed and their limits.
+The [AI-use record](../evidence/ai_use_record.md) documents assistance and verification limits. Selected prompts, passages from the supplied Claude review and working records are retained privately. No complete chronological prompt/output or historical model-version archive has been established. References identify applications; assessment-specific documentation remains the author's responsibility.
 
-### Documentation and archive
-
-The accompanying [AI-use disclosure record](../evidence/ai_use_record.md) summarises the assistance, author contribution and verification limits. Selected exact prompt evidence and detailed internal working records are retained locally for applicable assessment/archive or review requirements; they are not distributed with the public reports.
-
-A complete chronological prompt/output archive has not been established. Codex is identified at application level; no historical model version is asserted. Factual claims refer to the separately cited original evidence. The author remains responsible for the content and any assessment-specific documentation obligations.
-
-### AI application reference
+### Application references
 
 OpenAI. (n.d.). *Codex* [Generative AI coding assistant]. [Application reference](https://openai.com/codex/).
+
+Anthropic. (n.d.). *Claude* [Generative AI assistant; author-supplied review]. [Application reference](https://claude.ai/).

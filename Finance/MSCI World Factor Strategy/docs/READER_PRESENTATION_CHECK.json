@@ -1,0 +1,43 @@
+{
+  "status": "passed",
+  "reports": [
+    {
+      "file": "MSCI_World_Factor_Strategy_Backtest.pdf",
+      "sha256": "a28977e07cfb190cadc002939b353bbecb9c19062c46d75269a23a35d4c7c4b0",
+      "pages": 10,
+      "all_page_text_annotations_and_pixels_match_second_assembly": true,
+      "render_dpi": 108,
+      "table_numeric_tokens_checked": true,
+      "no_page_coordinate_overflow": true,
+      "page_x_of_y_checked": true,
+      "final_only_ai_section": true
+    },
+    {
+      "file": "Capital_Inflows_Fund_Economics.pdf",
+      "sha256": "b54cc4b08b1d0148b4b8561ecb78e7579b3aa6457070939ae2a210a8c9e45b89",
+      "pages": 12,
+      "all_page_text_annotations_and_pixels_match_second_assembly": true,
+      "render_dpi": 108,
+      "table_numeric_tokens_checked": true,
+      "no_page_coordinate_overflow": true,
+      "page_x_of_y_checked": true,
+      "final_only_ai_section": true
+    }
+  ],
+  "local_git_pdf_targets_checked": 29,
+  "scope": "Two reader/PDF assemblies from identical sealed evidence; all pages compared. Unchanged financial pipeline was not rerun.",
+  "date": "2026-10-08",
+  "financial_parameters_and_engines_unchanged": true,
+  "complete_evidence_fingerprint": "c44ce7b77b66502e15d3f47133b707ce8fad53ab1b9d446756df7bbc37385139",
+  "source_cells_preserved": 325,
+  "existing_tests_passed": 484,
+  "existing_subtests_passed": 9,
+  "complete_financial_rerun": false,
+  "prior_independent_financial_reconstruction": "598 CSV hashes and 52-family complete evidence previously verified; unchanged numerical producer/input/configuration identities reused",
+  "limitations": [
+    "macOS ARM64 demonstrated",
+    "locally licensed Times New Roman fonts required for the demonstrated PDF appearance",
+    "checks are not independent human peer review"
+  ],
+  "chart_source_commit": "9e755b3ffd9ed02ff8a99ff4f644707c4dc9fbd1"
+}
