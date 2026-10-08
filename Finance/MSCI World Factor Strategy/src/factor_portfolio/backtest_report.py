@@ -325,7 +325,7 @@ def run_backtest_report(root,contract_dir,output):
             origins[key]=dict(**d,artifact=str(dest.relative_to(output)))
             if suffix=='.csv':frames[key]=pd.read_csv(dest,float_precision='round_trip')
         # Additional plot and interpretation inputs are admitted by the same selected sealed run.
-        for key,run_name,relative in [('equity_curves','core','results/equity_curves.csv'),('synthetic_settings','expanded','config/backtest_synthetic_absolute_decoupled_2026-10-05.json'),('source_settings','core','config/backtest_sources.json'),('funding_gap_settings','funding_gap','config/backtest_funding_scan_gap_2026-10-06.json')]:
+        for key,run_name,relative in [('primary_history','core','results/full_factor_absolute_decoupled_1.25_history.csv'),('equity_curves','core','results/equity_curves.csv'),('synthetic_settings','expanded','config/backtest_synthetic_absolute_decoupled_2026-10-05.json'),('source_settings','core','config/backtest_sources.json'),('funding_gap_settings','funding_gap','config/backtest_funding_scan_gap_2026-10-06.json')]:
             run=contract['resolved_runs'][run_name];src=contained(root,run['path']+'/'+relative);m=json.loads((contained(root,run['path'])/'run_manifest.json').read_text());expected={**m['configuration_snapshots'],**m['artifacts']}[relative]
             if sha256(src)!=expected:raise ValueError('additional sealed evidence differs')
             dest=evidence/(key+src.suffix);shutil.copyfile(src,dest);origins[key]=dict(project_path=run['path']+'/'+relative,sha256=expected,artifact=str(dest.relative_to(output)))

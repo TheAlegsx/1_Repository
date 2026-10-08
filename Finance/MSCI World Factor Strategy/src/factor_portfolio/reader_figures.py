@@ -18,7 +18,18 @@ def render(kind, source, output):
     plt.rcParams.update({'font.family': 'DejaVu Serif', 'font.size': 10,
                          'axes.spines.top': False, 'axes.spines.right': False})
     records = []
-    if kind.startswith('backtest_') or kind == 'inflow_nav':
+    if kind == 'leverage':
+        frame = pd.read_csv(source, index_col='date', parse_dates=True, float_precision='round_trip')
+        fig, ax = plt.subplots(figsize=(8.2, 3.5))
+        ax.axhspan(1.15, 1.35, color='#eeeeee', label='Adjustment band')
+        ax.axhline(1.25, color=COMPARATOR, linestyle='--', linewidth=.8, label='Target 1.25x')
+        ax.plot(frame.index, frame.leverage, color=PRIMARY, linewidth=1.35, label='Observed portfolio leverage')
+        ax.set_ylabel('Assets / investor equity'); ax.set_ylim(1.13, 1.37)
+        ax.legend(frameon=False, loc='upper center', bbox_to_anchor=(.5, -.12), ncol=3, fontsize=8)
+        ax.grid(axis='y', color='#e4e4e4', linewidth=.5)
+        fig.tight_layout(pad=1)
+        records = [{'date': str(d.date()), 'series': 'observed leverage', 'value': float(v)} for d, v in frame.leverage.items()]
+    elif kind.startswith('backtest_') or kind == 'inflow_nav':
         frame = pd.read_csv(source)
         figure = 'historical_nav' if kind == 'inflow_nav' else kind.removeprefix('backtest_')
         data = frame[frame.figure.eq(figure)].pivot(index='date', columns='series', values='value')
@@ -46,7 +57,7 @@ def render(kind, source, output):
             records += [{'date': str(date.date()), 'series': label, 'value': float(value)}
                         for date, value in pair[column].items()]
         ax.set_ylabel(ylabel)
-        ax.legend(frameon=False, loc='upper left')
+        ax.legend(frameon=False, loc='upper center', bbox_to_anchor=(.5, -.14), ncol=2) if figure == 'drawdown' else ax.legend(frameon=False, loc='upper left')
         ax.grid(axis='y', color='#e4e4e4', linewidth=.5)
         if has_difference:
             relative = (pair[primary] / pair[comparator] - 1) * 100
@@ -61,7 +72,7 @@ def render(kind, source, output):
         tables = json.loads(source.read_text())
         row = tables['historical_manager']['rows'][0]
         values = [float(row[i]['value']) / 1000 for i in [2, 3]]
-        fig, ax = plt.subplots(figsize=(8.2, 2.9))
+        fig, ax = plt.subplots(figsize=(8.2, 2.35))
         bars = ax.barh(['External fee receipts', 'Business costs'], values,
                        color=[PRIMARY, COMPARATOR], height=.5)
         ax.invert_yaxis(); ax.set_xlabel('USD thousand over ten years')
@@ -69,6 +80,8 @@ def render(kind, source, output):
         for bar, value in zip(bars, values):
             ax.text(value + 5, bar.get_y() + bar.get_height()/2, f'{value:,.0f}', va='center')
         ax.spines['left'].set_visible(False); ax.tick_params(axis='y', length=0)
+        gap = (values[1] - values[0])
+        ax.set_title(f'External-business funding deficit: USD {gap:,.0f} thousand', loc='left', fontsize=11, pad=10)
         fig.tight_layout(pad=1.0)
         records = [{'series': label, 'value_usd': float(row[i]['value'])}
                    for label, i in [('external receipts', 2), ('business costs', 3)]]
@@ -80,11 +93,11 @@ def render(kind, source, output):
         for x, y, label in boxes:
             ax.text(x, y, label, ha='center', va='center', fontsize=10,
                     bbox={'boxstyle': 'round,pad=.65', 'facecolor': '#f3f5f7', 'edgecolor': '#999999'})
-        for start, end, text, tx, ty in [((2.7, 3.1), (3.5, 2.4), 'Investment / units', 3.45, 3.35),
-                ((2.7, .9), (3.5, 1.6), 'Subscriptions / redemptions', 3.35, .4),
+        for start, end, text, tx, ty in [((2.7, 3.1), (3.5, 2.4), 'Investment / units', 3.60, 3.2),
+                ((2.7, .9), (3.5, 1.6), 'Subscriptions / redemptions', 3.30, 1.4),
                 ((6.5, 2), (7.15, 2), 'Fund fees', 6.85, 2.75)]:
             ax.annotate('', xy=end, xytext=start, arrowprops={'arrowstyle': '<->' if tx < 4 else '->', 'color': PRIMARY})
-            ax.text(tx, ty, text, ha='center', fontsize=9)
+            ax.text(tx, ty, text, ha='center', fontsize=9, bbox={'facecolor':'white','edgecolor':'none','pad':2})
         ax.annotate('', xy=(8.5, .7), xytext=(8.5, 1.4), arrowprops={'arrowstyle': '->', 'color': COMPARATOR})
         ax.text(8.5, .35, 'Operating costs', ha='center', fontsize=9)
         fig.tight_layout(pad=.5)

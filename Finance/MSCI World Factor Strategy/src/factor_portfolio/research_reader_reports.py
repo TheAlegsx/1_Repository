@@ -17,7 +17,7 @@ import uuid
 from .inflow_workflow import verify_run, sha256
 from .inflow_report_tables import format_value
 
-TOKEN = re.compile(r'\{\{(table|claim|historical|figure|sources|disclosure):(\w+)\}\}')
+TOKEN = re.compile(r'\{\{(table|claim|historical|figure|sources|disclosure|detail):(\w+)\}\}')
 
 
 def copy_bytes(source, destination):
@@ -94,6 +94,8 @@ def present_table(spec, name, key):
                     'Flat': 'Flat 0%', '6%': 'Fixed 6%'}
     spec['source_headers'] = list(spec['headers'])
     spec['headers'] = [replacements.get(x, x) for x in spec['headers']]
+    if name == 'inflow' and key == 'acquisition':
+        spec['headers'][1] = 'Annual client equivalents: years 1 to 10'
     for row in spec['rows']:
         for cell in row:
             cell['reader_display'] = reader_display(cell['display'])
@@ -103,6 +105,12 @@ def present_table(spec, name, key):
                 row[1]['reader_display'] = '3 percentage points (300 bp)'
             if row[0]['display'] == 'USD per CHF':
                 row[1]['reader_display'] = f"{float(row[1]['value']):.4f}"
+    if name == 'inflow' and key == 'acquisition':
+        for row in spec['rows']:
+            vector = row[1]['value']
+            if not isinstance(vector, list) or len(vector) != 10:
+                raise ValueError('ten configured annual client values required')
+            row[1]['reader_display'] = '  '.join(f'{v:2g}' for v in vector)
     return spec
 
 
@@ -255,6 +263,11 @@ def assemble(project_root, source, output, selection_path, review_path=None):
                     for key, value in plan['tables'].items()}
         for key, spec in selected.items():
             spec['source_table'] = plan['tables'][key]['source']
+        details = {}
+        if plan.get('diagnostics'):
+            from .reader_diagnostics import summaries
+            details = summaries(source)
+            write_json(output / 'evidence' / f'{name}_diagnostics.json', details)
         figure_records = {}
         for key, specification in plan['figures'].items():
             relative = specification['source'] if isinstance(specification, dict) else specification
@@ -272,11 +285,14 @@ def assemble(project_root, source, output, selection_path, review_path=None):
             else:
                 copy_bytes(src, dest)
                 figure_records[key] = dict(source=relative, sha256=sha256(src), artifact=str(dest.relative_to(output)))
-        used = {namespace: [] for namespace in ['table', 'claim', 'historical', 'figure', 'sources', 'disclosure']}
+        used = {namespace: [] for namespace in ['table', 'claim', 'historical', 'figure', 'sources', 'disclosure', 'detail']}
 
         def substitute(match):
             namespace, key = match.groups()
             used[namespace].append(key)
+            if namespace == 'detail':
+                item = details[key]
+                return table_markdown(item) if item['kind'] == 'table' else item['display']
             if namespace == 'table':
                 return table_markdown(selected[key])
             if namespace in ['claim', 'historical']:
@@ -292,6 +308,8 @@ def assemble(project_root, source, output, selection_path, review_path=None):
             return supplement_path.read_text().strip()
 
         text = TOKEN.sub(substitute, template)
+        if set(used['detail']) != set(plan.get('diagnostics', [])):
+            raise ValueError('diagnostic selection differs from reviewed reader plan')
         if '{{' in text or '}}' in text:
             raise ValueError('unresolved reader token')
         if set(used['table']) != set(selected) or len(used['table']) != len(selected):
@@ -314,7 +332,7 @@ def assemble(project_root, source, output, selection_path, review_path=None):
             source_package=str(source.relative_to(project_root)),
             source_run_id=source_manifest['run_id'],
             source_payload_sha256=before,
-            manual_context=review['manual_numeric_context'],
+            diagnostics=details, manual_context=review['manual_numeric_context'],
             presentation_scope='Source values/displays/origins unchanged; reader_display supplies rounded wording.'))
         results[name] = dict(file=str(report_path.relative_to(output)), version=plan['version'],
                              tables=len(selected), figures=len(figure_records),

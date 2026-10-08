@@ -163,7 +163,10 @@ def convert(text, parent, story, audit, initial_orientation='portrait'):
                     numeric = bool(re.fullmatch(r'(?:USD )?[-+±]?\d[\d,.]*(?:%| pp| bp|x)?', c))
                     style = ParagraphStyle('NumericCell' if numeric else 'TextCell', parent=cell_style,
                                            alignment=TA_RIGHT if numeric and r>0 else TA_LEFT)
-                    formatted.append(Paragraph(('<b>'+inline(c)+'</b>') if r==0 else inline(c),style))
+                    rendered = ('<b>'+inline(c)+'</b>') if r==0 else inline(c)
+                    if r>0 and len(rows[0])>1 and rows[0][1].startswith('Annual client equivalents') and len(formatted)==1:
+                        rendered = '<font name="Courier" size="8.5">' + html.escape(c).replace(' ', '&#160;') + '</font>'
+                    formatted.append(Paragraph(rendered,style))
                 paragraphs.append(formatted)
             t=Table(paragraphs,colWidths=widths,repeatRows=1,hAlign='LEFT',splitByRow=1)
             t.setStyle(TableStyle([
@@ -174,7 +177,22 @@ def convert(text, parent, story, audit, initial_orientation='portrait'):
                 ('VALIGN',(0,0),(-1,-1),'TOP'),
                 ('LEFTPADDING',(0,0),(-1,-1),6),('RIGHTPADDING',(0,0),(-1,-1),6),
                 ('TOPPADDING',(0,0),(-1,-1),4),('BOTTOMPADDING',(0,0),(-1,-1),4)]))
-            story.extend([t,Spacer(1,7)])
+            # Keep a short comparison table with its first explanatory paragraph.
+            j=i
+            while j<len(lines) and not lines[j].strip():j+=1
+            following=[]
+            if len(rows)<=4 and j<len(lines) and not re.match(r'^(#|\||!\[|<|\*\*Table)', lines[j].strip()):
+                while j<len(lines) and lines[j].strip():
+                    if re.match(r'^(#|\||!\[|<)', lines[j].strip()):break
+                    following.append(lines[j].strip());j+=1
+            if following:
+                paragraph=Paragraph(inline(' '.join(following)), STYLE)
+                group=[t,Spacer(1,7),paragraph]
+                if story and isinstance(story[-1],Paragraph) and story[-1].style.name=='TableCaption':
+                    group.insert(0,story.pop())
+                story.append(KeepTogether(group));i=j
+            else:
+                story.extend([t,Spacer(1,7)])
             audit['tables']+=1; audit['table_cells']+=sum(map(len,rows))
             audit['table_values'].extend(c for row in rows for c in row)
             continue
