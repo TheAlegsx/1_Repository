@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "date": "2026-10-08",
+  "date": "2026-10-09",
   "source_run_id": "99472e20-bd5e-46d0-bdb1-ba7fd8635697",
   "reports": {
     "backtest": {
-      "version": 16,
+      "version": 17,
       "template": "src/factor_portfolio/templates/research_backtest_reader_2026-10-06.md",
       "output": "BACKTEST_RESEARCH_2026-10-07.md",
       "tables": {
@@ -395,7 +395,7 @@
       ]
     },
     "inflow": {
-      "version": 12,
+      "version": 13,
       "template": "src/factor_portfolio/templates/research_inflow_reader_2026-10-06.md",
       "output": "CAPITAL_INFLOWS_RESEARCH_2026-10-07.md",
       "tables": {
@@ -807,6 +807,16 @@
         "stamp_duty",
         "commission_fx",
         "inflow_terminology"
+      ],
+      "diagnostics": [
+        "fee_chain",
+        "wealth_bridge",
+        "fee_events",
+        "no_client_gap",
+        "additional_plan_gap",
+        "no_client_gap_share",
+        "threshold_control",
+        "threshold_fee"
       ]
     }
   }

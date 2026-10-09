@@ -1,6 +1,6 @@
 # AI-use disclosure record
 
-Public disclosure updated 8 October 2026 for the MSCI World Factor Strategy and Capital Inflows and Fund Economics research reports.
+Public disclosure updated 9 October 2026 for the MSCI World Factor Strategy and Capital Inflows and Fund Economics research reports.
 
 OpenAI Codex was the generative AI application used for the original research and report production. For the 8 October 2026 revision, Alex supplied a Claude (Anthropic) critique of both reports; its methodological, wording and layout suggestions were checked against project evidence and informed the editorial revision. No verified Claude model/version or direct access to its underlying session is asserted. Assistance was extensive throughout methodological discussion, programming, original-file readers, data processing, portfolio and fund simulations, statistical analysis, interpretation, prose, tables, figures, references and reproducibility documentation. AI contributed to methods as well as their implementation; this record does not imply that the author independently wrote all code or developed every analytical approach.
 
@@ -17,3 +17,5 @@ Automated and separate-implementation checks assess calculations and reporting u
 OpenAI. (n.d.). *Codex* [Generative AI coding assistant]. [Application reference](https://openai.com/codex/).
 
 Anthropic. (n.d.). *Claude* [Generative AI assistant; author-supplied review]. [Application reference](https://claude.ai/).
+
+On 9 October 2026, a further Claude critique supplied by Alex prompted a targeted fee/no-client ledger check. Codex implemented the matched-account bridge, monetary conservation checks, source capture and report correction; original financial parameters and simulations were retained.

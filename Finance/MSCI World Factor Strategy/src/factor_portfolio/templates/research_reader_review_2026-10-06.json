@@ -1,15 +1,15 @@
 {
   "schema_version": 1,
-  "date": "2026-10-08",
-  "selection_sha256": "6df2313bf7f852f1ab40d3461d5612e02423c1cd98c1669686645f8b51c726b3",
+  "date": "2026-10-09",
+  "selection_sha256": "6d16e226ba9e588aa6fcb01c605a477f522be1dfa595521f071d20eed079ca02",
   "templates_sha256": {
-    "backtest": "6dd39376cfc690041b9b3208dd83324b4dae4dc3c696f68f9d7ffa5d8318dfc4",
-    "inflow": "af759200264e918c83fc564f543f4281ded5c2b14a22f6dbe92a5dfe5561534f"
+    "backtest": "59f1bfe8d0f7ef3b5b0de9b51bdd64ef97efc5650c341bec6027da58582237f7",
+    "inflow": "f9083a0e8aa5eaf12f90abecd6d6e2a2e23e0c79fe0cc522c4fe1597953bb3c9"
   },
   "ai_supplement_sha256": "5606a33a771b950c567742cb439f1cb0aece3c75b739518dc152035c58b6549e",
-  "ai_record_sha256": "1d340e9f5232d536ace781a2bd49b0dd395ffc5acf803518df778136c09cde38",
+  "ai_record_sha256": "98ea9dea4a2730cce75748c536b7a4210d40156869995d00bd95773ee85056c6",
   "source_run_id": "99472e20-bd5e-46d0-bdb1-ba7fd8635697",
-  "review_scope": "Author-approved descriptive finish: end-date checkpoints, observed leverage and unlevered Core comparison from admitted existing paths. No new financial settings, bootstrap or parameter-neighbourhood research. Small layout corrections; source cell values retained; former inflow rule moved to appendix.",
+  "review_scope": "Author-requested correctness correction: no-client fee/signal feedback is separated from further client-plan effects, with a signed ledger identity and existing intervention dates. Backtest abstract/conclusion explicitly qualify endpoint dependence. Financial parameters and engines unchanged; no independent human expert certification.",
   "decisions": [
     "MSCI World/Core remains benchmark; no new Amundi leverage construction.",
     "Author clarification: display the existing factor2x control versus real Amundi daily2x, not a new Amundi1.25x construction; primary strategy stays1.25x.",
@@ -32,7 +32,8 @@
     "8 October 2026: evidence-backed editorial revision; two baseline interventions include one sleeve and one leverage event. Funding scenarios are whole-path reruns, not fixed-exposure cost deductions. Figure paths regenerated only from sealed figure-data and manager-table values.",
     "Full disclosure and aid list retained at the end; short front attribution identifies AI-assisted production. Author-supplied Claude review added without attributing original calculations to Claude.",
     "Original financial values and source origins retained in bindings; rounded reader_display fields and clearer headings are separate presentation metadata.",
-    "8 October descriptive finish: relative wealth checkpoints and leverage use the same continuing account paths. The verified primary history is captured into the sealed report evidence; derivatives record input hashes, fields and formulas. All financial engines and fourteen numerical-job references remain unchanged."
+    "8 October descriptive finish: relative wealth checkpoints and leverage use the same continuing account paths. The verified primary history is captured into the sealed report evidence; derivatives record input hashes, fields and formulas. All financial engines and fourteen numerical-job references remain unchanged.",
+    "9 October: interpret combined coupled-minus-overlay difference correctly; roughly69percent of that return gap already exists without customers. Fee/debt posting shifts2021execution and causes an additional2022deleveraging. The wealth bridge is an accounting identity, not unique causal attribution; different horizons remain explicit. Existing ledger copies are admitted by historical source seals and unchanged numerical CSV pins."
   ],
   "manual_numeric_context": [
     "Report/figure/table identifiers and date; allocation 60/15/10/15 and implied bands; target1.25 and band0.10; named windows and source IDs.",

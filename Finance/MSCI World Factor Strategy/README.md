@@ -1,12 +1,12 @@
 # MSCI World Factor Strategy
 
-GitHub reconstruction verified: code downloaded from the published revision and installed in a new isolated environment reproduced all14 calculation branches and598 reference CSV hashes.469 tests and nine subtests passed in that fresh environment. The current PDFs explain shared factor/leverage access, the proposed seven-founder capital and conditional financing economies. Financial results are preserved; clearer reader text, rounded displays and evidence-derived charts reproduce against renewed references. The current suite passes 484 tests plus nine subtests. The reports also show endpoint dependence, realised leverage and the unlevered Core alternative from existing account paths. Blue highlighted GitHub links name calculation functions/settings and their roles. [Verification](docs/VERIFICATION.md) · [Security controls](docs/SECURITY.md). Original provider data and private working records remain local.
+GitHub reconstruction verified: code downloaded from the published revision and installed in a new isolated environment reproduced all14 calculation branches and598 reference CSV hashes.469 tests and nine subtests passed in that fresh environment. The current PDFs explain shared factor/leverage access, the proposed seven-founder capital and conditional financing economies. Financial results are preserved; clearer reader text, rounded displays and evidence-derived charts reproduce against renewed references. The current suite passes 489 tests plus nine subtests. The reports also show endpoint dependence, realised leverage and the unlevered Core alternative from existing account paths. Blue highlighted GitHub links name calculation functions/settings and their roles. [Verification](docs/VERIFICATION.md) · [Security controls](docs/SECURITY.md). Original provider data and private working records remain local.
 
 Research on a leveraged global equity factor portfolio and the economics of a potential fund. The project brings together two connected studies: historical investment performance and hypothetical capital inflows, ownership, fees and operating costs.
 
 The concept offers shared factor/leverage implementation, with proposed opening capital from seven founders at USD one million each. Historical benchmark outperformance is additional evidence. A larger capital pool might improve financing terms, but this remains a hypothesis; the model has no automatic AUM-driven borrowing discount. Founders' investment outcomes and the economics of serving external clients are evaluated separately.
 
-**Status:** published research reports with verified reconstruction. The current reading reports are dated 8 October 2026. Each report has one stable filename; later updates are tracked in Git history.
+**Status:** published research reports with verified reconstruction. The current reading reports are dated 9 October 2026. Each report has one stable filename; later updates are tracked in Git history.
 
 | Read | Scope |
 | --- | --- |
@@ -36,3 +36,5 @@ Original provider observations stay local. The repository supplies code, configu
 The code is covered by the [MIT licence](LICENSE). It does not grant rights to third-party data or documents. Extensive OpenAI Codex assistance is disclosed in both reports and the linked evidence record. Human responsibility and the limits of the checks remain explicit.
 
 [Finance projects](../README.md) · [All projects](../../README.md)
+
+The9October correction separates fund-fee feedback without clients from the further acquisition-plan effect. It supplies an exact signed ledger bridge and existing intervention records; the financial settings and previously calculated outcomes remain unchanged.

@@ -3,7 +3,7 @@
   "reports": [
     {
       "file": "MSCI_World_Factor_Strategy_Backtest.pdf",
-      "sha256": "6151f0c70aedac778dfe9c396a88c24c61e27db1245c457f23b06cd3935d77cf",
+      "sha256": "82aeb0943f91c0c7c0fe17ef20aef6fcc7fd0a3456b2785906bf4342b9f3ffe0",
       "pages": 11,
       "all_page_text_annotations_and_pixels_match_second_assembly": true,
       "render_dpi": 108,
@@ -14,8 +14,8 @@
     },
     {
       "file": "Capital_Inflows_Fund_Economics.pdf",
-      "sha256": "77e5ad3fbc65994a1879f7ce93c4e90b0e342d6252ac7b6e6cfc0573a025076e",
-      "pages": 12,
+      "sha256": "1ddcf590c677c3f2e0ecbea4b16ae0e7cbd14b43165102f658be711cf1837c2b",
+      "pages": 14,
       "all_page_text_annotations_and_pixels_match_second_assembly": true,
       "render_dpi": 108,
       "table_numeric_tokens_checked": true,
@@ -24,21 +24,34 @@
       "final_only_ai_section": true
     }
   ],
-  "local_git_pdf_targets_checked": 30,
-  "scope": "Two reader/PDF assemblies from identical sealed evidence; all pages compared. Unchanged financial pipeline was not rerun.",
-  "date": "2026-10-08",
+  "local_git_pdf_targets_checked": 31,
+  "scope": "Corrected fee/client interpretation and deterministic ledger bridge; targeted report regeneration and twice-bound readers using unchanged financial evidence",
+  "date": "2026-10-09",
   "financial_parameters_and_engines_unchanged": true,
   "complete_evidence_fingerprint": "c44ce7b77b66502e15d3f47133b707ce8fad53ab1b9d446756df7bbc37385139",
   "source_cells_preserved": 325,
-  "existing_tests_passed": 484,
+  "existing_tests_passed": 489,
   "existing_subtests_passed": 9,
   "complete_financial_rerun": false,
-  "chart_source_commit": "24979b0b422c1f016a4b3a51e84420b3d701b5f7",
-  "descriptive_inputs": "Previously reviewed core history and complete report metric/equity-curve evidence; new copy matches existing CSV pin",
-  "prior_independent_financial_reconstruction": "Fourteen numerical jobs and598CSV references unchanged",
+  "fee_bridge_code_commit": "1c63b98051771cbcfbf043c1ab62e0d7cec3ed5f",
+  "account_reconciliation": {
+    "account_identity_errors_usd": {
+      "absolute_decoupled__control__no_flow_zero_added_fee": 2.60770320892334e-08,
+      "absolute_decoupled__acquisition__no_flows": 3.725290298461914e-08,
+      "absolute_decoupled__acquisition__steady": -7.450580596923828e-08
+    },
+    "wealth_bridge_error_usd": 9.89530235528946e-09,
+    "window": [
+      "2014-10-03",
+      "2024-10-03"
+    ],
+    "initial_owner_capital_usd": 7000000.0,
+    "annual_fund_fee": 0.0005,
+    "scope": "Arithmetic account comparison, not an order-independent causal decomposition or a new simulation"
+  },
   "limitations": [
     "macOS ARM64 demonstrated",
-    "licensed Times New Roman fonts required for demonstrated PDFs",
-    "observational summaries and reconstruction checks, not independent human expert review"
+    "licensed Times New Roman fonts required for demonstrated appearance",
+    "not independent human expert review or unique causal attribution"
   ]
 }

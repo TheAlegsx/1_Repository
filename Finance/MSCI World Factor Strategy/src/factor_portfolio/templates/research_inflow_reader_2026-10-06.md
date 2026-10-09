@@ -1,12 +1,12 @@
 # Capital Inflows and Fund Economics
 
-**Research report · 8 October 2026**  
+**Research report · 9 October 2026**  
 USD {{claim:owner_capital_m}} million of initial owner capital · Historical and hypothetical fund experiments  
 AI-assisted analysis and writing; tools, scope and responsibility are disclosed in the final section.
 
 ## Abstract
 
-This study separates a shared investment for seven founders from a business serving external clients. A historical simulation executes the same factor portfolio and 1.25x leverage rules with assumed subscriptions, redemptions and a 5 bp annual fund fee over 3 October 2014-3 October 2024. Its steady-acquisition unit return is **{{historical:absolute_coupled_twr}} annually**. In that scenario, full receipt of external fees generates approximately **USD 47,000** against **USD 455,000** of modelled business costs. Raising assets therefore does not fund the assumed operation or automatically improve founder wealth. Separate flat, fixed-growth and loss scenarios explore adjustable assumptions. Better borrowing terms from greater scale remain a hypothesis, not a mechanism in these calculations.
+This study separates a shared investment for seven founders from a business serving external clients. A historical simulation executes the same factor portfolio and 1.25x leverage rules with assumed subscriptions, redemptions and a 5 bp annual fund fee over 3 October 2014-3 October 2024. Its steady-acquisition unit return is **{{historical:absolute_coupled_twr}} annually**. Fee financing also changes portfolio signals and historical performance without outside clients. In that scenario, full receipt of external fees generates approximately **USD 47,000** against **USD 455,000** of modelled business costs. Raising assets therefore does not fund the assumed operation or automatically improve founder wealth. Separate flat, fixed-growth and loss scenarios explore adjustable assumptions. Better borrowing terms from greater scale remain a hypothesis, not a mechanism in these calculations.
 
 ## 1. Research Question and Economic Framework
 
@@ -80,7 +80,7 @@ A commercial operation with zero external clients still incurs the assumed busin
 
 ## 4. Historical Portfolio and Fund Results
 
-### 4.1 The strategy is actually executed with flows
+### 4.1 Fund fees and client-plan feedback
 
 The historical results use the ±5-percentage-point portfolio and separate leverage management. They are not calculated by inserting the full-period backtest CAGR as a constant monthly return. The full investment backtest continues to August 2026, whereas the business experiment ends in October 2024. Horizon, the added fund fee and flow feedback make the headline return measures different.
 
@@ -90,15 +90,35 @@ The **return-path comparison (overlay)** applies the no-flow portfolio's dated r
 
 {{table:historical_returns}}
 
-For the main strategy, the annualised fund unit return differs from the overlay by {{historical:absolute_gap}}. Direct flow-trading charges are {{historical:absolute_flow_cost}}. Those charges alone do not causally explain the difference; debt posting, funding and changed intervention paths also matter. The capped-relative comparison is retained in Appendix B. [Fund return comparison: historical_inflow_interpretation.compare_accounts](https://github.com/TheAlegsx/1_Repository/blob/cd861934faf1aaeca43ae57bde0d01ec68ee6a25/Finance/MSCI%20World%20Factor%20Strategy/src/factor_portfolio/historical_inflow_interpretation.py#L20).
+For the main strategy, the steady-acquisition fund unit return differs from the overlay by {{historical:absolute_gap}}. This is the combined effect of fee/debt/signal feedback and the client plan. It is not an isolated customer-flow effect. Direct flow-trading charges are {{historical:absolute_flow_cost}}; Table 4 shows that a substantial return difference already exists without customers. The capped-relative comparison is retained in Appendix B. [Fund return comparison: historical_inflow_interpretation.compare_accounts](https://github.com/TheAlegsx/1_Repository/blob/cd861934faf1aaeca43ae57bde0d01ec68ee6a25/Finance/MSCI%20World%20Factor%20Strategy/src/factor_portfolio/historical_inflow_interpretation.py#L20).
+
+**Table 4. Separating fund-fee feedback from the client plan** · [Fee and account bridge: inflow_fee_diagnostics.summaries](https://github.com/TheAlegsx/1_Repository/blob/1c63b98051771cbcfbf043c1ab62e0d7cec3ed5f/Finance/MSCI%20World%20Factor%20Strategy/src/factor_portfolio/inflow_fee_diagnostics.py#L9)
+
+{{detail:fee_chain}}
+
+All four comparisons use the same USD 7 million opening owner capital and 3 October 2014-3 October 2024 window. The executed accounts retain the same weights, absolute sleeve bands, leverage target, financing and trading rules. Returns use unrounded values and elapsed calendar years; owner units remain fixed. Manager cash and outside-fund business costs are excluded from these invested-equity amounts.
+
+Without external customers, the executed fee-paying account falls below the overlay by **{{detail:no_client_gap}} per year**. Adding the steady client plan changes annual unit return by another **{{detail:additional_plan_gap}}**. The no-client comparison accounts for **{{detail:no_client_gap_share}}** of the total coupled-minus-overlay return gap. This chained arithmetic comparison separates existing account outcomes; it is not an order-independent causal attribution of all interacting mechanisms.
+
+**Table 5. Accounting for the fee-paying no-client wealth shortfall, USD** · [Fee and account bridge: inflow_fee_diagnostics.summaries](https://github.com/TheAlegsx/1_Repository/blob/1c63b98051771cbcfbf043c1ab62e0d7cec3ed5f/Finance/MSCI%20World%20Factor%20Strategy/src/factor_portfolio/inflow_fee_diagnostics.py#L9)
+
+{{detail:wealth_bridge}}
+
+This signed identity explains the ending-equity difference between the fee-paying no-client account and the no-added-fee investment control. The investment-price P/L difference reflects the positions actually held on their different paths. Lower financing costs partly offset that lost investment P/L. The fee charge, financing difference and transaction costs are separate ledger components; they must not be counted again inside the price P/L component.
+
+**Table 6. Existing intervention records with and without the fund fee** · [Fee and account bridge: inflow_fee_diagnostics.summaries](https://github.com/TheAlegsx/1_Repository/blob/1c63b98051771cbcfbf043c1ab62e0d7cec3ed5f/Finance/MSCI%20World%20Factor%20Strategy/src/factor_portfolio/inflow_fee_diagnostics.py#L9)
+
+{{detail:fee_events}}
+
+In the borrowed fund, the added fee is posted to debt. It reduces net equity and can change the next portfolio signal even without subscriptions or redemptions. On 30 September 2022, leverage is **{{detail:threshold_fee}}** with the fee, versus **{{detail:threshold_control}}** without it. Only the fee-paying case breaches the 1.35x upper adjustment boundary and executes the signalled reduction on 3 October 2022. The earlier leverage increase also occurs on a different date. These deterministic threshold responses explain why a small fee can have a larger historical effect than a fixed-return deduction. The example establishes sensitivity in this ten-year fund window, not a probability of future loss or a measured fee effect on the longer full-sample backtest.
 
 {{figure:historical_nav}}
 
-*Figure 2. Historical fund unit performance under steady acquisition and the return-path comparison. The lower panel shows 100 x (coupled unit NAV / overlay unit NAV - 1), making portfolio flow feedback visible. This relative wealth difference is not the annualised return gap. Both paths include the added fee; investment observations are historical, while client schedules are assumed.* [Reader charts from recorded evidence: reader_figures.render](https://github.com/TheAlegsx/1_Repository/blob/24979b0b422c1f016a4b3a51e84420b3d701b5f7/Finance/MSCI%20World%20Factor%20Strategy/src/factor_portfolio/reader_figures.py#L15)
+*Figure 2. Historical fund unit performance under steady acquisition and the return-path comparison. The lower panel shows 100 x (coupled unit NAV / overlay unit NAV - 1), showing combined fee/signal and client-plan feedback. This relative wealth difference is not the annualised return gap or an isolated customer-flow effect. Both paths include the added fee; investment observations are historical, while client schedules are assumed.* [Reader charts from recorded evidence: reader_figures.render](https://github.com/TheAlegsx/1_Repository/blob/24979b0b422c1f016a4b3a51e84420b3d701b5f7/Finance/MSCI%20World%20Factor%20Strategy/src/factor_portfolio/reader_figures.py#L15)
 
 ### 4.2 Ownership and cash already returned to investors
 
-**Table 4. Main strategy: historical acquisition outcomes, USD million** · [Fund units and flows: coupled_inflow_accounting.simulate_coupled](https://github.com/TheAlegsx/1_Repository/blob/cd861934faf1aaeca43ae57bde0d01ec68ee6a25/Finance/MSCI%20World%20Factor%20Strategy/src/factor_portfolio/coupled_inflow_accounting.py#L48)
+**Table 7. Main strategy: historical acquisition outcomes, USD million** · [Fund units and flows: coupled_inflow_accounting.simulate_coupled](https://github.com/TheAlegsx/1_Repository/blob/cd861934faf1aaeca43ae57bde0d01ec68ee6a25/Finance/MSCI%20World%20Factor%20Strategy/src/factor_portfolio/coupled_inflow_accounting.py#L48)
 
 {{table:ownership}}
 
@@ -108,7 +128,7 @@ Fund-unit TWR measures the compounded unit performance. Aggregate external MWR a
 
 ### 4.3 Manager cash and working capital
 
-**Table 5. Main strategy, steady acquisition: historical manager accounts, USD** · [Manager cash: historical_inflow_diagnostics.manager_accounts](https://github.com/TheAlegsx/1_Repository/blob/cd861934faf1aaeca43ae57bde0d01ec68ee6a25/Finance/MSCI%20World%20Factor%20Strategy/src/factor_portfolio/historical_inflow_diagnostics.py#L94)
+**Table 8. Main strategy, steady acquisition: historical manager accounts, USD** · [Manager cash: historical_inflow_diagnostics.manager_accounts](https://github.com/TheAlegsx/1_Repository/blob/cd861934faf1aaeca43ae57bde0d01ec68ee6a25/Finance/MSCI%20World%20Factor%20Strategy/src/factor_portfolio/historical_inflow_diagnostics.py#L94)
 
 {{table:manager}}
 
@@ -126,7 +146,7 @@ Historical conditional treasury applies the same receipt fraction to owner and e
 
 ### 5.1 Raising assets does not establish profitable operations
 
-**Table 6. Acquisition under the hypothetical {{claim:growth_pct}} path** · [Acquisition accounts: inflow_scenarios.acquisition](https://github.com/TheAlegsx/1_Repository/blob/cd861934faf1aaeca43ae57bde0d01ec68ee6a25/Finance/MSCI%20World%20Factor%20Strategy/src/factor_portfolio/inflow_scenarios.py#L14)
+**Table 9. Acquisition under the hypothetical {{claim:growth_pct}} path** · [Acquisition accounts: inflow_scenarios.acquisition](https://github.com/TheAlegsx/1_Repository/blob/cd861934faf1aaeca43ae57bde0d01ec68ee6a25/Finance/MSCI%20World%20Factor%20Strategy/src/factor_portfolio/inflow_scenarios.py#L14)
 
 {{table:hypothetical_outcomes}}
 
@@ -136,7 +156,7 @@ A simple illustration explains the pressure: a USD 250,000 subscription incurs *
 
 ### 5.2 The fee rate and the amount actually received
 
-**Table 7. Steady acquisition: fee sensitivity under {{claim:growth_pct}}** · [Fee scenarios: inflow_results.sensitivity_tables](https://github.com/TheAlegsx/1_Repository/blob/cd861934faf1aaeca43ae57bde0d01ec68ee6a25/Finance/MSCI%20World%20Factor%20Strategy/src/factor_portfolio/inflow_results.py#L55)
+**Table 10. Steady acquisition: fee sensitivity under {{claim:growth_pct}}** · [Fee scenarios: inflow_results.sensitivity_tables](https://github.com/TheAlegsx/1_Repository/blob/cd861934faf1aaeca43ae57bde0d01ec68ee6a25/Finance/MSCI%20World%20Factor%20Strategy/src/factor_portfolio/inflow_results.py#L55)
 
 {{table:fees}}
 
@@ -150,7 +170,7 @@ At the baseline fee and servicing assumptions, full receipt leaves {{claim:net_m
 
 A controlled experiment distributes {{claim:timing_gross}} of gross subscriptions across five schedules: constant monthly, linearly increasing monthly, even tranches, early tranches and late tranches. Subscriptions begin no earlier than {{claim:launch_first_month}}. This matches gross fundraising rather than net flows or closing assets. [Subscription schedules: inflow_timing.json](https://github.com/TheAlegsx/1_Repository/blob/cd861934faf1aaeca43ae57bde0d01ec68ee6a25/Finance/MSCI%20World%20Factor%20Strategy/config/inflow_timing.json) · [Client, fee and cost settings: inflow_acquisition.json](https://github.com/TheAlegsx/1_Repository/blob/cd861934faf1aaeca43ae57bde0d01ec68ee6a25/Finance/MSCI%20World%20Factor%20Strategy/config/inflow_acquisition.json).
 
-**Table 8. Selected timing cases under {{claim:growth_pct}}** · [Subscription timing: inflow_scenarios.timing](https://github.com/TheAlegsx/1_Repository/blob/cd861934faf1aaeca43ae57bde0d01ec68ee6a25/Finance/MSCI%20World%20Factor%20Strategy/src/factor_portfolio/inflow_scenarios.py#L80)
+**Table 11. Selected timing cases under {{claim:growth_pct}}** · [Subscription timing: inflow_scenarios.timing](https://github.com/TheAlegsx/1_Repository/blob/cd861934faf1aaeca43ae57bde0d01ec68ee6a25/Finance/MSCI%20World%20Factor%20Strategy/src/factor_portfolio/inflow_scenarios.py#L80)
 
 {{table:timing}}
 
@@ -162,7 +182,7 @@ Moving the same net annual loss into different individual months changes the sub
 
 ## 6. Discussion and Conclusion
 
-The study separates investment outcomes from fundraising and business economics. The historical branch executes the actual strategy with assumed investor flows and an added fund fee; the hypothetical branches isolate adjustable return, demand and timing assumptions. Their horizons and accounting should remain distinct.
+The study separates investment outcomes from fundraising and business economics. A large part of the coupled-minus-overlay investment-return gap already arises without external customers: fee financing changes portfolio signals and holdings. Customer acquisition adds further interactions. The historical fee effect therefore cannot be represented solely by subtracting the quoted annual fee from an unchanged investment path. The historical branch executes the actual strategy with assumed investor flows and an added fund fee; the hypothetical branches isolate adjustable return, demand and timing assumptions. Their horizons and accounting should remain distinct.
 
 External subscriptions can enlarge fund assets without becoming owner wealth. At the assumed low fee and the stated costs, the retained historical manager accounts require additional working capital. Strong fundraising alone does not resolve that shortfall. Fee retention, acquisition spending and servicing costs must be discussed together.
 

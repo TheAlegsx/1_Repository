@@ -1,12 +1,12 @@
 # MSCI World Factor Strategy
 
-**Portfolio backtest · Research report · 8 October 2026**  
+**Portfolio backtest · Research report · 9 October 2026**  
 USD results · 3 October 2014–28 August 2026  
 AI-assisted analysis and writing; tools, scope and responsibility are disclosed in the final section.
 
 ## Abstract
 
-This study evaluates a shared MSCI World portfolio with Core, Momentum, Quality and Value weights of 60/15/10/15 and a 1.25x leverage target. Over 3 October 2014-28 August 2026, its CAGR is **{{claim:levered_cagr}}**, compared with **12.82%** for the MSCI World/Core investment at the same target leverage. Both include modelled trading and financing costs; the portfolio result excludes the added fund fee and outside-fund business costs. Borrowing raises return and risk relative to the unlevered portfolio. The estimated alpha against unlevered Core is -0.08% annually, with an interval including zero. The concept offers shared factor and leverage access; the historical evidence supports neither reliable future outperformance nor a proven commercial advantage.
+This study evaluates a shared MSCI World portfolio with Core, Momentum, Quality and Value weights of 60/15/10/15 and a 1.25x leverage target. Over 3 October 2014-28 August 2026, its CAGR is **{{claim:levered_cagr}}**, compared with **12.82%** for the MSCI World/Core investment at the same target leverage. Both include modelled trading and financing costs; the portfolio result excludes the added fund fee and outside-fund business costs. At the end of 2025, matched-target wealth was nearly equal; the positive terminal wealth advantage emerged in the observed 2026 segment. The full-sample comparison is endpoint-sensitive. Borrowing raises return and risk relative to the unlevered portfolio. The estimated alpha against unlevered Core is -0.08% annually, with an interval including zero. The concept offers shared factor and leverage access; the historical evidence supports neither reliable future outperformance nor a proven commercial advantage.
 
 ## 1. Research Question
 
@@ -163,7 +163,7 @@ Actual collateral eligibility, account category, rate fixing, settlement, liquid
 
 ## 6. Conclusion
 
-Under the stated conventions, the 60/15/10/15 portfolio with absolute ±5-percentage-point bands and separate leverage management has a favourable full-sample growth/risk comparison with MSCI World/Core. The simpler common band consciously permits factor drift. Borrowing adds historical growth and materially increases total risk.
+Under the stated conventions, the 60/15/10/15 portfolio with absolute ±5-percentage-point bands and separate leverage management has a favourable full-sample growth/risk comparison with MSCI World/Core. The comparison is specific to the August 2026 endpoint: the accounts were nearly level at the end of 2025, when the CAGR advantage was absent, and the terminal advantage developed in the observed 2026 segment. The simpler common band consciously permits factor drift. Borrowing adds historical growth and materially increases total risk.
 
 Shared access to the factor/leverage implementation is the central investment rationale; the favourable historical comparison is supporting evidence. Any financing advantage from pooling capital remains conditional on applicable lending terms.
 
