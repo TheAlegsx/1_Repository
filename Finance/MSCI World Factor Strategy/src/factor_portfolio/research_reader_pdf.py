@@ -88,7 +88,7 @@ class ReadingDocument(BaseDocTemplate):
         self.heading_index = 0
         super().__init__(str(path), pagesize=A4, leftMargin=MARGIN, rightMargin=MARGIN,
             topMargin=51, bottomMargin=49, title=title, author='Alex Weber',
-            subject='Research report, 8 October 2026', pageCompression=1)
+            subject='Research report, 9 October 2026', pageCompression=1)
         templates = []
         for name, size in [('portrait', A4), ('landscape', landscape(A4))]:
             w,h=size
@@ -104,7 +104,7 @@ class ReadingDocument(BaseDocTemplate):
         canvas.setFont('Reading',8)
         canvas.setFillColor(GREY)
         canvas.drawString(MARGIN,h-24,self.short_title)
-        canvas.drawRightString(w-MARGIN,h-24,'Research report | 8 October 2026')
+        canvas.drawRightString(w-MARGIN,h-24,'Research report | 9 October 2026')
         canvas.drawString(MARGIN,27,self.short_title)
         canvas.drawRightString(w-MARGIN,27,f'Page {doc.page} of {self.total_pages}' if self.total_pages else str(doc.page))
         canvas.restoreState()

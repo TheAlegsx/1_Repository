@@ -228,7 +228,7 @@ def run_coordinated(root,contract_dir,backtest_dir,output):
             d=contract['resolved_datasets'][key];src=contained(root,d['project_path']);dest=evidence/(key+src.suffix);shutil.copyfile(src,dest);bindings[key]=dict(**d,artifact=str(dest.relative_to(inflow)))
             if src.suffix=='.csv':frames[key]=pd.read_csv(dest,float_precision='round_trip')
         historical_run=contract['resolved_runs']['historical'];hd=contained(root,historical_run['path']);hm=json.loads((hd/'run_manifest.json').read_text())
-        for key,relative in [('coupled_monthly','pilot/coupled_monthly.csv'),('overlay_monthly','pilot/overlay_diagnostic_monthly.csv'),('manager_monthly','manager_monthly.csv')]:
+        for key,relative in [('coupled_events','pilot/coupled_trade_events.csv'),('coupled_daily','pilot/coupled_daily.csv'),('coupled_monthly','pilot/coupled_monthly.csv'),('overlay_monthly','pilot/overlay_diagnostic_monthly.csv'),('manager_monthly','manager_monthly.csv')]:
             src=contained(hd,relative)
             if sha256(src)!=hm['artifacts'][relative]:raise ValueError('historical monthly source differs')
             dest=evidence/(key+'.csv');shutil.copyfile(src,dest);bindings[key]=dict(project_path=historical_run['path']+'/'+relative,sha256=sha256(src),artifact=str(dest.relative_to(inflow)));frames[key]=pd.read_csv(dest,float_precision='round_trip')

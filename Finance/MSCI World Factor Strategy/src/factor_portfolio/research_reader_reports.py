@@ -265,7 +265,10 @@ def assemble(project_root, source, output, selection_path, review_path=None):
             spec['source_table'] = plan['tables'][key]['source']
         details = {}
         if plan.get('diagnostics'):
-            from .reader_diagnostics import summaries
+            if name == 'backtest':
+                from .reader_diagnostics import summaries
+            else:
+                from .inflow_fee_diagnostics import summaries
             details = summaries(source)
             write_json(output / 'evidence' / f'{name}_diagnostics.json', details)
         figure_records = {}
