@@ -232,3 +232,15 @@ The historical coupled-minus-overlay gap includes fee/debt/signal feedback even 
 | Table6: intervention dates and preceding threshold observation | [inflow_fee_diagnostics.summaries](https://github.com/TheAlegsx/1_Repository/blob/1c63b98051771cbcfbf043c1ab62e0d7cec3ed5f/Finance/MSCI%20World%20Factor%20Strategy/src/factor_portfolio/inflow_fee_diagnostics.py#L9) | `coupled_events.csv` and `coupled_daily.csv`, copied byte-for-byte from the admitted historical job and checked against its existing CSV pins |
 
 The generated `readers/evidence/inflow_diagnostics.json` records raw values, display values, selectors, expressions, identity residuals and all input hashes. The corrected numerical bridge itself is guarded by a reader-payload hash. Financial engines, parameters,25originals and598numerical CSV references remain unchanged. Backtest abstract and conclusion now explicitly qualify the full-period endpoint comparison.
+
+
+## Frozen paired robustness, 9 October 2026
+
+| Reader location | Responsible calculation | Generated evidence |
+| --- | --- | --- |
+| Backtest Table 11, endpoint sensitivity | `paired_robustness.run_account`, `outcome`, `run` | `robustness/paired_matrix.csv`, `endpoint_summary.csv`; all 56 pairs and post-entry counts |
+| Backtest Table 12, conditional CAGR intervals | `paired_robustness.stationary_draws`, `bootstrap` | `robustness/bootstrap_draws.csv`, `bootstrap_summary.csv`; paired circular blocks, opening charges fixed once |
+| Backtest tracking error and IR | `paired_robustness.bootstrap` | `robustness/measurement_definitions.json`; nominal-252 investor-return convention |
+| Inflow matched-fee companion comparison | `paired_robustness.run_account`, `robustness_reader_diagnostics.summaries` | Terminal baseline/2.5/5 bp pairs in `robustness/paired_matrix.csv`; both strategies subject to the same fee |
+
+The PDFs link to [the exact calculation module](https://github.com/TheAlegsx/1_Repository/blob/1d3dcd6fa63024174a5854d37292f08002c3d67d/Finance/MSCI%20World%20Factor%20Strategy/src/factor_portfolio/paired_robustness.py#L167), also supplied in the private package. The frozen JSON protocol and exact new-study reference are separate from the preserved main strategy and original numerical references. [Results, all pairs and limits](PAIRED_ROBUSTNESS_RESULTS_2026-10-09.md).

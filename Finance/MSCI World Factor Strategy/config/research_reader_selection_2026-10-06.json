@@ -391,7 +391,11 @@
         "retail",
         "endpoints",
         "leverage",
-        "core_mean"
+        "core_mean",
+        "paired_sensitivity",
+        "bootstrap_intervals",
+        "tracking_error",
+        "information_ratio"
       ]
     },
     "inflow": {
@@ -816,7 +820,8 @@
         "additional_plan_gap",
         "no_client_gap_share",
         "threshold_control",
-        "threshold_fee"
+        "threshold_fee",
+        "paired_fee_sensitivity"
       ]
     }
   }

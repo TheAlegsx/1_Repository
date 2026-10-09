@@ -3,8 +3,8 @@
   "reports": [
     {
       "file": "MSCI_World_Factor_Strategy_Backtest.pdf",
-      "sha256": "82aeb0943f91c0c7c0fe17ef20aef6fcc7fd0a3456b2785906bf4342b9f3ffe0",
-      "pages": 11,
+      "sha256": "f1279f7d591c78c747f499614fe9c57e0f5ad9badc2db5f2afce9b8e558ba002",
+      "pages": 12,
       "all_page_text_annotations_and_pixels_match_second_assembly": true,
       "render_dpi": 108,
       "table_numeric_tokens_checked": true,
@@ -14,7 +14,7 @@
     },
     {
       "file": "Capital_Inflows_Fund_Economics.pdf",
-      "sha256": "1ddcf590c677c3f2e0ecbea4b16ae0e7cbd14b43165102f658be711cf1837c2b",
+      "sha256": "e26b4d729fd9d4732d0bef9d25dd4cb9378184affea2f6feacd14c000e7a5f9e",
       "pages": 14,
       "all_page_text_annotations_and_pixels_match_second_assembly": true,
       "render_dpi": 108,
@@ -24,13 +24,13 @@
       "final_only_ai_section": true
     }
   ],
-  "local_git_pdf_targets_checked": 31,
-  "scope": "Corrected fee/client interpretation and deterministic ledger bridge; targeted report regeneration and twice-bound readers using unchanged financial evidence",
+  "local_git_pdf_targets_checked": 33,
+  "scope": "Frozen 56-pair sensitivity and 10,000 conditional bootstrap draws; twice-bound readers and PDF pages; original 14-job/598-CSV proof preserved without unchanged rerun",
   "date": "2026-10-09",
   "financial_parameters_and_engines_unchanged": true,
   "complete_evidence_fingerprint": "c44ce7b77b66502e15d3f47133b707ce8fad53ab1b9d446756df7bbc37385139",
   "source_cells_preserved": 325,
-  "existing_tests_passed": 489,
+  "existing_tests_passed": 499,
   "existing_subtests_passed": 9,
   "complete_financial_rerun": false,
   "fee_bridge_code_commit": "1c63b98051771cbcfbf043c1ab62e0d7cec3ed5f",
@@ -53,5 +53,9 @@
     "macOS ARM64 demonstrated",
     "licensed Times New Roman fonts required for demonstrated appearance",
     "not independent human expert review or unique causal attribution"
-  ]
+  ],
+  "paired_study_code_commit": "1d3dcd6fa63024174a5854d37292f08002c3d67d",
+  "paired_endpoint_results": 56,
+  "bootstrap_draws": 10000,
+  "source_cells_claims_figures_unchanged": true
 }

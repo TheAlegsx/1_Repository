@@ -1,15 +1,15 @@
 {
   "schema_version": 1,
   "date": "2026-10-09",
-  "selection_sha256": "6d16e226ba9e588aa6fcb01c605a477f522be1dfa595521f071d20eed079ca02",
+  "selection_sha256": "30663765e7bacca01a2130027b31f000006c55d43532de9133cfd2e386ba2939",
   "templates_sha256": {
-    "backtest": "59f1bfe8d0f7ef3b5b0de9b51bdd64ef97efc5650c341bec6027da58582237f7",
-    "inflow": "f9083a0e8aa5eaf12f90abecd6d6e2a2e23e0c79fe0cc522c4fe1597953bb3c9"
+    "backtest": "bd9cddd0339bf06f38cc6ce354c9ac9a0942dddbfbc5ea2702ecdf11e941e841",
+    "inflow": "bb45bc875b321ce856af9fbde53d2723d998592852f6f6cdbd1387b5bc7b8ab0"
   },
   "ai_supplement_sha256": "5606a33a771b950c567742cb439f1cb0aece3c75b739518dc152035c58b6549e",
   "ai_record_sha256": "98ea9dea4a2730cce75748c536b7a4210d40156869995d00bd95773ee85056c6",
   "source_run_id": "99472e20-bd5e-46d0-bdb1-ba7fd8635697",
-  "review_scope": "Author-requested correctness correction: no-client fee/signal feedback is separated from further client-plan effects, with a signed ledger identity and existing intervention dates. Backtest abstract/conclusion explicitly qualify endpoint dependence. Financial parameters and engines unchanged; no independent human expert certification.",
+  "review_scope": "Frozen paired robustness and conditional return-pair bootstrap; all original cells, claims, financial parameters and engines preserved. Fixed GitHub calculation references; no fresh full-workflow or independent human expert certification claimed.",
   "decisions": [
     "MSCI World/Core remains benchmark; no new Amundi leverage construction.",
     "Author clarification: display the existing factor2x control versus real Amundi daily2x, not a new Amundi1.25x construction; primary strategy stays1.25x.",
@@ -47,5 +47,8 @@
   ],
   "remaining": [
     "Author reading of revised PDFs"
+  ],
+  "checks": [
+    "Frozen paired robustness and conditional bootstrap reference-checked separately; 52 original table families and financial parameters retained. New code links pin the tested calculation snapshot 1d3dcd6fa63024174a5854d37292f08002c3d67d; numerical values and the conditional study scope are unchanged."
   ]
 }

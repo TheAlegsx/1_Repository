@@ -7,6 +7,7 @@
 | Artificial example and accounting library API | `engine.run_backtest` |
 | Hypothetical fund accounts and diagnostics | `inflow_workflow` and `inflow_*` |
 | Coupled historical accounts, dated returns and manager cash | `historical_inflow_*` and `coupled_inflow_accounting` |
+| Frozen paired sensitivity and conditional bootstrap | `paired_robustness`, `robustness_reader_diagnostics` |
 | Complete report evidence and assembly | `report_contract`, `backtest_report`, `coordinated_inflow_report` |
 | Concise readers and PDF presentation | `research_reader_reports`, `research_reader_pdf` |
 

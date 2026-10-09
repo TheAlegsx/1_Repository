@@ -35,13 +35,14 @@ The workflow executes fourteen evidence producers: main accounts; extended finan
 
 ## Checks and outputs
 
-Every job verifies its seals, exact captured configurations and the full expected CSV inventory against[reviewed reference checksums](config/reproduction_reference_2026-10-06.json). The complete table/claim evidence, manuscripts and selected figure data/bitmaps are then checked. Only after equality is established does the workflow create new reader-selection/review sidecars with the actual new run identity. Published source files remain unchanged. A missing, changed or non-equivalent result stops the workflow; it does not silently change parameters or disable report guards.
+Every job verifies its seals, exact captured configurations and the full expected CSV inventory against[reviewed reference checksums](config/reproduction_reference_2026-10-06.json). The complete table/claim evidence, manuscripts and selected figure data/bitmaps are then checked. The separate frozen paired robustness study then regenerates 56 matched endpoint comparisons and 10,000 conditional bootstrap draws, checking all its artifacts against its own exact reference. Only after equality is established does the workflow create new reader-selection/review sidecars with the actual new run identity. Published source files remain unchanged. A missing, changed or non-equivalent result stops the workflow; it does not silently change parameters or disable report guards.
 
 Look inside your output directory:
 
 | Location | Result |
 | --- | --- |
 | `logs/` and fourteen named job folders | Calculation logs, data-derived outputs and manifests |
+| `robustness/` | Frozen 56-pair matrix, 112 accounts/events, 10,000 bootstrap draws and exact checks |
 | `complete_reports/` | Full 52-family research evidence and linked complete reports |
 | `reader_binding/` | Checked sidecars for this actual run |
 | `readers/report/` | Concise backtest and inflow Markdown reports |
@@ -53,3 +54,5 @@ PDF metadata may change between renders. Manuscripts, table cells and figure dat
 This is reconstruction of the recorded research with matching inputs, not an experiment with different datasets or assumptions. For exploratory changes, use the component configurations and numerical modes, then renew interpretation/reference evidence after review. Do not update checksums merely to accept an unexplained difference.
 
 The[verification record](docs/VERIFICATION.md) distinguishes the local clean-install test from the later experiment using an actually published GitHub revision.
+
+The frozen paired study and its scope are documented in [the result record](docs/PAIRED_ROBUSTNESS_RESULTS_2026-10-09.md). Its exact study reference remains separate from the preserved original numerical references.

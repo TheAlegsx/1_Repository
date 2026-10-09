@@ -192,6 +192,14 @@ The next substantive inputs are evidenced client counts, tickets, redemption beh
 
 The [companion portfolio backtest](BACKTEST_RESEARCH_2026-10-07.md) presents investment performance, the MSCI World benchmark and brief Dimensional and Amundi comparisons. It contains no investor subscriptions or outside-fund manager revenue.
 
+## Paired fee sensitivity in the companion backtest
+
+**Matched fees for factor and Core, through 28 August 2026** · [Paired accounts and sensitivity: paired_robustness.run](https://github.com/TheAlegsx/1_Repository/blob/1d3dcd6fa63024174a5854d37292f08002c3d67d/Finance/MSCI%20World%20Factor%20Strategy/src/factor_portfolio/paired_robustness.py#L167)
+
+{{detail:paired_fee_sensitivity}}
+
+The companion study applies each fee to both no-client investment accounts. Its results confirm that the fee-induced change in the factor portfolio's own path is distinct from the change in its advantage over Core. These August 2026 comparisons have a different endpoint and terminal accrual convention from the 2014-2024 historical fund experiment above; they do not replace its 10.73% scenario return. The same-charge comparison remains positive at the final endpoint, but the gap is smaller at 5 bp. Neither this sensitivity nor the historical no-client wealth bridge isolates a universal causal effect of fees. The full frozen matrix and conditional bootstrap are documented in the companion backtest and calculation materials.
+
 ## Sources and Data
 
 {{sources:inflow}}

@@ -783,11 +783,11 @@
     "inflow/evidence/coupled_events.csv": "79d5bdfa02a0aa970e397e148681961f633426b5986697faf1378f44f7131b0d",
     "inflow/evidence/coupled_daily.csv": "3e041d99575311701cb4a74449fa9f913fdbd364e091a78d9d2613bfbc4ee04e"
   },
-  "reader_selection_sha256": "6d16e226ba9e588aa6fcb01c605a477f522be1dfa595521f071d20eed079ca02",
-  "reader_review_sha256": "b99ac8bf172e5631fd71c0ee4fe44f4f74dd2edd9028c97a8e5ea456a061de40",
+  "reader_selection_sha256": "30663765e7bacca01a2130027b31f000006c55d43532de9133cfd2e386ba2939",
+  "reader_review_sha256": "dff2fd31b26b6d2824fee3c4a5408fe3ffa7f9a349b1e94395717f0ecd61a42d",
   "reader_payloads": {
-    "report/CAPITAL_INFLOWS_RESEARCH_2026-10-07.md": "3e3c75ba57393947a266757d9bbe815696e838034a3d22abae6fe7039b70f2f5",
-    "report/BACKTEST_RESEARCH_2026-10-07.md": "b8a64b42070333cc402b7fd1a749b49254996c7c2d2b7dd653ee2a346f595deb",
+    "report/CAPITAL_INFLOWS_RESEARCH_2026-10-07.md": "9c01451b2b8fae95aa6099ca3b0fda2c01b91c2b330617c6a9bfad8a3015584d",
+    "report/BACKTEST_RESEARCH_2026-10-07.md": "88125eab68ff7f2ac928b8ad8312983ad6530ec3d0dd15e160b32576567f8ce8",
     "figures/inflow_historical_nav.json": "1e3c6a9bda6cff3423d2c5a64a4aa0134ed487a10c168055894230c238b8fe20",
     "figures/inflow_manager_cash.json": "ac78c10ade97c7024b427abe47c34ef0bab22128b6033b813fb5bd5b9c77ad15",
     "figures/inflow_accounts.png": "472ff714a3dadad555d768bd66b9a59e91269123ac397bcdfb6a4e18918785f2",
@@ -800,7 +800,8 @@
     "figures/backtest_leverage.json": "9bbf59987f90785555f94979ea715c888031bfaa8bff33cf2275b275e38240ed",
     "figures/backtest_drawdown.json": "0f83397bd1106e44750893706edfbe7f2f1f625074e58d29278e53d886b8eaa5",
     "figures/backtest_equity.png": "9ee631d31415de4e8cce770f98868e2b0cb44a8b522b2b9e8bd4df8016e7d9f3",
-    "evidence/backtest_diagnostics.json": "544d1afc8b732071927ef691fd2939246c652b8b7a3f23e843b3f5266027d27a",
-    "evidence/inflow_diagnostics.json": "60aaf1a1ac27df324fa236503dcd16af20291b8b87835da7f299e503e5c9a6f3"
+    "evidence/backtest_diagnostics.json": "db09dfecb6828cf009dc55064f8a71eafa740d65def9a0c4f4b0656bc4db474e",
+    "evidence/inflow_diagnostics.json": "d4deacdb0abe57ad674eb4a79ebd439bb5ed6901e271303798a85323b265b383",
+    "evidence/robustness_diagnostics.json": "3236a7de44037cef121e923f0915afaf46d481ec6eeb33c10993956428bf2867"
   }
 }
