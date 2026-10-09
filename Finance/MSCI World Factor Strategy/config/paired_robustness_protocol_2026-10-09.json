@@ -1,0 +1,360 @@
+{
+  "schema_version": 1,
+  "status": "frozen_before_new_results",
+  "frozen_on": "2026-10-09",
+  "baseline_public_commit": "b0864758c7f33c7001e3a09afb3d1a647f66c534",
+  "purpose": "Paired deterministic specification sensitivity, followed by separately labelled conditional time-series bootstrap; no primary strategy replacement",
+  "selection_context": "Designed after reading historical results, endpoint dependence and fee feedback. Frozen before this new matrix/bootstrap; not a pristine preregistration or holdout.",
+  "fixed": {
+    "weights": {
+      "core": 0.6,
+      "momentum": 0.15,
+      "quality": 0.1,
+      "value": 0.15
+    },
+    "initial_equity_usd": 7000000,
+    "target_leverage": 1.25,
+    "factor_policy": "absolute_decoupled",
+    "core_policy": "no_sleeve",
+    "costs": "unchanged baseline Swissquote current-cost scenario; embedded ETF costs not deducted twice",
+    "financing_reference": "unchanged observed indicative/SOFR reference series with ACT/360 accrual",
+    "calendar": "the original five-series common NAV calendar; no interpolation or ETF-only calendar substitution",
+    "primary_execution_nav_delay": 1,
+    "no_external_clients": true,
+    "no_outside_fund_business_budget_in_investment_equity": true
+  },
+  "requested_end_dates": [
+    "2023-12-31",
+    "2024-12-31",
+    "2025-12-31",
+    "2026-08-28"
+  ],
+  "actual_end_dates": [
+    "2023-12-29",
+    "2024-12-31",
+    "2025-12-31",
+    "2026-08-28"
+  ],
+  "design": "one_at_a_time; no full factorial grid; report every requested case including unavailable cases",
+  "cases": [
+    {
+      "id": "baseline",
+      "dimension": "baseline",
+      "available": true,
+      "start": "2014-10-03",
+      "margin_bps": 300,
+      "fund_fee_bps": 0,
+      "leverage_band": 0.1,
+      "sleeve_band": 0.05,
+      "execution_nav_delay": 1
+    },
+    {
+      "id": "start_-5",
+      "dimension": "start_offset",
+      "available": false,
+      "start": null,
+      "margin_bps": 300,
+      "fund_fee_bps": 0,
+      "leverage_band": 0.1,
+      "sleeve_band": 0.05,
+      "execution_nav_delay": 1,
+      "start_offset_common_navs": -5,
+      "unavailable_reason": "Frozen common NAV and financing snapshots begin3October2014; no earlier levels will be invented or acquired for this block."
+    },
+    {
+      "id": "start_-4",
+      "dimension": "start_offset",
+      "available": false,
+      "start": null,
+      "margin_bps": 300,
+      "fund_fee_bps": 0,
+      "leverage_band": 0.1,
+      "sleeve_band": 0.05,
+      "execution_nav_delay": 1,
+      "start_offset_common_navs": -4,
+      "unavailable_reason": "Frozen common NAV and financing snapshots begin3October2014; no earlier levels will be invented or acquired for this block."
+    },
+    {
+      "id": "start_-3",
+      "dimension": "start_offset",
+      "available": false,
+      "start": null,
+      "margin_bps": 300,
+      "fund_fee_bps": 0,
+      "leverage_band": 0.1,
+      "sleeve_band": 0.05,
+      "execution_nav_delay": 1,
+      "start_offset_common_navs": -3,
+      "unavailable_reason": "Frozen common NAV and financing snapshots begin3October2014; no earlier levels will be invented or acquired for this block."
+    },
+    {
+      "id": "start_-2",
+      "dimension": "start_offset",
+      "available": false,
+      "start": null,
+      "margin_bps": 300,
+      "fund_fee_bps": 0,
+      "leverage_band": 0.1,
+      "sleeve_band": 0.05,
+      "execution_nav_delay": 1,
+      "start_offset_common_navs": -2,
+      "unavailable_reason": "Frozen common NAV and financing snapshots begin3October2014; no earlier levels will be invented or acquired for this block."
+    },
+    {
+      "id": "start_-1",
+      "dimension": "start_offset",
+      "available": false,
+      "start": null,
+      "margin_bps": 300,
+      "fund_fee_bps": 0,
+      "leverage_band": 0.1,
+      "sleeve_band": 0.05,
+      "execution_nav_delay": 1,
+      "start_offset_common_navs": -1,
+      "unavailable_reason": "Frozen common NAV and financing snapshots begin3October2014; no earlier levels will be invented or acquired for this block."
+    },
+    {
+      "id": "start_+1",
+      "dimension": "start_offset",
+      "available": true,
+      "start": "2014-10-06",
+      "margin_bps": 300,
+      "fund_fee_bps": 0,
+      "leverage_band": 0.1,
+      "sleeve_band": 0.05,
+      "execution_nav_delay": 1,
+      "start_offset_common_navs": 1
+    },
+    {
+      "id": "start_+2",
+      "dimension": "start_offset",
+      "available": true,
+      "start": "2014-10-07",
+      "margin_bps": 300,
+      "fund_fee_bps": 0,
+      "leverage_band": 0.1,
+      "sleeve_band": 0.05,
+      "execution_nav_delay": 1,
+      "start_offset_common_navs": 2
+    },
+    {
+      "id": "start_+3",
+      "dimension": "start_offset",
+      "available": true,
+      "start": "2014-10-08",
+      "margin_bps": 300,
+      "fund_fee_bps": 0,
+      "leverage_band": 0.1,
+      "sleeve_band": 0.05,
+      "execution_nav_delay": 1,
+      "start_offset_common_navs": 3
+    },
+    {
+      "id": "start_+4",
+      "dimension": "start_offset",
+      "available": true,
+      "start": "2014-10-09",
+      "margin_bps": 300,
+      "fund_fee_bps": 0,
+      "leverage_band": 0.1,
+      "sleeve_band": 0.05,
+      "execution_nav_delay": 1,
+      "start_offset_common_navs": 4
+    },
+    {
+      "id": "start_+5",
+      "dimension": "start_offset",
+      "available": true,
+      "start": "2014-10-10",
+      "margin_bps": 300,
+      "fund_fee_bps": 0,
+      "leverage_band": 0.1,
+      "sleeve_band": 0.05,
+      "execution_nav_delay": 1,
+      "start_offset_common_navs": 5
+    },
+    {
+      "id": "margin_bps_250",
+      "dimension": "margin_bps",
+      "available": true,
+      "start": "2014-10-03",
+      "margin_bps": 250,
+      "fund_fee_bps": 0,
+      "leverage_band": 0.1,
+      "sleeve_band": 0.05,
+      "execution_nav_delay": 1
+    },
+    {
+      "id": "margin_bps_350",
+      "dimension": "margin_bps",
+      "available": true,
+      "start": "2014-10-03",
+      "margin_bps": 350,
+      "fund_fee_bps": 0,
+      "leverage_band": 0.1,
+      "sleeve_band": 0.05,
+      "execution_nav_delay": 1
+    },
+    {
+      "id": "fund_fee_bps_2.5",
+      "dimension": "fund_fee_bps",
+      "available": true,
+      "start": "2014-10-03",
+      "margin_bps": 300,
+      "fund_fee_bps": 2.5,
+      "leverage_band": 0.1,
+      "sleeve_band": 0.05,
+      "execution_nav_delay": 1
+    },
+    {
+      "id": "fund_fee_bps_5",
+      "dimension": "fund_fee_bps",
+      "available": true,
+      "start": "2014-10-03",
+      "margin_bps": 300,
+      "fund_fee_bps": 5,
+      "leverage_band": 0.1,
+      "sleeve_band": 0.05,
+      "execution_nav_delay": 1
+    },
+    {
+      "id": "leverage_band_0.09",
+      "dimension": "leverage_band",
+      "available": true,
+      "start": "2014-10-03",
+      "margin_bps": 300,
+      "fund_fee_bps": 0,
+      "leverage_band": 0.09,
+      "sleeve_band": 0.05,
+      "execution_nav_delay": 1
+    },
+    {
+      "id": "leverage_band_0.11",
+      "dimension": "leverage_band",
+      "available": true,
+      "start": "2014-10-03",
+      "margin_bps": 300,
+      "fund_fee_bps": 0,
+      "leverage_band": 0.11,
+      "sleeve_band": 0.05,
+      "execution_nav_delay": 1
+    },
+    {
+      "id": "sleeve_band_0.045",
+      "dimension": "sleeve_band",
+      "available": true,
+      "start": "2014-10-03",
+      "margin_bps": 300,
+      "fund_fee_bps": 0,
+      "leverage_band": 0.1,
+      "sleeve_band": 0.045,
+      "execution_nav_delay": 1
+    },
+    {
+      "id": "sleeve_band_0.055",
+      "dimension": "sleeve_band",
+      "available": true,
+      "start": "2014-10-03",
+      "margin_bps": 300,
+      "fund_fee_bps": 0,
+      "leverage_band": 0.1,
+      "sleeve_band": 0.055,
+      "execution_nav_delay": 1
+    }
+  ],
+  "counts": {
+    "requested_variants": 19,
+    "available_variants": 14,
+    "unavailable_variants": 5,
+    "endpoint_pairs_available": 56,
+    "account_endpoint_results": 112
+  },
+  "fund_fee": {
+    "annual_bps": [
+      0,
+      2.5,
+      5
+    ],
+    "paired": true,
+    "regular_rule": "annual fee/12 charged on prior event closing net equity at the first common NAV on or after each anniversary-month date, anchored on the case start",
+    "funding": "post to debt in the borrowed no-client fund; preserve original mark/funding/prior-trade/fee/new-signal order",
+    "terminal_stub_extension": "if cutoff is not a regular fee event, charge once on the cutoff NAV: annual fee * calendar days since last actual fee event /365.2425 * prior-event closing net equity; post to debt; no double charge on regular-event dates",
+    "scope": "This is a specified extension for irregular robustness endpoints, not a change to the old120-month inflow account or zero-added-fee primary backtest."
+  },
+  "timing_secondary": {
+    "nav_delay": 2,
+    "status": "separate follow-up timing experiment, excluded from first matrix",
+    "gate": "default next-NAV mode must remain exactly equivalent and second-NAV mode needs explicit paired regression checks"
+  },
+  "reporting": {
+    "per_pair": [
+      "actual start/end",
+      "requested case and availability",
+      "factor/core CAGR and signed gap in percentage points",
+      "ending investor equity",
+      "sleeve/leverage/joint intervention counts excluding entry",
+      "trading/funding/added-fund-fee costs",
+      "observed leverage summary",
+      "parameter and input hashes"
+    ],
+    "summaries": "baseline, median, minimum, maximum and sign by endpoint and perturbation family; display sample counts; no probability/significance inferred from parameter span",
+    "core_sleeve_band": "not applicable; unchanged Core cases may be reused and must not be counted as independent corroboration",
+    "tracking_error": "std of aligned investor net-return differences, ddof1, times sqrt252",
+    "information_ratio": "mean aligned arithmetic active return times252 divided by tracking error; unavailable if tracking error is zero"
+  },
+  "bootstrap": {
+    "scope": "Only the full-period baseline factor1.25/Core1.25 realised net investment-return pair; no rule rerun, specification uncertainty, causal attribution or future performance guarantee",
+    "method": "paired stationary circular-block resampling; jointly use the same indices for both arrays; restart probability1/expected_block_length, otherwise increment and wrap",
+    "expected_block_lengths_common_nav_intervals": [
+      20,
+      60
+    ],
+    "replications_per_block_length": 5000,
+    "seeds": {
+      "20": 2026100920,
+      "60": 2026100960
+    },
+    "opening_cost": "hold each original post-entry equity/committed-capital factor fixed once per replicate; resample adjacent post-entry equity returns without resampling the opening charge",
+    "statistic": "difference of each compounded calendar-year CAGR using the original elapsed-year divisor; use paired log-return sums plus fixed entry-cost factor",
+    "confidence_interval": "two-sided95percent percentile interval, report both predefined block lengths; no selection by outcome; do not call an untested CAGR gap nonsignificant",
+    "limits": "conditional on the realised strategy-return streams and resampling assumptions; threshold rules and financing/holdings are not recomputed under new paths"
+  },
+  "baseline_expected": {
+    "factor": {
+      "cagr": 0.132436495883,
+      "ending_equity_usd": 30757694.545435704,
+      "transaction_cost_usd": 26158.231578747254,
+      "financing_cost_usd": 2104425.394236858,
+      "trades_after_entry": 2.0
+    },
+    "core": {
+      "cagr": 0.128246897287,
+      "ending_equity_usd": 29430357.039011862,
+      "transaction_cost_usd": 21007.977882008392,
+      "financing_cost_usd": 2110452.42110286,
+      "trades_after_entry": 1.0
+    }
+  },
+  "validation": {
+    "metric_atol": 1e-09,
+    "account_usd_atol": 1e-06,
+    "baseline": "zero-fee coupled factor/Core must match original histories and metrics; original14-job references and current report figures stay protected",
+    "bootstrap_original_order": "the unresampled post-entry return pair plus one opening-cost factor must recover both original CAGRs",
+    "fail_closed": "mark unavailable/incomplete cases and explain; do not weaken tolerances, change inputs, tune parameters or replace expected results to obtain a desired answer"
+  },
+  "publication": "implement using the authoritative GitHub checkout; copy this frozen protocol unchanged into public config/docs with freeze checks before result interpretation; originals remain private; update reports/package only after reviewed checks",
+  "baseline_pins": {
+    "config/backtest_absolute_decoupled_2026-10-05.json": "32f1ae0d3b6245f6a3b2124c537c86ae71dbd93f2e227d4f153a41bd97e605b5",
+    "config/reproduction_reference_2026-10-06.json": "4d6255a688ae7fc0321dd9b8fec546517182272b0527bf10d9e62a1d8c979fba",
+    "docs/ORIGINAL_DATA_REQUIREMENTS_2026-10-06.json": "700a7a5733d6003c3735794bb346da7865249db3742b9f46f1edeeb9adebee67",
+    "src/factor_portfolio/historical.py": "e75e4fb390b31bbfde23db069406bb26c9707b4ec09b048ef27b282312447e72",
+    "src/factor_portfolio/coupled_inflow_accounting.py": "da827800e834e8222135bbc55a742d58ba4b97ed0929dcb32687f7d121247377",
+    "src/factor_portfolio/config.py": "d8b6f92322326819b7eac4deb7197af5e623a288dac500ce0e3b490448033109"
+  },
+  "admitted_input_pins": {
+    "inputs/common_nav_usd.csv": "1fc09cf7e389bfa9a29eda6d61f4d917f35cdd9bb557c6d413801f5e2ff30bd5",
+    "inputs/common_returns_usd.csv": "225b9f496314a0aca1937bc1b5995515e65153afcb92884af3ee57e93d0d9425",
+    "inputs/canonical/daily_borrow_rates_usd.csv": "6c57fa1991bee4949439f66ebea24ac8caeb003fc7a0fd4dc3e0c8188f3e10c9",
+    "results/policy_metrics.csv": "715cc38700931e956d3fe300e5f42a79f9ca51efbd69241e78710d8a32cc9ddb"
+  }
+}

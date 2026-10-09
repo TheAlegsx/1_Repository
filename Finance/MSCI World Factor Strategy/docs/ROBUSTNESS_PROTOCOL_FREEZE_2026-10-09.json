@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "protocol_sha256": "251169af59938f7040fa18a6e5b27d7e01d5ab886a015d317f24811ed6b84955",
+  "markdown_sha256": "68007912a7df2eadb520c6b4b0794a6a909adbd5359b34fe6f0e26831236423a",
+  "requested_variants": 19,
+  "available_variants": 14,
+  "unavailable_variants": 5,
+  "endpoint_pairs": 56,
+  "account_endpoint_outcomes": 112,
+  "baseline_pins_verified": true,
+  "source_availability_checked": true,
+  "new_matrix_or_bootstrap_executed": false,
+  "publication_or_package_changed": false
+}

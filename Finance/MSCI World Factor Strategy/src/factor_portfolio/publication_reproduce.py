@@ -55,7 +55,18 @@ def check_complete_source(source, reference):
             raise ValueError('reviewed manuscript/figure payload differs: ' + relative)
 
 
-def bind_readers(project, source, destination, reference, binding_directory):
+def check_robustness(project, source):
+    verify_run(source)
+    reference = json.loads((project / 'config/paired_robustness_reference_2026-10-09.json').read_text())
+    manifest = json.loads((Path(source) / 'run_manifest.json').read_text())
+    if (reference['protocol_sha256'] != sha256(project / 'config/paired_robustness_protocol_2026-10-09.json')
+            or manifest['configuration_snapshots'] != reference['configuration_snapshots']
+            or manifest['artifacts'] != reference['artifacts_sha256']):
+        raise ValueError('frozen paired study results differ from the reviewed reference')
+    return len(manifest['artifacts'])
+
+
+def bind_readers(project, source, destination, reference, binding_directory, robustness_source=None):
     # Never infer equivalence from a run ID or silently refresh an unchecked hash.
     check_complete_source(source, reference)
     settings = json.loads((project / 'config/research_reader_selection_2026-10-06.json').read_text())
@@ -78,7 +89,7 @@ def bind_readers(project, source, destination, reference, binding_directory):
         complete_evidence_fingerprint=reference['complete_evidence_fingerprint'])
     review_path = binding_directory / 'reader_review.json'
     write_json(review_path, renewed)
-    result = assemble(project, source, destination, selection_path, review_path)
+    result = assemble(project, source, destination, selection_path, review_path, robustness_source)
     for relative, expected in reference['reader_payloads'].items():
         if sha256(contained(destination, relative)) != expected:
             raise ValueError('regenerated reader manuscript/figure differs: ' + relative)
@@ -140,16 +151,22 @@ def run(project, input_roots, output, font_directory, include_pdf=True):
     (output / 'configuration').mkdir()
     contract_path = output / 'configuration/coordinated_reports.json'
     write_json(contract_path, contract)
+    from .paired_robustness import run as run_robustness
+    print('Calculating frozen paired robustness study', flush=True)
+    run_robustness(project, output / 'core', output / 'robustness')
+    robustness_count = check_robustness(project, output / 'robustness')
     print('Assembling verified reports', flush=True)
     run_contract(project, contract_path, output / 'report_contract')
     run_backtest_report(project, output / 'report_contract', output / 'backtest_report')
     run_coordinated(project, output / 'report_contract', output / 'backtest_report', output / 'complete_reports')
     reader = bind_readers(project, output / 'complete_reports', output / 'readers',
-                          reference, output / 'reader_binding')
+                          reference, output / 'reader_binding', output / 'robustness')
     if include_pdf:
         from .research_reader_pdf import render_readers
         render_readers(output / 'readers', output / 'pdf', font_directory)
     result = dict(status='complete', evidence_jobs=completed, exact_reference_csv_files=csv_count,
+                  robustness_paired_results=56, robustness_bootstrap_draws=10000,
+                  exact_robustness_artifacts=robustness_count,
                   reference_sha256=sha256(reference_path), reader_run_id=reader['run_id'],
                   pdf_generated=include_pdf, pdf_visual_review='pending' if include_pdf else 'not generated',
                   source_files_modified=False, scope='Matching-original-data reconstruction against reviewed references; no forecast or expert approval.')

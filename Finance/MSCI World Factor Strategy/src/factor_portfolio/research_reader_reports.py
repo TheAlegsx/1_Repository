@@ -208,7 +208,7 @@ def source_excerpt(source, names):
     return intro + header + '\n'.join(data) + note + header + '\n'.join(references) + end
 
 
-def assemble(project_root, source, output, selection_path, review_path=None):
+def assemble(project_root, source, output, selection_path, review_path=None, robustness_source=None):
     project_root, source, output = map(lambda p: Path(p).resolve(), (project_root, source, output))
     if output.exists():
         raise FileExistsError('choose a new reader-report destination')
@@ -243,6 +243,19 @@ def assemble(project_root, source, output, selection_path, review_path=None):
     copy_bytes(review_path, output / 'config/reader_review.json')
     copy_bytes(supplement_path, output / 'config' / supplement_path.name)
     copy_bytes(ai_record_path, output / 'evidence/ai_use_record.md')
+    robustness_details = {}
+    if any('paired_sensitivity' in plan.get('diagnostics', []) for plan in selection['reports'].values()):
+        if robustness_source is None:
+            raise ValueError('the revised readers require the sealed paired robustness study')
+        from .publication_reproduce import check_robustness
+        from .robustness_reader_diagnostics import summaries as robustness_summaries
+        check_robustness(project_root, robustness_source)
+        robustness_details = robustness_summaries(robustness_source)
+        write_json(output / 'evidence/robustness_diagnostics.json', robustness_details)
+        for relative in robustness_details['source_files_sha256']:
+            (output / 'evidence/robustness' / relative).parent.mkdir(parents=True, exist_ok=True)
+            copy_bytes(Path(robustness_source) / relative, output / 'evidence/robustness' / relative)
+        copy_bytes(project_root / 'src/factor_portfolio/paired_robustness.py', output / 'evidence/robustness_code.py')
     results = {}
     for name, plan in selection['reports'].items():
         template_path = project_root / plan['template']
@@ -270,6 +283,7 @@ def assemble(project_root, source, output, selection_path, review_path=None):
             else:
                 from .inflow_fee_diagnostics import summaries
             details = summaries(source)
+            details.update({key: robustness_details[key] for key in plan["diagnostics"] if key in robustness_details})
             write_json(output / 'evidence' / f'{name}_diagnostics.json', details)
         figure_records = {}
         for key, specification in plan['figures'].items():
@@ -370,7 +384,7 @@ def assemble(project_root, source, output, selection_path, review_path=None):
         figures_included=True, configuration_snapshots={}, artifacts=artifacts,
         source_run_id=source_manifest['run_id'], source_manifest_sha256=sha256(source / 'run_manifest.json'),
         code={code_path.name: sha256(code_path)}, reports=results,
-        scope='Local curated reader assembly; financial engines and original outputs unchanged.')
+        scope='Local curated reader assembly; original financial engines unchanged; added paired study is separately sealed and reference-checked.')
     write_json(output / 'run_manifest.json', manifest)
     verify_run(output)
     return manifest
@@ -383,8 +397,9 @@ def main():
     parser.add_argument('--output', type=Path, required=True)
     parser.add_argument('--selection', type=Path, default=Path('config/research_reader_selection_2026-10-06.json'))
     parser.add_argument('--review', type=Path, help='separately reviewed source binding; all existing checks remain required')
+    parser.add_argument('--robustness', type=Path, help='sealed frozen paired study required by the revised readers')
     args = parser.parse_args()
-    result = assemble(args.project_root, args.source, args.output, args.selection, args.review)
+    result = assemble(args.project_root, args.source, args.output, args.selection, args.review, args.robustness)
     print(json.dumps(dict(run_id=result['run_id'], reports=result['reports']), indent=2))
 
 

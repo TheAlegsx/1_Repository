@@ -56,6 +56,9 @@ def inline(s):
                 return hold(f'<link href="{html.escape(target, quote=True)}" color="#1e4d78">'
                             f'<font size="8" backColor="#f3f6f9"><u>{label}</u></font></link>')
             return hold(f'<link href="{html.escape(target, quote=True)}" color="#000000">{label}</link>')
+        if target == '../evidence/robustness_code.py':
+            return hold(f'<link href="../Code/src/factor_portfolio/paired_robustness.py" color="#1e4d78">'
+                        f'<font size="8" backColor="#f3f6f9"><u>{label}</u></font></link>')
         if Path(target).name == 'source_register.md':
             return hold(f'<link href="#source-register" color="#000000">{label}</link>')
         if Path(target).name in LINK_MAP:
