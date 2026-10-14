@@ -1,15 +1,15 @@
 {
   "schema_version": 1,
-  "date": "2026-10-09",
+  "date": "2026-10-14",
   "selection_sha256": "30663765e7bacca01a2130027b31f000006c55d43532de9133cfd2e386ba2939",
   "templates_sha256": {
-    "backtest": "bd9cddd0339bf06f38cc6ce354c9ac9a0942dddbfbc5ea2702ecdf11e941e841",
+    "backtest": "cbeb2c78bbc1f3c53b6405b20add7d379235d2f0060013f022141043f8f3c5bc",
     "inflow": "bb45bc875b321ce856af9fbde53d2723d998592852f6f6cdbd1387b5bc7b8ab0"
   },
   "ai_supplement_sha256": "5606a33a771b950c567742cb439f1cb0aece3c75b739518dc152035c58b6549e",
   "ai_record_sha256": "98ea9dea4a2730cce75748c536b7a4210d40156869995d00bd95773ee85056c6",
   "source_run_id": "99472e20-bd5e-46d0-bdb1-ba7fd8635697",
-  "review_scope": "Frozen paired robustness and conditional return-pair bootstrap; all original cells, claims, financial parameters and engines preserved. Fixed GitHub calculation references; no fresh full-workflow or independent human expert certification claimed.",
+  "review_scope": "Backtest-only editorial clarification of cost scope, calendar/day-count conventions, rounded leverage and supplementary index label; every original financial value, engine, parameter, table selection and figure remains unchanged.",
   "decisions": [
     "MSCI World/Core remains benchmark; no new Amundi leverage construction.",
     "Author clarification: display the existing factor2x control versus real Amundi daily2x, not a new Amundi1.25x construction; primary strategy stays1.25x.",
@@ -33,7 +33,8 @@
     "Full disclosure and aid list retained at the end; short front attribution identifies AI-assisted production. Author-supplied Claude review added without attributing original calculations to Claude.",
     "Original financial values and source origins retained in bindings; rounded reader_display fields and clearer headings are separate presentation metadata.",
     "8 October descriptive finish: relative wealth checkpoints and leverage use the same continuing account paths. The verified primary history is captured into the sealed report evidence; derivatives record input hashes, fields and formulas. All financial engines and fourteen numerical-job references remain unchanged.",
-    "9 October: interpret combined coupled-minus-overlay difference correctly; roughly69percent of that return gap already exists without customers. Fee/debt posting shifts2021execution and causes an additional2022deleveraging. The wealth bridge is an accounting identity, not unique causal attribution; different horizons remain explicit. Existing ledger copies are admitted by historical source seals and unchanged numerical CSV pins."
+    "9 October: interpret combined coupled-minus-overlay difference correctly; roughly69percent of that return gap already exists without customers. Fee/debt posting shifts2021execution and causes an additional2022deleveraging. The wealth bridge is an accounting identity, not unique causal attribution; different horizons remain explicit. Existing ledger copies are admitted by historical source seals and unchanged numerical CSV pins.",
+    "14 October 2026: author-approved backtest-only final clarifications. Main custody exclusion is explicit; Appendix C documents ACT/360 versus saved contractual wording, nominal252 and the common calendar, and points to the existing custody job. Rounded leverage interpretation, intervention terminology and supplementary daily2x index description clarified. Inflow template, numerical code, parameters, source originals and all displayed numerical values remain unchanged. No external reviewer claims adopted without their supporting files."
   ],
   "manual_numeric_context": [
     "Report/figure/table identifiers and date; allocation 60/15/10/15 and implied bands; target1.25 and band0.10; named windows and source IDs.",

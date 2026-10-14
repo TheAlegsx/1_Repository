@@ -1,12 +1,12 @@
 # MSCI World Factor Strategy
 
-**Portfolio backtest · Research report · 9 October 2026**  
+**Portfolio backtest · Research report · 14 October 2026**  
 USD results · 3 October 2014–28 August 2026  
 AI-assisted analysis and writing; tools, scope and responsibility are disclosed in the final section.
 
 ## Abstract
 
-This study evaluates a shared MSCI World portfolio with Core, Momentum, Quality and Value weights of 60/15/10/15 and a 1.25x leverage target. Over 3 October 2014-28 August 2026, its CAGR is **{{claim:levered_cagr}}**, compared with **12.82%** for the MSCI World/Core investment at the same target leverage. Both include modelled trading and financing costs; the portfolio result excludes the added fund fee and outside-fund business costs. At the end of 2025, matched-target wealth was nearly equal; the positive terminal wealth advantage emerged in the observed 2026 segment. The full-sample comparison is endpoint-sensitive. Borrowing raises return and risk relative to the unlevered portfolio. The estimated alpha against unlevered Core is -0.08% annually, with an interval including zero. The concept offers shared factor and leverage access; the historical evidence supports neither reliable future outperformance nor a proven commercial advantage.
+This study evaluates a shared MSCI World portfolio with Core, Momentum, Quality and Value weights of 60/15/10/15 and a 1.25x leverage target. Over 3 October 2014-28 August 2026, its CAGR is **{{claim:levered_cagr}}**, compared with **12.82%** for the MSCI World/Core investment at the same target leverage. Both include modelled trading and financing costs; the portfolio result excludes custody charges, the added fund fee and outside-fund business costs. At the end of 2025, matched-target wealth was nearly equal; the positive terminal wealth advantage emerged in the observed 2026 segment. The full-sample comparison is endpoint-sensitive. Borrowing raises return and risk relative to the unlevered portfolio. The estimated alpha against unlevered Core is -0.08% annually, with an interval including zero. The concept offers shared factor and leverage access; the historical evidence supports neither reliable future outperformance nor a proven commercial advantage.
 
 ## 1. Research Question
 
@@ -75,7 +75,7 @@ Funding accrues from the previous observation inclusive to the current observati
 
 The fixed commission conversion is **1 CHF = USD 1.2368**, derived from the recorded ECB reference rates for **31 August 2026**: 1.1596 USD per EUR divided by 0.9376 CHF per EUR. Only the CHF-denominated broker commission is converted; investment returns and debt already use USD. Full precision is retained in the calculation. This endpoint reference rate is a modelling assumption, not a historical series of broker execution rates. [Portfolio and cost settings: backtest configuration](https://github.com/TheAlegsx/1_Repository/blob/cd861934faf1aaeca43ae57bde0d01ec68ee6a25/Finance/MSCI%20World%20Factor%20Strategy/config/backtest_absolute_decoupled_2026-10-05.json).
 
-CAGR uses committed opening capital and elapsed calendar years. Opening trading charges are included once and folded into the first investor-return interval. Drawdown uses a high-water mark no lower than committed opening capital. Volatility uses 252-observation annualisation. Jensen alpha is an annualised excess-return regression intercept against unlevered Core, not the CAGR difference; exploratory intervals use five-lag HAC errors. [Return and risk metrics: historical.metrics](https://github.com/TheAlegsx/1_Repository/blob/cd861934faf1aaeca43ae57bde0d01ec68ee6a25/Finance/MSCI%20World%20Factor%20Strategy/src/factor_portfolio/historical.py#L121).
+CAGR uses committed opening capital and elapsed calendar years. Opening trading charges are included once and folded into the first investor-return interval. Drawdown uses a high-water mark no lower than committed opening capital. Volatility uses 252-observation annualisation. Appendix C explains the calendar, annualisation and financing conventions. Jensen alpha is an annualised excess-return regression intercept against unlevered Core, not the CAGR difference; exploratory intervals use five-lag HAC errors. [Return and risk metrics: historical.metrics](https://github.com/TheAlegsx/1_Repository/blob/cd861934faf1aaeca43ae57bde0d01ec68ee6a25/Finance/MSCI%20World%20Factor%20Strategy/src/factor_portfolio/historical.py#L121).
 
 Separate implementations check account identities and selected daily, event and outcome results under shared inputs and conventions. These checks address implementation errors; they do not establish market-price executability, commercial feasibility or expert peer review.
 
@@ -91,7 +91,7 @@ Separate implementations check account identities and selected daily, event and 
 
 {{table:main}}
 
-These account returns include embedded product expenses, investor trading charges and financing. They exclude the additional fund fee and outside-fund operating budget analysed in the companion study. The main strategy meets the stated joint growth/risk criterion against Core over the full sample. Its CAGR advantage is {{claim:unlevered_gap_core}} without borrowing and {{claim:levered_gap_core}} at matched target leverage. These are historical account comparisons, not a causal estimate of the return from each factor. [Return and risk metrics: historical.metrics](https://github.com/TheAlegsx/1_Repository/blob/cd861934faf1aaeca43ae57bde0d01ec68ee6a25/Finance/MSCI%20World%20Factor%20Strategy/src/factor_portfolio/historical.py#L121).
+These account returns include embedded product expenses, investor trading charges and financing. They exclude custody charges, the additional fund fee and the outside-fund operating budget analysed in the companion study; the separate custody sensitivity is identified in Appendix C. The main strategy meets the stated joint growth/risk criterion against Core over the full sample. Its CAGR advantage is {{claim:unlevered_gap_core}} without borrowing and {{claim:levered_gap_core}} at matched target leverage. These are historical account comparisons, not a causal estimate of the return from each factor. [Return and risk metrics: historical.metrics](https://github.com/TheAlegsx/1_Repository/blob/cd861934faf1aaeca43ae57bde0d01ec68ee6a25/Finance/MSCI%20World%20Factor%20Strategy/src/factor_portfolio/historical.py#L121).
 
 Borrowing increases portfolio CAGR from {{claim:unlevered_cagr}} to {{claim:levered_cagr}}, but also raises volatility from {{claim:unlevered_annualised_volatility}} to {{claim:levered_annualised_volatility}} and deepens maximum drawdown from {{claim:unlevered_maximum_drawdown}} to {{claim:levered_maximum_drawdown}}. The additional growth comes with additional total risk. [Return and risk metrics: historical.metrics](https://github.com/TheAlegsx/1_Repository/blob/cd861934faf1aaeca43ae57bde0d01ec68ee6a25/Finance/MSCI%20World%20Factor%20Strategy/src/factor_portfolio/historical.py#L121).
 
@@ -107,7 +107,7 @@ For an investor without convenient borrowing access, unlevered Core is a relevan
 
 Relative wealth is 100 x (portfolio equity / Core equity - 1), with both paths at a 1.25x target and unchanged opening capital. These are checkpoints of the continuing accounts, not independently restarted backtests or annual return gaps. The portfolio recovered most of its 2024 shortfall during 2025 and was nearly level with Core at the end of 2025. Its positive terminal wealth advantage emerged in the observed 2026 segment. The headline result is therefore sensitive to the chosen endpoint and does not demonstrate a persistent advantage throughout the sample.
 
-After the opening investment, the main path contains only **two rule-triggered interventions**: a sleeve reset on **3 September 2020** and a leverage adjustment on **9 April 2021**. The count includes leverage adjustments. Most of this historical path therefore consists of held positions with permitted weight and leverage drift. The thresholds still govern when trading is avoided, and few interventions do not remove retrospective selection risk. The event ledger records both actions.
+After the opening investment, the main path contains only **two rule-triggered interventions**: a sleeve reset on **3 September 2020** and a leverage adjustment on **9 April 2021**. The count includes leverage adjustments; each intervention can comprise several individual purchases or sales. Most of this historical path therefore consists of held positions with permitted weight and leverage drift. The thresholds still govern when trading is avoided, and few interventions do not remove retrospective selection risk. The event ledger records both actions.
 
 {{figure:equity}}
 
@@ -220,6 +220,18 @@ The early period is 3 October 2014–31 December 2021; the later period starts o
 {{table:funding}}
 
 The later result is a restarted account, not a continuation of the full-history balance. Policy discontinuities prevent interpreting a finite scan as a continuous or globally complete break-even search.
+
+## Appendix C. Cost Scope and Measurement Conventions
+
+**Financing day count.** ACT/360 counts actual elapsed calendar days over a 360-day denominator and capitalises interest at NAV dates. It is the model convention used throughout this historical scenario. Clause 4.2 of the [saved Swissquote collateralised loan agreement](https://library.swissquote.com/cdn/2958/ql/sqb-collateralised-loan-agreement-en.pdf) states a 30/360 basis and permits another method indicated on the website. The model therefore does not reconstruct contractual invoices or establish the terms of an individual account.
+
+**Calendar and annualisation.** The four ETF NAV series and Dimensional share one observed calendar for comparable account measurements. Missing investment observations are excluded, not interpolated. The nominal 252 convention is applied consistently to volatility, excess-return Sharpe and regression annualisation; it is not the measured number of common observations per calendar year. CAGR uses elapsed calendar years. These conventions remain unchanged.
+
+**Custody sensitivity.** Custody charges are excluded from the main account. Separate whole-path scenarios retain private-account and legal-entity tariff assumptions, including VAT, without selecting a legal form or asserting negotiated terms. The common reconstruction produces `custody/custody_metrics.csv` in the custody job; the complete backtest evidence records Table `backtest_22`. See the [custody scenario configuration](https://github.com/TheAlegsx/1_Repository/blob/330a6b8e4768ea29dd3fd9a8364125224f762440/Finance/MSCI%20World%20Factor%20Strategy/config/backtest_custody_absolute_decoupled_2026-10-05.json) and [custody account simulation](https://github.com/TheAlegsx/1_Repository/blob/330a6b8e4768ea29dd3fd9a8364125224f762440/Finance/MSCI%20World%20Factor%20Strategy/src/factor_portfolio/custody_accounting.py#L41). Charging custody can change debt, band crossings and subsequent trades; it is not a fixed deduction from CAGR.
+
+**Boundary display.** The minimum in Table 8 rounds to 1.150x but is slightly below the lower boundary. It triggers the next-NAV adjustment on 9 April 2021.
+
+**Supplementary index label.** The supplementary Bloomberg input **MXWOLDNU Index** is treated as a daily 2x leveraged index in the product diagnostics. Its original filename and source identifier are preserved. It is separate from the Core ETF used as the main benchmark and from the Amundi ETF NAV used in Table 10.
 
 ## Reproducibility Materials
 

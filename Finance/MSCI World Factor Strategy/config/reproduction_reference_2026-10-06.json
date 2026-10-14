@@ -784,10 +784,10 @@
     "inflow/evidence/coupled_daily.csv": "3e041d99575311701cb4a74449fa9f913fdbd364e091a78d9d2613bfbc4ee04e"
   },
   "reader_selection_sha256": "30663765e7bacca01a2130027b31f000006c55d43532de9133cfd2e386ba2939",
-  "reader_review_sha256": "dff2fd31b26b6d2824fee3c4a5408fe3ffa7f9a349b1e94395717f0ecd61a42d",
+  "reader_review_sha256": "bc8b3e93e765c59f47cf691a8d05505e13565d6196a47fcfb17018fe3f76fc92",
   "reader_payloads": {
     "report/CAPITAL_INFLOWS_RESEARCH_2026-10-07.md": "9c01451b2b8fae95aa6099ca3b0fda2c01b91c2b330617c6a9bfad8a3015584d",
-    "report/BACKTEST_RESEARCH_2026-10-07.md": "88125eab68ff7f2ac928b8ad8312983ad6530ec3d0dd15e160b32576567f8ce8",
+    "report/BACKTEST_RESEARCH_2026-10-07.md": "8e486aa552d3d2c8277282ea6c12e422ca2196dc01106a120be9d485af6e9da6",
     "figures/inflow_historical_nav.json": "1e3c6a9bda6cff3423d2c5a64a4aa0134ed487a10c168055894230c238b8fe20",
     "figures/inflow_manager_cash.json": "ac78c10ade97c7024b427abe47c34ef0bab22128b6033b813fb5bd5b9c77ad15",
     "figures/inflow_accounts.png": "472ff714a3dadad555d768bd66b9a59e91269123ac397bcdfb6a4e18918785f2",

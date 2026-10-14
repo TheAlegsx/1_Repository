@@ -3,8 +3,8 @@
   "reports": [
     {
       "file": "MSCI_World_Factor_Strategy_Backtest.pdf",
-      "sha256": "f1279f7d591c78c747f499614fe9c57e0f5ad9badc2db5f2afce9b8e558ba002",
-      "pages": 12,
+      "sha256": "12a027785c8283ecb2067210e1070a3a406c20ac4cec5f1d4ad97b401118e244",
+      "pages": 13,
       "all_page_text_annotations_and_pixels_match_second_assembly": true,
       "render_dpi": 108,
       "table_numeric_tokens_checked": true,
@@ -25,8 +25,8 @@
     }
   ],
   "local_git_pdf_targets_checked": 33,
-  "scope": "Frozen 56-pair sensitivity and 10,000 conditional bootstrap draws; twice-bound readers and PDF pages; original 14-job/598-CSV proof preserved without unchanged rerun",
-  "date": "2026-10-09",
+  "scope": "Backtest-only final wording and conventions appendix; two reader/PDF assemblies agree; unchanged prior financial and paired-study evidence preserved without recomputation.",
+  "date": "2026-10-14",
   "financial_parameters_and_engines_unchanged": true,
   "complete_evidence_fingerprint": "c44ce7b77b66502e15d3f47133b707ce8fad53ab1b9d446756df7bbc37385139",
   "source_cells_preserved": 325,
@@ -57,5 +57,7 @@
   "paired_study_code_commit": "1d3dcd6fa63024174a5854d37292f08002c3d67d",
   "paired_endpoint_results": 56,
   "bootstrap_draws": 10000,
-  "source_cells_claims_figures_unchanged": true
+  "source_cells_claims_figures_unchanged": true,
+  "inflow_pdf_byte_identical": true,
+  "full_unchanged_workflow_repeated": false
 }

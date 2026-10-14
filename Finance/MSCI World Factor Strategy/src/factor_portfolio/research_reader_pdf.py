@@ -85,13 +85,14 @@ TABLE_CAPTION = ParagraphStyle('TableCaption', parent=STYLE, keepWithNext=True,
                               spaceBefore=4, spaceAfter=6)
 
 class ReadingDocument(BaseDocTemplate):
-    def __init__(self, path, title, total_pages=None):
+    def __init__(self, path, title, total_pages=None, report_date="9 October 2026"):
         self.total_pages = total_pages
+        self.report_date = report_date
         self.short_title = title
         self.heading_index = 0
         super().__init__(str(path), pagesize=A4, leftMargin=MARGIN, rightMargin=MARGIN,
             topMargin=51, bottomMargin=49, title=title, author='Alex Weber',
-            subject='Research report, 9 October 2026', pageCompression=1)
+            subject=f'Research report, {report_date}', pageCompression=1)
         templates = []
         for name, size in [('portrait', A4), ('landscape', landscape(A4))]:
             w,h=size
@@ -107,7 +108,7 @@ class ReadingDocument(BaseDocTemplate):
         canvas.setFont('Reading',8)
         canvas.setFillColor(GREY)
         canvas.drawString(MARGIN,h-24,self.short_title)
-        canvas.drawRightString(w-MARGIN,h-24,'Research report | 9 October 2026')
+        canvas.drawRightString(w-MARGIN,h-24,f'Research report | {self.report_date}')
         canvas.drawString(MARGIN,27,self.short_title)
         canvas.drawRightString(w-MARGIN,27,f'Page {doc.page} of {self.total_pages}' if self.total_pages else str(doc.page))
         canvas.restoreState()
@@ -272,14 +273,18 @@ def render_readers(source, destination, font_directory):
     copy_bytes(ai_record, destination / LINK_MAP['ai_use_record.md'])
     for src,name,title in SPECS:
         path=SOURCE/src;story=[]
+        dated_title = re.search(r"Research report · (\d{1,2} [A-Za-z]+ \d{4})", path.read_text())
+        if dated_title is None:
+            raise ValueError("Reader title must specify its report date")
+        report_date = dated_title.group(1)
         audit={'tables':0,'table_cells':0,'table_values':[],'images':[]}
         convert(path.read_text(),path.parent,story,audit)
         output=destination/name
-        ReadingDocument(output,title).build(story)
+        ReadingDocument(output,title,report_date=report_date).build(story)
         page_count = len(PdfReader(output).pages)
         story=[]; audit={'tables':0,'table_cells':0,'table_values':[],'images':[]}
         convert(path.read_text(),path.parent,story,audit)
-        ReadingDocument(output,title,total_pages=page_count).build(story)
+        ReadingDocument(output,title,total_pages=page_count,report_date=report_date).build(story)
         pdf=PdfReader(output)
         extracted=normalise('\n'.join(page.extract_text() or '' for page in pdf.pages))
         numbers=lambda s:Counter(re.findall(r'(?<![A-Za-z])[-+]?\d[\d,]*(?:\.\d+)?%?',s))

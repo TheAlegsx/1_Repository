@@ -28,3 +28,7 @@ The financial code, investment/business configurations, hash locks, 598 CSV refe
 The baseline was regenerated from the unchanged originals and matches both original ending equities, all 2,929 wealth observations, costs and events exactly. The fixed 14-variant/four-endpoint matrix and both 5,000-draw paired stationary bootstraps completed. Each zero-fee account is checked against the original simulator on every history field and event. Five earlier starts remain unavailable. The second-NAV experiment is excluded.
 
 The original 14 job references/598 CSV hashes and complete 52-family fingerprint were preserved. Both revised readers were assembled twice from sealed original and new-study evidence; all 26 PDF pages match in text, annotations and rendered pixels. Runtime and the 31-distribution lock were checked in the reused reviewed environment. This is not a fresh installation or a newly claimed independent human review. ZIP-specific checks are recorded beside the matching private package. [Full result and scope](PAIRED_ROBUSTNESS_RESULTS_2026-10-09.md).
+
+## Backtest clarifications of 14 October 2026
+
+The [final editorial check](BACKTEST_FINAL_CLARIFICATIONS_2026-10-14.md) preserves numerical evidence, inputs and parameters while clarifying cost scope and measurement conventions. The Backtest PDF has13pages; the Inflow PDF remains byte-identical. The reader/PDF date now follows each manuscript title. No unchanged financial workflow or installation was repeated.
