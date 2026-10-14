@@ -3,7 +3,7 @@
   "reports": [
     {
       "file": "MSCI_World_Factor_Strategy_Backtest.pdf",
-      "sha256": "12a027785c8283ecb2067210e1070a3a406c20ac4cec5f1d4ad97b401118e244",
+      "sha256": "bfa2341fa4eb5fefae55d5669cf76dd58297bb6339a594f4d971c8cedbf7948b",
       "pages": 13,
       "all_page_text_annotations_and_pixels_match_second_assembly": true,
       "render_dpi": 108,
@@ -24,8 +24,8 @@
       "final_only_ai_section": true
     }
   ],
-  "local_git_pdf_targets_checked": 33,
-  "scope": "Backtest-only final wording and conventions appendix; two reader/PDF assemblies agree; unchanged prior financial and paired-study evidence preserved without recomputation.",
+  "local_git_pdf_targets_checked": 35,
+  "scope": "Backtest-only typography finish; every word, numerical result and link target preserved; current reader/PDF and ZIP checks reuse unchanged sealed financial evidence.",
   "date": "2026-10-14",
   "financial_parameters_and_engines_unchanged": true,
   "complete_evidence_fingerprint": "c44ce7b77b66502e15d3f47133b707ce8fad53ab1b9d446756df7bbc37385139",
@@ -59,5 +59,8 @@
   "bootstrap_draws": 10000,
   "source_cells_claims_figures_unchanged": true,
   "inflow_pdf_byte_identical": true,
-  "full_unchanged_workflow_repeated": false
+  "full_unchanged_workflow_repeated": false,
+  "body_emphasis_removed": 20,
+  "visible_backtest_text_unchanged": true,
+  "focused_binding_tests_passed": 5
 }

@@ -9,3 +9,5 @@ The Backtest report is dated 14 October 2026; the unchanged Capital Inflows repo
 Use [the common workflow](../REPRODUCE.md) to generate a separate fresh evidence/report/PDF directory with your local originals.
 
 The final Backtest clarifications preserve every financial result and add a short conventions appendix. See the [bounded editorial checks](../docs/BACKTEST_FINAL_CLARIFICATIONS_2026-10-14.md).
+
+Body emphasis in the Backtest was reduced for a quieter research-report layout. Text, figures, numerical results and blue calculation links are unchanged.
