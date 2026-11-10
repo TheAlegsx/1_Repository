@@ -1,0 +1,6 @@
+* text=auto eol=lf
+*.pdf binary
+*.md whitespace=-blank-at-eol
+Code/reproduce.py whitespace=-blank-at-eof
+Code/src/factor_portfolio/historical.py whitespace=-blank-at-eof
+Code/src/factor_portfolio/research_reader_pdf.py whitespace=-blank-at-eof

@@ -1,0 +1,27 @@
+{
+  "initial_owner_capital_usd": 7000000,
+  "annual_return_before_fund_fee": 0.06,
+  "ticket_usd": 250000,
+  "annual_new_client_equivalents": [
+    2,
+    4,
+    6,
+    8,
+    10,
+    12,
+    14,
+    16,
+    18,
+    20
+  ],
+  "first_year_subscription_months": [
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ],
+  "annual_external_unit_redemption": 0.1,
+  "video_annual_fund_fee": 0.003
+}

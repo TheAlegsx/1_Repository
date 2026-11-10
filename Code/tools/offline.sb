@@ -1,0 +1,13 @@
+(version 1)
+(allow default)
+(deny network*)
+(deny file-write*)
+(allow file-write* (subpath (param "REVIEW_ROOT")) (literal "/dev/null"))
+(deny file-read* file-write*
+  (require-all (subpath "/private/tmp") (require-not (subpath (param "REVIEW_ROOT")))))
+(deny file-read* file-write*
+  (subpath "/Users")
+  (subpath "/System/Volumes/Data/Users")
+  (subpath "/Volumes")
+  (subpath "/private/var/folders")
+  (subpath "/System/Volumes/Data/private/var/folders"))

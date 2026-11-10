@@ -1,0 +1,297 @@
+{
+  "scope": "Portfolio backtest, Amundi product comparison and private Dimensional comparison.",
+  "runtime": {
+    "python": "3.12.15",
+    "openssl": "OpenSSL 3.5.9 29 Sep 2026",
+    "expat": "expat_2.9.0"
+  },
+  "numpy": "2.3.5",
+  "pandas": "2.2.3",
+  "code_sha256": {
+    "data.py": "fb331960da201e094122007adc152b7a1c710174d7eaabeebae055e8d083cb6c",
+    "rates.py": "12b042f84190c454a65afa3d96621094e4ccac7e18df7f0304066861cf103ac9",
+    "historical.py": "e75e4fb390b31bbfde23db069406bb26c9707b4ec09b048ef27b282312447e72",
+    "config.py": "d8b6f92322326819b7eac4deb7197af5e623a288dac500ce0e3b490448033109",
+    "benchmark.py": "4908e7702c6d5a58efd34379116c2aeb71b4217f2839139a386724f157d0aadd",
+    "market_data.py": "05eaa2d8f6b25c5527ee4fe7fd8829b3c39e4d5d5bb8932fc34734e8bc5d8f6c",
+    "paired_robustness.py": "0d70ea3543fb4985fce62b618a6d407ee8dfb2c93172ceb2db8ef1a57ad55fa0",
+    "coupled_inflow_accounting.py": "da827800e834e8222135bbc55a742d58ba4b97ed0929dcb32687f7d121247377",
+    "research_reader_pdf.py": "8ac970b13d89f59db67f6bfa7f85bbc69d69eedfc3659b023688e374491ee661",
+    "security_io.py": "61d0e4b29ce462bdcc25c7f325152044f4a5d19eb0816fd137cdbd5a884d4a24",
+    "inflows.py": "07a0278321f91674f1953890eb6ecc6d1f8805f9e543ffc08b01af5b90d84224"
+  },
+  "baseline_config_sha256": "b4bf45e960e075cfce76805762e4daf12832ddc987af436c6c481b33e1d96a77",
+  "inputs_relative_to_market_data_sha256": {
+    "ishares/iShares-Core-MSCI-World-UCITS-ETF_fund.xls": "ca671c15c1e695ad40ad6a448149e9dc6a14c516643e8911d93e8bfae481d7c3",
+    "ishares/iShares-Edge-MSCI-World-Momentum-Factor-UCITS-ETF-USD-Acc_fund.xls": "ea36a4ac3f951bfc7137fb485b589b4c75ae478e45729afd27f23a7e7d36322f",
+    "ishares/iShares-Edge-MSCI-World-Quality-Factor-UCITS-ETF-USD-Acc_fund.xls": "734dd1e04ae9fb2fba8d601978d4dccc3c15521900d71e0afdc5e51d9e92e42f",
+    "ishares/iShares-Edge-MSCI-World-Value-Factor-UCITS-ETF-USD-Acc_fund.xls": "e39cd7e67af9c9945c5ab3d5fa98f3a2f3bf432235682efcbfb3a732d874edd1",
+    "ishares/source_manifest.json": "39dfa4e6b05516b50fcb8e4a73b09b48e76e0419c9d1f528772adeb1431b14ad",
+    "rates/new_york_fed/Data Release.xlsx": "1c889930bca90edb58c6fe6c4d219f1366261ab9b3e5e0ad54d9a7e62e102180",
+    "rates/new_york_fed/sofr_official_2018-04-02_2026-08-31.json": "16031a7ffb8865e9fd7eb066ab119198edca696eba4278f455c30c892d952ecf",
+    "rates/new_york_fed/source_manifest.json": "3bf3dac9f40ad9faad2ba4cb4d73f761cc41cd878695c183c899eec01e53d954",
+    "amundi/NAV History_Amundi MSCI World (2x) Leveraged UCITS ETF Acc_FR0014010HV4_30_09_2025.xlsx": "22f0780124d0ca4609c9f677a4920d03890b3fe5ccfe94a611c11b26bb39ae95",
+    "dimensional/IE00B2PC0153_Morningstar_Finanzfluss_2026-11-10.json": "26ce9209a97e69a2578581652e8044bedf3c7dc091c6f38decdcb6fbd0bdd5fe"
+  },
+  "calendar": {
+    "start": "2014-10-03",
+    "end": "2026-08-28",
+    "nav_dates": 3027,
+    "intervals": 3026
+  },
+  "performance": {
+    "absolute_decoupled_1.00": {
+      "cagr": 0.11868200967602438,
+      "annualised_volatility": 0.14683276239449275,
+      "maximum_drawdown": -0.33560041336526536,
+      "sharpe_ratio": 0.6912535679487325,
+      "ending_equity_usd": 26594334.97706925
+    },
+    "absolute_decoupled_1.25": {
+      "cagr": 0.13243641801841322,
+      "annualised_volatility": 0.18253031968415184,
+      "maximum_drawdown": -0.3969608127999976,
+      "sharpe_ratio": 0.6548562430941036,
+      "ending_equity_usd": 30757669.37518942
+    },
+    "no_sleeve_1.00": {
+      "cagr": 0.11517891346097309,
+      "annualised_volatility": 0.1490214372740927,
+      "maximum_drawdown": -0.3406620580146159,
+      "sharpe_ratio": 0.6623949965149828,
+      "ending_equity_usd": 25619921.46448565
+    },
+    "no_sleeve_1.25": {
+      "cagr": 0.12824681722990272,
+      "annualised_volatility": 0.18588298284664978,
+      "maximum_drawdown": -0.4035729014694728,
+      "sharpe_ratio": 0.6265995984526878,
+      "ending_equity_usd": 29430332.184948135
+    },
+    "hybrid20_1.00": {
+      "cagr": 0.11792652109449264,
+      "annualised_volatility": 0.14706837963889574,
+      "maximum_drawdown": -0.33718806624472064,
+      "sharpe_ratio": 0.6858325360518411,
+      "ending_equity_usd": 26381363.897280294
+    },
+    "hybrid20_1.25": {
+      "cagr": 0.129200838001595,
+      "annualised_volatility": 0.1813158091680316,
+      "maximum_drawdown": -0.3988507643047242,
+      "sharpe_ratio": 0.6423833237779781,
+      "ending_equity_usd": 29727882.144243937
+    }
+  },
+  "relative_wealth_pct": {
+    "2022-12-30": 1.207775747839701,
+    "2023-12-29": -1.1704175594314026,
+    "2024-12-31": -2.1925996317109786,
+    "2025-12-31": -0.06576877342560072,
+    "2026-08-28": 4.510099246926402
+  },
+  "paired_summary": [
+    {
+      "endpoint": "2023-12-29",
+      "baseline_pp": -0.1401338180174072,
+      "median_pp": -0.14269545472980205,
+      "minimum_pp": -0.3363010837562408,
+      "maximum_pp": -0.06346744151177752,
+      "positive": 0,
+      "total": 14
+    },
+    {
+      "endpoint": "2024-12-31",
+      "baseline_pp": -0.24008789419200927,
+      "median_pp": -0.24088430694516605,
+      "minimum_pp": -0.47184102730590816,
+      "maximum_pp": -0.18068398770791916,
+      "positive": 0,
+      "total": 14
+    },
+    {
+      "endpoint": "2025-12-31",
+      "baseline_pp": -0.006563901678435791,
+      "median_pp": -0.0075830188136394305,
+      "minimum_pp": -0.291849808768041,
+      "maximum_pp": 0.048938974260548385,
+      "positive": 5,
+      "total": 14
+    },
+    {
+      "endpoint": "2026-08-28",
+      "baseline_pp": 0.41896007885104947,
+      "median_pp": 0.4227579289070693,
+      "minimum_pp": 0.16767137605373517,
+      "maximum_pp": 0.47454418356529526,
+      "positive": 14,
+      "total": 14
+    }
+  ],
+  "bootstrap": [
+    {
+      "block": 20,
+      "draws": 5000,
+      "seed": 2026100920,
+      "observed_pp": 0.41896007885108,
+      "low_pp": -0.7175249019070038,
+      "high_pp": 1.5947722307335186,
+      "includes_zero": true
+    },
+    {
+      "block": 60,
+      "draws": 5000,
+      "seed": 2026100960,
+      "observed_pp": 0.41896007885108,
+      "low_pp": -0.6927805834678293,
+      "high_pp": 1.7123809746427632,
+      "includes_zero": true
+    }
+  ],
+  "amundi_window": {
+    "start": "2025-09-30",
+    "end": "2026-08-31",
+    "nav_dates": 232
+  },
+  "amundi": {
+    "factor_2x": {
+      "cumulative_return": 0.3638395153464573,
+      "maximum_drawdown": -0.18744445901322937,
+      "annualised_volatility": 0.262195600522393
+    },
+    "amundi_2x": {
+      "cumulative_return": 0.27513999999999994,
+      "maximum_drawdown": -0.17503163984812864,
+      "annualised_volatility": 0.23790913348260495
+    }
+  },
+  "margin_sensitivity": {
+    "0": {
+      "full_cagr": 0.1363558298266052,
+      "later_cagr": 0.13303428230138614
+    },
+    "300": {
+      "full_cagr": 0.13243641801841322,
+      "later_cagr": 0.12607233461971812
+    },
+    "500": {
+      "full_cagr": 0.1277777883048712,
+      "later_cagr": 0.12132797261666761
+    },
+    "1000": {
+      "full_cagr": 0.11406964258992058,
+      "later_cagr": 0.11106256270607173
+    }
+  },
+  "dimensional_comparison": {
+    "source": "Morningstar via Finanzfluss",
+    "isin": "IE00B2PC0153",
+    "currency": "USD",
+    "retrieved": "2026-11-10",
+    "price_series_id": 42858,
+    "target_leverage": 1.25,
+    "source_url": "https://hippoverse.finanzfluss.de/api/v1/funds/IE00B2PC0153/prices?startDate=2014-10-03&endDate=2026-08-28&includeNav=true",
+    "common_nav_dates": 2929,
+    "start": "2014-10-03",
+    "end": "2026-08-28",
+    "metrics": {
+      "portfolio": {
+        "cagr": 0.1324364960927733,
+        "annualised_volatility": 0.18592883067604,
+        "maximum_drawdown": -0.39696068589131484,
+        "sharpe_ratio": 0.664715004394007,
+        "ending_equity_usd": 30757694.61328185,
+        "post_entry_rebalances": [
+          "2020-09-03",
+          "2021-04-09"
+        ]
+      },
+      "dimensional": {
+        "cagr": 0.11317447256882618,
+        "annualised_volatility": 0.20916432687850267,
+        "maximum_drawdown": -0.43549365759749536,
+        "sharpe_ratio": 0.5290245910624685,
+        "ending_equity_usd": 25077190.910818584,
+        "post_entry_rebalances": [
+          "2021-08-31",
+          "2022-09-26",
+          "2026-08-04"
+        ]
+      }
+    }
+  },
+  "video_supplement": {
+    "quality_weight_test": {
+      "target_leverage": 1.0,
+      "nav_dates": 3027,
+      "baseline_weights": {
+        "core": 0.6,
+        "momentum": 0.15,
+        "quality": 0.1,
+        "value": 0.15
+      },
+      "comparison_weights": {
+        "core": 0.6,
+        "momentum": 0.1,
+        "quality": 0.2,
+        "value": 0.1
+      },
+      "rules": {
+        "hybrid20": {
+          "baseline_cagr": 0.11792652109449264,
+          "comparison_cagr": 0.11683763381223211,
+          "cagr_difference_pp": -0.10888872822605311,
+          "baseline_maximum_drawdown": -0.33718806624472064,
+          "comparison_maximum_drawdown": -0.3365416077618367
+        },
+        "absolute_decoupled": {
+          "baseline_cagr": 0.11868200967602438,
+          "comparison_cagr": 0.11626023586714984,
+          "cagr_difference_pp": -0.24217738088745389,
+          "baseline_maximum_drawdown": -0.33560041336526536,
+          "comparison_maximum_drawdown": -0.33540751578350536
+        }
+      }
+    },
+    "steady_acquisition": {
+      "config_sha256": "4a68a66b2c2b7941bf33b766bb58cb4cdc53f8bc74e1762166ee670f620558ef",
+      "assumptions": {
+        "initial_owner_capital_usd": 7000000,
+        "annual_return_before_fund_fee": 0.06,
+        "ticket_usd": 250000,
+        "annual_new_client_equivalents": [
+          2,
+          4,
+          6,
+          8,
+          10,
+          12,
+          14,
+          16,
+          18,
+          20
+        ],
+        "first_year_subscription_months": [
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "annual_external_unit_redemption": 0.1,
+        "video_annual_fund_fee": 0.003
+      },
+      "months": 120,
+      "gross_subscriptions_usd": 27500000.0,
+      "scenarios": {
+        "video": {
+          "annual_fund_fee": 0.003,
+          "closing_aum_usd": 35470921.01851497,
+          "owner_equity_usd": 12167163.845381044,
+          "external_equity_usd": 23303757.17313393
+        }
+      }
+    }
+  }
+}

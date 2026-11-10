@@ -1,0 +1,31 @@
+{
+  "initial_equity_usd": 7000000,
+  "target_weights": {
+    "core": 0.6,
+    "momentum": 0.15,
+    "quality": 0.1,
+    "value": 0.15
+  },
+  "borrowing_margin_annual": 0.03,
+  "sleeve_band": 0.05,
+  "leverage_band": 0.1,
+  "fee_schedule": {
+    "usd_per_chf": 1.2367747440273038,
+    "platform_fee_usd": 0.85,
+    "stamp_duty_rate": 0.0015,
+    "spread_rate": 0.0005
+  },
+  "periods": {
+    "full": {
+      "start": "2014-10-03",
+      "end": "2026-08-28"
+    },
+    "confirmation": {
+      "start": "2022-01-04",
+      "end": "2026-08-28"
+    }
+  },
+  "measurement": {
+    "cagr_calendar_year_days": 365.2425
+  }
+}
